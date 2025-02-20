@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="./index.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div class="pagina-inicial">
+    		<div class="cabealho-pagina-principal">
+      			<div class="moldura-cabealho">
+        				<div class="boto-produto">
+          					<b class="button" id="buttonText">Produtos</b>
+        				</div>
+        				<div class="boto-funcionalidades" id="botoFuncionalidadesContainer">
+          					<b class="button1">Funcionalidades</b>
+        				</div>
+        				<div class="boto-funcionalidades" id="botoSegmentosContainer">
+          					<b class="button1">Assinaturas</b>
+        				</div>
+        				<div class="boto-funcionalidades" id="botoContatosContainer">
+          					<b class="button1">Contatos</b>
+        				</div>
+        				<div class="boto-funcionalidades" id="botoAssinaturasContainer">
+          					<b class="button1">Em breve</b>
+        				</div>
+        				<div class="lupa-boto">
+        				</div>
+      			</div>
+      			<div class="boto-de-pesquisa">
+        				<img class="iconly" alt="" src="Iconly.svg">
+        				
+        				<b class="button1">Pesquisar</b>
+      			</div>
+      			<img class="avatar-icon" alt="" src="assets/Avatar.svg">
+      			
+      			<div class="boto-decadastro" id="botoDecadastroContainer">
+        				<b class="button1">Cadastro</b>
+      			</div>
+      			<img class="xneedware-logo-transparent-1-icon" alt="" src="XNeedware_logo_transparent 1.png">
+      			
+    		</div>
+    		<div class="rodap">
+      			<div class="wrapper">
+        				<div class="container">
+        				</div>
+        				<div class="copyright-wrapper">
+          					<div class="copyright">Copyright © 2025 xNeedWare Enterprise</div>
+        				</div>
+        				<div class="footer-right">
+          					<span class="all-rights-reserved">All Rights Reserved | </span>
+          					<span class="terms-and-conditions">Terms and Conditions</span>
+          					<span class="all-rights-reserved"> | </span>
+          					<span class="terms-and-conditions">Privacy Policy</span>
+        				</div>
+      			</div>
+    		</div>
+    		
+>
+			
+			
+			<div class="slide-list">
+				<img class="slide-item-4" alt="" src="assets/Slide_item4.png">
+				<img class="slide-item-3" alt="" src="assets/Slide_item3.png">
+				<img class="slide-item-5" alt="" src="assets/Slide_item5.png">
+				<img class="slide-item-2" alt="" src="assets/Slide_item2.png">
+				<img class="slide-item-1" alt="" src="assets/Slide_Item1.png">
+				</div>
+				
+			
+				
+						<div class="carousel">
+							<div class="gallery-padding">
+								<div class="content">
+									<div class="carousel1">
+										<img class="slides-box-icon" alt="" src="Slides Box.png">
+				
+										<div class="slide-list">
+											<img class="slide-item" alt="" src="assets/Slide_item4.png">
+											<img class="slide-item" alt="" src="assets/Slide_item3.png">
+											<img class="slide-item" alt="" src="assets/Slide_item5.png">
+											<img class="slide-item" alt="" src="assets/Slide_item2.png">
+											<img class="slide-item" alt="" src="assets/Slide_Item1.png">
+										</div>
+				
+										<div class="slides-navigation">
+											<div class="click-area prev">
+												<img class="arrow-left-icon" alt="" src="Arrow Left.svg">
+											</div>
+											<div class="slide-indicator"></div>
+											<div class="click-area next">
+												<img class="arrow-left-icon" alt="" src="Arrow Right.svg">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				
+  	
+  	
+  	
+  	<script>
+    		var buttonText = document.getElementById("buttonText");
+    		if(buttonText) {
+      			buttonText.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
+    		if(botoFuncionalidadesContainer) {
+      			botoFuncionalidadesContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoSegmentosContainer = document.getElementById("botoSegmentosContainer");
+    		if(botoSegmentosContainer) {
+      			botoSegmentosContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoContatosContainer = document.getElementById("botoContatosContainer");
+    		if(botoContatosContainer) {
+      			botoContatosContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
+    		if(botoAssinaturasContainer) {
+      			botoAssinaturasContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
+    		if(botoDecadastroContainer) {
+      			botoDecadastroContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}</script></body>
+
+document.addEventListener("DOMContentLoaded", function () {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide-list img");
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+</html>
