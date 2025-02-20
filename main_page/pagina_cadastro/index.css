@@ -1,0 +1,391 @@
+.pagina-de-cadastro-child {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 25px;
+    width: 683px;
+    height: 806px;
+    object-fit: cover;
+}
+.pagina-de-cadastro-item {
+    position: absolute;
+    top: calc(50% - 320.5px);
+    left: calc(50% + 184px);
+    backdrop-filter: blur(13.6px);
+    border-radius: 46px;
+    background-color: rgba(255, 255, 255, 0.21);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    box-sizing: border-box;
+    width: 412px;
+    height: 524px;
+}
+.women-with-tab-1 {
+    position: absolute;
+    top: 122px;
+    right: 26px;
+    width: 785px;
+    height: 524px;
+    object-fit: cover;
+}
+.cadastro-com-outros {
+    position: absolute;
+    top: 0px;
+    left: 117.96px;
+    display: inline-block;
+    width: 294px;
+}
+.subtract-child {
+    position: absolute;
+    top: 592.5px;
+    left: 133.5px;
+    border-top: 1px solid #f0edff;
+    box-sizing: border-box;
+    width: 11.3px;
+    height: 1px;
+}
+.subtract-item {
+    position: absolute;
+    top: 581px;
+    left: 320.34px;
+    background-color: #d9d9d9;
+    width: 249.6px;
+    height: 23px;
+}
+.subtract {
+    position: relative;
+    background-color: #f0edff;
+    width: 10.3px;
+    height: 1px;
+}
+.cadastro-com-outros-parent {
+    position: absolute;
+    top: 431px;
+    left: 0px;
+    width: 412px;
+    height: 24px;
+    font-size: 16px;
+    color: #525252;
+}
+.cadastro {
+    position: absolute;
+    top: 0px;
+    left: 108px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+}
+.group-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 16px;
+    background-color: rgba(224, 224, 224, 0.8);
+    width: 364px;
+    height: 52px;
+}
+.senha {
+    position: absolute;
+    top: 17px;
+    left: 48px;
+}
+.frame-icon {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+.rectangle-parent {
+    position: absolute;
+    top: 149px;
+    left: 25px;
+    width: 364px;
+    height: 52px;
+}
+.rectangle-group {
+    position: absolute;
+    top: 79px;
+    left: 25px;
+    width: 364px;
+    height: 52px;
+}
+.group-inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    background: linear-gradient(84.5deg, #fff, #1a1a1a 0.01%, #9a9a9b);
+    width: 124px;
+    height: 52px;
+}
+.cadastro1 {
+    position: absolute;
+    top: 17px;
+    left: calc(50% - 35px);
+}
+.rectangle-container {
+    position: absolute;
+    top: 361px;
+    left: 145px;
+    width: 124px;
+    height: 52px;
+    color: #fff;
+}
+.rectangle-div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 16px;
+    border: 1px solid #f0edff;
+    box-sizing: border-box;
+    width: 364px;
+    height: 52px;
+}
+.login-with-google-container {
+    position: absolute;
+    top: 6px;
+    left: 38px;
+}
+.google-1-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.login-with-google-parent {
+    position: absolute;
+    top: 11px;
+    left: 110px;
+    width: 144px;
+    height: 30px;
+}
+.group-div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 364px;
+    height: 52px;
+}
+.login-with-facebook-parent {
+    position: absolute;
+    top: 11px;
+    left: 101px;
+    width: 162px;
+    height: 30px;
+}
+.rectangle-parent1 {
+    position: absolute;
+    top: 68px;
+    left: 0px;
+    width: 364px;
+    height: 52px;
+}
+.group-container {
+    position: absolute;
+    top: 488px;
+    left: 24px;
+    width: 364px;
+    height: 120px;
+}
+.rectangle-parent2 {
+    position: absolute;
+    top: 216px;
+    left: 25px;
+    width: 364px;
+    height: 52px;
+}
+.group-parent {
+    position: absolute;
+    top: 149px;
+    left: 134px;
+    width: 412px;
+    height: 608px;
+}
+.ellipse-div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    background-color: #5a5a5a;
+    width: 79px;
+    height: 79px;
+}
+.thunderbolt-1-icon {
+    position: absolute;
+    top: 18px;
+    left: 19px;
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+}
+.ellipse-parent {
+    position: absolute;
+    top: 469px;
+    left: 788px;
+    width: 79px;
+    height: 79px;
+}
+.rectangle-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 25px;
+    width: 683px;
+    height: 900px;
+    object-fit: cover;
+}
+.group-child3 {
+    position: absolute;
+    top: calc(50% - 301px);
+    left: calc(50% - 102px);
+    backdrop-filter: blur(13.6px);
+    border-radius: 46px;
+    background-color: rgba(255, 255, 255, 0.21);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    box-sizing: border-box;
+    width: 473px;
+    height: 594px;
+}
+.women-with-tab-11 {
+    position: absolute;
+    top: 125px;
+    right: 42px;
+    width: 936px;
+    height: 618px;
+    object-fit: cover;
+}
+.ellipse-group {
+    position: absolute;
+    top: 511px;
+    left: 348px;
+    width: 79px;
+    height: 79px;
+}
+.rectangle-parent3 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 978px;
+    height: 900px;
+}
+.apple-logo-icon {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 0;
+}
+.continue-com-apple {
+    width: 175px;
+    position: absolute;
+    margin: 0 !important;
+    top: 15px;
+    left: calc(50% - 87px);
+    font-weight: 500;
+    display: inline-block;
+    z-index: 1;
+}
+.continue-with-apple-left-ali {
+    position: absolute;
+    top: 769px;
+    left: 158px;
+    border-radius: 10px;
+    background-color: #000;
+    width: 364px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
+    gap: 15px;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'SF Pro Display';
+}
+.checkbox {
+    width: 28px;
+    position: relative;
+    border-radius: 1px;
+    background-color: #fff;
+    border: 2px solid #c1c1c1;
+    box-sizing: border-box;
+    height: 28px;
+}
+.no-sou-um {
+    position: relative;
+    font-weight: 500;
+}
+.frame {
+    position: absolute;
+    top: calc(50% - 11.5px);
+    left: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+}
+.logo-icon {
+    width: 48px;
+    position: relative;
+    height: 46px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.frame1 {
+    position: absolute;
+    top: calc(50% - 28.5px);
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    font-size: 8px;
+    color: #a6a6a6;
+}
+.captcha-1 {
+    position: absolute;
+    top: 426px;
+    left: 158px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 52px;
+    background-color: #fafafa;
+    border: 1px solid #d6d6d6;
+    box-sizing: border-box;
+    width: 366px;
+    height: 67px;
+    font-size: 14px;
+    color: #000;
+    font-family: Roboto;
+}
+.line-roundedclose-icon {
+    position: absolute;
+    top: 29px;
+    left: 25px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.pagina-de-cadastro {
+    width: 100%;
+    position: relative;
+    border-radius: 24px;
+    background-color: #fff;
+    height: 937px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 12px;
+    color: #1c1c1c;
+    font-family: Poppins;
+}
+
