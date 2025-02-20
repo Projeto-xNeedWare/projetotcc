@@ -289,6 +289,9 @@
     font-weight: 500;
     display: inline-block;
     z-index: 1;
+    font-family: 'SF Pro Display';
+    color: #fff;
+
 }
 .continue-with-apple-left-ali {
     position: absolute;
@@ -306,8 +309,8 @@
     box-sizing: border-box;
     gap: 15px;
     font-size: 20px;
-    color: #fff;
-    font-family: 'SF Pro Display';
+    
+    
 }
 .checkbox {
     width: 28px;
@@ -388,4 +391,139 @@
     color: #1c1c1c;
     font-family: Poppins;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+footer {
+    background-color: white;
+    border-top: 2px solid #ccc;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Garante que o conteúdo principal ocupe o espaço disponível */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: white;
+    border-top: 2px solid #ccc;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Torna os elementos responsivos */
+.pagina-de-cadastro {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+/* Ajusta imagens para que não estourem o layout */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adiciona responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .pagina-de-cadastro {
+        padding: 15px;
+    }
+
+    .pagina-de-cadastro-item {
+        width: 90%;
+        height: auto;
+        left: 5%;
+        top: auto;
+    }
+
+    .group-parent {
+        width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+
+    .rectangle-group, .rectangle-container, .rectangle-parent2 {
+        width: 90%;
+        left: 5%;
+    }
+
+    .continue-with-apple-left-ali {
+        width: 90%;
+        left: 5%;
+    }
+
+    .captcha-1 {
+        width: 90%;
+        left: 5%;
+    }
+
+    /* Torna os botões mais acessíveis */
+    .group-container {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .rectangle-parent {
+        top: auto;
+        width: 100%;
+    }
+
+    /* Reduz o tamanho dos ícones para telas pequenas */
+    .frame-icon, .logo-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Para celulares muito pequenos */
+@media screen and (max-width: 480px) {
+    .pagina-de-cadastro {
+        padding: 10px;
+    }
+
+    .cadastro {
+        font-size: 24px;
+    }
+
+    .rectangle-group, .rectangle-container, .rectangle-parent2 {
+        width: 100%;
+        left: 0;
+    }
+
+    .continue-with-apple-left-ali {
+        width: 100%;
+        left: 0;
+    }
+
+    .captcha-1 {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
 
