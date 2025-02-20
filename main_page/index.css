@@ -1,0 +1,238 @@
+/* Estilos Globais */
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: #131313;
+    background-color: #fff;
+}
+
+.pagina-inicial {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+.cabealho-pagina-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    height: 142px;
+}
+
+.moldura-cabealho {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.button, .button1 {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boto-produto, .boto-funcionalidades {
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boto-funcionalidades:hover, .boto-produto:hover {
+    background-color: #f0f0f0;
+}
+
+.boto-de-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #131313;
+    border-radius: 6px;
+}
+
+.iconly {
+    width: 18px;
+    height: 18px;
+}
+
+.avatar-icon {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+}
+
+.boto-decadastro {
+    background-color: #131313;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.xneedware-logo-transparent-1-icon {
+    width: 139px;
+    height: 25px;
+    object-fit: cover;
+}
+
+/* Rodapé */
+.rodap {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.copyright-wrapper {
+    margin-bottom: 10px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.terms-and-conditions {
+    text-decoration: underline;
+    color: #adabc3;
+    cursor: pointer;
+}
+
+/* Carrossel */
+.carousel {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.slide-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.slide-item {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.slides-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.click-area {
+    cursor: pointer;
+}
+
+.arrow-left-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.slide-indicator {
+    display: flex;
+    gap: 10px;
+}
+
+.dot-indictaor-1, .dot-indictaor-2 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.dot-indictaor-1 {
+    background-color: #131313;
+}
+/* Responsividade */
+@media (max-width: 1200px) {
+    .moldura-cabealho {
+        gap: 10px;
+    }
+
+    .boto-produto, .boto-funcionalidades {
+        padding: 8px;
+    }
+
+    .boto-de-pesquisa {
+        padding: 8px;
+    }
+
+    .slide-item {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabealho-pagina-principal {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .moldura-cabealho {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boto-de-pesquisa {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .avatar-icon {
+        margin-top: 10px;
+    }
+
+    .slide-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide-item {
+        max-width: 100%;
+    }
+
+    .slides-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .boto-produto, .boto-funcionalidades {
+        font-size: 14px;
+    }
+
+    .boto-de-pesquisa {
+        font-size: 14px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .slide-item {
+        border-radius: 20px;
+    }
+}
