@@ -430,16 +430,6 @@ footer {
     margin-top: auto;
 }
 
-/* Torna os elementos responsivos */
-.pagina-de-cadastro {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 24px;
-    background-color: #fff;
-}
-
 /* Ajusta imagens para que não estourem o layout */
 img {
     max-width: 100%;
