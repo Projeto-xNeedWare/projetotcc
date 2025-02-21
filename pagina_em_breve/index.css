@@ -68,7 +68,7 @@ html, body {
     border: 1px solid #cbcbcb;
     box-sizing: border-box;
     width: 210px;
-   height: 75px;
+    height: 75px;
     display: flex;
 
     flex-direction: column;
@@ -118,12 +118,16 @@ html, body {
     left: 45px;
     font-size: 36px;
     font-weight: 600;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
     display: inline-block;
-    width: 253px;
     height: 41px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
     cursor: pointer;
 }
+
+
 .pagina-em-breve {
     width: 100%;
     position: relative;
