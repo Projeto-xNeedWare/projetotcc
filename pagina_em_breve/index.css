@@ -1,0 +1,143 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.pagina-em-breve-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1440px;
+    height: 845px;
+    object-fit: cover;
+}
+.pagina-em-breve-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 945px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.ns-estamos-criando {
+    position: absolute;
+    top: 423px;
+    left: calc(50% - 390px);
+    font-size: 48px;
+    font-weight: 500;
+    text-align: left;
+}
+.lanaremos-novos-projetos {
+    position: absolute;
+    top: 504px;
+    left: calc(50% - 276px);
+    font-size: 24px;
+    font-family: Inter;
+    text-align: left;
+}
+.me-notifique {
+    position: relative;
+    font-weight: 500;
+    width: 162px;
+}
+.send-icon {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.notify-me {
+    position: absolute;
+    top: 48px;
+    left: 1100px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #cbcbcb;
+    box-sizing: border-box;
+    width: 210px;
+   height: 75px;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    color: #2d2d2d;
+}
+.notify-me1 {
+    position: absolute;
+    top: 48px;
+    left: 1440px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #cbcbcb;
+    box-sizing: border-box;
+    width: 337px;
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    cursor: pointer;
+    color: #000;
+}
+.facebook-original {
+    width: 40px;
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.socials {
+    position: absolute;
+    bottom: 48px;
+    left: calc(50% - 108px);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 48px;
+}
+.xneedware {
+    position: absolute;
+    top: 48px;
+    left: 45px;
+    font-size: 36px;
+    font-weight: 600;
+    display: inline-block;
+    width: 253px;
+    height: 41px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+    cursor: pointer;
+}
+.pagina-em-breve {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 940px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: Poppins;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
