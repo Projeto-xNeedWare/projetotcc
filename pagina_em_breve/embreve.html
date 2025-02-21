@@ -21,34 +21,41 @@
     		<div class="ns-estamos-criando">Nós estamos criando algo incrível</div>
     		<div class="lanaremos-novos-projetos">Lançaremos novos projetos em breve, aguarde...</div>
     		<div class="notify-me">
-      			<div class="group">
-        				<div class="me-notifique">Me notifique</div>
-        				<img class="send-icon" alt="" src="./assets_embreve/send.svg">
-        				
-      			</div>
+				<div class="group">
+				<div class="me-notifique">Me notifique</div>
+				<img class="send-icon" alt="" src="assets_embreve/send.svg">
+				</div>
+				</div>
     		</div>
     		<div class="notify-me1" id="notifyMeContainer1">
-      			<div class="me-notifique">Voltar para página inicial</div>
-    		</div>
-    		<div class="socials">
-      			<img class="facebook-original" alt="" src="./assets_embreve/facebook.svg">
-      			
-      			<img class="facebook-original" alt="" src="./assets_embreve/twitter.svg">
-      			
-      			<img class="facebook-original" alt="" src="./assets_embreve/instagram.svg">
-      			
-    		</div>
-    		<div class="xneedware">xNeedWare</div>
-  	</div>
-  	
-  	
+				<div class="tela-inicial" id="voltarInicio">Voltar para página anterior</div>
+			</div>
+				<div class="socials">
+					<img class="facebook-original" alt="" src="./assets_embreve/facebook.svg">
+					
+					<img class="facebook-original" alt="" src="./assets_embreve/twitter.svg">
+					
+					<img class="facebook-original" alt="" src="./assets_embreve/instagram.svg">
+					
+			</div>
+			<div class="xneedware" id="xNeedWareText">xNeedWare</div>
+
+  			</div>
   	
   	
   	<script>
-    		var notifyMeContainer1 = document.getElementById("notifyMeContainer1");
-    		if(notifyMeContainer1) {
-      			notifyMeContainer1.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
+			var voltarInicio = document.getElementById("voltarInicio");
+			if (voltarInicio) {
+				voltarInicio.addEventListener("click", function () {
+					window.history.back(); 
+				});
+			}
+
+    		var xNeedWareText = document.getElementById("xNeedWareText");
+			if(xNeedWareText) {
+				xNeedWareText.addEventListener("click", function (e) {
+					e.preventDefault();
+					window.open("main_page/index.html");
+				});
+			}</script></body>
 </html>
