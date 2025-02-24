@@ -8,10 +8,11 @@
     object-fit: contain;
 }
 .arrow-left-icon {
-    width: 24px;
+    width: 100%;
     position: relative;
     height: 24px;
 }
+
 .click-area {
     display: flex;
     flex-direction: row;
@@ -375,4 +376,3 @@
     color: #131313;
     font-family: Inter;
 }
-

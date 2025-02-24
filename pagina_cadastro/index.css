@@ -160,8 +160,9 @@
     position: absolute;
     top: 11px;
     left: 110px;
-    width: 144px;
-    height: 30px;
+    width: 200px;
+    height: 24px;
+    gap: 15px;
 }
 .group-div {
     position: absolute;
@@ -279,20 +280,16 @@
     overflow: hidden;
     flex-shrink: 0;
     z-index: 0;
+    text-align: center;
 }
 .continue-com-apple {
-    width: 175px;
-    position: absolute;
-    margin: 0 !important;
-    top: 15px;
-    left: calc(50% - 87px);
-    font-weight: 500;
-    display: inline-block;
-    z-index: 1;
-    font-family: 'SF Pro Display';
-    color: #fff;
+    text-align: right;
+    font-family: 'Poppins';
+    color: white;
+    position: right;
 
 }
+
 .continue-with-apple-left-ali {
     position: absolute;
     top: 769px;
@@ -303,12 +300,14 @@
     height: 50px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 15px;
     box-sizing: border-box;
-    gap: 15px;
-    font-size: 20px;
+    gap: 5px;
+    font-size: 13px;
+    font-family: 'Poppins';
+    
     
     
 }
