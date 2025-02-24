@@ -4,54 +4,133 @@
   	<meta charset="utf-8">
   	<meta name="viewport" content="initial-scale=1, width=device-width">
   	
-  	<link rel="stylesheet"  href="./caroussel.css" />
-  	
-  	
-  	
-  	
+  	<link rel="stylesheet"  href="./cabecalho.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
+  		
 </head>
 <body>
-    
-	<div class="mask">
-	</div>
-	
-	<div class="slide-list">
-        <img class="slide_item4" alt="" src="assets/Slide_item4.png">
-        <img class="slide_item5" alt="" src="assets/Slide_Item5.png">
-        <img class="slide_item3" alt="" src="assets/Slide_Item3.png">
-        <img class="slide_item1" alt="" src="assets/Slide_Item1.png">
-        <img class="slide_item2" alt="" src="assets/Slide_item2.png">
-    </div>
   	
-  	<div class="slide1">
-    		<img class="slides-box-icon" alt="" src="assets/Slide_Item1.png">
-    		
-    		<div class="slides-navigation">
-      			<div class="click-area">
-        				<img class="arrow-left-icon" alt="" src="Arrow Left.svg">
-        				
+  	<div class="cabealho-pagina-principal">
+    		<div class="moldura-cabealho">
+      			<div class="boto-produto" id="botoProdutoContainer">
+        				<b class="button">Produtos</b>
       			</div>
-      			<div class="slide-indicator">
-        				<img class="dot-indictaor-1" alt="" src="assets/dot-indictaor-1.svg">
-        				
-        				<img class="dot-indictaor-2" alt="" src="assets/dot-indictaor-2.svg">
-        				
-        				<img class="dot-indictaor-2" alt="" src="assets/dot-indictaor-2.svg">
-        				
-        				<img class="dot-indictaor-2" alt="" src="assets/dot-indictaor-2.svgg">
-        				
-        				<img class="dot-indictaor-2" alt="" src="assets/dot-indictaor-2.svg">
-        				
+      			<div class="boto-funcionalidades" id="botoFuncionalidadesContainer">
+        				<b class="button">Funcionalidades</b>
       			</div>
-      			<div class="click-area">
-        				<img class="arrow-left-icon" alt="" src="Arrow Right.svg">
-        				
+      			<div class="boto-segmentos">
+        				<b class="button2" id="buttonText">Assinaturas</b>
       			</div>
+      			<div class="boto-funcionalidades" id="botoContatosContainer">
+        				<b class="button">Contatos</b>
+      			</div>
+      			<div class="boto-funcionalidades" id="botoAssinaturasContainer">
+        				<b class="button2" id="buttonText">Em breve</b>
+      			</div>
+      			<div class="lupa-boto">
+      			</div>
+    		</div>
+    		<div class="boto-decadastro" id="botoDecadastroContainer">
+      			<b class="button">Cadastro</b>
     		</div>
   	</div>
   	
   	
   	
   	
-</body>
+  	<script>
+    		var botoProdutoContainer = document.getElementById("botoProdutoContainer");
+    		if(botoProdutoContainer) {
+      			botoProdutoContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
+    		if(botoFuncionalidadesContainer) {
+      			botoFuncionalidadesContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var buttonText = document.getElementById("buttonText");
+    		if(buttonText) {
+      			buttonText.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoContatosContainer = document.getElementById("botoContatosContainer");
+    		if(botoContatosContainer) {
+      			botoContatosContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
+    		if(botoAssinaturasContainer) {
+      			botoAssinaturasContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}
+    		
+    		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
+    		if(botoDecadastroContainer) {
+      			botoDecadastroContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}</script></body>
+</html>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="./caroussel.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+
+    		<div class="carousel1">
+      			<img class="slides-box-icon" alt="" src="Slides Box.png">
+      			
+      			<div class="slides-navigation">
+        				<div class="click-area">
+							<img class="arrow-left-icon" alt="" src=",/assets_main_page/Arrow_Left.svg">
+          					
+        				</div>
+        				<div class="slide-indicator">
+          					<img class="slide-item-1" alt="" src="./assets_main_page/Slide_Item1.png">
+          					
+          					<img class="slide-item-2" alt="" src="./assets_main_page/Slide_item2.png">
+          					
+          					<img class="slide-item-3" alt="" src="./assets_main_page/Slide_item3.png">
+          					
+          					<img class="slide-item-4" alt="" src="./assets_main_page/Slide_item4.png">
+          					
+          					<img class="slide-item-5" alt="" src="./assets_main_page/Slide_item5.png">
+          					
+        				</div>
+        				<div class="click-area">
+          					<img class="arrow-right-icon" alt="" src="./assets_main_page/Arrow_Right.svg">
+          					
+        				</div>
+      			</div>
+    		</div>
+    		<div class="desctritpion1" id="desctritpionText">
+      			<a class="cleandesign" href="https://clean.design" target="_blank">clean.design </a>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+  	<script>
+    		var desctritpionText = document.getElementById("desctritpionText");
+    		if(desctritpionText) {
+      			desctritpionText.addEventListener("click", function () {
+        				window.open("https://clean.design");
+      			});
+    		}</script></body>
 </html>
