@@ -1,0 +1,301 @@
+.group-child {
+    position: absolute;
+    top: 107px;
+    left: 0px;
+    border-radius: 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #393939;
+    box-sizing: border-box;
+    width: 609px;
+    height: 66px;
+}
+.group-item {
+    position: absolute;
+    top: 321px;
+    left: 0px;
+    border-radius: 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #9c9c9c;
+    box-sizing: border-box;
+    width: 609px;
+    height: 65px;
+}
+.group-inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #393939;
+    box-sizing: border-box;
+    width: 609px;
+    height: 67px;
+}
+.rectangle-div {
+    position: absolute;
+    top: 213px;
+    left: 0px;
+    border-radius: 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #393939;
+    box-sizing: border-box;
+    width: 283px;
+    height: 68px;
+}
+.group-child1 {
+    position: absolute;
+    top: 427px;
+    left: 0px;
+    border-radius: 10px;
+    background-color: #545454;
+    width: 242px;
+    height: 66px;
+}
+.group-child2 {
+    position: absolute;
+    top: 213px;
+    left: 369px;
+    border-radius: 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #393939;
+    box-sizing: border-box;
+    width: 240px;
+    height: 68px;
+}
+.rectangle-parent {
+    position: absolute;
+    top: 302px;
+    left: 0px;
+    width: 609px;
+    height: 493px;
+}
+.faa-o-seu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 40px;
+    color: #000;
+}
+.adicione-abaixo-os {
+    position: absolute;
+    top: 87px;
+    left: 0px;
+    font-size: 24px;
+}
+.cardholders-name {
+    position: absolute;
+    top: 276px;
+    left: 4px;
+}
+.card-number {
+    position: absolute;
+    top: 378px;
+    left: 4px;
+}
+.expiry {
+    position: absolute;
+    top: 485px;
+    left: 4px;
+}
+.discount-code {
+    position: absolute;
+    top: 592px;
+    left: 4px;
+}
+.chikamso-20-off {
+    position: absolute;
+    top: 644px;
+    left: 22px;
+    color: #393939;
+}
+.div {
+    position: absolute;
+    top: 535px;
+    left: 32px;
+    font-size: 23px;
+    color: #393939;
+}
+.div1 {
+    position: absolute;
+    top: 535px;
+    left: 397px;
+    font-size: 23px;
+    color: #393939;
+}
+.div2 {
+    position: absolute;
+    top: 428px;
+    left: 90px;
+    font-size: 23px;
+    color: #393939;
+    display: inline-block;
+    width: 252px;
+    height: 27px;
+}
+.paulina-chimaroke {
+    position: absolute;
+    top: 323px;
+    left: 22px;
+    font-size: 23px;
+    color: #393939;
+    display: inline-block;
+    width: 258px;
+    height: 25px;
+}
+.aplique {
+    position: absolute;
+    top: 644px;
+    left: 510px;
+    color: #393939;
+}
+.pagamento {
+    position: absolute;
+    top: 747px;
+    left: 50px;
+    font-size: 24px;
+    color: #fff;
+}
+.cvc {
+    position: absolute;
+    top: 496px;
+    left: 376px;
+}
+.mastercard-1-icon {
+    position: absolute;
+    top: 425px;
+    left: 9px;
+    border-radius: 10px;
+    width: 62px;
+    height: 33px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+.group-parent {
+    position: absolute;
+    top: 101px;
+    left: 88px;
+    width: 663px;
+    height: 795px;
+    font-size: 20px;
+    color: #575757;
+}
+.b {
+    width: 237px;
+    top: 206px;
+    left: 982px;
+    position: absolute;
+    font-size: 64px;
+    display: inline-block;
+    font-family: Inter;
+    color: #000;
+    text-align: center;
+    height: 60px;
+    text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+    align-items: flex-start;
+    display: flex;
+}
+
+
+.pagina-pagamento-child {
+    position: absolute;
+    top: 94px;
+    left: 915px;
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    width: 503px;
+    height: 810px;
+    mix-blend-mode: multiply;
+}
+.voc-est-pagando {
+    position: absolute;
+    top: 165px;
+    left: 955px;
+    font-weight: 500;
+    color: #575757;
+}
+.tipo-de-plano {
+    position: absolute;
+    top: 388px;
+    left: 975px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #575757;
+}
+.plano-basico {
+    position: absolute;
+    top: 352px;
+    left: 975px;
+    font-size: 26px;
+}
+.div3 {
+    position: absolute;
+    top: 352px;
+    left: 1288px;
+    font-weight: 500;
+}
+.div4 {
+    position: absolute;
+    top: 546px;
+    left: 1319px;
+    font-weight: 500;
+}
+.div5 {
+    position: absolute;
+    top: 691px;
+    left: 1318px;
+    font-weight: 500;
+}
+.div6 {
+    position: absolute;
+    top: 768px;
+    left: 1288px;
+    font-weight: 500;
+}
+.desconto-ofertas {
+    position: absolute;
+    top: 542px;
+    left: 975px;
+    font-size: 26px;
+}
+.total {
+    position: absolute;
+    top: 768px;
+    left: 974px;
+    font-size: 26px;
+}
+.imposto {
+    position: absolute;
+    top: 691px;
+    left: 974px;
+    font-size: 26px;
+}
+.pagina-pagamento-item {
+    position: absolute;
+    top: 650px;
+    left: 979px;
+    max-height: 100%;
+    width: 409.1px;
+}
+.line-roundedclose-icon {
+    position: absolute;
+    top: 29px;
+    left: 25px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.pagina-pagamento {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 940px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 24px;
+    color: #000;
+    font-family: Inter;
+}
+
