@@ -171,20 +171,26 @@
   	
   	
   	<script>
-    		var somosUmaStartup = document.getElementById("somosUmaStartup");
-    		if(somosUmaStartup) {
+
+			// AINDA NÃO CONSEGUI ADICIOANR OS BOTÕES AQUI NA PAGINA INICIAL
+
+			// CABEÇALHO
+    		var somosUmaStartup = document.getElementById("saibaMais");
+    		if(saibaMais) {
       			somosUmaStartup.addEventListener("click", function (e) {
         				// Add your code here
       			});
     		}
     		
+			// FUNCIONALIDADES
     		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
     		if(botoFuncionalidadesContainer) {
       			botoFuncionalidadesContainer.addEventListener("click", function (e) {
-        				// Add your code here
+					window.location.href = "../pagina_funcionalidades/index.html";
       			});
     		}
     		
+			// CONTATOS
     		var botoContatosContainer = document.getElementById("botoContatosContainer");
     		if(botoContatosContainer) {
       			botoContatosContainer.addEventListener("click", function (e) {
@@ -192,21 +198,23 @@
       			});
     		}
     		
+			// ASSINATURAS
     		var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
     		if(botoAssinaturasContainer) {
       			botoAssinaturasContainer.addEventListener("click", function (e) {
-        				// Add your code here
+					window.location.href = "../pagina_assinaturas/index.html";
       			});
     		}
     		
+			// CADASTRO
     		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
 						if (botoDecadastroContainer) {
 				botoDecadastroContainer.addEventListener("click", function () {
-					window.location.href = "pagina_cadastro/index.html"; // Caminho correto
+					window.location.href = "pagina_cadastro/index.html";
 				});
 			}
 
-    		
+    		// PRODUTOS
     		var botoProdutoContainer = document.getElementById("botoProdutoContainer");
     		if(botoProdutoContainer) {
       			botoProdutoContainer.addEventListener("click", function (e) {
@@ -214,13 +222,15 @@
       			});
     		}
     		
+			// SAIBA MAIS
     		var buttonText = document.getElementById("buttonText");
     		if(buttonText) {
       			buttonText.addEventListener("click", function (e) {
-        				// Add your code here
+					window.location.href = "pagina_cadastro/index.html";
       			});
     		}
     		
+			// LOGIN
     		var avatar = document.getElementById("avatar");
     		if(avatar) {
       			avatar.addEventListener("click", function (e) {

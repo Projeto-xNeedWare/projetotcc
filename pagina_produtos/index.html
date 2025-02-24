@@ -278,13 +278,13 @@
         				<div class="boto-funcionalidades" id="botoFuncionalidadesContainer">
           					<b class="loidonsaf">Funcionalidades</b>
         				</div>
-        				<div class="boto-funcionalidades" id="botoSegmentosContainer">
+        				<div class="boto-assinaturas" id="botoAssinaturasContainer">
           					<b class="loidonsaf">Assinaturas</b>
         				</div>
-        				<div class="boto-funcionalidades" id="botoContatosContainer">
+        				<div class="boto-contatos" id="botoContatosContainer">
           					<b class="loidonsaf">Contatos</b>
         				</div>
-        				<div class="boto-funcionalidades" id="botoAssinaturasContainer">
+        				<div class="boto-embreve" id="botoEmBreveContainer">
           					<b class="loidonsaf">Em breve</b>
         				</div>
         				<div class="lupa-boto">
@@ -326,59 +326,88 @@
       			});
     		}
     		
+
+
+
+			// BOTÕES DO CABEÇALHO
+
+			// PRODUTOS
     		var botoProdutoContainer = document.getElementById("botoProdutoContainer");
     		if(botoProdutoContainer) {
       			botoProdutoContainer.addEventListener("click", function (e) {
-        				window.location.href = "index.html";
+        				window.location.href = "../pagina_produtos/index.html";
       			});
     		}
     		
+			// FUNCIONALIDADES
     		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
     		if(botoFuncionalidadesContainer) {
       			botoFuncionalidadesContainer.addEventListener("click", function (e) {
-        				window.location.href = "..Paginas_Funcionalidades/index.html";
+					window.location.assign("../pagina_funcionalidades/index.html");
       			});
     		}
     		
-    		var botoSegmentosContainer = document.getElementById("botoSegmentosContainer");
-    		if(botoSegmentosContainer) {
-      			botoSegmentosContainer.addEventListener("click", function (e) {
-						window.location.href = "../main_page/index.html";
-      			});
+			// CONTATOS
+			// necessário adicionar
+			var botoContatosContainer = document.getElementById("botoContatosContainer");
+			if(botoContatosContainer) {
+				  botoContatosContainer.addEventListener("click", function (e) {
+					window.location.href = "../Paginas_Contatos/index.html";
+				  });
+			}
+    		
+    		// ASSINATURAS
+    		var botoAssinaturasContainer = document.getElementById("botoEmBreveContainer");
+    		if(botoEmBreveContainer) {
+				botoAssinaturasContainer.addEventListener("click", function (e) {
+					window.location.href = "../pagina_em_breve/index.html";
+				});
     		}
     		
-    		var botoContatosContainer = document.getElementById("botoContatosContainer");
-    		if(botoContatosContainer) {
-      			botoContatosContainer.addEventListener("click", function (e) {
-        			window.location.href = "../Paginas_Contatos/index.html";
-      			});
-    		}
-    		
-    		var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
-    		if(botoAssinaturasContainer) {
-      			botoAssinaturasContainer.addEventListener("click", function (e) {
-						window.location.href = "../pagina_em_breve/embreve.html";
-      			});
-    		}
-    		
+			// CADASTRO
     		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
     		if(botoDecadastroContainer) {
-      			botoDecadastroContainer.addEventListener("click", function (e) {
-						window.location.href = "../pagina_cadastro/index.html";
-      			});
+				botoDecadastroContainer.addEventListener("click", function (e) {
+					window.location.href = "../pagina_cadastro/index.html";
+				});
     		}
     		
+			// ASSINATURAS
+			var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
+			if(botoAssinaturasContainer) {
+					botoAssinaturasContainer.addEventListener("click", function (e) {
+						window.location.href = "../pagina_assinaturas/index.html";
+					});
+			}
+
+			// PAGINA INICIAL
     		var xNeedWareText = document.getElementById("xNeedWareText");
     		if(xNeedWareText) {
-      			xNeedWareText.addEventListener("click", function (e) {
-        				window.location.href = "../main_page/index.html";
-      			});
+				xNeedWareText.addEventListener("click", function (e) {
+					window.location.href = "../pagina_inicial/index.html";
+				});
     		}
     		
+			// LOGIN
     		var avatar = document.getElementById("avatar");
     		if(avatar) {
-      			avatar.addEventListener("click", function (e) {
-						window.location.href = "../pagina_login/login.html";
-      			});
-    		}</script></body>
-</html>
+				avatar.addEventListener("click", function (e) {
+					window.location.href = "../pagina_login/login.html";
+				});
+			}
+			
+			// EM BREVE
+			var botoEmBreveContainer = document.getElementById("botoEmBreveContainer");
+			if(botoEmBreveContainer) {
+					botoEmBreveContainer.addEventListener("click", function (e) {
+						window.location.href = "../pagina_em_breve/embreve.html";
+					});
+			}
+			// BOTÕES DO CABEÇALHO
+
+
+
+
+
+    		</script></body>
+			</html>

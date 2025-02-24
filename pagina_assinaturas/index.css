@@ -326,12 +326,30 @@
     padding: 10px 0px;
     cursor: pointer;
 }
-.boto-segmentos {
+.boto-assinaturas {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
+    cursor: pointer;
+}
+.boto-contatos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.boto-embreve {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    cursor: pointer;
+    white-space: nowrap;
 }
 .button4 {
     position: relative;
@@ -382,7 +400,7 @@
     color: #131313;
     font-family: Inter;
 }
-.xneedware {
+.xneedware-text {
     position: absolute;
     top: 10px;
     left: 10px;

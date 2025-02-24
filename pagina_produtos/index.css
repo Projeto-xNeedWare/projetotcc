@@ -647,6 +647,31 @@
     padding: 10px 0px;
     cursor: pointer;
 }
+.boto-assinaturas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.boto-contatos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.boto-embreve {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    cursor: pointer;
+    white-space: nowrap;
+}
 .lupa-boto {
     width: 101px;
     height: 39px;
