@@ -141,7 +141,7 @@
     width: 101px;
     height: 39px;
 }
-.moldura-cabealho {
+.moldura-cabecalho {
     position: absolute;
     top: calc(50% - 21px);
     left: calc(50% - 505px);
@@ -190,7 +190,7 @@
     cursor: pointer;
     color: #fff;
 }
-.cabealho-pagina-principal {
+.cabecalho-pagina-principal {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -199,14 +199,14 @@
     height: 104px;
     overflow: hidden;
 }
-.cabealho-pagina-principal-wrapper {
+.cabecalho-pagina-principal-wrapper {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 1440px;
     height: 104px;
 }
-.cabealho {
+.cabecalho {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -234,7 +234,7 @@
     position: relative;
     cursor: pointer;
 }
-.cabealho-pagina-principal1 {
+.cabecalho-pagina-principal1 {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -260,7 +260,7 @@
     cursor: pointer;
     color: #fff;
 }
-.cabealho-pagina-principal-parent {
+.cabecalho-pagina-principal-parent {
     position: absolute;
     top: 0px;
     left: 0px;

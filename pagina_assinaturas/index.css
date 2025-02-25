@@ -359,7 +359,7 @@
     width: 101px;
     height: 39px;
 }
-.moldura-cabealho {
+.moldura-cabecalho {
     position: absolute;
     top: calc(50% - 21px);
     left: calc(50% - 505px);
@@ -388,7 +388,7 @@
     cursor: pointer;
     color: #fff;
 }
-.cabealho-pagina-principal {
+.cabecalho-pagina-principal {
     position: absolute;
     top: -4px;
     left: 0px;

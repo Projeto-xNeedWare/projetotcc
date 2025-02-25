@@ -1216,7 +1216,7 @@
     width: 101px;
     height: 39px;
 }
-.moldura-cabealho {
+.moldura-cabecalho {
     position: absolute;
     top: calc(50% - 21px);
     left: calc(50% - 505px);
@@ -1265,7 +1265,7 @@
     cursor: pointer;
     color: #fff;
 }
-.cabealho-pagina-principal {
+.cabecalho-pagina-principal {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1274,7 +1274,7 @@
     height: 104px;
     overflow: hidden;
 }
-.cabealho-pagina-principal-wrapper {
+.cabecalho-pagina-principal-wrapper {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1311,7 +1311,7 @@
     overflow: hidden;
     cursor: pointer;
 }
-.cabealho {
+.cabecalho {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1332,5 +1332,33 @@
     font-size: 16px;
     color: #fff;
     font-family: Poppins;
+}
+.button {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: blue; /* Cor da linha */
+    transition: width 0.3s ease-in-out;
+}
+
+.button:hover {
+    color: blue; /* Muda a cor do texto */
+}
+
+.button:hover::after {
+    width: 100%; /* Expande a linha ao passar o mouse */
 }
 
