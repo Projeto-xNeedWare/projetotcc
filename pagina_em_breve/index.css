@@ -46,12 +46,13 @@ html, body {
     width: 162px;
 }
 .send-icon {
-    width: 24px;
+    width: 40px;  /* Aumentando a largura do ícone */
+    height: 40px; /* Aumentando a altura do ícone */
     position: relative;
-    height: 24px;
     overflow: hidden;
     flex-shrink: 0;
 }
+
 .group {
     display: flex;
     flex-direction: row;
@@ -59,42 +60,57 @@ html, body {
     justify-content: flex-start;
     gap: 8px;
 }
-.notify-me {
-    position: absolute;
-    top: 48px;
-    left: 1100px;
-    border-radius: 40px;
-    background-color: #fff;
-    border: 1px solid #cbcbcb;
-    box-sizing: border-box;
-    width: 210px;
-    height: 75px;
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 40px;
-    color: #2d2d2d;
-}
+/* Estilização dos botões "Me notifique" e "Voltar para página anterior" */
+.notify-me,
 .notify-me1 {
     position: absolute;
-    top: 48px;
-    left: 1440px;
     border-radius: 40px;
     background-color: #fff;
     border: 1px solid #cbcbcb;
     box-sizing: border-box;
-    width: 337px;
-    height: 54px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 16px 40px;
     cursor: pointer;
-    color: #000;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+    width: 250px; /* Tamanho fixo igual para ambos */
+    height: 75px; /* Tamanho fixo igual para ambos */
+    font-size: 22px; /* Tamanho de fonte igual para ambos */
+    font-family: 'Poppins', sans-serif; /* Fonte igual para ambos */
+    white-space: nowrap;
 }
+
+/* Estilização do botão "Me notifique" */
+.notify-me {
+    top: 48px;
+    left: 1100px;
+    color: #2d2d2d;
+}
+
+/* Estilização do botão "Voltar para página anterior" */
+.notify-me1 {
+    top: 48px;
+    left: 1440px;
+    color: #000;
+    width: 350px; /* Aumentando a largura do botão */
+    font-size: 22px; /* Aumentando o tamanho da fonte */
+}
+
+/* Ícone do botão "Me notifique" */
+.send-icon {
+    width: 40px;
+    height: 20px;
+    margin-left: 8px; /* Espaço entre o texto e o ícone */
+}
+
+/* Efeito de zoom quando passa o mouse sobre os botões */
+.notify-me:hover,
+.notify-me1:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+}
+
 .facebook-original {
     width: 40px;
     position: relative;
@@ -102,6 +118,7 @@ html, body {
     overflow: hidden;
     flex-shrink: 0;
 }
+/* Estilização das redes sociais */
 .socials {
     position: absolute;
     bottom: 48px;
@@ -112,6 +129,19 @@ html, body {
     justify-content: flex-start;
     gap: 48px;
 }
+
+/* Estilização das imagens das redes sociais */
+.socials img {
+    width: 30px; /* Defina o tamanho das imagens */
+    height: 30px; /* Tamanho proporcional */
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+/* Efeito de zoom quando passa o mouse sobre as imagens das redes sociais */
+.socials img:hover {
+    transform: scale(2.2); /* Aumenta o tamanho da imagem */
+}
+
 .xneedware {
     position: absolute;
     top: 48px;
@@ -125,7 +155,14 @@ html, body {
     height: 41px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
     cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
 }
+
+/* Efeito de zoom quando passa o mouse sobre o texto */
+.xneedware:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do texto */
+}
+
 
 
 .pagina-em-breve {

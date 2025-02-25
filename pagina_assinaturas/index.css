@@ -400,15 +400,24 @@
     color: #131313;
     font-family: Inter;
 }
-.xneedware-text {
+.xneedware {
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 20px;
     font-weight: 600;
+    font-family: Poppins;
     text-align: center;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
 }
+
+/* Efeito de zoom quando passa o mouse sobre o texto */
+.xneedware:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do texto */
+}
+
 .avatar-icon {
     position: absolute;
     top: 25px;
@@ -506,3 +515,62 @@
     font-family: Poppins;
 }
 
+.button {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: blue; /* Cor da linha */
+    transition: width 0.3s ease-in-out;
+}
+
+.button:hover {
+    color: blue; /* Muda a cor do texto */
+}
+
+.button:hover::after {
+    width: 100%; /* Expande a linha ao passar o mouse */
+}
+.boto-decadastro {
+    background-color: #000000; /* Cor de fundo azul */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.boto-decadastro:hover {
+    background-color: #000000; /* Muda a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+}
+
+.conect-wallet-wrapper,
+.conect-wallet-container {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Apenas suaviza o zoom */
+}
+
+.conect-wallet-wrapper:hover,
+.conect-wallet-container:hover {
+    transform: scale(1.1); /* Apenas aumenta de tamanho */
+}
