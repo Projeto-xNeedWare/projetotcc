@@ -354,36 +354,32 @@
         				</div>
       			</div>
     		</div>
-    		<div class="cabealho">
-      			<div class="cabealho-pagina-principal-wrapper">
-        				<div class="cabealho-pagina-principal-wrapper">
-          					<div class="cabealho-pagina-principal">
-            						<div class="moldura-cabealho">
-              							<div class="boto-produto">
+    		<div class="cabecalho">
+      			<div class="cabecalho-pagina-principal-wrapper">
+        				<div class="cabecalho-pagina-principal-wrapper">
+          					<div class="cabecalho-pagina-principal">
+            						<div class="moldura-cabecalho">
+              							<div class="boto-produto" id="botoProdutoContainer">
                 								<b class="button">Produtos</b>
               							</div>
               							<div class="boto-funcionalidades" id="botoFuncionalidadesContainer">
                 								<b class="button">Funcionalidades</b>
               							</div>
-              							<div class="boto-segmentos">
+              							<div class="boto-segmentos" id="botoAssinaturasContainer">
                 								<b class="button">Assinaturas</b>
               							</div>
               							<div class="boto-funcionalidades" id="botoContatosContainer">
                 								<b class="button">Contatos</b>
               							</div>
-              							<div class="boto-funcionalidades" id="botoAssinaturasContainer">
-                								<b class="button">Em breve</b>
+              							<div class="boto-funcionalidades" id="botoEmBreveContainer">
+                								<b class="button" id="buttonText">Em breve</b>
               							</div>
               							<div class="lupa-boto">
               							</div>
             						</div>
-            						<div class="boto-de-pesquisa">
-              							<img class="iconly" alt="" src="Iconly.svg">
-              							
-              							<b class="button">Pesquisar</b>
-            						</div>
+            					
             						<div class="boto-decadastro" id="botoDecadastroContainer">
-              							<b class="button">Cadastro</b>
+              							<b class="conect-wallet-wrapper">Cadastro</b>
             						</div>
           					</div>
         				</div>
@@ -400,33 +396,81 @@
   	
   	
   	<script>
+    		// BOTÕES DO CABEÇALHO
+
+			// PRODUTOS
+    		var botoProdutoContainer = document.getElementById("botoProdutoContainer");
+    		if(botoProdutoContainer) {
+      			botoProdutoContainer.addEventListener("click", function (e) {
+        				window.location.href = "../pagina_produtos/index.html";
+      			});
+    		}
+    		
+			// FUNCIONALIDADES
     		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
     		if(botoFuncionalidadesContainer) {
       			botoFuncionalidadesContainer.addEventListener("click", function (e) {
-        				window.location.href = "PaginaFuncionaldades.html"
+					window.location.assign("index.html");
       			});
     		}
     		
-    		var botoContatosContainer = document.getElementById("botoContatosContainer");
-    		if(botoContatosContainer) {
-      			botoContatosContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
+			// CONTATOS
+			// necessário adicionar
+			var botoContatosContainer = document.getElementById("botoContatosContainer");
+			if(botoContatosContainer) {
+				  botoContatosContainer.addEventListener("click", function (e) {
+					window.location.href = "../Paginas_Contatos/index.html";
+				  });
+			}
+    		
+    		// ASSINATURAS
+    		var botoAssinaturasContainer = document.getElementById("botoEmBreveContainer");
+    		if(botoEmBreveContainer) {
+				botoAssinaturasContainer.addEventListener("click", function (e) {
+					window.location.href = "../pagina_em_breve/index.html";
+				});
     		}
     		
-    		var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
-    		if(botoAssinaturasContainer) {
-      			botoAssinaturasContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
+			// CADASTRO
     		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
     		if(botoDecadastroContainer) {
-      			botoDecadastroContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
+				botoDecadastroContainer.addEventListener("click", function (e) {
+					window.location.href = "../pagina_cadastro/index.html";
+				});
     		}
+    		
+			// ASSINATURAS
+			var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
+			if(botoAssinaturasContainer) {
+					botoAssinaturasContainer.addEventListener("click", function (e) {
+						window.location.href = "../pagina_assinaturas/index.html";
+					});
+			}
+
+			// PAGINA INICIAL
+    		var xNeedWareText = document.getElementById("xNeedWareText");
+    		if(xNeedWareText) {
+				xNeedWareText.addEventListener("click", function (e) {
+					window.location.href = "../pagina_inicial/index.html";
+				});
+    		}
+    		
+			// LOGIN
+    		var avatar = document.getElementById("avatar");
+    		if(avatar) {
+				avatar.addEventListener("click", function (e) {
+					window.location.href = "../pagina_login/login.html";
+				});
+			}
+			
+			// EM BREVE
+			var botoEmBreveContainer = document.getElementById("botoEmBreveContainer");
+			if(botoEmBreveContainer) {
+					botoEmBreveContainer.addEventListener("click", function (e) {
+						window.location.href = "../pagina_em_breve/embreve.html";
+					});
+			}
+			// BOTÕES DO CABEÇALHO
     		
     		var frameContainer = document.getElementById("frameContainer");
     		if(frameContainer) {
@@ -435,10 +479,5 @@
       			});
     		}
     		
-    		var avatar = document.getElementById("avatar");
-    		if(avatar) {
-      			avatar.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
+    		</script></body>
 </html>

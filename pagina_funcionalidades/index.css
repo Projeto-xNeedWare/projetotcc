@@ -1,3 +1,11 @@
+.search-box {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
 .pagina-funcionaldades-child {
     position: absolute;
     top: 2315px;
@@ -1207,6 +1215,7 @@
     padding: 10px 0px;
 }
 .boto-funcionalidades {
+    white-space: nowrap; /* Impede que o texto quebre linha */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1225,7 +1234,7 @@
     width: 101px;
     height: 39px;
 }
-.moldura-cabealho {
+.moldura-cabecalho {
     position: absolute;
     top: calc(50% - 21px);
     left: calc(50% - 505px);
@@ -1274,7 +1283,7 @@
     cursor: pointer;
     color: #fff;
 }
-.cabealho-pagina-principal {
+.cabecalho-pagina-principal {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1283,7 +1292,7 @@
     height: 104px;
     overflow: hidden;
 }
-.cabealho-pagina-principal-wrapper {
+.cabecalho-pagina-principal-wrapper {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1291,25 +1300,23 @@
     height: 104px;
 }
 .xneedware {
-    position: relative;
-    font-weight: 600;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
-}
-.xneedware-wrapper {
     position: absolute;
-    top: 9px;
-    left: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
+    top: 10px;
+    left: 10px;
     font-size: 20px;
-    color: #000;
+    font-weight: 600;
     font-family: Poppins;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
 }
+
+/* Efeito de zoom quando passa o mouse sobre o texto */
+.xneedware:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do texto */
+}
+    
 .avatar-icon {
     position: absolute;
     top: 25px;
@@ -1320,7 +1327,7 @@
     overflow: hidden;
     cursor: pointer;
 }
-.cabealho {
+.cabecalho {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1343,3 +1350,63 @@
     font-family: Poppins;
 }
 
+
+.button {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: blue; /* Cor da linha */
+    transition: width 0.3s ease-in-out;
+}
+
+.button:hover {
+    color: blue; /* Muda a cor do texto */
+}
+
+.button:hover::after {
+    width: 100%; /* Expande a linha ao passar o mouse */
+}
+.boto-decadastro {
+    background-color: #000000; /* Cor de fundo azul */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.boto-decadastro:hover {
+    background-color: #000000; /* Muda a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+}
+
+.conect-wallet-wrapper,
+.conect-wallet-container {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Apenas suaviza o zoom */
+}
+
+.conect-wallet-wrapper:hover,
+.conect-wallet-container:hover {
+    transform: scale(1.1); /* Apenas aumenta de tamanho */
+}

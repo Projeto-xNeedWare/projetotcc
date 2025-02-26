@@ -42,7 +42,7 @@
           					</div>
         				</div>
         				<div class="comprar-wrapper" id="frameContainer1">
-          					<div class="mensais">Comprar</div>
+          					<div class="botoComprar">Comprar</div>
         				</div>
         				<div class="frame-item">
         				</div>
@@ -98,7 +98,7 @@
           					</div>
         				</div>
         				<div class="comprar-container" id="frameContainer1">
-          					<div class="mensais">Comprar</div>
+          					<div class="botoComprar" id="botoComprarContainer">Comprar</div>
         				</div>
         				<div class="line-div">
         				</div>
@@ -154,7 +154,7 @@
           					</div>
         				</div>
         				<div class="comprar-wrapper" id="frameContainer1">
-          					<div class="mensais">Comprar</div>
+          					<div class="botoComprar" id="botoComprar">Comprar</div>
         				</div>
         				<div class="frame-item">
         				</div>
@@ -199,31 +199,31 @@
         				</div>
         				<div class="nossos-planos">Nossos planos</div>
       			</div>
-      			<div class="cabealho-pagina-principal">
-        				<div class="moldura-cabealho">
+      			<div class="cabecalho-pagina-principal">
+        				<div class="moldura-cabecalho">
           					<div class="boto-produto" id="botoProdutoContainer">
             						<b class="button">Produtos</b>
           					</div>
           					<div class="boto-funcionalidades" id="botoFuncionalidadesContainer">
             						<b class="button">Funcionalidades</b>
           					</div>
-          					<div class="boto-segmentos">
+          					<div class="boto-assinaturas" id= "botoAssinaturasContainer">
             						<b class="button">Assinaturas</b>
           					</div>
-          					<div class="boto-funcionalidades" id="botoContatosContainer">
+          					<div class="boto-contatos" id="botoContatosContainer">
             						<b class="button">Contatos</b>
           					</div>
-          					<div class="boto-funcionalidades" id="botoAssinaturasContainer">
-            						<b class="button4" id="buttonText">Em breve</b>
+          					<div class="boto-embreve" id="botoEmBreveContainer">
+            						<b class="button" id="buttonText">Em breve</b>
           					</div>
           					<div class="lupa-boto">
           					</div>
         				</div>
         				<div class="boto-decadastro" id="botoDecadastroContainer">
-          					<b class="button">Cadastro</b>
+          					<b class="conect-wallet-wrapper">Cadastro</b>
         				</div>
       			</div>
-      			<div class="xneedware">xNeedWare</div>
+      			<div class="xneedware" id ="xneedware">xNeedWare</div>
       			<img class="avatar-icon" alt="" src="Avatar.svg" id="avatar">
       			
       			<div class="rodap">
@@ -270,52 +270,80 @@
       			});
     		}
     		
+
+			// BOTÕES DO CABEÇALHO
+
+			// PRODUTOS
     		var botoProdutoContainer = document.getElementById("botoProdutoContainer");
     		if(botoProdutoContainer) {
       			botoProdutoContainer.addEventListener("click", function (e) {
-        				// Add your code here
+        				window.location.href = "../pagina_produtos/index.html";
       			});
     		}
     		
+			// FUNCIONALIDADES
     		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
     		if(botoFuncionalidadesContainer) {
       			botoFuncionalidadesContainer.addEventListener("click", function (e) {
-        				// Add your code here
+					window.location.assign("../pagina_funcionalidades/index.html");
       			});
     		}
     		
-    		var botoContatosContainer = document.getElementById("botoContatosContainer");
-    		if(botoContatosContainer) {
-      			botoContatosContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
+			// CONTATOS
+			// necessário adicionar
+			var botoContatosContainer = document.getElementById("botoContatosContainer");
+			if(botoContatosContainer) {
+				  botoContatosContainer.addEventListener("click", function (e) {
+					window.location.href = "../Paginas_Contatos/index.html";
+				  });
+			}
     		
-    		var buttonText = document.getElementById("buttonText");
-    		if(buttonText) {
-      			buttonText.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
+    		// ASSINATURAS
     		var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
     		if(botoAssinaturasContainer) {
-      			botoAssinaturasContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
+				botoAssinaturasContainer.addEventListener("click", function (e) {
+					window.location.href = "./index.html";
+				});
     		}
     		
+			// CADASTRO
     		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
     		if(botoDecadastroContainer) {
-      			botoDecadastroContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
+				botoDecadastroContainer.addEventListener("click", function (e) {
+					window.location.href = "../pagina_cadastro/index.html";
+				});
     		}
     		
+			// PAGINA INICIAL
+    		var xneedwareText = document.getElementById("xNeedWareText");
+    		if(xneedwareText) {
+				xneedwareText.addEventListener("click", function (e) {
+					window.location.href = "../pagina_inicial/index.html";
+				});
+    		}
+    		
+			// LOGIN
     		var avatar = document.getElementById("avatar");
     		if(avatar) {
-      			avatar.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
+				avatar.addEventListener("click", function (e) {
+					window.location.href = "../pagina_login/login.html";
+				});
+			}
+			
+			var botoEmBreveContainer = document.getElementById("botoEmBreveContainer");
+			if(botoEmBreveContainer) {
+				botoEmBreveContainer.addEventListener("click", function (e) {
+					window.location.href = "../pagina_em_breve/embreve.html";
+				});
+			}	
+			// BOTÕES DO CABEÇALHO
+
+			var botoComprar = document.getElementById("botoComprar");
+			if(botoComprar) {
+				botoComprar.addEventListener("click", function (e) {
+					window.location.href = "../pagina_pagamento/index.html";
+				});
+			}	
+
+			</script></body>
 </html>
