@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
+    <title>Pagina Inicial</title>
   </head>
   <body>
     <div class="pagina-inicial">
       <div class="div">
-        <div class="overlap">
-          <div class="hero-section">
-            <p class="text-wrapper">Os únicos softwares que você precisa</p>
+        <div class="sobreposicao">
+          <div class="parte_decima">
+            <p class="texto_apresentacao">Os únicos softwares que você precisa</p>
             <p class="p">Explore todas as possibilidades com apenas um clique</p>
-
-            <!-- Botão "Saiba mais" -->
-            <button class="button"><div class="text-wrapper-2">Saiba mais</div></button>
+            <button class="saiba-mais"><div class="saiba-mais-texto">Saiba mais</div></button>
           </div>
           <div class="macbook-pro">
             <div class="overlap-group">
@@ -30,6 +28,27 @@
           </div>
         </div>
         <div class="section">
+          <div class="box">
+            <img class="icon-heart" src="https://c.animaapp.com/BRuATGvF/img/---icon--heart--2@2x.png" />
+            <p class="i-guess-we-could">
+              I guess we could discuss the implications of the phrase &#34;meant to be.&#34; That is if we wanted to
+              drown ourselves in a sea of backwardly referential semantics and other mumbo-jumbo.
+            </p>
+          </div>
+          <div class="box-2">
+            <img class="icon-heart" src="https://c.animaapp.com/BRuATGvF/img/---icon--heart--2@2x.png" />
+            <p class="i-guess-we-could">
+              I guess we could discuss the implications of the phrase &#34;meant to be.&#34; That is if we wanted to
+              drown ourselves in a sea of backwardly referential semantics and other mumbo-jumbo.
+            </p>
+          </div>
+          <div class="box-3">
+            <img class="icon-heart" src="https://c.animaapp.com/BRuATGvF/img/---icon--heart--2@2x.png" />
+            <p class="i-guess-we-could">
+              I guess we could discuss the implications of the phrase &#34;meant to be.&#34; That is if we wanted to
+              drown ourselves in a sea of backwardly referential semantics and other mumbo-jumbo.
+            </p>
+          </div>
           <div class="text-wrapper-4">O que oferecemos</div>
         </div>
         <div class="rodap">
@@ -47,50 +66,29 @@
         </div>
         <div class="cabealho">
           <div class="overlap-group-3">
-            <div class="cabealho-pagina">
-              <div class="moldura-cabealho">
-                <!-- Botões do Cabeçalho -->
-                <div class="boto-produto"><button class="button-2">Produtos</button></div>
-                <div class="boto-funcionalidades"><button class="button-2">Funcionalidades</button></div>
-                <div class="boto-assinaturas"><button class="button-2">Assinaturas</button></div>
-                <div class="boto-contatos"><button class="button-2">Contatos</button></div>
-                <div class="boto-embreve"><button class="button-2">Em breve</button></div>
+            <div class="div-wrapper">
+              <div class="overlap-group-3">
+                <div class="div-wrapper">
+                  <div class="cabealho-pagina">
+                    <div class="moldura-cabealho">
+                      <div class="boto-produto"><button class="botao_cabecalho">Produtos</button></div>
+                      <div class="boto-funcionalidades"><button class="botao_cabecalho">Funcionalidades</button></div>
+                      <div class="boto-assinaturas"><button class="botao_cabecalho">Assinaturas</button></div>
+                      <div class="boto-contatos"><button class="botao_cabecalho">Contatos</button></div>
+                      <div class="boto-embreve"><button class="botao_cabecalho">Em breve</button></div>
+                      <div class="lupa-boto"></div>
+                    </div>
+                    <div class="boto-decadastro"><button class="button-3">Cadastro</button></div>
+                  </div>
+                </div>
+                <div class="logo"><div class="text-wrapper-6">xNeedWare</div></div>
               </div>
-
-              <!-- Botão "Cadastro" -->
-              <div class="boto-decadastro"><button class="button-3">Cadastro</button></div>
             </div>
-
-            <!-- Texto "xNeedWare" que pode ser clicável -->
-            <div class="frame"><div class="text-wrapper-6">xNeedWare</div></div>
-
-            <!-- Ícone do avatar, possivelmente um botão para login -->
             <img class="avatar" src="https://c.animaapp.com/BRuATGvF/img/avatar.svg" />
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-      // Função para adicionar evento de clique em botões
-      function addClickEvent(selector, url) {
-        var element = document.querySelector(selector);
-        if (element) {
-          element.addEventListener("click", function () {
-            window.location.href = url;
-          });
-        }
-      }
-
-      // Adicionando eventos aos botões
-      addClickEvent(".boto-produto", "../pagina_produtos/index.html");
-      addClickEvent(".boto-funcionalidades", "../pagina_funcionalidades/index.html");
-      addClickEvent(".boto-assinaturas", "../pagina_assinaturas/index.html");
-      addClickEvent(".boto-contatos", "../pagina_contatos/index.html");
-      addClickEvent(".boto-embreve", "../pagina_em_breve/index.html");
-      addClickEvent(".boto-decadastro", "../pagina_cadastro/index.html");
-      addClickEvent(".text-wrapper-6", "../pagina_inicial/index.html"); // Texto "xNeedWare"
-      addClickEvent(".avatar", "../pagina_login/index.html"); // Ícone de avatar (login)
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
