@@ -376,7 +376,7 @@
     left: 215px;
   }
   
-  .pagina-inicial .boto-produto {
+  .pagina-inicial .button_produtos {
     display: inline-flex;
     padding: 10px 0px;
     position: relative;
@@ -418,7 +418,7 @@
     margin-right: -43.00px;
   }
   
-  .pagina-inicial .boto-decadastro {
+  .pagina-inicial .button_cadastro {
     display: flex;
     width: 125px;
     height: 39px;
