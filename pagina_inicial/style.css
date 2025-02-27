@@ -1,483 +1,482 @@
 .pagina-inicial {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .pagina-inicial .div {
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 1440px;
-    height: 2707px;
-    position: relative;
-  }
-  
-  .pagina-inicial .overlap {
-    position: absolute;
-    width: 1440px;
-    height: 1630px;
-    top: 110px;
-    left: 0;
-  }
-  
-  .pagina-inicial .hero-section {
-    position: absolute;
-    width: 1440px;
-    height: 792px;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-  }
-  
-  .pagina-inicial .text-wrapper {
-    position: absolute;
-    width: 917px;
-    top: 7px;
-    left: 262px;
-    background: linear-gradient(
-      180deg,
-      rgb(255, 255, 255) 0%,
-      rgb(111.55, 111.55, 111.55) 100%
-    );
-    -webkit-background-clip: text !important;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    color: transparent;
-    font-size: 96px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .pagina-inicial .p {
-    position: absolute;
-    top: 472px;
-    left: 277px;
-    font-family: "Poppins", Helvetica;
-    font-weight: 500;
-    color: #867777;
-    font-size: 32px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .pagina-inicial .button {
-    all: unset;
-    box-sizing: border-box;
-    position: absolute;
-    width: 150px;
-    height: 64px;
-    top: 554px;
-    left: 646px;
-    border-radius: 10px;
-    overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      rgb(239, 239, 239) 0%,
-      rgb(255, 255, 255) 100%
-    );
-  }
-  
-  .pagina-inicial .text-wrapper-2 {
-    position: absolute;
-    top: 17px;
-    left: 22px;
-    font-family: "Kodchasan", Helvetica;
-    font-weight: 700;
-    color: #171717;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .pagina-inicial .macbook-pro {
-    position: absolute;
-    width: 1281px;
-    height: 854px;
-    top: 776px;
-    left: 83px;
-    background-color: #ffffff;
-    overflow: hidden;
-  }
-  
-  .pagina-inicial .overlap-group {
-    position: relative;
-    height: 854px;
-  }
-  
-  .pagina-inicial .ios-icon {
-    position: absolute;
-    width: 588px;
-    height: 376px;
-    top: 162px;
-    left: 344px;
-  }
-  
-  .pagina-inicial .soft-shadow {
-    position: absolute;
-    width: 1281px;
-    height: 854px;
-    top: 0;
-    left: 0;
-    mix-blend-mode: multiply;
-    object-fit: cover;
-  }
-  
-  .pagina-inicial .img {
-    position: absolute;
-    width: 1281px;
-    height: 854px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
-  
-  .pagina-inicial .body {
-    position: absolute;
-    width: 1281px;
-    height: 854px;
-    top: 0;
-    left: 0;
-  }
-  
-  .pagina-inicial .screen {
-    position: absolute;
-    width: 1281px;
-    height: 200px;
-    top: 654px;
-    left: 0;
-    mix-blend-mode: darken;
-  }
-  
-  .pagina-inicial .text-wrapper-3 {
-    position: absolute;
-    width: 570px;
-    top: 291px;
-    left: 356px;
-    -webkit-text-stroke: 1px #000000;
-    font-family: "Poppins", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 96px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .pagina-inicial .section {
-    position: absolute;
-    width: 1440px;
-    height: 789px;
-    top: 1772px;
-    left: 0;
-  }
-  
-  .pagina-inicial .box {
-    position: absolute;
-    width: 390px;
-    height: 572px;
-    top: 174px;
-    left: 66px;
-    border-radius: 40px;
-    overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      rgb(13.81, 13.81, 13.81) 0%,
-      rgb(255, 228.35, 209.31) 100%
-    );
-  }
-  
-  .pagina-inicial .icon-heart {
-    position: absolute;
-    width: 144px;
-    height: 144px;
-    top: 67px;
-    left: 123px;
-  }
-  
-  .pagina-inicial .i-guess-we-could {
-    position: absolute;
-    width: 288px;
-    top: 263px;
-    left: 51px;
-    font-family: "Poppins", Helvetica;
-    font-weight: 500;
-    color: #efefef;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .pagina-inicial .box-2 {
-    left: 525px;
-    position: absolute;
-    width: 390px;
-    height: 572px;
-    top: 174px;
-    border-radius: 40px;
-    overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      rgb(13.81, 13.81, 13.81) 0%,
-      rgb(255, 228.35, 209.31) 100%
-    );
-  }
-  
-  .pagina-inicial .box-3 {
-    left: 984px;
-    position: absolute;
-    width: 390px;
-    height: 572px;
-    top: 174px;
-    border-radius: 40px;
-    overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      rgb(13.81, 13.81, 13.81) 0%,
-      rgb(255, 228.35, 209.31) 100%
-    );
-  }
-  
-  .pagina-inicial .text-wrapper-4 {
-    position: absolute;
-    top: 29px;
-    left: 310px;
-    font-family: "Poppins", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 88px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .pagina-inicial .rodap {
-    position: fixed;
-    width: 1440px;
-    height: 133px;
-    top: 2574px;
-    left: 0;
-    background-color: var(--neutral-colorswhite);
-    overflow: hidden;
-  }
-  
-  .pagina-inicial .wrapper {
-    position: relative;
-    height: 107px;
-    left: 21px;
-  }
-  
-  .pagina-inicial .overlap-group-2 {
-    position: relative;
-    width: 1438px;
-    height: 107px;
-    background-color: var(--neutral-colorswhite);
-  }
-  
-  .pagina-inicial .group {
-    position: absolute;
-    width: 344px;
-    height: 18px;
-    top: 72px;
-    left: 89px;
-  }
-  
-  .pagina-inicial .copyright {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: var(--text-single-200-regular-font-family);
-    font-weight: var(--text-single-200-regular-font-weight);
-    color: var(--neutral-colorstext-gray);
-    font-size: var(--text-single-200-regular-font-size);
-    letter-spacing: var(--text-single-200-regular-letter-spacing);
-    line-height: var(--text-single-200-regular-line-height);
-    white-space: nowrap;
-    font-style: var(--text-single-200-regular-font-style);
-  }
-  
-  .pagina-inicial .footer-right {
-    position: absolute;
-    top: 66px;
-    left: 832px;
-    font-family: "DM Sans", Helvetica;
-    font-weight: 400;
-    color: transparent;
-    font-size: 18px;
-    text-align: right;
-    line-height: 18px;
-  }
-  
-  .pagina-inicial .span {
-    color: #9795b4;
-    letter-spacing: var(--text-single-200-regular-letter-spacing);
-    font-family: var(--text-single-200-regular-font-family);
-    font-style: var(--text-single-200-regular-font-style);
-    font-weight: var(--text-single-200-regular-font-weight);
-    line-height: var(--text-single-200-regular-line-height);
-    font-size: var(--text-single-200-regular-font-size);
-  }
-  
-  .pagina-inicial .text-wrapper-5 {
-    color: #acabc2;
-    letter-spacing: var(--rich-text-text-link-regular-letter-spacing);
-    line-height: var(--rich-text-text-link-regular-line-height);
-    text-decoration: underline;
-    font-family: var(--rich-text-text-link-regular-font-family);
-    font-style: var(--rich-text-text-link-regular-font-style);
-    font-weight: var(--rich-text-text-link-regular-font-weight);
-    font-size: var(--rich-text-text-link-regular-font-size);
-  }
-  
-  .pagina-inicial .cabealho {
-    position: fixed;
-    width: 1440px;
-    height: 104px;
-    top: 0;
-    left: 1px;
-  }
-  
-  .pagina-inicial .overlap-group-3 {
-    position: relative;
-    height: 104px;
-  }
-  
-  .pagina-inicial .div-wrapper {
-    position: absolute;
-    width: 1440px;
-    height: 104px;
-    top: 0;
-    left: 0;
-  }
-  
-  .pagina-inicial .cabealho-pagina {
-    position: relative;
-    height: 104px;
-    background-color: #ffffff;
-  }
-  
-  .pagina-inicial .moldura-cabealho {
-    display: flex;
-    width: 760px;
-    height: 39px;
-    align-items: flex-start;
-    gap: 52px;
-    position: absolute;
-    top: 31px;
-    left: 215px;
-  }
-  
-  .pagina-inicial .button_produtos {
-    display: inline-flex;
-    padding: 10px 0px;
-    position: relative;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  
-  .pagina-inicial .button-2 {
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter", Helvetica;
-    font-weight: 700;
-    color: var(--colorsneutralblack);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .pagina-inicial .button-wrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 0px;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  
-  .pagina-inicial .lupa-boto {
-    position: relative;
-    flex: 0 0 auto;
-    margin-right: -43.00px;
-  }
-  
-  .pagina-inicial .button_cadastro {
-    display: flex;
-    width: 125px;
-    height: 39px;
-    padding: 10px 24px;
-    position: absolute;
-    top: 32px;
-    left: 1186px;
-    background-color: var(--colorsneutralblack);
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  
-  .pagina-inicial .button-3 {
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter", Helvetica;
-    font-weight: 700;
-    color: var(--colorsneutralwhite);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .pagina-inicial .frame {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    position: absolute;
-    top: 9px;
-    left: 15px;
-  }
-  
-  .pagina-inicial .text-wrapper-6 {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    text-shadow: 0px 2px 4px #000000b8;
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .pagina-inicial .avatar {
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    top: 25px;
-    left: 1344px;
-  }
-  
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagina-inicial .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1440px;
+  height: 2707px;
+  position: relative;
+}
+
+.pagina-inicial .overlap {
+  position: absolute;
+  width: 1440px;
+  height: 1630px;
+  top: 110px;
+  left: 0;
+}
+
+.pagina-inicial .hero-section {
+  position: absolute;
+  width: 1440px;
+  height: 792px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.pagina-inicial .text-wrapper {
+  position: absolute;
+  width: 917px;
+  top: 7px;
+  left: 262px;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgb(111.55, 111.55, 111.55) 100%
+  );
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: transparent;
+  font-size: 96px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pagina-inicial .p {
+  position: absolute;
+  top: 472px;
+  left: 277px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #867777;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pagina-inicial .button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 150px;
+  height: 64px;
+  top: 554px;
+  left: 646px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgb(239, 239, 239) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.pagina-inicial .text-wrapper-2 {
+  position: absolute;
+  top: 17px;
+  left: 22px;
+  font-family: "Kodchasan", Helvetica;
+  font-weight: 700;
+  color: #171717;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pagina-inicial .macbook-pro {
+  position: absolute;
+  width: 1281px;
+  height: 854px;
+  top: 776px;
+  left: 83px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.pagina-inicial .overlap-group {
+  position: relative;
+  height: 854px;
+}
+
+.pagina-inicial .ios-icon {
+  position: absolute;
+  width: 588px;
+  height: 376px;
+  top: 162px;
+  left: 344px;
+}
+
+.pagina-inicial .soft-shadow {
+  position: absolute;
+  width: 1281px;
+  height: 854px;
+  top: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  object-fit: cover;
+}
+
+.pagina-inicial .img {
+  position: absolute;
+  width: 1281px;
+  height: 854px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.pagina-inicial .body {
+  position: absolute;
+  width: 1281px;
+  height: 854px;
+  top: 0;
+  left: 0;
+}
+
+.pagina-inicial .screen {
+  position: absolute;
+  width: 1281px;
+  height: 200px;
+  top: 654px;
+  left: 0;
+  mix-blend-mode: darken;
+}
+
+.pagina-inicial .text-wrapper-3 {
+  position: absolute;
+  width: 570px;
+  top: 291px;
+  left: 356px;
+  -webkit-text-stroke: 1px #000000;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 96px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pagina-inicial .section {
+  position: absolute;
+  width: 1440px;
+  height: 789px;
+  top: 1772px;
+  left: 0;
+}
+
+.pagina-inicial .box {
+  position: absolute;
+  width: 390px;
+  height: 572px;
+  top: 174px;
+  left: 66px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgb(13.81, 13.81, 13.81) 0%,
+    rgb(255, 228.35, 209.31) 100%
+  );
+}
+
+.pagina-inicial .icon-heart {
+  position: absolute;
+  width: 144px;
+  height: 144px;
+  top: 67px;
+  left: 123px;
+}
+
+.pagina-inicial .i-guess-we-could {
+  position: absolute;
+  width: 288px;
+  top: 263px;
+  left: 51px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #efefef;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pagina-inicial .box-2 {
+  left: 525px;
+  position: absolute;
+  width: 390px;
+  height: 572px;
+  top: 174px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgb(13.81, 13.81, 13.81) 0%,
+    rgb(255, 228.35, 209.31) 100%
+  );
+}
+
+.pagina-inicial .box-3 {
+  left: 984px;
+  position: absolute;
+  width: 390px;
+  height: 572px;
+  top: 174px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgb(13.81, 13.81, 13.81) 0%,
+    rgb(255, 228.35, 209.31) 100%
+  );
+}
+
+.pagina-inicial .text-wrapper-4 {
+  position: absolute;
+  top: 29px;
+  left: 310px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 88px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pagina-inicial .rodap {
+  position: fixed;
+  width: 1440px;
+  height: 133px;
+  top: 2574px;
+  left: 0;
+  background-color: var(--neutral-colorswhite);
+  overflow: hidden;
+}
+
+.pagina-inicial .wrapper {
+  position: relative;
+  height: 107px;
+  left: 21px;
+}
+
+.pagina-inicial .overlap-group-2 {
+  position: relative;
+  width: 1438px;
+  height: 107px;
+  background-color: var(--neutral-colorswhite);
+}
+
+.pagina-inicial .group {
+  position: absolute;
+  width: 344px;
+  height: 18px;
+  top: 72px;
+  left: 89px;
+}
+
+.pagina-inicial .copyright {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--text-single-200-regular-font-family);
+  font-weight: var(--text-single-200-regular-font-weight);
+  color: var(--neutral-colorstext-gray);
+  font-size: var(--text-single-200-regular-font-size);
+  letter-spacing: var(--text-single-200-regular-letter-spacing);
+  line-height: var(--text-single-200-regular-line-height);
+  white-space: nowrap;
+  font-style: var(--text-single-200-regular-font-style);
+}
+
+.pagina-inicial .footer-right {
+  position: absolute;
+  top: 66px;
+  left: 832px;
+  font-family: "DM Sans", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 18px;
+  text-align: right;
+  line-height: 18px;
+}
+
+.pagina-inicial .span {
+  color: #9795b4;
+  letter-spacing: var(--text-single-200-regular-letter-spacing);
+  font-family: var(--text-single-200-regular-font-family);
+  font-style: var(--text-single-200-regular-font-style);
+  font-weight: var(--text-single-200-regular-font-weight);
+  line-height: var(--text-single-200-regular-line-height);
+  font-size: var(--text-single-200-regular-font-size);
+}
+
+.pagina-inicial .text-wrapper-5 {
+  color: #acabc2;
+  letter-spacing: var(--rich-text-text-link-regular-letter-spacing);
+  line-height: var(--rich-text-text-link-regular-line-height);
+  text-decoration: underline;
+  font-family: var(--rich-text-text-link-regular-font-family);
+  font-style: var(--rich-text-text-link-regular-font-style);
+  font-weight: var(--rich-text-text-link-regular-font-weight);
+  font-size: var(--rich-text-text-link-regular-font-size);
+}
+
+.pagina-inicial .cabealho {
+  position: fixed;
+  width: 1440px;
+  height: 104px;
+  top: 0;
+  left: 1px;
+}
+
+.pagina-inicial .overlap-group-3 {
+  position: relative;
+  height: 104px;
+}
+
+.pagina-inicial .div-wrapper {
+  position: absolute;
+  width: 1440px;
+  height: 104px;
+  top: 0;
+  left: 0;
+}
+
+.pagina-inicial .cabealho-pagina {
+  position: relative;
+  height: 104px;
+  background-color: #ffffff;
+}
+
+.pagina-inicial .moldura-cabealho {
+  display: flex;
+  width: 760px;
+  height: 39px;
+  align-items: flex-start;
+  gap: 52px;
+  position: absolute;
+  top: 31px;
+  left: 215px;
+}
+
+.pagina-inicial .boto-produto {
+  display: inline-flex;
+  padding: 10px 0px;
+  position: relative;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+.pagina-inicial .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: var(--colorsneutralblack);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pagina-inicial .button-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.pagina-inicial .lupa-boto {
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: -43.00px;
+}
+
+.pagina-inicial .boto-decadastro {
+  display: flex;
+  width: 125px;
+  height: 39px;
+  padding: 10px 24px;
+  position: absolute;
+  top: 32px;
+  left: 1186px;
+  background-color: var(--colorsneutralblack);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+.pagina-inicial .button-3 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: var(--colorsneutralwhite);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.pagina-inicial .frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 9px;
+  left: 15px;
+}
+
+.pagina-inicial .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  text-shadow: 0px 2px 4px #000000b8;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.pagina-inicial .avatar {
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  top: 25px;
+  left: 1344px;
+}
