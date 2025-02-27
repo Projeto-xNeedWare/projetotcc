@@ -304,6 +304,7 @@
     width: 301.6px;
     height: 345px;
     object-fit: cover;
+    background-color: #252525;
 }
 .mask-group-icon6 {
     position: absolute;
@@ -312,6 +313,7 @@
     width: 301.6px;
     height: 345px;
     object-fit: cover;
+    background-color: #252525;
 }
 .mask-group-icon7 {
     position: absolute;
@@ -320,6 +322,7 @@
     width: 301.6px;
     height: 345px;
     object-fit: cover;
+    background-color: #252525;
 }
 .group-child9 {
     position: absolute;
@@ -354,6 +357,8 @@
     top: 0px;
     left: 332.44px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(196, 196, 196, 0));
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #252525;
     width: 297.1px;
     height: 345px;
 }
@@ -362,6 +367,8 @@
     top: 0px;
     left: 657.63px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(196, 196, 196, 0));
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #252525;
     width: 297.1px;
     height: 345px;
 }
@@ -370,6 +377,8 @@
     top: 0px;
     left: 987.36px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(196, 196, 196, 0));
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #252525;
     width: 299.8px;
     height: 345px;
 }
@@ -380,6 +389,7 @@
     display: inline-block;
     width: 133.2px;
     height: 21.5px;
+    
 }
 .t-wrapper {
     position: absolute;
@@ -387,6 +397,8 @@
     left: 348px;
     width: 133.2px;
     height: 21.5px;
+    background-color: #252525;
+    
 }
 .t2 {
     position: absolute;
@@ -395,6 +407,7 @@
     display: inline-block;
     width: 157px;
     height: 21px;
+   
 }
 .t-container {
     position: absolute;
@@ -402,6 +415,7 @@
     left: 676px;
     width: 157px;
     height: 21px;
+    background-color: #252525;
 }
 .t3 {
     position: absolute;
@@ -410,6 +424,7 @@
     display: inline-block;
     width: 171px;
     height: 21px;
+  
 }
 .t-frame {
     position: absolute;
@@ -417,6 +432,7 @@
     left: 1002px;
     width: 171px;
     height: 21px;
+    background-color: #252525;
 }
 .mask-group-group {
     position: absolute;
@@ -426,6 +442,7 @@
     height: 345px;
     text-align: left;
     font-size: 25px;
+    
 }
 .showing-1- {
     position: absolute;
