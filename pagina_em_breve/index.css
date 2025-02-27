@@ -14,7 +14,7 @@ html, body {
     height: 845px;
     object-fit: cover;
 }
-.pagina-em-breve-item {
+.imagem_espaco {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -24,7 +24,7 @@ html, body {
     background-size: cover;
     background-position: center;
 }
-.ns-estamos-criando {
+.texto_estamos_criando {
     position: absolute;
     top: 423px;
     left: calc(50% - 390px);
@@ -32,7 +32,7 @@ html, body {
     font-weight: 500;
     text-align: left;
 }
-.lanaremos-novos-projetos {
+.texto_novos_projetos {
     position: absolute;
     top: 504px;
     left: calc(50% - 276px);
@@ -45,7 +45,7 @@ html, body {
     font-weight: 500;
     width: 162px;
 }
-.send-icon {
+.icone_enviar {
     width: 40px;  /* Aumentando a largura do ícone */
     height: 40px; /* Aumentando a altura do ícone */
     position: relative;
@@ -53,7 +53,7 @@ html, body {
     flex-shrink: 0;
 }
 
-.group {
+.grupo_me_notifique {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,8 +61,8 @@ html, body {
     gap: 8px;
 }
 /* Estilização dos botões "Me notifique" e "Voltar para página anterior" */
-.notify-me,
-.notify-me1 {
+.me_notifique,
+.me_notifique1 {
     position: absolute;
     border-radius: 40px;
     background-color: #fff;
@@ -83,14 +83,14 @@ html, body {
 }
 
 /* Estilização do botão "Me notifique" */
-.notify-me {
+.me_notifique {
     top: 48px;
     left: 1100px;
     color: #2d2d2d;
 }
 
 /* Estilização do botão "Voltar para página anterior" */
-.notify-me1 {
+.me_notifique1 {
     top: 48px;
     left: 1440px;
     color: #000;
@@ -99,19 +99,19 @@ html, body {
 }
 
 /* Ícone do botão "Me notifique" */
-.send-icon {
+.icone_enviar {
     width: 40px;
     height: 20px;
     margin-left: 8px; /* Espaço entre o texto e o ícone */
 }
 
 /* Efeito de zoom quando passa o mouse sobre os botões */
-.notify-me:hover,
-.notify-me1:hover {
+.me_notifique:hover,
+.me_notifique1:hover {
     transform: scale(1.1); /* Aumenta o tamanho do botão */
 }
 
-.facebook-original {
+.logos_redes_sociais {
     width: 40px;
     position: relative;
     height: 40px;
@@ -119,7 +119,7 @@ html, body {
     flex-shrink: 0;
 }
 /* Estilização das redes sociais */
-.socials {
+.redes_sociais {
     position: absolute;
     bottom: 48px;
     left: calc(50% - 108px);
@@ -131,14 +131,14 @@ html, body {
 }
 
 /* Estilização das imagens das redes sociais */
-.socials img {
+.redes_sociais img {
     width: 30px; /* Defina o tamanho das imagens */
     height: 30px; /* Tamanho proporcional */
     transition: transform 0.3s ease-in-out; /* Animação suave */
 }
 
 /* Efeito de zoom quando passa o mouse sobre as imagens das redes sociais */
-.socials img:hover {
+.redes_sociais img:hover {
     transform: scale(2.2); /* Aumenta o tamanho da imagem */
 }
 
