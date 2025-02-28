@@ -45,10 +45,10 @@
             </div>
           </div>
         </div>
-        <div class="cabealho">
+        <div class="cabecalho">
           <div class="overlap-group-3">
-            <div class="cabealho-pagina">
-              <div class="moldura-cabealho">
+            <div class="cabecalho-pagina">
+              <div class="moldura-cabecalho">
                 <!-- Botões do Cabeçalho -->
                 <div class="boto-produto"><button class="button-2">Produtos</button></div>
                 <div class="boto-funcionalidades"><button class="button-2">Funcionalidades</button></div>
@@ -58,7 +58,7 @@
               </div>
 
               <!-- Botão "Cadastro" -->
-              <div class="boto-decadastro"><button class="button-3">Cadastro</button></div>
+              <div class="boto-decadastro"><button class="button">Cadastro</button></div>
             </div>
 
             <!-- Texto "xNeedWare" que pode ser clicável -->
@@ -71,26 +71,6 @@
       </div>
     </div>
 
-    <script>
-      // Função para adicionar evento de clique em botões
-      function addClickEvent(selector, url) {
-        var element = document.querySelector(selector);
-        if (element) {
-          element.addEventListener("click", function () {
-            window.location.href = url;
-          });
-        }
-      }
-
-      // Adicionando eventos aos botões
-      addClickEvent(".boto-produto", "../pagina_produtos/index.html");
-      addClickEvent(".boto-funcionalidades", "../pagina_funcionalidades/index.html");
-      addClickEvent(".boto-assinaturas", "../pagina_assinaturas/index.html");
-      addClickEvent(".boto-contatos", "../pagina_contatos/index.html");
-      addClickEvent(".boto-embreve", "../pagina_em_breve/index.html");
-      addClickEvent(".boto-decadastro", "../pagina_cadastro/index.html");
-      addClickEvent(".text-wrapper-6", "../pagina_inicial/index.html"); // Texto "xNeedWare"
-      addClickEvent(".avatar", "../pagina_login/index.html"); // Ícone de avatar (login)
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

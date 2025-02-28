@@ -338,7 +338,7 @@
     font-size: var(--rich-text-text-link-regular-font-size);
   }
   
-  .pagina-inicial .cabealho {
+  .pagina-inicial .cabecalho {
     position: fixed;
     width: 1440px;
     height: 104px;
@@ -359,13 +359,13 @@
     left: 0;
   }
   
-  .pagina-inicial .cabealho-pagina {
+  .pagina-inicial .cabecalho-pagina {
     position: relative;
     height: 104px;
     background-color: #ffffff;
   }
   
-  .pagina-inicial .moldura-cabealho {
+  .pagina-inicial .moldura-cabecalho {
     display: flex;
     width: 760px;
     height: 39px;
