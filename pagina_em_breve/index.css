@@ -1,0 +1,184 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.pagina-em-breve-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1440px;
+    height: 845px;
+    object-fit: cover;
+}
+.imagem_espaco {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 945px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.texto_estamos_criando {
+    position: absolute;
+    top: 423px;
+    left: calc(50% - 390px);
+    font-size: 48px;
+    font-weight: 500;
+    text-align: left;
+}
+.texto_novos_projetos {
+    position: absolute;
+    top: 504px;
+    left: calc(50% - 276px);
+    font-size: 24px;
+    font-family: Inter;
+    text-align: left;
+}
+.me-notifique {
+    position: relative;
+    font-weight: 500;
+    width: 162px;
+}
+.icone_enviar {
+    width: 40px;  /* Aumentando a largura do ícone */
+    height: 40px; /* Aumentando a altura do ícone */
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.grupo_me_notifique {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+/* Estilização dos botões "Me notifique" e "Voltar para página anterior" */
+.me_notifique,
+.me_notifique1 {
+    position: absolute;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #cbcbcb;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+    width: 250px; /* Tamanho fixo igual para ambos */
+    height: 75px; /* Tamanho fixo igual para ambos */
+    font-size: 22px; /* Tamanho de fonte igual para ambos */
+    font-family: 'Poppins', sans-serif; /* Fonte igual para ambos */
+    white-space: nowrap;
+}
+
+/* Estilização do botão "Me notifique" */
+.me_notifique {
+    top: 48px;
+    left: 1100px;
+    color: #2d2d2d;
+}
+
+/* Estilização do botão "Voltar para página anterior" */
+.me_notifique1 {
+    top: 48px;
+    left: 1440px;
+    color: #000;
+    width: 350px; /* Aumentando a largura do botão */
+    font-size: 22px; /* Aumentando o tamanho da fonte */
+}
+
+/* Ícone do botão "Me notifique" */
+.icone_enviar {
+    width: 40px;
+    height: 20px;
+    margin-left: 8px; /* Espaço entre o texto e o ícone */
+}
+
+/* Efeito de zoom quando passa o mouse sobre os botões */
+.me_notifique:hover,
+.me_notifique1:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+}
+
+.logos_redes_sociais {
+    width: 40px;
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+/* Estilização das redes sociais */
+.redes_sociais {
+    position: absolute;
+    bottom: 48px;
+    left: calc(50% - 108px);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 48px;
+}
+
+/* Estilização das imagens das redes sociais */
+.redes_sociais img {
+    width: 30px; /* Defina o tamanho das imagens */
+    height: 30px; /* Tamanho proporcional */
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+/* Efeito de zoom quando passa o mouse sobre as imagens das redes sociais */
+.redes_sociais img:hover {
+    transform: scale(2.2); /* Aumenta o tamanho da imagem */
+}
+
+.xneedware {
+    position: absolute;
+    top: 48px;
+    left: 45px;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    height: 41px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+/* Efeito de zoom quando passa o mouse sobre o texto */
+.xneedware:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do texto */
+}
+
+
+
+.pagina-em-breve {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 940px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: Poppins;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+

@@ -1,97 +1,23 @@
-var frameContainer1 = document.getElementById ("frameContainer1");
-    		if(frameContainer1) {
-      			frameContainer1.addEventListener("click", function (e) {
-        				window.location.href = "../pagina_pagamento/index.html";
-      			});
-    		}
-    		
-			var frameContainer1 = document.getElementById ("mensais");
-    		if(frameContainer1) {
-      			frameContainer1.addEventListener("click", function (e) {
-        				window.location.href = "../pagina_pagamento/index.html";
-      			});
-    		}
+function addClickEvent(selector, url) {
+    var element = document.querySelector(selector);
+    if (element) {
+        element.addEventListener("click", function () {
+            window.location.href = url;
+        });
+    }
+}
 
-			var frameContainer1 = document.getElementById ("comprar-container");
-    		if(frameContainer1) {
-      			frameContainer1.addEventListener("click", function (e) {
-        				window.location.href = "../pagina_pagamento/index.html";
-      			});
-    		}
+// Adicionando eventos aos botões de compra
+addClickEvent("#frameContainer", "../pagina_pagamento/index.html");
+addClickEvent("#frameContainer1", "../pagina_pagamento/index.html");
+addClickEvent("#frameContainer2", "../pagina_pagamento/index.html");
 
-
-    		// BOTÕES DO CABEÇALHO
-
-			// PRODUTOS
-    		var botoProdutoContainer = document.getElementById("botoProdutoContainer");
-    		if(botoProdutoContainer) {
-      			botoProdutoContainer.addEventListener("click", function (e) {
-        				window.location.href = "../pagina_produtos/index.html";
-      			});
-    		}
-    		
-			// FUNCIONALIDADES
-    		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
-    		if(botoFuncionalidadesContainer) {
-      			botoFuncionalidadesContainer.addEventListener("click", function (e) {
-					window.location.assign("../pagina_funcionalidades/index.html");
-      			});
-    		}
-    		
-			// CONTATOS
-			// necessário adicionar
-			var botoContatosContainer = document.getElementById("botoContatosContainer");
-			if(botoContatosContainer) {
-				  botoContatosContainer.addEventListener("click", function (e) {
-					window.location.href = "../paginas_contatos/index.html";
-				  });
-			}
-    		
-    		// ASSINATURAS
-    		var botoAssinaturasContainer = document.getElementById("botoEmBreveContainer");
-    		if(botoEmBreveContainer) {
-				botoAssinaturasContainer.addEventListener("click", function (e) {
-					window.location.href = "../pagina_em_breve/index.html";
-				});
-    		}
-    		
-			// CADASTRO
-    		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
-    		if(botoDecadastroContainer) {
-				botoDecadastroContainer.addEventListener("click", function (e) {
-					window.location.href = "../pagina_cadastro/index.html";
-				});
-    		}
-    		
-			// ASSINATURAS
-			var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
-			if(botoAssinaturasContainer) {
-					botoAssinaturasContainer.addEventListener("click", function (e) {
-						window.location.href = "../pagina_assinaturas/index.html";
-					});
-			}
-
-			// PAGINA INICIAL
-    		var xNeedWareText = document.getElementById("xNeedWareText");
-    		if(xNeedWareText) {
-				xNeedWareText.addEventListener("click", function (e) {
-					window.location.href = "../pagina_inicial/index.html";
-				});
-    		}
-    		
-			// LOGIN
-    		var avatar = document.getElementById("avatar");
-    		if(avatar) {
-				avatar.addEventListener("click", function (e) {
-					window.location.href = "../pagina_login/login.html";
-				});
-			}
-			
-			// EM BREVE
-			var botoEmBreveContainer = document.getElementById("botoEmBreveContainer");
-			if(botoEmBreveContainer) {
-					botoEmBreveContainer.addEventListener("click", function (e) {
-						window.location.href = "../pagina_em_breve/embreve.html";
-					});
-			}
-			// BOTÕES DO CABEÇALHO
+// Adicionando eventos aos botões do cabeçalho
+addClickEvent("#botoProdutoContainer", "../pagina_produtos/index.html");
+addClickEvent("#botoFuncionalidadesContainer", "../pagina_funcionalidades/index.html");
+addClickEvent("#botoAssinaturasContainer", "../pagina_assinaturas/index.html");
+addClickEvent("#botoContatosContainer", "../pagina_contatos/index.html");
+addClickEvent("#botoEmBreveContainer", "../pagina_em_breve/embreve.html");
+addClickEvent("#botoDecadastroContainer", "../pagina_cadastro/index.html");
+addClickEvent("#xNeedWareText", "../pagina_inicial/index.html"); // Texto "xNeedWare"
+addClickEvent("#avatar", "../pagina_login/login.html"); // Ícone de avatar (login)
