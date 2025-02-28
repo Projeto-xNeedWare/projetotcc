@@ -81,7 +81,7 @@
     		var avatar = document.getElementById("avatar");
     		if(avatar) {
 				avatar.addEventListener("click", function (e) {
-					window.location.href = "../pagina_login/login.html";
+					window.location.href = "../pagina_login/index.html";
 				});
 			}
 			
@@ -89,7 +89,7 @@
 			var botoEmBreveContainer = document.getElementById("botoEmBreveContainer");
 			if(botoEmBreveContainer) {
 					botoEmBreveContainer.addEventListener("click", function (e) {
-						window.location.href = "../pagina_em_breve/embreve.html";
+						window.location.href = "../pagina_em_breve/index.html";
 					});
 			}
 			// BOTÕES DO CABEÇALHO

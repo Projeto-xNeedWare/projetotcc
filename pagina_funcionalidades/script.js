@@ -24,7 +24,7 @@ addClickEvent("#botoAssinaturasContainer", "../pagina_assinaturas/index.html");
 addClickEvent("#botoDecadastroContainer", "../pagina_cadastro/index.html");
 addClickEvent("#xNeedWareText", "../pagina_inicial/index.html");
 addClickEvent("#avatar", "../pagina_login/login.html");
-addClickEvent("#botoEmBreveContainer", "../pagina_em_breve/embreve.html");
+addClickEvent("#botoEmBreveContainer", "../pagina_em_breve/index.html");
 
 // Adicionando evento para botão de voltar
 addBackEvent("#lineRoundedCloseIcon");
