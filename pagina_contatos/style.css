@@ -1,331 +1,442 @@
-/* Efeito de zoom quando passa o mouse sobre o texto */
-.xneedware:hover {
-  transform: scale(1.1); /* Aumenta o tamanho do texto */
-}
-
-.pagina-contatos .xneedware {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: Poppins;
-  text-align: center;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Animação suave */
-}
-
 .pagina-contatos {
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .pagina-contatos .div {
-    background-color: #fafafa;
-    overflow: hidden;
-    width: 1440px;
-    height: 1383px;
-    position: relative;
-  }
-  
-  .pagina-contatos .overlap {
-    position: absolute;
-    width: 1442px;
-    height: 1265px;
-    top: 118px;
-    left: -1px;
-  }
-  
-  .pagina-contatos .text-wrapper {
-    position: absolute;
-    top: 970px;
-    left: 630px;
-    font-family: "Inter-ExtraBold", Helvetica;
-    font-weight: 800;
-    color: #ffffff;
-    font-size: 36px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .pagina-contatos .group {
-    position: absolute;
-    width: 1440px;
-    height: 1265px;
-    top: 0;
-    left: 1px;
-  }
-  
-  .pagina-contatos .wrapper {
-    position: absolute;
-    width: 1442px;
-    height: 107px;
-    top: 1158px;
-    left: 0;
-  }
-  
-  .pagina-contatos .overlap-group {
-    position: relative;
-    width: 1440px;
-    height: 107px;
-    background-color: var(--neutral-colorswhite);
-  }
-  
-  .pagina-contatos .copyright-wrapper {
-    position: absolute;
-    width: 344px;
-    height: 18px;
-    top: 72px;
-    left: 89px;
-  }
-  
-  .pagina-contatos .copyright {
-    position: absolute;
-    width: 342px;
-    top: 0;
-    left: 0;
-    font-family: var(--text-single-200-regular-font-family);
-    font-weight: var(--text-single-200-regular-font-weight);
-    color: var(--neutral-colorstext-gray);
-    font-size: var(--text-single-200-regular-font-size);
-    letter-spacing: var(--text-single-200-regular-letter-spacing);
-    line-height: var(--text-single-200-regular-line-height);
-    font-style: var(--text-single-200-regular-font-style);
-  }
-  
-  .pagina-contatos .footer-right {
-    position: absolute;
-    width: 483px;
-    top: 66px;
-    left: 833px;
-    font-family: "DM Sans-Regular", Helvetica;
-    font-weight: 400;
-    color: transparent;
-    font-size: 18px;
-    text-align: right;
-    line-height: 18px;
-  }
-  
-  .pagina-contatos .span {
-    color: #9795b4;
-    letter-spacing: var(--text-single-200-regular-letter-spacing);
-    font-family: var(--text-single-200-regular-font-family);
-    font-style: var(--text-single-200-regular-font-style);
-    font-weight: var(--text-single-200-regular-font-weight);
-    line-height: var(--text-single-200-regular-line-height);
-    font-size: var(--text-single-200-regular-font-size);
-  }
-  
-  .pagina-contatos .text-wrapper-2 {
-    color: #acabc2;
-    letter-spacing: var(--rich-text-text-link-regular-letter-spacing);
-    line-height: var(--rich-text-text-link-regular-line-height);
-    text-decoration: underline;
-    font-family: var(--rich-text-text-link-regular-font-family);
-    font-style: var(--rich-text-text-link-regular-font-style);
-    font-weight: var(--rich-text-text-link-regular-font-weight);
-    font-size: var(--rich-text-text-link-regular-font-size);
-  }
-  
-  .pagina-contatos .overlap-group-wrapper {
-    position: absolute;
-    width: 1440px;
-    height: 104px;
-    top: 0;
-    left: 0;
-  }
-  
-  .pagina-contatos .overlap-group-2 {
-    position: relative;
-    height: 104px;
-  }
-  
-  .pagina-contatos .cabealho-pagina {
-    position: absolute;
-    width: 1440px;
-    height: 104px;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-  }
-  
-  .pagina-contatos .moldura-cabealho {
-    display: flex;
-    width: 760px;
-    height: 39px;
-    align-items: flex-start;
-    gap: 52px;
-    position: absolute;
-    top: 31px;
-    left: 215px;
-  }
-  
-  .pagina-contatos .boto-produto {
-    display: inline-flex;
-    padding: 10px 0px;
-    position: relative;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  
-  .pagina-contatos .button {
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: var(--colorsneutralblack);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .pagina-contatos .button-wrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 0px;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  
-  .pagina-contatos .lupa-boto {
-    position: relative;
-    flex: 0 0 auto;
-    margin-right: -43.00px;
-  }
-  
-  .pagina-contatos .boto-decadastro {
-    display: flex;
-    width: 125px;
-    height: 39px;
-    padding: 10px 24px;
-    position: absolute;
-    top: 32px;
-    left: 1186px;
-    background-color: var(--colorsneutralblack);
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  
-  .pagina-contatos .button-2 {
-    all: unset;
-    box-sizing: border-box;
-    color: var(--colorsneutralwhite);
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .pagina-contatos .avatar {
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    top: 25px;
-    left: 1330px;
-  }
-  
-  .pagina-contatos .frame {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    position: absolute;
-    top: 9px;
-    left: 15px;
-  }
-  
-  .pagina-contatos .text-wrapper-3 {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    text-shadow: 0px 2px 4px #000000b8;
-    font-family: "Poppins-SemiBold", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .button {
-    position: relative;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    padding: 10px;
-    transition: color 0.3s ease-in-out;
-    cursor: pointer;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
-.button::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 3px;
-    background-color: blue; /* Cor da linha */
-    transition: width 0.3s ease-in-out;
+.pagina-contatos .div {
+  background-color: #fafafa;
+  width: 1440px;
+  height: 2800px;
+  position: relative;
 }
 
-.button:hover {
-    color: blue; /* Muda a cor do texto */
+.pagina-contatos .overlap {
+  position: absolute;
+  width: 100%;
+  height: 100%px;
+  top: 104px;
+  left: 0;
 }
 
-.button:hover::after {
-    width: 100%; /* Expande a linha ao passar o mouse */
+.pagina-contatos .text-wrapper {
+  position: absolute;
+  top: 2335px;
+  left: 630px;
+  font-family: "Inter", Helvetica;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
 }
+
+.pagina-contatos .contact-us {
+  position: absolute;
+  width: 1440px;
+  height: 2696px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.pagina-contatos .overlap-group {
+  position: absolute;
+  width: 690px;
+  height: 1400px;
+  top: 0;
+  left: 750px;
+}
+
+.pagina-contatos .rectangle {
+  position: absolute;
+  width: 296px;
+  height: 1400px;
+  top: 0;
+  left: 394px;
+  background-color: #393939;
+}
+
+.pagina-contatos .rectangle-2 {
+  position: absolute;
+  width: 660px;
+  height: 650px;
+  top: 390px;
+  left: 30px;
+  background-color: #919191;
+}
+
+.pagina-contatos .instagram {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 715px;
+  left: 102px;
+}
+
+.pagina-contatos .rectangle-3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 360px;
+  left: 0;
+  background-color: #000000;
+}
+
+.pagina-contatos .text-wrapper-2 {
+  top: 605px;
+  left: 175px;
+  position: absolute;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 1.20px;
+  line-height: normal;
+}
+
+.pagina-contatos .bold-messages {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  top: 590px;
+  left: 99px;
+}
+
+.pagina-contatos .text-wrapper-3 {
+  top: 735px;
+  left: 191px;
+  position: absolute;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 1.20px;
+  line-height: normal;
+}
+
+.pagina-contatos .text-wrapper-4 {
+  position: absolute;
+  top: 639px;
+  left: 128px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 64px;
+  letter-spacing: 1.92px;
+  line-height: normal;
+}
+
+.pagina-contatos .about-us {
+  position: absolute;
+  width: 1440px;
+  height: 1400px;
+  top: 1400px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.pagina-contatos .overlap-group-2 {
+  position: absolute;
+  width: 690px;
+  height: 1400px;
+  top: 0;
+  left: 0;
+}
+
+.pagina-contatos .rectangle-4 {
+  position: absolute;
+  width: 296px;
+  height: 1400px;
+  top: 0;
+  left: 0;
+  background-color: #393939;
+}
+
+.pagina-contatos .rectangle-5 {
+  position: absolute;
+  width: 660px;
+  height: 731px;
+  top: 334px;
+  left: 0;
+  background-color: #919191;
+}
+
+.pagina-contatos .rectangle-6 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 304px;
+  left: 630px;
+  background-color: #000000;
+}
+
+.pagina-contatos .p {
+  position: absolute;
+  width: 490px;
+  height: 360px;
+  top: 527px;
+  left: 85px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.60px;
+  line-height: normal;
+}
+
+.pagina-contatos .saiba-mais {
+  position: absolute;
+  top: 651px;
+  left: 861px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 64px;
+  letter-spacing: 1.92px;
+  line-height: normal;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+
+/* Cabeçalho fixo */
+.pagina-contatos .cabecalho {
+  position: fixed;
+  width: 1440px;
+  height: 104px;
+  top: 0;
+  left: 1px;
+}
+
+/* Sobreposição do cabeçalho */
+.pagina-contatos .sobreposicao-2 {
+  position: relative;
+  height: 104px;
+}
+
+/* Itens do cabeçalho */
+.pagina-contatos .itens-cabecalho {
+  position: absolute;
+  width: 1440px;
+  height: 104px;
+  top: 0;
+  left: 0;
+}
+
+/* Estilo do cabeçalho da página */
+.pagina-contatos .cabecalho-pagina {
+  position: relative;
+  height: 100px;
+  background-color: transparent;
+}
+
+/* Moldura no cabeçalho */
+.pagina-contatos .moldura-cabecalho {
+  display: flex;
+  width: 760px;
+  height: 10px;
+  align-items: flex-start;
+  gap: 52px;
+  position: absolute;
+  top: 31px;
+  left: 215px;
+}
+
+/* Botão de produto no cabeçalho */
+.pagina-contatos .boto-produto {
+  display: inline-flex;
+  padding: 0px 0px;
+  position: relative;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+/* Botão no cabeçalho */
+.pagina-contatos .botao_cabecalho {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: var(--colorsneutralblack);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Envolvimento do botão no cabeçalho */
+.pagina-contatos .button-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+/* Lupa no cabeçalho */
+.pagina-contatos .lupa-boto {
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: -43.00px;
+}
+
+/* Botão de cadastro no cabeçalho */
+.pagina-contatos .boto-decadastro {
+  display: flex;
+  width: 125px;
+  height: 39px;
+  padding: 10px 24px;
+  position: absolute;
+  top: 32px;
+  left: 1186px;
+  background-color: var(--colorsneutralblack);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+/* Texto do botão de cadastro */
+.pagina-contatos .button-3 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: var(--colorsneutralwhite);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Estilo da logo */
+.pagina-contatos .logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 9px;
+  left: 15px;
+}
+
+/* Texto da logo */
+.pagina-contatos .logo-texto {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  text-shadow: 0px 2px 4px #000000b8;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Avatar no cabeçalho */
+.pagina-contatos .avatar {
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  top: 25px;
+  left: 1344px;
+}
+
+/* Efeito hover sobre a logo */
+.logo {
+  display: inline-block;
+  transition: all 0.3s ease-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Botões com transição */
+.botao_cabecalho {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.botao_cabecalho::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: rgb(133, 133, 133); /* Cor da linha */
+  transition: width 0.5s ease-in-out;
+}
+
+.botao_cabecalho:hover {
+  color: rgb(133, 133, 133); /* Muda a cor do texto */
+}
+
+.botao_cabecalho:hover::after {
+  width: 100%; /* Expande a linha ao passar o mouse */
+}
+
+/* Botão de cadastro */
 .boto-decadastro {
-    background-color: #000000; /* Cor de fundo azul */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Suaviza a transição */
+  background-color: #000000; /* Cor de fundo azul */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Suaviza a transição */
 }
 
 .boto-decadastro:hover {
-    background-color: #000000; /* Muda a cor ao passar o mouse */
-    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+  background-color: #000000; /* Muda a cor ao passar o mouse */
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
 }
 
-.conect-wallet-wrapper,
-.conect-wallet-container {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Apenas suaviza o zoom */
+.pagina-contatos .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  text-shadow: 0px 2px 4px #000000b8;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-.conect-wallet-wrapper:hover,
-.conect-wallet-container:hover {
-    transform: scale(1.1); /* Apenas aumenta de tamanho */
+.saiba-mais:hover {
+  transform: scale(1.1)
 }
-
+  
