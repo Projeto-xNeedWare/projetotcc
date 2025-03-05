@@ -1,99 +1,25 @@
-
-			
-
-    		var frameContainer = document.getElementById("frameContainer");
-    		if(frameContainer) {
-      			frameContainer.addEventListener("click", function (e) {
-        			
-      			});
-    		}
-    		
-    		var frameContainer1 = document.getElementById("frameContainer1");
-    		if(frameContainer1) {
-      			frameContainer1.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-
-
-
-			// BOTÕES DO CABEÇALHO
-
-			// PRODUTOS
-    		var botoProdutoContainer = document.getElementById("botoProdutoContainer");
-    		if(botoProdutoContainer) {
-      			botoProdutoContainer.addEventListener("click", function (e) {
-        				window.location.href = "../pagina_produtos/index.html";
-      			});
-    		}
-    		
-			// FUNCIONALIDADES
-    		var botoFuncionalidadesContainer = document.getElementById("botoFuncionalidadesContainer");
-    		if(botoFuncionalidadesContainer) {
-      			botoFuncionalidadesContainer.addEventListener("click", function (e) {
-					window.location.assign("../pagina_funcionalidades/index.html");
-      			});
-    		}
-    		
-			// CONTATOS
-			// necessário adicionar
-			var botoContatosContainer = document.getElementById("botoContatosContainer");
-			if(botoContatosContainer) {
-				  botoContatosContainer.addEventListener("click", function (e) {
-					window.location.href = "../paginas_contatos/index.html";
-				  });
-			}
-    		
-    		// ASSINATURAS
-    		var botoAssinaturasContainer = document.getElementById("botoEmBreveContainer");
-    		if(botoEmBreveContainer) {
-				botoAssinaturasContainer.addEventListener("click", function (e) {
-					window.location.href = "../pagina_em_breve/index.html";
-				});
-    		}
-    		
-			// CADASTRO
-    		var botoDecadastroContainer = document.getElementById("botoDecadastroContainer");
-    		if(botoDecadastroContainer) {
-				botoDecadastroContainer.addEventListener("click", function (e) {
-					window.location.href = "../pagina_cadastro/index.html";
-				});
-    		}
-    		
-			// ASSINATURAS
-			var botoAssinaturasContainer = document.getElementById("botoAssinaturasContainer");
-			if(botoAssinaturasContainer) {
-					botoAssinaturasContainer.addEventListener("click", function (e) {
-						window.location.href = "../pagina_assinaturas/index.html";
-					});
-			}
-
-			// PAGINA INICIAL
-    		var xNeedWareText = document.getElementById("xNeedWareText");
-    		if(xNeedWareText) {
-				xNeedWareText.addEventListener("click", function (e) {
-					window.location.href = "../pagina_inicial/index.html";
-				});
-    		}
-    		
-			// LOGIN
-    		var avatar = document.getElementById("avatar");
-    		if(avatar) {
-				avatar.addEventListener("click", function (e) {
-					window.location.href = "../pagina_login/index.html";
-				});
-			}
-			
-			// EM BREVE
-			var botoEmBreveContainer = document.getElementById("botoEmBreveContainer");
-			if(botoEmBreveContainer) {
-					botoEmBreveContainer.addEventListener("click", function (e) {
-						window.location.href = "../pagina_em_breve/index.html";
-					});
-			}
-			// BOTÕES DO CABEÇALHO
-
-
-
-
+// Função para adicionar evento de clique em botões
+function addClickEvent(selector, url) {
+	var elements = document.querySelectorAll(selector); // Usa querySelectorAll para pegar todos os elementos
+	elements.forEach(function (element) {
+	  element.addEventListener("click", function () {
+		window.location.href = url; // Redireciona para a URL
+	  });
+	});
+  }
+  
+  // Adicionando eventos aos botões
+  addClickEvent(".boto-produto", "../pagina_produtos/index.html");
+  addClickEvent(".boto-funcionalidades", "../pagina_funcionalidades/index.html");
+  addClickEvent(".boto-assinaturas", "../pagina_assinaturas/index.html");
+  addClickEvent(".boto-contatos", "../pagina_contatos/index.html");
+  addClickEvent(".boto-embreve", "../pagina_em_breve/index.html");
+  addClickEvent(".boto-decadastro", "../pagina_cadastro/index.html");
+  addClickEvent(".text-wrapper-6", "../pagina_inicial/index.html"); // Texto "xNeedWare"
+  addClickEvent(".avatar", "../pagina_login/login.html"); // Ícone de avatar (login)
+  addClickEvent(".text-wrapper-2", "../pagina_produtos/index.html"); // Texto "xNeedWare"
+  addClickEvent(".botosaiba-mais", "../pagina_funcionalidades/index.html");
+  
+  // Aplique o evento de clique em todos os botões de compra
+  addClickEvent(".botao-comprar", "../pagina_pagamento/index.html");
+  
