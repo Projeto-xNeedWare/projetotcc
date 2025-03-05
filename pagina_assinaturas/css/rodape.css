@@ -1,0 +1,58 @@
+.copyright {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    line-height: 18px;
+}
+.copyright-wrapper {
+    position: absolute;
+    top: 72px;
+    left: 89px;
+    width: 342px;
+    height: 18px;
+}
+.all-rights-reserved {
+    line-height: 18px;
+}
+.terms-and-conditions {
+    text-decoration: underline;
+    line-height: 30px;
+    color: #adabc3;
+}
+.footer-right {
+    position: absolute;
+    top: 66px;
+    left: 832px;
+    text-align: right;
+}
+.wrapper {
+    position: absolute;
+    top: 0px;
+    left: 21px;
+    width: 1438px;
+    height: 107px;
+}
+.rodap1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.rodap {
+    position: absolute;
+    height: 7.75%;
+    width: 100%;
+    top: 92.25%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    background-color: #fff;
+    overflow: hidden;
+    color: #9795b5;
+    font-family: 'DM Sans';
+}
