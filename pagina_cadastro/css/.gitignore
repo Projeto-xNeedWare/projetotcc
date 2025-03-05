@@ -1,0 +1,31 @@
+/* LOGIN PELO GOOGLE */
+
+.login-with-google-container {
+    position: absolute;
+    top: 6px;
+    left: 38px;
+}
+.google-1-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.login-with-google-parent {
+    position: absolute;
+    top: 11px;
+    left: 110px;
+    width: 200px;
+    height: 24px;
+    gap: 15px;
+}
+
+.group-container {
+    position: absolute;
+    top: 488px;
+    left: 24px;
+    width: 364px;
+    height: 120px;
+}
