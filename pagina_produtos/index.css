@@ -187,6 +187,7 @@
     width: 1280.4px;
     height: 525.8px;
 }
+<<<<<<< Updated upstream
 .em-alta-da {
     position: absolute;
     top: 0px;
@@ -380,6 +381,20 @@
     padding: 12px 32px;
     cursor: pointer;
     font-size: 17.76px;
+=======
+
+.titulo-produtos-2 {
+  position: absolute;
+  top: 1800px;        /* Distância do topo */
+  left: 50%;          /* Posiciona o título no meio */
+  transform: translateX(-50%); /* Ajusta a posição para o centro exato */
+  text-align: center;
+  letter-spacing: 0.01em;
+  line-height: 128.5%;
+  font-weight: 600;
+  font-family: Poppins;
+  font-size: 50px;
+>>>>>>> Stashed changes
 }
 .frame-child {
     width: 276px;
@@ -461,6 +476,7 @@
 }
 .loidonsaf-container {
     position: absolute;
+<<<<<<< Updated upstream
     top: 36px;
     left: 0px;
     display: flex;
@@ -616,6 +632,10 @@
     position: absolute;
     top: 227.57px;
     left: 0px;
+=======
+    top: 2000px; /* Ajuste para ficar abaixo da sessão "Em alta da semana" */
+    left: 140px;
+>>>>>>> Stashed changes
     width: 1264px;
     height: 910.6px;
     font-size: 24px;
@@ -709,6 +729,22 @@
     align-items: center;
     justify-content: center;
     padding: 10px 24px;
+<<<<<<< Updated upstream
+=======
+    position: absolute;
+    top: 32px;
+    left: 1186px;
+    background-color: var(--colorsneutralblack);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 30px;
+  }
+  
+  /* Texto do botão de cadastro */
+  .button-3 {
+    all: unset;
+>>>>>>> Stashed changes
     box-sizing: border-box;
     cursor: pointer;
     color: #fff;
@@ -855,7 +891,7 @@
 .boto-decadastro {
     background-color: #000000; /* Cor de fundo azul */
     color: white;
-    padding: 10px 20px;
+    padding: 5px 0.5px;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
