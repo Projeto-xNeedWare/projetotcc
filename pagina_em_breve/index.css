@@ -139,7 +139,7 @@ html, body {
 
 /* Efeito de zoom quando passa o mouse sobre as imagens das redes sociais */
 .redes_sociais img:hover {
-    transform: scale(2.2); /* Aumenta o tamanho da imagem */
+    transform: scale(1.5); /* Aumenta o tamanho da imagem */
 }
 
 .xneedware {

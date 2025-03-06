@@ -1,0 +1,514 @@
+.pagina {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .pagina .div {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1440px;
+    height: 940px;
+    position: relative;
+  }
+  
+  /* Efeito de zoom quando passa o mouse sobre o texto */
+.xneedware:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do texto */
+}
+
+.xneedware {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Poppins;
+  text-align: center;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+.button {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: blue; /* Cor da linha */
+  transition: width 0.3s ease-in-out;
+}
+
+.button:hover {
+  color: blue; /* Muda a cor do texto */
+}
+
+.button:hover::after {
+  width: 100%; /* Expande a linha ao passar o mouse */
+}
+.boto-decadastro {
+  background-color: #000000; /* Cor de fundo azul */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.boto-decadastro:hover {
+  background-color: #000000; /* Muda a cor ao passar o mouse */
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+}
+
+  .pagina .overlap {
+    position: absolute;
+    width: 1042px;
+    height: 345px;
+    top: 350px;
+    left: 17px;
+  }
+  
+  .pagina .group {
+    position: absolute;
+    width: 916px;
+    height: 345px;
+    top: 0;
+    left: 68px;
+  }
+  
+  .pagina .mask-group {
+    position: absolute;
+    width: 302px;
+    height: 345px;
+    top: 0;
+    left: 613px;
+  }
+  
+  .pagina .t {
+    position: absolute;
+    width: 112px;
+    top: 22px;
+    left: 0;
+    font-family: "Poppins", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .pagina .DALLE {
+    position: absolute;
+    width: 332px;
+    height: 332px;
+    top: 13px;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .pagina .text-wrapper {
+    position: absolute;
+    width: 151px;
+    top: 43px;
+    left: 142px;
+    font-family: "DM Sans", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  
+  .pagina .lorem-ipsum-is {
+    position: absolute;
+    width: 230px;
+    top: 119px;
+    left: 29px;
+    font-family: "Poppins", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  
+  .pagina .img {
+    width: 331px;
+    height: 331px;
+    top: 14px;
+    left: 355px;
+    position: absolute;
+    mix-blend-mode: hard-light;
+    object-fit: cover;
+  }
+  
+  .pagina .text-wrapper-2 {
+    position: absolute;
+    width: 282px;
+    top: 32px;
+    left: 385px;
+    font-family: "Poppins", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .pagina .p {
+    width: 228px;
+    top: 119px;
+    left: 387px;
+    position: absolute;
+    font-family: "Poppins", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  
+  .pagina .DALLE-2 {
+    width: 333px;
+    height: 333px;
+    top: 12px;
+    left: 709px;
+    position: absolute;
+    mix-blend-mode: hard-light;
+    object-fit: cover;
+  }
+  
+  .pagina .text-wrapper-3 {
+    position: absolute;
+    top: 43px;
+    left: 766px;
+    font-family: "Poppins", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 28px;
+    white-space: nowrap;
+  }
+  
+  .pagina .lorem-ipsum-is-2 {
+    width: 238px;
+    top: 114px;
+    left: 736px;
+    position: absolute;
+    font-family: "Poppins", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  
+  .pagina .rectangle {
+    position: absolute;
+    width: 1px;
+    height: 2px;
+    top: 310px;
+    left: 720px;
+    background-color: #d9d9d9;
+  }
+  
+  .pagina .overlap-group {
+    position: absolute;
+    width: 331px;
+    height: 331px;
+    top: 364px;
+    left: 1082px;
+    background-image: url(https://c.animaapp.com/voWU2Z6l/img/dall-e-2025-02-26-10-14-56---a-futuristic-digital-representation@2x.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .pagina .text-wrapper-4 {
+    position: absolute;
+    width: 265px;
+    top: 28px;
+    left: 51px;
+    font-family: "Poppins", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  
+  .pagina .lorem-ipsum-is-3 {
+    width: 243px;
+    top: 90px;
+    left: 34px;
+    position: absolute;
+    font-family: "Poppins", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  
+  .pagina .rodap {
+    position: absolute;
+    width: 1440px;
+    height: 133px;
+    top: 822px;
+    left: 0;
+    background-color: var(--neutral-colorswhite);
+    overflow: hidden;
+  }
+  
+  .pagina .overlap-2 {
+    position: relative;
+    width: 1461px;
+    height: 133px;
+  }
+  
+  .pagina .wrapper {
+    position: absolute;
+    width: 1440px;
+    height: 107px;
+    top: 0;
+    left: 21px;
+  }
+  
+  .pagina .overlap-group-2 {
+    position: relative;
+    width: 1438px;
+    height: 107px;
+    background-color: var(--neutral-colorswhite);
+  }
+  
+  .pagina .copyright-wrapper {
+    position: absolute;
+    width: 344px;
+    height: 18px;
+    top: 72px;
+    left: 89px;
+  }
+  
+  .pagina .copyright {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--text-single-200-regular-font-family);
+    font-weight: var(--text-single-200-regular-font-weight);
+    color: var(--neutral-colorstext-gray);
+    font-size: var(--text-single-200-regular-font-size);
+    letter-spacing: var(--text-single-200-regular-letter-spacing);
+    line-height: var(--text-single-200-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--text-single-200-regular-font-style);
+  }
+  
+  .pagina .footer-right {
+    position: absolute;
+    top: 66px;
+    left: 832px;
+    font-family: "DM Sans", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 18px;
+    text-align: right;
+    line-height: 18px;
+  }
+  
+  .pagina .span {
+    color: #9795b4;
+    letter-spacing: var(--text-single-200-regular-letter-spacing);
+    font-family: var(--text-single-200-regular-font-family);
+    font-style: var(--text-single-200-regular-font-style);
+    font-weight: var(--text-single-200-regular-font-weight);
+    line-height: var(--text-single-200-regular-line-height);
+    font-size: var(--text-single-200-regular-font-size);
+  }
+  
+  .pagina .text-wrapper-5 {
+    color: #acabc2;
+    letter-spacing: var(--rich-text-text-link-regular-letter-spacing);
+    line-height: var(--rich-text-text-link-regular-line-height);
+    text-decoration: underline;
+    font-family: var(--rich-text-text-link-regular-font-family);
+    font-style: var(--rich-text-text-link-regular-font-style);
+    font-weight: var(--rich-text-text-link-regular-font-weight);
+    font-size: var(--rich-text-text-link-regular-font-size);
+  }
+  
+  .pagina .wrapper-wrapper {
+    position: absolute;
+    width: 1440px;
+    height: 133px;
+    top: 0;
+    left: 0;
+    background-color: var(--neutral-colorswhite);
+    overflow: hidden;
+  }
+  
+  .pagina .overlap-group-wrapper {
+    position: relative;
+    height: 107px;
+    left: 21px;
+  }
+  
+  .pagina .cabecalho {
+    position: fixed;
+    width: 1440px;
+    height: 104px;
+    top: 0;
+    left: 0;
+  }
+  
+  .pagina .overlap-group-3 {
+    position: relative;
+    height: 104px;
+  }
+  
+  .pagina .div-wrapper {
+    position: absolute;
+    width: 1440px;
+    height: 104px;
+    top: 0;
+    left: 0;
+  }
+  
+  .pagina .cabecalho-pagina {
+    position: relative;
+    height: 104px;
+    background-color: #f9f8f8;
+  }
+  
+  .pagina .moldura-cabecalho {
+    display: flex;
+    width: 760px;
+    height: 39px;
+    align-items: flex-start;
+    gap: 52px;
+    position: absolute;
+    top: 31px;
+    left: 215px;
+  }
+  
+  .pagina .boto-produto {
+    display: inline-flex;
+    padding: 10px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  
+  .pagina .button {
+    all: unset;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: var(--colorsneutralblack);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .pagina .button-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .pagina .lupa-boto {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: -43.00px;
+  }
+  
+  .pagina .boto-decadastro {
+    display: flex;
+    width: 125px;
+    height: 39px;
+    padding: 10px 24px;
+    position: absolute;
+    top: 32px;
+    left: 1186px;
+    background-color: var(--colorsneutralblack);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  
+  .pagina .button-2 {
+    all: unset;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: var(--colorsneutralwhite);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .pagina .frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 9px;
+    left: 15px;
+  }
+  
+  .pagina .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    text-shadow: 0px 2px 4px #000000b8;
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .pagina .avatar {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    top: 25px;
+    left: 1344px;
+  }
+  
