@@ -1,590 +1,364 @@
-/* Estilos Gerais */
-.bg {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: #fff;
-    width: 1440px;
-    height: 4200px;
+/* Reset e Estilos Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.navegacao {
+  display: flex;
+  gap: 30px;
+}
+
+.navegacao a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navegacao a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.navegacao a:hover::after {
+  width: 100%;
+}
+
+.botoes-cabecalho {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.botao-cadastro {
+  padding: 10px 25px;
+  background: #000;
+  color: #fff!important;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.botao-cadastro:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Conteúdo Principal */
+.hero-section {
+  padding: 150px 100px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.conteudo-textual {
+  flex: 1;
+  max-width: 600px;
+}
+
+.titulo-principal {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.descricao {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.botoes-acao {
+  display: flex;
+  gap: 20px;
+}
+
+.botao-primario, .botao-secundario {
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.botao-primario {
+  background: linear-gradient(97deg, #000, #333);
+  color: #fff;
+  border: none;
+}
+
+.botao-secundario {
+  background: transparent;
+  color: #000;
+  border: 2px solid #666;
+}
+
+.conteudo-visual {
+  flex: 1;
+  position: relative;
+  max-width: 600px;
+  height: 500px;
+}
+
+.container-imagens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.laranja, .roxo, .imagem-principal {
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .laranja {
-    position: absolute;
-    top: 0px;
-    left: 0.06px;
-    border-radius: 10px;
-    width: 495.4px;
-    height: 525.8px;
-    object-fit: contain;
+  width: 85%;
+  height: 90%;
+  background: #ffa726;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .roxo {
-    position: absolute;
-    top: 21.84px;
-    left: 0.41px;
-    border-radius: 10px;
-    width: 440.8px;
-    height: 482.1px;
-    object-fit: contain;
+  width: 80%;
+  height: 85%;
+  background: #7e57c2;
+  top: 5%;
+  left: 10%;
+  z-index: 2;
 }
 
-.imagem-principal-cima {
-    position: absolute;
-    top: 54.57px;
-    left: 0px;
-    border-radius: 10px;
-    width: 362.1px;
-    height: 398px;
-    object-fit: cover;
+.imagem-principal {
+  width: 75%;
+  height: 80%;
+  object-fit: cover;
+  top: 10%;
+  left: 15%;
+  z-index: 3;
 }
 
-.imagens-cima {
-    position: absolute;
-    top: 0px;
-    left: 104px;
-    width: 495.4px;
-    height: 525.8px;
+/* Seção de Pagamentos */
+.secao-pagamentos {
+  padding: 50px 100px;
+  background: #f8f9fa;
 }
 
-.pagamentos {
-    position: absolute;
-    top: 371.95px;
-    left: 0px;
-    backdrop-filter: blur(29.69px);
-    border-radius: 7.42px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1.5px solid rgba(6, 19, 45, 0);
-    box-sizing: border-box;
-    width: 661.4px;
-    height: 127.7px;
+.titulo-pagamentos {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
-.posicionamento-pagamentos {
-    position: absolute;
-    top: 417.23px;
-    left: 469.55px;
-    width: 152.3px;
-    height: 27.2px;
-    overflow: hidden;
+.icones-pagamento {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.base-google-pay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    border-radius: 6px;
-    background-color: #fff;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
+.icone-pagamento {
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: 0.3s;
 }
 
-.googlepay-imagem {
-    position: absolute;
-    height: 42.92%;
-    width: 71.43%;
-    top: 32.11%;
-    right: 14.29%;
-    bottom: 24.98%;
-    left: 14.29%;
+.icone-pagamento:hover {
+  filter: none;
 }
 
-.google-pay {
-    position: absolute;
-    top: 410.34px;
-    left: 546px;
-    width: 70px;
-    height: 48px;
+/* Seção de Produtos */
+.secao-produtos {
+  padding: 100px;
 }
 
-.visa-icon {
-    position: absolute;
-    top: 410.34px;
-    left: 49px;
-    width: 70px;
-    height: 48px;
-    object-fit: cover;
+.titulo-produtos {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
 }
 
-.mastercard-icon {
-    position: absolute;
-    top: 410.34px;
-    left: 215px;
-    width: 70px;
-    height: 48px;
-    object-fit: contain;
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
 }
 
-.applepay-icon {
-    position: absolute;
-    top: 410.34px;
-    left: 383px;
-    width: 70px;
-    height: 48px;
-    object-fit: cover;
+.card-produto {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  position: relative;
 }
 
-.parte-decima {
-    position: absolute;
-    top: 0px;
-    left: 622px;
-    width: 658.4px;
-    height: 525.8px;
+.card-produto:hover {
+  transform: translateY(-10px);
 }
 
-.texto-1 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-size: 66.78px;
-    letter-spacing: 0.02em;
-    line-height: 122.02%;
-    display: inline-block;
-    width: 615px;
-    font-family: Poppins;
+.imagem-produto {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
-.texto-2 {
-    position: absolute;
-    top: 271px;
-    left: 0px;
-    font-size: 16.49px;
-    letter-spacing: 0.02em;
-    line-height: 152.02%;
-    display: inline-block;
-    width: 522px;
-    font-family: Poppins;
-}
-
-.qe-texto {
-    position: relative;
-    font-weight: 500;
-}
-
-.botao-1 {
-    position: absolute;
-    top: 384px;
-    left: 0px;
-    border-radius: 30px;
-    background: linear-gradient(97.86deg, #000000, #929292);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 32px;
-    cursor: pointer;
-    color: #fff;
-    font-family: Roboto;
-}
-
-.botao-2 {
-    position: absolute;
-    top: 384px;
-    left: 201px;
-    border-radius: 30px;
-    border: 3px solid #535353;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 32px;
-    cursor: pointer;
-    font-family: Roboto;
-}
-
-.texto-parte-decima {
-    position: absolute;
-    top: 12.34px;
-    left: 0px;
-    width: 615px;
-    height: 439px;
-}
-
-.main {
-    position: absolute;
-    top: 169.66px;
-    left: 80px;
-    width: 1280.4px;
-    height: 525.8px;
-}
-.titulo-produtos-2{
-    position: absolute;
-    top: 0px;
-    left: 330px;
-    letter-spacing: 0.01em;
-    line-height: 128.5%;
-    font-weight: 600;
-    font-family: Poppins;
-}
-.titulo-produtos-2 {
-    position: absolute;
-    top: 0px;
-    left: 330px;
-    letter-spacing: 0.01em;
-    line-height: 128.5%;
-    font-weight: 600;
-    font-family: Poppins;
-}
-
-
-
-.frame-child {
-    width: 276px;
-    position: relative;
-    border-radius: 14.01px;
-    height: 307px;
-    object-fit: cover;
-}
-
-.imagem-interna {
-    height: 313px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+.info-produto {
+  padding: 25px;
 }
 
 .nome-produto {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 15px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
-.preco-2 {
-    width: 87px;
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(97.86deg, #ff8d8d, #f7fc0e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    height: 22px;
-    flex-shrink: 0;
+.preco-produto {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
 }
-
-.preco-produtos {
-    position: absolute;
-    top: 3px;
-    left: 160px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 15px;
-}
-
-.frame-parent {
-    width: 200px;
-    position: relative;
-    height: 50px;
-}
-
-/* Estilos do Flip Card */
-.flip-card {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    perspective: 1200px; /* Mantém uma boa profundidade */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.7s ease-out; /* Melhor suavidade */
-    transform-style: preserve-3d;
-    will-change: transform; /* Otimiza a animação */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.flip-card-front {
-    background-color: #000;
-    color: white;
-}
-
-.flip-card-back {
-    background-color: #000;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-/* Estilos para o botão de comprar */
-.botao-comprar {
-    background: linear-gradient(97.86deg, #89c6ff, #3633d0);
-    border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    color: white;
-    font-family: Roboto;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.botao-comprar:hover {
-    background: linear-gradient(97.86deg, #3633d0, #89c6ff);
-}
-
-/* Ajustes para a grade de produtos */
-.sessão-produtos-2 {
-    position: absolute;
-    top: 2000px; /* Ajuste para ficar abaixo da sessão "Em alta da semana" */
-    left: 82px;
-    width: 1264px;
-    height: 910.6px;
-    font-size: 24px;
-    color: #fff;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-    grid-template-rows: repeat(2, 1fr); /* 2 linhas */
-    gap: 20px; /* Espaçamento entre os produtos */
-}
-
-
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .sessão-produtos-2 {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
-        grid-template-rows: repeat(4, 1fr); /* 4 linhas em telas menores */
-    }
+@media (max-width: 1200px) {
+  .hero-section {
+    padding: 150px 50px 100px;
+  }
+  
+  .titulo-principal {
+    font-size: 3rem;
+  }
 }
-/* Cabeçalho fixo */
+
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+  
+  .botoes-acao {
+    justify-content: center;
+  }
+  
+  .conteudo-visual {
+    height: 400px;
+    max-width: 500px;
+  }
+  
+  .secao-produtos, .secao-pagamentos {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 768px) {
   .cabecalho {
-    position: fixed;
-    width: 1440px;
-    height: 104px;
-    top: 0;
-    left: 1px;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    gap: 15px;
   }
   
-  /* Sobreposição do cabeçalho */
-  .sobreposicao-2 {
-    position: relative;
-    height: 104px;
+  .navegacao {
+    display: none;
   }
   
-  /* Itens do cabeçalho */
-  .itens-cabecalho {
-    position: absolute;
-    width: 1440px;
-    height: 104px;
-    top: 0;
-    left: 0;
+  .titulo-principal {
+    font-size: 2.2rem;
   }
   
-  /* Estilo do cabeçalho da página */
-  .cabecalho-pagina {
-    position: relative;
-    height: 100px;
-    background-color: transparent;
+  .descricao {
+    font-size: 1rem;
   }
   
-  /* Moldura no cabeçalho */
-  .moldura-cabecalho {
-    display: flex;
-    width: 760px;
-    height: 10px;
-    align-items: flex-start;
-    gap: 52px;
-    position: absolute;
-    top: 31px;
-    left: 215px;
+  .conteudo-visual {
+    height: 350px;
   }
   
-  /* Botão de produto no cabeçalho */
-  .boto-produto {
-    display: inline-flex;
-    padding: 0px 0px;
-    position: relative;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
+  .secao-produtos, .secao-pagamentos {
+    padding: 30px;
   }
   
-  /* Botão no cabeçalho */
-  .botao_cabecalho {
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter", Helvetica;
-    font-weight: 700;
-    color: var(--colorsneutralblack);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
+  .grid-produtos {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 100px 20px 50px;
   }
   
-  /* Envolvimento do botão no cabeçalho */
-  .button-wrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 0px;
-    position: relative;
-    flex: 0 0 auto;
+  .titulo-principal {
+    font-size: 1.8rem;
   }
   
-  /* Lupa no cabeçalho */
-  .lupa-boto {
-    position: relative;
-    flex: 0 0 auto;
-    margin-right: -43.00px;
+  .botao-primario, .botao-secundario {
+    padding: 12px 25px;
+    font-size: 0.9rem;
   }
   
-  /* Botão de cadastro no cabeçalho */
- .boto-decadastro {
-    display: flex;
-    width: 125px;
-    height: 39px;
-    padding: 10px 24px;
-    position: absolute;
-    top: 32px;
-    left: 1186px;
-    background-color: var(--colorsneutralblack);
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
+  .icones-pagamento {
+    gap: 25px;
   }
   
-  /* Texto do botão de cadastro */
-  .button-3 {
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter", Helvetica;
-    font-weight: 700;
-    color: var(--colorsneutralwhite);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
+  .icone-pagamento {
+    width: 60px;
+    height: 40px;
   }
   
-  /* Estilo da logo */
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    position: absolute;
-    top: 9px;
-    left: 15px;
+  .secao-produtos {
+    padding: 30px 15px;
   }
   
-  /* Texto da logo */
-  .logo-texto {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    text-shadow: 0px 2px 4px #000000b8;
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
+  .grid-produtos {
+    grid-template-columns: 1fr;
   }
-  
-  /* Avatar no cabeçalho */
-  .avatar {
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    top: 25px;
-    left: 1344px;
-  }
-  
-  /* Efeito hover sobre a logo */
-  .logo {
-    display: inline-block;
-    transition: all 0.3s ease-out;
-  }
-  
-  .logo:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Botões com transição */
-  .botao_cabecalho {
-    position: relative;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    padding: 10px;
-    transition: color 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .botao_cabecalho::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 3px;
-    background-color: rgb(133, 133, 133); /* Cor da linha */
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .botao_cabecalho:hover {
-    color: rgb(133, 133, 133); /* Muda a cor do texto */
-  }
-  
-  .botao_cabecalho:hover::after {
-    width: 100%; /* Expande a linha ao passar o mouse */
-  }
-  
-  /* Botão de cadastro */
-  .boto-decadastro {
-    background-color: #000000; /* Cor de fundo azul */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Suaviza a transição */
-  }
-  
-  .boto-decadastro:hover {
-    background-color: #000000; /* Muda a cor ao passar o mouse */
-    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
-  }
+}
