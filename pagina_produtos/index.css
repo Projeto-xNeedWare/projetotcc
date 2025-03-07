@@ -1,670 +1,532 @@
-/* Estilos Gerais */
+/* ==================== SEÇÃO DE PAGAMENTOS ==================== */
+.pagamentos {
+  position: absolute;
+  top: 371.95px;
+  left: 0px;
+  backdrop-filter: blur(29.69px);
+  border-radius: 7.42px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(6, 19, 45, 0);
+  width: 661.4px;
+  height: 127.7px;
+  z-index: 5;
+}
+
+.posicionamento-pagamentos {
+  position: absolute;
+  top: 417.23px;
+  left: 469.55px;
+  width: 152.3px;
+  height: 27.2px;
+  overflow: hidden;
+}
+
+.base-google-pay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.googlepay-imagem {
+  position: absolute;
+  height: 42.92%;
+  width: 71.43%;
+  top: 32.11%;
+  left: 14.29%;
+}
+
+/* Ícones de pagamento */
+.google-pay {
+  position: absolute;
+  top: 410.34px;
+  left: 546px;
+  width: 70px;
+  height: 48px;
+  z-index: 6;
+}
+
+.visa-icon {
+  position: absolute;
+  top: 410.34px;
+  left: 49px;
+  width: 70px;
+  height: 48px;
+  object-fit: cover;
+  z-index: 6;
+}
+
+.mastercard-icon {
+  position: absolute;
+  top: 410.34px;
+  left: 215px;
+  width: 70px;
+  height: 48px;
+  object-fit: contain;
+  z-index: 6;
+}
+
+.applepay-icon {
+  position: absolute;
+  top: 410.34px;
+  left: 383px;
+  width: 70px;
+  height: 48px;
+  object-fit: cover;
+  z-index: 6;
+}
+
+/* ==================== ESTILOS GERAIS ==================== */
 @font-face {
   font-family: "San Francisco";
   src: url("fonts/SF-Pro-Display-Regular.otf") format("opentype");
 }
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
   background-color: #fff;
-  width: 100vw; /* Agora ocupa toda a largura da tela */
-  min-height: 100vh; /* Ajusta a altura mínima */
+  overflow-x: hidden;
 }
 
-.laranja {
-    position: absolute;
-    top: 0px;
-    left: 0.06px;
-    border-radius: 10px;
-    width: 495.4px;
-    height: 525.8px;
-    object-fit: contain;
-    align-self: start;
+/* ==================== CABEÇALHO ==================== */
+.cabecalho {
+  position: absolute;
+  width: 100%;
+  height: 104px;
+  top: 0;
+  left: 1px;
+  background-color: transparent;
+  z-index: 1000;
 }
 
-.roxo {
-    position: absolute;
-    top: 21.84px;
-    left: 0.41px;
-    border-radius: 10px;
-    width: 440.8px;
-    height: 482.1px;
-    object-fit: contain;
+.itens-cabecalho {
+  position: absolute;
+  width: 1440px;
+  height: 104px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.imagem-principal-cima {
-    position: absolute;
-    top: 54.57px;
-    left: 0px;
-    border-radius: 10px;
-    width: 362.1px;
-    height: 398px;
-    object-fit: cover;
+.logo {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  padding: 10px;
 }
 
-.imagens-cima {
-    position: absolute;
-    top: 0px;
-    left: 104px;
-    width: 495.4px;
-    height: 525.8px;
+.logo-texto {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
 }
 
-.pagamentos {
-    position: absolute;
-    top: 371.95px;
-    left: 0px;
-    backdrop-filter: blur(29.69px);
-    border-radius: 7.42px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1.5px solid rgba(6, 19, 45, 0);
-    box-sizing: border-box;
-    width: 661.4px;
-    height: 127.7px;
+.moldura-cabecalho {
+  display: flex;
+  width: 760px;
+  gap: 52px;
+  position: absolute;
+  top: 31px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.posicionamento-pagamentos {
-    position: absolute;
-    top: 417.23px;
-    left: 469.55px;
-    width: 152.3px;
-    height: 27.2px;
-    overflow: hidden;
+.botao_cabecalho {
+  all: unset;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
-.base-google-pay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    border-radius: 6px;
-    background-color: #fff;
-    border: 1px solid #d9d9d9;
-    box-sizing: border-box;
+.botao_cabecalho::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: #858585;
+  transition: width 0.5s ease;
 }
 
-.googlepay-imagem {
-    position: absolute;
-    height: 42.92%;
-    width: 71.43%;
-    top: 32.11%;
-    right: 14.29%;
-    bottom: 24.98%;
-    left: 14.29%;
+.botao_cabecalho:hover {
+  color: #858585;
 }
 
-.google-pay {
-    position: absolute;
-    top: 410.34px;
-    left: 546px;
-    width: 70px;
-    height: 48px;
+.botao_cabecalho:hover::after {
+  width: 100%;
 }
 
-.visa-icon {
-    position: absolute;
-    top: 410.34px;
-    left: 49px;
-    width: 70px;
-    height: 48px;
-    object-fit: cover;
+.boto-decadastro {
+  position: absolute;
+  top: 32px;
+  left: 1186px;
+  background: #000;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
 }
 
-.mastercard-icon {
-    position: absolute;
-    top: 410.34px;
-    left: 215px;
-    width: 70px;
-    height: 48px;
-    object-fit: contain;
+.boto-decadastro:hover {
+  transform: scale(1.1);
 }
 
-.applepay-icon {
-    position: absolute;
-    top: 410.34px;
-    left: 383px;
-    width: 70px;
-    height: 48px;
-    object-fit: cover;
+.avatar {
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  top: 25px;
+  left: 98%;
+}
+
+/* ==================== SEÇÃO PRINCIPAL ==================== */
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1280.4px;
+  height: 525.8px;
+  transform: translate(-50%, -50%);
 }
 
 .parte-decima {
-    position: absolute;
-    top: 0px;
-    left: 622px;
-    width: 658.4px;
-    height: 525.8px;
+  position: absolute;
+  top: 0;
+  left: 622px;
+  width: 658.4px;
+  height: 525.8px;
+}
+
+.imagens-cima {
+  position: absolute;
+  top: 0;
+  left: 104px;
+  width: 495.4px;
+  height: 525.8px;
+}
+
+.laranja {
+  position: absolute;
+  top: 0;
+  left: 0.06px;
+  width: 495.4px;
+  height: 525.8px;
+  object-fit: contain;
+}
+
+.roxo {
+  position: absolute;
+  top: 21.84px;
+  left: 0.41px;
+  width: 440.8px;
+  height: 482.1px;
+  object-fit: contain;
+}
+
+.imagem-principal-cima {
+  position: absolute;
+  top: 54.57px;
+  left: 0;
+  width: 362.1px;
+  height: 398px;
+  object-fit: cover;
+}
+
+.texto-parte-decima {
+  position: absolute;
+  top: 12.34px;
+  left: 0;
+  width: 615px;
+  height: 439px;
 }
 
 .texto-1 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-size: 66.78px;
-    letter-spacing: 0.02em;
-    line-height: 122.02%;
-    display: inline-block;
-    width: 615px;
-    font-family: Poppins;
+  font-size: 66.78px;
+  letter-spacing: 0.02em;
+  line-height: 122.02%;
+  font-weight: 600;
 }
 
 .texto-2 {
-    position: absolute;
-    top: 271px;
-    left: 0px;
-    font-size: 16.49px;
-    letter-spacing: 0.02em;
-    line-height: 152.02%;
-    display: inline-block;
-    width: 522px;
-    font-family: Poppins;
+  position: absolute;
+  top: 271px;
+  font-size: 16.49px;
+  letter-spacing: 0.02em;
+  line-height: 152.02%;
+  width: 522px;
 }
 
-.qe-texto {
-    position: relative;
-    font-weight: 500;
+/* ==================== BOTÕES PRINCIPAIS ==================== */
+.botao-1, .botao-2 {
+  position: absolute;
+  top: 384px;
+  border-radius: 30px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .botao-1 {
-  position: absolute;
-  top: 384px;
-  left: 0px;
-  border-radius: 30px;
-  background: linear-gradient(97.86deg, #000000, #929292);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  cursor: pointer;
-  color: #fff;
-  font-family: Roboto;
-  transition: transform 0.3s ease-out; /* Transição para o aumento do botão */
-}
-
-.botao-1:hover {
-  background: linear-gradient(97.86deg, #333333, #929292); /* Alteração da cor do gradiente ao passar o mouse */
-  transform: scale(1.1); /* Aumenta o tamanho do botão */
-  transition: background 0.3s ease-out, transform 0.3s ease-out;
-}
-
-/* Adicionando uma linha ao estilo similar ao ::after */
-.botao-1::after {
-  content: "";
-  position: absolute;
   left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 3px;
-  
-  transition: width 0.5s ease-out, transform 0.5s ease-out; /* Transição para a linha */
-}
-
-.botao-1:hover::after {
-  width: 100%;
-  transform: scale(1, 1); /* A linha aparece aumentando horizontalmente */
+  background: linear-gradient(97.86deg, #000000, #929292);
+  color: #fff;
 }
 
 .botao-2 {
-  position: absolute;
-  top: 384px;
   left: 201px;
-  border-radius: 30px;
   border: 3px solid #535353;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  cursor: pointer;
-  font-family: Roboto;
-  transition: transform 0.3s ease-out; /* Transição para o aumento do botão */
-}
-
-.botao-2:hover {
-  background-color: #fff;
   color: #000;
-  transform: scale(1.1); /* Aumenta o tamanho do botão */
-  transition: background-color 0.3s ease-out, color 0.3s ease-out, transform 0.3s ease-out;
 }
 
-.botao-2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 3px;
-  
-  transition: width 0.5s ease-out, transform 0.5s ease-out; /* Adiciona transição para a linha */
+.botao-1:hover, .botao-2:hover {
+  transform: scale(1.1);
 }
 
-.botao-2:hover::after {
-  width: 100%;
-  transform: scale(1, 1); /* A linha aparece aumentando horizontalmente */
-}
-  
-
-
-.texto-parte-decima {
-    position: absolute;
-    top: 12.34px;
-    left: 0px;
-    width: 615px;
-    height: 439px;
-}
-
-.main {
-    position: absolute;
-    top: 169.66px;
-    left: 80px;
-    width: 1280.4px;
-    height: 525.8px;
-}
+/* ==================== SEÇÃO DE PRODUTOS ==================== */
 .titulo-produtos-2 {
   position: absolute;
   top: 800px;
   left: 50%;
   transform: translateX(-50%);
-  letter-spacing: 0.01em;
-  line-height: 128.5%;
-  font-weight: 600;
-  font-family: Poppins;
   font-size: 50px;
-}
-
-.nome-produtos {
-    font-family: Poppins;  /* Fonte simples e legível */
-    font-weight: 600;                /* Deixa o texto mais forte */
-    font-size: 40x;                /* Tamanho grande, mas não exagerado */
-    line-height: 1.0;                 /* Espaçamento entre as linhas */
-    color: #000000;                      /* Cor escura para boa legibilidade */
-    text-transform: capitalize;       /* Coloca a primeira letra de cada palavra em maiúsculo */
-    letter-spacing: 0.0px;            /* Um pequeno espaçamento entre as letras */
-    margin: 0;                        /* Remove a margem extra */
-    padding: 10px 20px;                  /* Espaçamento superior e inferior */
-    text-align: start;               /* Alinha o título ao centro */
-  
-  }
-
-  
-
-
-.frame-child {
-    width: 276px;
-    position: relative;
-    border-radius: 14.01px;
-    height: 307px;
-    object-fit: cover;
-}
-
-.imagem-interna {
-  width: 100%; /* Ou um tamanho fixo, ex: 300px */
-  height: 313px; /* Garante que a imagem terá esse limite */
-  overflow: hidden; /* Corta qualquer parte da imagem que ultrapasse */
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.imagem-interna img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Preenche todo o espaço cortando excessos */
-}
-
-
-.nome-produto {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 15px;
-    font-family: Poppins;
-}
-
-.preco-2 {
-    width: 87px;
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(97.86deg, #000000, #000000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    height: 100px;
-    flex-shrink: 0;
-    font-family: Poppins;
-    font-size: 20px;
-}
-
-.preco-produtos {
-    position: absolute;
-    top: 3px;
-    left: 160px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 15px;
-}
-
-.frame-parent {
-    width: 200px;
-    position: relative;
-    height: 10px;
-    
-}
-
-/* Estilos do Flip Card */
-.flip-card {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    perspective: 1200px; /* Mantém uma boa profundidade */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.7s ease-out; /* Melhor suavidade */
-    transform-style: preserve-3d;
-    will-change: transform; /* Otimiza a animação */
-    border-radius: 50px;
-}
-    
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.flip-card-front {
-    
-    color: white;
-    background: blur(10px);
-}
-
-.flip-card-back {
-    background-color: #000;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-/* Estilos para o botão de comprar */
-.botao-comprar {
-    background: linear-gradient(97.86deg, #89c6ff, #3633d0);
-    border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    color: white;
-    font-family: Roboto;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.botao-comprar:hover {
-    background: linear-gradient(97.86deg, #3633d0, #89c6ff);
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .sessão-produtos-2 {
   position: absolute;
   top: 900px;
-  left: 50%; /* Posiciona a sessão no centro horizontal */
-  transform: translateX(-50%); /* Ajusta para que o centro da sessão fique alinhado ao centro do contêiner */
-  width: 1400px;
-  height:800px;
-  font-size: 24px;
-  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 800px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-  grid-template-rows: repeat(2, 1fr); /* 2 linhas */
-  gap: 20px; /* Espaçamento entre os produtos */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 
-
-
-
-/* Responsividade */
-@media (max-width: 500px) {
-    .sessão-produtos-2 {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
-        grid-template-rows: repeat(4, 1fr); /* 4 linhas em telas menores */
-    }
+/* ==================== FLIP CARD ==================== */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
 }
-/* Cabeçalho fixo */
-  .cabecalho {
-    position: fixed;
-    width: 1440px;
-    height: 90px;
-    top: 0;
-    left: 1px;
-    background-color: #ffffff;
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease-out;
+  transform-style: preserve-3d;
+  border-radius: 50px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+.flip-card-back {
+  background: transparent;
+  transform: rotateY(180deg);
+  
+}
+/* ==================== INFORMAÇÕES DO PRODUTO (FLIP CARD BACK) ==================== */
+.informacoes-produto {
+  color: #1d1d1f;
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  line-height: 1.14;
+  margin-top: 0;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.informacoes-produto p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  color: #666;
+  max-width: 80%;
+  margin: 30;
+}
+
+/* Ajustes para o flip card back */
+.flip-card-back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+  justify-content: space-between;
+  padding: 40px 30px;
+}
+
+/* Versão mobile */
+@media (max-width: 768px) {
+  .informacoes-produto {
+      font-size: 22px;
+      padding-top: 15px;
   }
   
-  /* Sobreposição do cabeçalho */
-  .sobreposicao-2 {
-    position: relative;
-    height: 104px;
+  .informacoes-produto p {
+      font-size: 16px;
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .informacoes-produto {
+      font-size: 20px;
+      gap: 15px;
   }
   
-  /* Itens do cabeçalho */
+  .informacoes-produto p {
+      font-size: 14px;
+  }
+}
+
+.imagem-interna {
+  width: 100%;
+  height: 313px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.imagem-interna img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nome-produtos {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.preco-2 {
+  font-size: 20px;
+  background: linear-gradient(97.86deg, #000, #000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.botao-comprar {
+  background: linear-gradient(97.86deg, #ffffff, #ffffff);
+  color: #000000;
+  box-shadow: #000;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-comprar:hover {
+  transform: scale(1.1);
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 1440px) {
   .itens-cabecalho {
-    position: absolute;
-    width: 1440px;
-    height: 104px;
-    top: 0;
-    left: 0;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  
-  /* Estilo do cabeçalho da página */
-  .cabecalho-pagina {
-    position: relative;
-    height: 100px;
-    background-color: transparent;
-  }
-  
-  /* Moldura no cabeçalho */
-  .moldura-cabecalho {
-    display: flex;
-    width: 760px;
-    height: 10px;
-    align-items: flex-start;
-    gap: 52px;
-    position: absolute;
-    top: 31px;
-    left: 215px;
-  }
-  
-  /* Botão de produto no cabeçalho */
-  .boto-produto {
-    display: inline-flex;
-    padding: 0px 0px;
-    position: relative;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  
-  /* Botão no cabeçalho */
-  .botao_cabecalho {
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter", Helvetica;
-    font-weight: 700;
-    color: var(--colorsneutralblack);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  /* Envolvimento do botão no cabeçalho */
-  .button-wrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 0px;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  
-  /* Lupa no cabeçalho */
-  .lupa-boto {
-    position: relative;
-    flex: 0 0 auto;
-    margin-right: -43.00px;
-  }
-  
-  /* Botão de cadastro no cabeçalho */
-.boto-decadastro {
-    display: flex;
-    width: 125px;
-    height: 39px;
-    padding: 10px 24px;
-    position: absolute;
-    top: 32px;
-    left: 1186px;
-    background-color: var(--colorsneutralblack);
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 6px;
-  }
-  
-  /* Texto do botão de cadastro */
-  .button-3 {
-    all: unset;
-    box-sizing: border-box;
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Inter", Helvetica;
-    font-weight: 700;
-    color: var(--colorsneutralwhite);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  /* Estilo da logo */
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    position: absolute;
-    top: 9px;
-    left: 15px;
-  }
-  
-  /* Texto da logo */
-  .logo-texto {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    text-shadow: 0px 2px 4px #000000b8;
-    font-family: "Poppins", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  /* Avatar no cabeçalho */
-  .avatar {
-    position: absolute;
-    width: 51px;
-    height: 51px;
-    top: 25px;
-    left: 1344px;
-  }
-  
-  /* Efeito hover sobre a logo */
-  .logo {
-    display: inline-block;
-    transition: all 0.3s ease-out;
-  }
-  
-  .logo:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Botões com transição */
-  .botao_cabecalho {
-    position: relative;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    padding: 10px;
-    transition: color 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .botao_cabecalho::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 3px;
-    background-color: rgb(133, 133, 133); /* Cor da linha */
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .botao_cabecalho:hover {
-    color: rgb(133, 133, 133); /* Muda a cor do texto */
-  }
-  
-  .botao_cabecalho:hover::after {
-    width: 100%; /* Expande a linha ao passar o mouse */
-  }
-  
-  /* Botão de cadastro */
-  .boto-decadastro {
-    background-color: #000000; /* Cor de fundo azul */
-    color: white;
-    padding: 0px 0px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Suaviza a transição */
-  }
-  
-  .boto-decadastro:hover {
-    background-color: #000000; /* Muda a cor ao passar o mouse */
-    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
-  }
+}
 
+@media (max-width: 1200px) {
+  .main {
+    width: 90%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .parte-decima {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sessão-produtos-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .texto-1 {
+    font-size: 40px;
+  }
+  
+  .sessão-produtos-2 {
+    grid-template-columns: repeat(2, 1fr);
+    top: 950px;
+  }
+  
+  .moldura-cabecalho {
+    width: 90%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sessão-produtos-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .botao-1, .botao-2 {
+    width: 80%;
+    left: 10% !important;
+  }
+  
+  .botao-2 {
+    top: 450px;
+  }
+}
