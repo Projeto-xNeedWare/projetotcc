@@ -132,6 +132,11 @@ body {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
 }
 
+.logo-texto:hover {
+  text-shadow: 0px 2px 4px #000000b8;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
 .moldura-cabecalho {
   display: flex;
   width: 760px;
@@ -176,16 +181,43 @@ body {
   position: absolute;
   top: 32px;
   left: 1186px;
-  background: #000;
+  background: #000; /* Preto sólido */
   color: #fff;
-  padding: 10px 24px;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
+  padding: 12px 26px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 20px; /* Cantos mais arredondados */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
 }
 
 .boto-decadastro:hover {
-  transform: scale(1.1);
+  background: #333; /* Preto levemente mais claro */
+  transform: scale(1.05);
 }
+
+.boto-decadastro:active {
+  transform: scale(0.98);
+}
+.button-3 {
+  background: #000; /* Preto sólido */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 20px; /* Bordas arredondadas no estilo Apple */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 
 .avatar {
   position: absolute;
@@ -276,10 +308,12 @@ body {
 .botao-1, .botao-2 {
   position: absolute;
   top: 384px;
-  border-radius: 30px;
-  padding: 16px 32px;
+  border-radius: 20px; /* Menos arredondado para um design mais moderno */
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,24 +321,35 @@ body {
 
 .botao-1 {
   left: 0;
-  background: linear-gradient(97.86deg, #000000, #929292);
+  background: #000; /* Preto sólido */
   color: #fff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .botao-2 {
   left: 201px;
-  border: 3px solid #535353;
+  background: #f5f5f7; /* Cinza bem claro */
+  border: 2px solid rgba(0, 0, 0, 0.3);
   color: #000;
 }
 
-.botao-1:hover, .botao-2:hover {
-  transform: scale(1.1);
+.botao-1:hover {
+  background: #333; /* Um preto um pouco mais claro */
+}
+
+.botao-2:hover {
+  background: #e5e5e7; /* Cinza um pouco mais escuro */
+}
+
+.botao-1:active, .botao-2:active {
+  transform: scale(0.98);
 }
 
 /* ==================== SEÇÃO DE PRODUTOS ==================== */
 .titulo-produtos-2 {
   position: absolute;
-  top: 800px;
+  top: 1000px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
@@ -314,7 +359,7 @@ body {
 
 .sessão-produtos-2 {
   position: absolute;
-  top: 900px;
+  top: 1200px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -374,7 +419,7 @@ body {
 .informacoes-produto {
   color: #1d1d1f;
   font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 600;
   letter-spacing: 0.007em;
   line-height: 1.14;
@@ -389,7 +434,7 @@ body {
 }
 
 .informacoes-produto p {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.005em;
@@ -458,19 +503,28 @@ body {
 }
 
 .botao-comprar {
-  background: linear-gradient(97.86deg, #ffffff, #ffffff);
-  color: #000000;
-  box-shadow: #000;
-  box-sizing: border-box;
-  border-radius: 30px;
-  padding: 5px 20px;
+  background: #f5f5f7; /* Cinza claro, similar ao usado pela Apple */
+  color: #000;
+  border: none;
+  border-radius: 16px; /* Cantos levemente arredondados */
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .botao-comprar:hover {
-  transform: scale(1.1);
+  background: #e5e5e7; /* Um cinza um pouco mais escuro no hover */
 }
+
+.botao-comprar:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
 
 /* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 1440px) {
