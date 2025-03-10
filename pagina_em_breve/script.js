@@ -9,6 +9,6 @@ var voltarInicio = document.getElementById("voltarInicio");
 			if(xNeedWareText) {
 				xNeedWareText.addEventListener("click", function (e) {
 					e.preventDefault();
-					window.open("main_page/index.html");
+					window.open("pagina_inicial/index.html");
 				});
 			}

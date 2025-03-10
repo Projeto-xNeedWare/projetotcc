@@ -1,23 +1,23 @@
+// Função para adicionar evento de clique em botões
 function addClickEvent(selector, url) {
-    var element = document.querySelector(selector);
-    if (element) {
-        element.addEventListener("click", function () {
-            window.location.href = url;
-        });
-    }
-}
+	var elements = document.querySelectorAll(selector); // Usa querySelectorAll para pegar todos os elementos
+	elements.forEach(function (element) {
+	  element.addEventListener("click", function () {
+		window.location.href = url; // Redireciona para a URL
+	  });
+	});
+  }
+  
+  // Adicionando eventos aos botões
+  addClickEvent(".boto-produto", "../pagina_produtos/index.html");
+  addClickEvent(".boto-funcionalidades", "../pagina_funcionalidades/index.html");
+  addClickEvent(".boto-assinaturas", "../pagina_assinaturas/index.html");
+  addClickEvent(".boto-contatos", "../pagina_contatos/index.html");
+  addClickEvent(".boto-embreve", "../pagina_em_breve/index.html");
+  addClickEvent(".boto-decadastro", "../pagina_cadastro/index.html");
+  addClickEvent(".text-wrapper-6", "../pagina_inicial/index.html"); // Texto "xNeedWare"
+  addClickEvent(".avatar", "../pagina_login/login.html"); // Ícone de avatar (login)
+  addClickEvent(".text-wrapper-2", "../pagina_produtos/index.html"); // Texto "xNeedWare"
+  addClickEvent(".botao-2", "../pagina_em_breve/index.html");
 
-// Adicionando eventos aos botões de compra
-addClickEvent("#comprar_container", "../pagina_pagamento/index.html");
-addClickEvent("#comprar_container", "../pagina_pagamento/index.html");
-addClickEvent("#comprar_container", "../pagina_pagamento/index.html");
-
-// Adicionando eventos aos botões do cabeçalho
-addClickEvent("#botoProdutoContainer", "../pagina_produtos/index.html");
-addClickEvent("#botoFuncionalidadesContainer", "../pagina_funcionalidades/index.html");
-addClickEvent("#botoAssinaturasContainer", "../pagina_assinaturas/index.html");
-addClickEvent("#botoContatosContainer", "../pagina_contatos/index.html");
-addClickEvent("#botoEmBreveContainer", "../pagina_em_breve/embreve.html");
-addClickEvent("#botoDecadastroContainer", "../pagina_cadastro/index.html");
-addClickEvent("#xNeedWareText", "../pagina_inicial/index.html"); // Texto "xNeedWare"
-addClickEvent("#avatar", "../pagina_login/login.html"); // Ícone de avatar (login)
+  

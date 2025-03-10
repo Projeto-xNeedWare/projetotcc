@@ -1,195 +1,129 @@
-.cabecalho-pagina-principal {
+/* ==================== CABEÇALHO ==================== */
+.cabecalho {
     position: absolute;
-    top: -4px;
-    left: 0px;
-    background-color: #fff;
+    width: 100%;
+    height: 104px;
+    top: 0;
+    left: 1px;
+    background-color: transparent;
+    z-index: 1000;
+  }
+  
+  .itens-cabecalho {
+    position: absolute;
     width: 1440px;
     height: 104px;
-    overflow: hidden;
-    font-size: 16px;
-    color: #131313;
-    font-family: Inter;
-}
-
-.button {
-    position: relative;
-}
-
-.boto-produto {
-    border-radius: 6px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    cursor: pointer;
-}
-
-.boto-funcionalidades {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    cursor: pointer;
-}
-
-.boto-assinaturas {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    cursor: pointer;
-}
-
-.boto-contatos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    cursor: pointer;
-}
-
-.boto-embreve {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.button4 {
-    position: relative;
-    cursor: pointer;
-}
-
-.lupa-boto {
-    width: 101px;
-    height: 39px;
-}
-
-.moldura-cabecalho {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .logo {
     position: absolute;
-    top: calc(50% - 21px);
-    left: calc(50% - 505px);
-    width: 760px;
-    height: 39px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 52px;
-}
-
-.boto-decadastro {
-    position: absolute;
-    top: calc(50% - 20px);
-    right: 129px;
-    border-radius: 6px;
-    background-color: #131313;
-    width: 125px;
-    height: 39px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 24px;
-    box-sizing: border-box;
-    cursor: pointer;
-    color: #fff;
-}
-
-.xneedware {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: Poppins;
-    text-align: center;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Animação suave */
-}
-
-/* Efeito de zoom quando passa o mouse sobre o texto */
-.xneedware:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do texto */
-}
-
-.avatar-icon {
-    position: absolute;
-    top: 25px;
-    left: 1344px;
-    border-radius: 100px;
-    width: 51px;
-    height: 51px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-
-/* Animações para o botão */
-.button {
-    position: relative;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
+    top: 9px;
+    left: 0;
     padding: 10px;
-    transition: color 0.3s ease-in-out;
+  }
+  
+  .logo-texto {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+  }
+  
+  .logo-texto:hover {
+    text-shadow: 0px 2px 4px #000000b8;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .moldura-cabecalho {
+    display: flex;
+    width: 760px;
+    gap: 52px;
+    position: absolute;
+    top: 31px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .botao_cabecalho {
+    all: unset;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
     cursor: pointer;
-}
-
-.button::after {
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .botao_cabecalho::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -3px;
     width: 0;
     height: 3px;
-    background-color: blue; /* Cor da linha */
-    transition: width 0.3s ease-in-out;
-}
-
-.button:hover {
-    color: blue; /* Muda a cor do texto */
-}
-
-.button:hover::after {
-    width: 100%; /* Expande a linha ao passar o mouse */
-}
-.boto-decadastro {
-    background-color: #000000; /* Cor de fundo azul */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
+    background-color: #858585;
+    transition: width 0.5s ease;
+  }
+  
+  .botao_cabecalho:hover {
+    color: #858585;
+  }
+  
+  .botao_cabecalho:hover::after {
+    width: 100%;
+  }
+  
+  .boto-decadastro {
+    position: absolute;
+    top: 32px;
+    left: 1186px;
+    background: #000; /* Preto sólido */
+    color: #fff;
+    padding: 12px 26px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px; /* Cantos mais arredondados */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: none;
     cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Suaviza a transição */
-}
-
-.boto-decadastro:hover {
-    background-color: #000000; /* Muda a cor ao passar o mouse */
-    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
-}
-
-.conect-wallet-wrapper,
-.conect-wallet-container {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
+  }
+  
+  .boto-decadastro:hover {
+    background: #333; /* Preto levemente mais claro */
+    transform: scale(1.05);
+  }
+  
+  .boto-decadastro:active {
+    transform: scale(0.98);
+  }
+  .button-3 {
+    background: #000; /* Preto sólido */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px; /* Bordas arredondadas no estilo Apple */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: none;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Apenas suaviza o zoom */
-}
-
-.conect-wallet-wrapper:hover,
-.conect-wallet-container:hover {
-    transform: scale(1.1); /* Apenas aumenta de tamanho */
-}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  
+  .avatar {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    top: 25px;
+    left: 98%;
+  }

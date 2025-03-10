@@ -33,7 +33,7 @@ function typingEffect() {
 
   
   // Busca o elemento com a classe "typedtext"
-  const typedtext = document.getElementsByClassName("typedtext")[0];
+  const typedtext = document.getElementsByClassName("textoDigitado")[0];
   
   // Define as variáveis de controle
   let removing = false;

@@ -200,7 +200,6 @@
     position: absolute;
     top: 94px;
     left: 915px;
-    backdrop-filter: blur(4px);
     border-radius: 15px;
     background-color: #f0f0f0;
     width: 503px;
