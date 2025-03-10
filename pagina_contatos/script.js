@@ -78,7 +78,7 @@ function typingEffect() {
       removing = false;
     }
 
-  }, 150); // Velocidade da animação (150ms)
+  }, 90); // Velocidade da animação (150ms)
 }
 
 // Chama a função typingEffect

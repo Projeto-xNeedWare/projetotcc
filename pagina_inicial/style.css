@@ -186,8 +186,6 @@
   position: absolute;
   height: 789px;
   top: 1772px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Caixa 1 na parte inferior */
@@ -251,10 +249,10 @@
 }
 
 /* Título das caixas */
-.pagina-inicial .titulo-caixa {
+.titulo-caixa {
   position: absolute;
-  top: 29px;
-  left: 310px;
+  top: -200px;
+  left: 500px;
   font-family: "Poppins", Helvetica;
   font-weight: 700;
   color: #000000;
@@ -570,3 +568,4 @@
     left: 0;
   }
 }
+
