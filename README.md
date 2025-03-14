@@ -10,6 +10,3 @@
 - [🔑 Página Login](https://projeto-xneedware.github.io/projetotcc/pagina_login/)  
 - [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/pagina_pagamento/)  
 - [🛍️ Página Produtos](https://projeto-xneedware.github.io/projetotcc/pagina_produtos/)  
-
-Acesse o projeto completo aqui:  
-🔗 **[Projeto no GitHub Pages](https://projeto-xneedware.github.io/projetotcc/)** 🚀  
