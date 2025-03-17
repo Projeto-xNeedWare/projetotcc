@@ -421,26 +421,20 @@ body {
   padding: 0;
 }
 
-/* Estrutura principal */
-body {
-  font-family: "Inter", sans-serif;
-  min-height: 130vh;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
-  position: relative;
-  
-}
+
+
 
 /* Cards */
 .card {
   background: #fff;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   max-width: 400px;
   position: relative;
   box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
-  margin-bottom: 20px;
+  top: 300px;
+  margin-bottom: 40px;
+  
 }
 
 .etiqueta {
@@ -480,28 +474,22 @@ body {
   gap: 15px;
   margin: 10px 0;
 }
-
-.preco-antigo {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
-
 /* Botão */
 .btn-compra {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   background: #000;
   color: #fff;
   padding: 15px;
   margin-top: 20px;
-  text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: background 0.3s;
   border-radius: 20px;
+  
 }
 
 .btn-compra:hover {
@@ -546,3 +534,18 @@ body {
   }
 }
 
+/* Rodapé */
+.rodape {
+  width: 100%;
+  display: inline-block;
+  margin:  0;
+  height: 70px;
+  background-color: #f5f3f3;
+  top: 1300px;
+  position: relative;
+}
+.social {
+  position: absolute;
+  top: 10px;
+  left: 90%;
+}
