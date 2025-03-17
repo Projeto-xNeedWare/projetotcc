@@ -230,7 +230,7 @@ body {
 /* ==================== SEÇÃO PRINCIPAL ==================== */
 .main {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 1280.4px;
   height: 525.8px;
@@ -346,186 +346,6 @@ body {
   transform: scale(0.98);
 }
 
-/* ==================== SEÇÃO DE PRODUTOS ==================== */
-.titulo-produtos-2 {
-  position: absolute;
-  top: 1000px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 50px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-.sessão-produtos-2 {
-  position: absolute;
-  top: 1200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 800px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-}
-
-/* ==================== FLIP CARD ==================== */
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  perspective: 1200px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s ease-out;
-  transform-style: preserve-3d;
-  border-radius: 50px;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.flip-card-front {
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
-}
-
-.flip-card-back {
-  background: transparent;
-  transform: rotateY(180deg);
-  
-}
-/* ==================== INFORMAÇÕES DO PRODUTO (FLIP CARD BACK) ==================== */
-.informacoes-produto {
-  color: #1d1d1f;
-  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: 0.007em;
-  line-height: 1.14;
-  margin-top: 0;
-  padding: 20px 0;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.informacoes-produto p {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.005em;
-  color: #666;
-  max-width: 80%;
-  margin: 30;
-}
-
-/* Ajustes para o flip card back */
-.flip-card-back {
-  background-color: #ffffff;
-  transform: rotateY(180deg);
-  justify-content: space-between;
-  padding: 40px 30px;
-}
-
-/* Versão mobile */
-@media (max-width: 768px) {
-  .informacoes-produto {
-      font-size: 22px;
-      padding-top: 15px;
-  }
-  
-  .informacoes-produto p {
-      font-size: 16px;
-      max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .informacoes-produto {
-      font-size: 20px;
-      gap: 15px;
-  }
-  
-  .informacoes-produto p {
-      font-size: 14px;
-  }
-}
-
-.imagem-interna {
-  width: 100%;
-  height: 313px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.imagem-interna img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.nome-produtos {
-  font-size: 40px;
-  font-weight: 600;
-  margin: 10px 0;
-}
-
-.preco-2 {
-  font-size: 20px;
-  background: linear-gradient(97.86deg, #000, #000);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.botao-comprar {
-  background: #f5f5f7; /* Cinza claro, similar ao usado pela Apple */
-  color: #000;
-  border: none;
-  border-radius: 16px; /* Cantos levemente arredondados */
-  padding: 14px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.botao-comprar:hover {
-  background: #e5e5e7; /* Um cinza um pouco mais escuro no hover */
-}
-
-.botao-comprar:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-
-
 /* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 1440px) {
   .itens-cabecalho {
@@ -584,3 +404,145 @@ body {
     top: 450px;
   }
 }
+
+/* Reset básico */
+
+.produtos {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0 20px;
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estrutura principal */
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 130vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  position: relative;
+  
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  margin-bottom: 20px;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Imagens */
+.img-produto {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Textos */
+.marca {
+  font-size: 0.75em;
+  color: #646464;
+  margin: 10px 0;
+}
+
+.nome {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* Preços */
+.precos {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.preco-antigo {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+/* Botão */
+.btn-compra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background 0.3s;
+  border-radius: 20px;
+}
+
+.btn-compra:hover {
+  background: #333;
+}
+
+.icone {
+  width: 20px;
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+
+.btn-compra:hover .icone {
+  transform: translate(3px, -3px);
+}
+
+/* Layout */
+.grades {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.produtos {
+  margin-top: auto;
+  padding: 40px 0;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .grades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grades {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
