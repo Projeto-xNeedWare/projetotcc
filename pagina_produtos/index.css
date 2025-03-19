@@ -446,6 +446,7 @@ body {
   padding: 5px 10px;
   font-size: 0.9em;
   font-weight: bold;
+  
 }
 
 /* Imagens */
@@ -454,6 +455,7 @@ body {
   height: 250px;
   object-fit: cover;
   margin-bottom: 15px;
+ 
 }
 
 /* Textos */
@@ -509,16 +511,19 @@ body {
 /* Layout */
 .grades {
   display: grid;
-  gap: 20px;
+  gap: 100px; /* Gap aumentado */
   padding: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
+  justify-items: center; /* Centraliza os cartões na célula */
+  top: 0px;
 }
 
 .produtos {
   margin-top: auto;
   padding: 40px 0;
+  top: 400px;
 }
 
 /* Responsivo */
@@ -534,18 +539,33 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .grades {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+}
+
 /* Rodapé */
 .rodape {
   width: 100%;
-  display: inline-block;
+  
   margin:  0;
   height: 70px;
-  background-color: #f5f3f3;
+  background-color: #ffffff;
   top: 1300px;
   position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 .social {
   position: absolute;
   top: 10px;
   left: 90%;
+}
+
+.logos_redes_sociais {
+  width: 40px;
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
