@@ -19,6 +19,8 @@ function addClickEvent(selector, url) {
   addClickEvent(".avatar", "../pagina_login/login.html"); // Ícone de avatar (login)
   addClickEvent(".text-wrapper-2", "../pagina_produtos/index.html"); // Texto "xNeedWare"
   addClickEvent(".botao-2", "../pagina_em_breve/index.html");
+  addClickEvent(".btn-compra", "../pagina_em_breve/index.html");
+  
   
   // Aplique o evento de clique em todos os botões de compra
   addClickEvent(".botao-comprar", "../pagina_pagamento/index.html");

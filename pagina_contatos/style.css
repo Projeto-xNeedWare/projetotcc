@@ -1,6 +1,13 @@
 /* ------------------------------------------------
    Reset de Listas
 ------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 li,
 ul {
   list-style: none;
@@ -8,6 +15,12 @@ ul {
   margin: 0;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
 /* ------------------------------------------------
    Cabeçalho (classes inalteradas)
 ------------------------------------------------ */
