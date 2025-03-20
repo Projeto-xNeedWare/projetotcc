@@ -346,64 +346,6 @@ body {
   transform: scale(0.98);
 }
 
-/* ==================== RESPONSIVIDADE ==================== */
-@media (max-width: 1440px) {
-  .itens-cabecalho {
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 1200px) {
-  .main {
-    width: 90%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .parte-decima {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 1024px) {
-  .sessão-produtos-2 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .texto-1 {
-    font-size: 40px;
-  }
-  
-  .sessão-produtos-2 {
-    grid-template-columns: repeat(2, 1fr);
-    top: 950px;
-  }
-  
-  .moldura-cabecalho {
-    width: 90%;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .sessão-produtos-2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  
-  .botao-1, .botao-2 {
-    width: 80%;
-    left: 10% !important;
-  }
-  
-  .botao-2 {
-    top: 450px;
-  }
-}
 
 /* Reset básico */
 
@@ -411,7 +353,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 40px 0 20px;
+  padding: 100px 0 20px;
   
 }
 
@@ -427,12 +369,12 @@ body {
 /* Cards */
 .card {
   background: #fff;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   max-width: 400px;
   position: relative;
   box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
-  top: 300px;
+  top: 400px;
   margin-bottom: 40px;
   
 }
@@ -510,7 +452,7 @@ body {
 .grades {
   display: grid;
   gap: 20px;
-  padding: 20px;
+  padding: 40px;
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -521,18 +463,7 @@ body {
   padding: 40px 0;
 }
 
-/* Responsivo */
-@media (min-width: 768px) {
-  .grades {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (min-width: 1024px) {
-  .grades {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 /* Rodapé */
 .rodape {
@@ -549,3 +480,72 @@ body {
   top: 10px;
   left: 90%;
 }
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 1440px) {
+  .itens-cabecalho {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    width: 90%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .parte-decima {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sessão-produtos-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .texto-1 {
+    font-size: 40px;
+  }
+  
+  .sessão-produtos-2 {
+    grid-template-columns: repeat(2, 1fr);
+    top: 950px;
+  }
+  
+  .moldura-cabecalho {
+    width: 90%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sessão-produtos-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .botao-1, .botao-2 {
+    width: 80%;
+    left: 10% !important;
+  }
+  
+  .botao-2 {
+    top: 450px;
+  }
+}
+    @media (min-width: 768px) {
+      .grades {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .grades {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
