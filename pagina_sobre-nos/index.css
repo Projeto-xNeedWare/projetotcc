@@ -12,7 +12,9 @@ body {
     padding-top: 104px;
 }
 
-/* ==================== CABEÇALHO ==================== */
+html, body {
+  overflow-x: hidden; /* Desabilita a barra de rolagem horizontal */
+}
 /* ==================== CABEÇALHO ==================== */
 .cabecalho {
     position: absolute;
@@ -166,13 +168,34 @@ body {
 
 #boxes {
     padding: 50px 0;
+    margin-bottom: 1;
 }
 
+.box1 {
+  background: #FAF9F6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  
+
+}
 .container {
     height: 290px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.box1:hover {
+  transform: translateY(-10px);
+}
+
+.box1 img {
+  width: 100px;
+  margin-bottom: 15px;
 }
 
 .box {
@@ -218,4 +241,34 @@ body {
     .boto-decadastro {
         display: none;
     }
+}
+
+
+/* Rodapé */
+.rodape {
+  width: 100%;
+  bottom: 0 auto;
+  height: 60px;
+  background-color: #ffffff;
+  top: 1500px;
+  position: absolute;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  
+}
+  
+  
+.social {
+  position: absolute;
+  top: 10px;
+  left: 90%;
+  
+}
+
+.logos_redes_sociais {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }

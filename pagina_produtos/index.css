@@ -453,7 +453,7 @@ body {
 /* Layout */
 .grades {
   display: grid;
-  gap: 20px;
+  gap: 40px;
   padding: 40px;
   width: 100%;
   max-width: 1500px;
@@ -479,18 +479,25 @@ body {
 /* Rodapé */
 .rodape {
   width: 100%;
-  
   margin:  0;
   height: 70px;
   background-color: #ffffff;
-  top: 1300px;
-  position: relative;
+  top: 1500px;
+  position: absolute;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
+  
 .social {
   position: absolute;
   top: 10px;
   left: 90%;
+  
+}
+
+.logos_redes_sociais {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 /* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 1440px) {
