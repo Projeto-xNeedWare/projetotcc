@@ -1,20 +1,22 @@
 /* ==================== RESET & BASE ==================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body {
+  overflow-x: hidden; /* Desabilita a barra de rolagem horizontal */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #ffffff;
-    padding-top: 104px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  padding-top: 80px; /* Compensa a altura do cabeçalho fixo */
 }
 
-html, body {
-  overflow-x: hidden; /* Desabilita a barra de rolagem horizontal */
+.content {
+  flex: 1; /* Faz o conteúdo crescer e empurrar o rodapé */
 }
+
 /* ==================== CABEÇALHO ==================== */
 .cabecalho {
     position: absolute;
@@ -29,8 +31,8 @@ html, body {
   
   .itens-cabecalho {
     position: absolute;
-    width: 1440px;
-    height: 104px;
+    width: 90%;
+    height: 0px;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -64,6 +66,7 @@ html, body {
     top: 31px;
     left: 50%;
     transform: translateX(-50%);
+    justify-content: center;
   }
   
   .botao_cabecalho {
@@ -156,14 +159,18 @@ html, body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.subtitulo {
-    text-align: center;
-    margin-top: 100px;
-    font-size: 40px;
-    color: #000000;
-    font-weight: 600;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+  .subtitulo {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 25px;
+      color: #000000;
+      font-weight: 600;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      align-content: center;
+      line-height: 0.1px;
+      word-wrap: break-word;
+      
+  }
 /* ==================== BOXES ==================== */
 
 #boxes {
@@ -179,14 +186,16 @@ html, body {
   text-align: center;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  background: radial-gradient(circle, rgba(169,196,249,1) 0%, rgba(255,255,255,1) 100%);
+}
   
 
-}
 .container {
     height: 290px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 .box1:hover {
@@ -206,7 +215,9 @@ html, body {
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    background: radial-gradient(circle, rgba(169,196,249,1) 0%, rgba(255,255,255,1) 100%);
 }
+    
 
 .box:hover {
     transform: translateY(-10px);
@@ -247,15 +258,16 @@ html, body {
 /* Rodapé */
 .rodape {
   width: 100%;
-  bottom: 0 auto;
   height: 60px;
   background-color: #ffffff;
-  top: 1500px;
   position: absolute;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  margin-top: auto;
+  
+  
+  
   
 }
   
@@ -268,6 +280,7 @@ html, body {
 }
 
 .logos_redes_sociais {
+  position: relative;
   width: 40px;
   height: 40px;
   margin-right: 10px;

@@ -90,14 +90,15 @@ html, body {
 /* Estilização do botão "Me notifique" */
 .me_notifique {
     top: 48px;
-    left: 1200px;
+    left: 70%;
     color: #2d2d2d;
+    margin-right: 10px;
 }
 
 /* Estilização do botão "Voltar para página anterior" */
 .me_notifique1 {
     top: 48px;
-    left: 1600px;
+    left: 85%;
     color: #000;
     width: 350px; /* Aumentando a largura do botão */
     font-size: 22px; /* Aumentando o tamanho da fonte */
