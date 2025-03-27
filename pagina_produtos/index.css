@@ -1,7 +1,7 @@
 /* ==================== SEÇÃO DE PAGAMENTOS ==================== */
 .pagamentos {
   position: absolute;
-  top: 371.95px;
+  top: 70%;
   left: 0px;
   backdrop-filter: blur(29.69px);
   border-radius: 7.42px;
@@ -14,8 +14,8 @@
 
 .posicionamento-pagamentos {
   position: absolute;
-  top: 417.23px;
-  left: 469.55px;
+  top: 70%;
+  left: 70%;
   width: 152.3px;
   height: 27.2px;
   overflow: hidden;
@@ -80,10 +80,7 @@
 }
 
 /* ==================== ESTILOS GERAIS ==================== */
-@font-face {
-  font-family: "San Francisco";
-  src: url("fonts/SF-Pro-Display-Regular.otf") format("opentype");
-}
+
 
 * {
   margin: 0;
@@ -228,18 +225,18 @@ body {
 }
 
 /* ==================== SEÇÃO PRINCIPAL ==================== */
-.main {
-  position: absolute;
-  top: 40%;
+.banner {
+  position: sticky;
+  top: 40vh;
   left: 50%;
   width: 1280.4px;
-  height: 525.8px;
+  
   transform: translate(-50%, -50%);
 }
 
-.parte-decima {
+.elementos-banner {
   position: absolute;
-  top: 0;
+  
   left: 622px;
   width: 658.4px;
   height: 525.8px;
@@ -247,7 +244,7 @@ body {
 
 .imagens-cima {
   position: absolute;
-  top: 0;
+  
   left: 104px;
   width: 495.4px;
   height: 525.8px;
@@ -255,7 +252,7 @@ body {
 
 .laranja {
   position: absolute;
-  top: 0;
+  
   left: 0.06px;
   width: 495.4px;
   height: 525.8px;
@@ -349,13 +346,7 @@ body {
 
 /* Reset básico */
 
-.produtos {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 100px 0 20px;
-  
-}
+
 
 * {
   box-sizing: border-box;
@@ -373,9 +364,11 @@ body {
   width: 100%;
   max-width: 400px;
   position: relative;
-  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
-  top: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  top: 950px;
   margin-bottom: 40px;
+
+border-radius: 40px;
   
 }
 
@@ -433,6 +426,8 @@ body {
   letter-spacing: 2px;
   transition: background 0.3s;
   border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
   
 }
 
@@ -463,10 +458,10 @@ body {
 }
 
 .produtos {
-  margin-top: auto;
-  padding: 40px 0;
-  top: 400px;
+  top: 80%;
+  margin-top: 20%;
 }
+
 
 
 
@@ -482,7 +477,7 @@ body {
   margin:  0;
   height: 70px;
   background-color: #ffffff;
-  top: 1500px;
+  top: 2000px;
   position: absolute;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
