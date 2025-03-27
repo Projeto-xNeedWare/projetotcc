@@ -1,83 +1,3 @@
-/* ==================== SEÇÃO DE PAGAMENTOS ==================== */
-.pagamentos {
-  position: absolute;
-  top: 70%;
-  left: 0px;
-  backdrop-filter: blur(29.69px);
-  border-radius: 7.42px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1.5px solid rgba(6, 19, 45, 0);
-  width: 661.4px;
-  height: 127.7px;
-  z-index: 5;
-}
-
-.posicionamento-pagamentos {
-  position: absolute;
-  top: 70%;
-  left: 70%;
-  width: 152.3px;
-  height: 27.2px;
-  overflow: hidden;
-}
-
-.base-google-pay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-.googlepay-imagem {
-  position: absolute;
-  height: 42.92%;
-  width: 71.43%;
-  top: 32.11%;
-  left: 14.29%;
-}
-
-/* Ícones de pagamento */
-.google-pay {
-  position: absolute;
-  top: 410.34px;
-  left: 546px;
-  width: 70px;
-  height: 48px;
-  z-index: 6;
-}
-
-.visa-icon {
-  position: absolute;
-  top: 410.34px;
-  left: 49px;
-  width: 70px;
-  height: 48px;
-  object-fit: cover;
-  z-index: 6;
-}
-
-.mastercard-icon {
-  position: absolute;
-  top: 410.34px;
-  left: 215px;
-  width: 70px;
-  height: 48px;
-  object-fit: contain;
-  z-index: 6;
-}
-
-.applepay-icon {
-  position: absolute;
-  top: 410.34px;
-  left: 383px;
-  width: 70px;
-  height: 48px;
-  object-fit: cover;
-  z-index: 6;
-}
 
 /* ==================== ESTILOS GERAIS ==================== */
 
@@ -224,9 +144,9 @@ body {
   left: 98%;
 }
 
-/* ==================== SEÇÃO PRINCIPAL ==================== */
+/* ==================== BANNER ==================== */
 .banner {
-  position: sticky;
+  position: absolute;
   top: 40vh;
   left: 50%;
   width: 1280.4px;
@@ -301,64 +221,144 @@ body {
   width: 522px;
 }
 
-/* ==================== BOTÕES PRINCIPAIS ==================== */
-.botao-1, .botao-2 {
-  position: absolute;
-  top: 384px;
-  border-radius: 20px; /* Menos arredondado para um design mais moderno */
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  /* ==================== SEÇÃO DE PAGAMENTOS DO BANNER ==================== */
+  .pagamentos {
+    position: absolute;
+    top: 70%;
+    left: 0px;
+    backdrop-filter: blur(29.69px);
+    border-radius: 7.42px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(6, 19, 45, 0);
+    width: 661.4px;
+    height: 127.7px;
+    z-index: 5;
+  }
 
-.botao-1 {
-  left: 0;
-  background: #000; /* Preto sólido */
-  color: #fff;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+  .posicionamento-pagamentos {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    width: 152.3px;
+    height: 27.2px;
+    overflow: hidden;
+  }
 
-.botao-2 {
-  left: 201px;
-  background: #f5f5f7; /* Cinza bem claro */
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  color: #000;
-}
+  .base-google-pay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
 
-.botao-1:hover {
-  background: #333; /* Um preto um pouco mais claro */
-}
+  .googlepay-imagem {
+    position: absolute;
+    height: 42.92%;
+    width: 71.43%;
+    top: 32.11%;
+    left: 14.29%;
+  }
 
-.botao-2:hover {
-  background: #e5e5e7; /* Cinza um pouco mais escuro */
-}
+  /* Ícones de pagamento */
+  .google-pay {
+    position: absolute;
+    top: 410.34px;
+    left: 546px;
+    width: 70px;
+    height: 48px;
+    z-index: 6;
+  }
 
-.botao-1:active, .botao-2:active {
-  transform: scale(0.98);
-}
+  .visa-icon {
+    position: absolute;
+    top: 410.34px;
+    left: 49px;
+    width: 70px;
+    height: 48px;
+    object-fit: cover;
+    z-index: 6;
+  }
+
+  .mastercard-icon {
+    position: absolute;
+    top: 410.34px;
+    left: 215px;
+    width: 70px;
+    height: 48px;
+    object-fit: contain;
+    z-index: 6;
+  }
+
+  .applepay-icon {
+    position: absolute;
+    top: 410.34px;
+    left: 383px;
+    width: 70px;
+    height: 48px;
+    object-fit: cover;
+    z-index: 6;
+  }
+
+  /* ==================== SEÇÃO DE PAGAMENTOS DO BANNER ==================== */
+
+  /* ==================== BOTÕES DO BANNER ==================== */
+  .botao-1, .botao-2 {
+    position: absolute;
+    top: 384px;
+    border-radius: 20px; /* Menos arredondado para um design mais moderno */
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .botao-1 {
+    left: 0;
+    background: #000; /* Preto sólido */
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .botao-2 {
+    left: 201px;
+    background: #f5f5f7; /* Cinza bem claro */
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: #000;
+  }
+  
+  .botao-1:hover {
+    background: #333; /* Um preto um pouco mais claro */
+  }
+  
+  .botao-2:hover {
+    background: #e5e5e7; /* Cinza um pouco mais escuro */
+  }
+  
+  .botao-1:active, .botao-2:active {
+    transform: scale(0.98);
+  }
+  /* ==================== BOTÕES DO BANNER ==================== */
+/* ==================== BANNER ==================== */
 
 
-/* Reset básico */
-
-
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 
 
 
-/* Cards */
+
+
+
+/* SESSÃO DE PRODUTOS */
 .card {
+  display: grid;
   background: #fff;
   padding: 20px;
   width: 100%;
@@ -448,28 +448,31 @@ border-radius: 40px;
 /* Layout */
 .grades {
   display: grid;
-  gap: 40px;
+  gap: 20px;
   padding: 40px;
   width: 100%;
   max-width: 1500px;
   margin: auto;
   justify-items: center; /* Centraliza os cartões na célula */
   top: 0px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
 }
 
 .produtos {
   top: 80%;
   margin-top: 20%;
+  position: initial;
 }
 
+/* SESSÃO DE PRODUTOS */
 
 
 
-@media (min-width: 1024px) {
-  .grades {
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-  }
-}
+
+
+
 
 /* Rodapé */
 .rodape {
@@ -494,72 +497,4 @@ border-radius: 40px;
   height: 30px;
   margin-right: 10px;
 }
-/* ==================== RESPONSIVIDADE ==================== */
-@media (max-width: 1440px) {
-  .itens-cabecalho {
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 
-@media (max-width: 1200px) {
-  .main {
-    width: 90%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .parte-decima {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 1024px) {
-  .sessão-produtos-2 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .texto-1 {
-    font-size: 40px;
-  }
-  
-  .sessão-produtos-2 {
-    grid-template-columns: repeat(2, 1fr);
-    top: 950px;
-  }
-  
-  .moldura-cabecalho {
-    width: 90%;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .sessão-produtos-2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  
-  .botao-1, .botao-2 {
-    width: 80%;
-    left: 10% !important;
-  }
-  
-  .botao-2 {
-    top: 450px;
-  }
-}
-    @media (min-width: 768px) {
-      .grades {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .grades {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
