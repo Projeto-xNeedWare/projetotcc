@@ -13,7 +13,7 @@ if (xneedware) {
     });
 }
 
-
+			//Pega um biblioteca JQuery para executar o que estiver dentro da função, e inicializa variáveis que serão usadas ao longo do código
 			$(function(){
 
 				var canvas, gl,
@@ -37,7 +37,7 @@ if (xneedware) {
 					canvas2,
 					ctx2,
 					ctx,
-					maxStars = 1500;
+					maxStars = 300;
 				starsCount = 0,
 					stars = [],
 					hue = 217;
@@ -50,20 +50,37 @@ if (xneedware) {
 				var coefficient = .4;
 				var targetCoefficient = .02;
 				
+				//Chama a função que pega elementos do canvas que configura a tela onde vai acontecer a animação
 				function initAnimationScene() {
-					//    Get the canvas element
+
+					//Pega o lugar do html que será colocada a função, pelo ID
+
 					canvas = document.getElementById("animation-canvas");
+
+					//Pega variáveis criadas nas funções de cima e adiciona novas coisas
+
 					contentWidth = canvas.parentNode.offsetWidth;
 					contentHeight = canvas.parentNode.offsetHeight;
+
+					//Pega o conteudo das variáveis de cima, e adiciona as de baixo
+
 					canvas.width = contentWidth;
 					canvas.height = contentHeight;
+					//Primeiro pega a div criada no html, e adiciona numa variável
+					//Pega a variável criada já pronta na biblioteca e modifica os parâmetros de Largura (width), e Altura (height)
+
 					canvasSpace = document.getElementById("animation-space-canvas");
 					canvasSpace.width = contentWidth;
 					canvasSpace.height = contentHeight;
+
+					//Inicia a função
+
 					initStarsAnimation();
 					startStarsAnimation();
 				}
 				
+					//Indica quando as estrelas devem começar a aparecer 
+
 				function timer() {
 					if (drawType < 2) {
 						drawType += 1;
@@ -96,25 +113,38 @@ if (xneedware) {
 					return Math.floor(Math.random() * (max - min + 1)) + min;
 				}
 				
+				//Pega as 4 medidas da página para a órbita das estrelas não ficar maior que a tela
+
 				function maxOrbit(x, y) {
 					var max = Math.max(x, y),
 						diameter = Math.round(Math.sqrt(max * max + max * max));
 					return diameter / 2;
 				}
 				
+				
+
 				var Star = function() {
 					this.orbitRadius = random(maxOrbit(contentWidth, contentHeight));
 					this.radius = random(60, this.orbitRadius) / 10;
+
+					//Pega as medidas de altura e largura para centralizar a animação
+
 					this.orbitX = contentWidth / 2;
 					this.orbitY = contentHeight / 2;
-					this.timePassed = random(0, maxStars);
+
+					//Ajusta a velocidade da animação
+
+					this.timePassed = random(0, maxStars);//Tempo que passou desde que a função começou
 					this.speed = random(this.orbitRadius) / 200000;
 					this.alpha = random(2, 10) / 10;
 					starsCount++;
 					stars[starsCount] = this;
 				}
 				
+				
+
 				Star.prototype.draw = function() {
+					//Pega a variável criada para verificar o tempo que passou e multiplica com os parêmtros da estrela
 					var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
 						y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
 						twinkle = random(10);
@@ -124,8 +154,10 @@ if (xneedware) {
 						this.alpha += 0.05;
 					}
 					ctx.globalAlpha = this.alpha;
-					// draw the cached gradient canvas image
+					// Desenha a estrela com um pré gradiente do canvas
 					ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+
+					//Atualiza o tempo que passou e coloca na estrela
 					this.timePassed += this.speed;
 				}
 				
@@ -135,10 +167,16 @@ if (xneedware) {
 					ctx.globalAlpha = 0.8;
 					ctx.fillStyle = 'transparent';
 					ctx.fillRect(0, 0, contentWidth, contentHeight);
+
+					//Ajusta a sobreposição de cores
 					ctx.globalCompositeOperation = 'lighter';
+
+					//Itera sobre cada estrela e chama a função para desenhar ela
+
 					for (var i = 1, l = stars.length; i < l; i++) {
 						stars[i].draw();
 					};
+					//Chama a função starsAnimation novamente para se o navegador atualizar
 					requestAnimationFrame(starsAnimation);
 				}
 				
@@ -169,6 +207,8 @@ if (xneedware) {
 				}
 				
 				function initStarsAnimation() {
+
+					//Inicia um novo objeto para pegar a função de desenho e realizar a pré renderização
 					ctx = canvasSpace.getContext('2d');
 					for (var i = 0; i < maxStars; i++) {
 						new Star();
