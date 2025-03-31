@@ -2,18 +2,19 @@
 /* ==================== ESTILOS GERAIS ==================== */
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
   overflow-x: hidden;
+  flex-direction: column;
 }
 
+body {
+  
+  margin: 0px;
+}
 /* ==================== CABEÇALHO ==================== */
 .cabecalho {
   position: absolute;
@@ -147,7 +148,7 @@ body {
 /* ==================== BANNER ==================== */
 .banner {
   position: absolute;
-  top: 40vh;
+  top: 20vh;
   left: 50%;
   width: 1280.4px;
   
@@ -365,7 +366,7 @@ body {
   max-width: 400px;
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  top: 950px;
+  top: 900px;
   margin-bottom: 40px;
 
 border-radius: 40px;
@@ -448,25 +449,21 @@ border-radius: 40px;
 /* Layout */
 .grades {
   display: grid;
-  gap: 20px;
-  padding: 40px;
   width: 100%;
   max-width: 1500px;
   margin: auto;
   justify-items: center; /* Centraliza os cartões na célula */
-  top: 0px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 50px;
+  
+  gap: 80px;
 }
-
-.produtos {
-  top: 80%;
-  margin-top: 20%;
-  position: initial;
-}
-
 /* SESSÃO DE PRODUTOS */
+  
+  
+  
+
+
+
 
 
 
@@ -475,26 +472,14 @@ border-radius: 40px;
 
 
 /* Rodapé */
-.rodape {
-  width: 100%;
-  margin:  0;
-  height: 70px;
-  background-color: #ffffff;
-  top: 2000px;
-  position: absolute;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+.site-footer
+{
+  text-align:center;
+  position: sticky;
+  background-color:#ffffff;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#000000;
+  margin-top: 1200px;
 }
-  
-.social {
-  position: absolute;
-  top: 10px;
-  left: 90%;
-  
-}
-
-.logos_redes_sociais {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
