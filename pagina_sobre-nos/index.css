@@ -1,0 +1,287 @@
+/* ==================== RESET & BASE ==================== */
+html, body {
+  overflow-x: hidden; /* Desabilita a barra de rolagem horizontal */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  padding-top: 80px; /* Compensa a altura do cabeçalho fixo */
+}
+
+.content {
+  flex: 1; /* Faz o conteúdo crescer e empurrar o rodapé */
+}
+
+/* ==================== CABEÇALHO ==================== */
+.cabecalho {
+    position: absolute;
+    width: 100%;
+    height: 104px;
+    top: 0;
+    left: 1px;
+    background-color: white;
+    z-index: 1;
+  }
+    
+  
+  .itens-cabecalho {
+    position: absolute;
+    width: 90%;
+    height: 0px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .logo {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    padding: 10px;
+  }
+  
+  .logo-texto {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+  }
+  
+  .logo-texto:hover {
+    text-shadow: 0px 2px 4px #000000b8;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .moldura-cabecalho {
+    display: flex;
+    width: 760px;
+    gap: 52px;
+    position: absolute;
+    top: 31px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+  }
+  
+  .botao_cabecalho {
+    all: unset;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .botao_cabecalho::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: #858585;
+    transition: width 0.5s ease;
+  }
+  
+  .botao_cabecalho:hover {
+    color: #858585;
+  }
+  
+  .botao_cabecalho:hover::after {
+    width: 100%;
+  }
+  
+  .boto-decadastro {
+    position: absolute;
+    top: 32px;
+    left: 1186px;
+    background: #000; /* Preto sólido */
+    color: #fff;
+    padding: 12px 26px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px; /* Cantos mais arredondados */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .boto-decadastro:hover {
+    background: #333; /* Preto levemente mais claro */
+    transform: scale(1.05);
+  }
+  
+  .boto-decadastro:active {
+    transform: scale(0.98);
+  }
+  .button-3 {
+    background: #000; /* Preto sólido */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px; /* Bordas arredondadas no estilo Apple */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  
+  .avatar {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    top: 25px;
+    left: 98%;
+  }
+
+/* Quem somos nós*/
+.titulo {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 80px;
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+  .subtitulo {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 25px;
+      color: #000000;
+      font-weight: 600;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      align-content: center;
+      line-height: 0.1px;
+      word-wrap: break-word;
+      
+  }
+/* ==================== BOXES ==================== */
+
+#boxes {
+    padding: 50px 0;
+    margin-bottom: 1;
+}
+
+.box1 {
+  background: #FAF9F6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background: radial-gradient(circle, rgba(169,196,249,1) 0%, rgba(255,255,255,1) 100%);
+}
+  
+
+.container {
+    height: 290px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.box1:hover {
+  transform: translateY(-10px);
+}
+
+.box1 img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.box {
+    background: #FAF9F6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background: radial-gradient(circle, rgba(169,196,249,1) 0%, rgba(255,255,255,1) 100%);
+}
+    
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+/* ==================== RESPONSIVO ==================== */
+@media (max-width: 768px) {
+    .moldura-cabecalho {
+        display: none;
+    }
+
+    .itens-cabecalho {
+        justify-content: center;
+    }
+
+    #showcase {
+        padding: 80px 0;
+    }
+
+    #boxes .container {
+        flex-direction: column;
+    }
+
+    .box {
+        margin: 20px 0;
+    }
+
+    .boto-decadastro {
+        display: none;
+    }
+}
+
+
+/* Rodapé */
+.rodape {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  position: absolute;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: auto;
+  top: 1700px;
+  
+  
+  
+}
+  
+  
+.social {
+  position: absolute;
+  top: 10px;
+  left: 90%;
+  
+}
+
+.logos_redes_sociais {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

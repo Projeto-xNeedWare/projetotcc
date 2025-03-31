@@ -10,15 +10,17 @@ function addClickEvent(selector, url) {
   
   // Adicionando eventos aos botões
   addClickEvent(".boto-produto", "../pagina_produtos/index.html");
-  addClickEvent(".boto-funcionalidades", "../pagina_funcionalidades/index.html");
+  addClickEvent(".boto-funcionalidades", "../pagina_sobre-nos/index.html");
   addClickEvent(".boto-assinaturas", "../pagina_assinaturas/index.html");
-  addClickEvent(".boto-contatos", "../pagina_contatos/index.html");
+  addClickEvent(".boto-contatos", "../pagina_cWontatos/index.html");
   addClickEvent(".boto-embreve", "../pagina_em_breve/index.html");
   addClickEvent(".boto-decadastro", "../pagina_cadastro/index.html");
   addClickEvent(".logo-texto", "../pagina_inicial/index.html"); // Texto "xNeedWare"
   addClickEvent(".avatar", "../pagina_login/login.html"); // Ícone de avatar (login)
   addClickEvent(".text-wrapper-2", "../pagina_produtos/index.html"); // Texto "xNeedWare"
   addClickEvent(".botao-2", "../pagina_em_breve/index.html");
+  addClickEvent(".btn-compra", "../pagina_em_breve/index.html");
+  
   
   // Aplique o evento de clique em todos os botões de compra
   addClickEvent(".botao-comprar", "../pagina_pagamento/index.html");

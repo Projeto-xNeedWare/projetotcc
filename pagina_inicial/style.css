@@ -1,50 +1,13 @@
-/* Estilos principais para a página inicial */
-.pagina-inicial {
-  background-color: #ffffff; /* Cor de fundo da página */
-  display: flex; /* Usando Flexbox para o layout */
-  flex-direction: row; /* Alinha os itens horizontalmente */
-  justify-content: center; /* Centraliza os itens */
-  width: 100%; /* Largura total */
-}
 
-/* Div principal dentro da página */
-.pagina-inicial .div {
-  background-color: #ffffff; /* Cor de fundo da div */
-  overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites da div */
-  width: 100%; /* Largura fixa da div */
-  height: 2707px; /* Altura fixa da div */
-  position: relative; /* Para o posicionamento absoluto dos filhos */
-}
-
-/* Sobreposição dentro da div */
-.pagina-inicial .overlap {
-  position: absolute;
-  width: 1440px;
-  height: 1630px;
-  top: 110px; /* Posição relativa a partir do topo */
-  left: 0;
-}
-
-/* Parte superior da página (onde está o texto de apresentação) */
-.pagina-inicial .parte_decima {
-  position: absolute;
-  width: 1440px; /* Largura da parte superior */
-  height: 792px; /* Altura da parte superior */
-  top: 0;
-  left: 0;
-  background-color: #ffffff; /* Cor de fundo */
-}
 
 /* Estilo do texto de apresentação */
 .pagina-inicial .texto_apresentacao {
   position: absolute;
-  top: 55px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(111.55, 111.55, 111.55) 100%);
   -webkit-background-clip: text !important; /* Clip para texto */
-  background-clip: text; /* Clip para o fundo */
-  -webkit-text-fill-color: transparent; /* Preenche a cor do texto com transparência */
   background-color: transparent;
   font-family: "Poppins", Helvetica;
   font-weight: 600;
@@ -53,6 +16,7 @@
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
+
 }
 
 /* Estilo do texto secundário */
@@ -78,7 +42,8 @@
   width: 150px;
   height: 50px;
   top: 600px;
-  left: 646px;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 40px;
   overflow: hidden;
   background: linear-gradient(180deg, rgb(239, 239, 239) 0%, rgb(255, 255, 255) 100%);
@@ -97,52 +62,10 @@
   letter-spacing: 0;
   line-height: normal;
 }
-
-/* Sobreposição para a área do PC */
-.pagina-inicial .sobreposicao-pc {
-  position: absolute;
-  width: 1281px;
-  height: 854px;
-  top: 776px;
-  left: 83px;
-  background-color: #ffffff;
-  overflow: hidden;
-}
-
 /* Grupo que envolve a sobreposição do PC */
 .pagina-inicial .overlap-group {
   position: relative;
   height: 854px;
-}
-
-/* Imagem de fundo do PC */
-.pagina-inicial .imagem_fundo-pc {
-  position: absolute;
-  width: 588px;
-  height: 376px;
-  top: 162px;
-  left: 344px;
-}
-
-/* Sombra suave sobre a imagem do PC */
-.pagina-inicial .soft-shadow {
-  position: absolute;
-  width: 1281px;
-  height: 854px;
-  top: 0;
-  left: 0;
-  mix-blend-mode: multiply; /* Mistura de cores */
-  object-fit: cover; /* Preenche a área sem distorcer */
-}
-
-/* Moldura ao redor da imagem do PC */
-.pagina-inicial .moldura_pc {
-  position: absolute;
-  width: 1281px;
-  height: 854px;
-  top: 0;
-  left: 0;
-  object-fit: cover;
 }
 
 /* Moldura do teclado do PC */
@@ -154,39 +77,17 @@
   left: 0;
 }
 
-/* Tela do computador */
-.pagina-inicial .screen {
-  position: absolute;
-  width: 1281px;
-  height: 200px;
-  top: 654px;
-  left: 0;
-  mix-blend-mode: darken;
-}
-
-/* Texto sobre a tela do PC */
-.pagina-inicial .texto_pc {
-  position: absolute;
-  width: 570px;
-  top: 291px;
-  left: 356px;
-  -webkit-text-stroke: 1px #000000; /* Sombra no texto */
-  font-family: "Poppins", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 96px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap; /* Impede que o texto quebre */
-}
-
 /* Parte inferior da página */
 .pagina-inicial .parte_debaixo {
-  position: absolute;
-  height: 789px;
-  top: 1772px;
+  position: relative; /* Alterado para permitir ajuste dinâmico */
+  width: 100%; /* Ocupa toda a largura disponível */
+  min-height: 789px; /* Mantém a altura mínima */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  padding: 50px 20px; /* Adiciona espaçamento para evitar cortes em telas menores */
 }
+
 
 /* Caixa 1 na parte inferior */
 .pagina-inicial .caixa1 {
@@ -194,7 +95,7 @@
   width: 390px;
   height: 572px;
   top: 174px;
-  left: 66px;
+  left: 0;
   border-radius: 40px;
   overflow: hidden;
   background: linear-gradient(180deg, rgb(13.81, 13.81, 13.81) 0%, rgb(255, 228.35, 209.31) 100%);
@@ -252,7 +153,8 @@
 .titulo-caixa {
   position: absolute;
   top: -200px;
-  left: 500px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Poppins", Helvetica;
   font-weight: 700;
   color: #000000;
@@ -531,10 +433,15 @@
     top: 20px;
     left: 0;
     border-radius: 15px; /* Ajusta o raio */
+    margin: auto;
+    min-width: 320px;
+    max-width: 1440px;
   }
 
   .pagina-inicial .caixa1 {
     margin-bottom: 20px;
+    margin: auto
+    
   }
 
   .pagina-inicial .caixa2 {
@@ -568,4 +475,316 @@
     left: 0;
   }
 }
+* html .clearfix {
+  zoom: 1;
+}
 
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+
+/* IE7 */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none !important;
+  outline: none;
+}
+
+.npd {
+  padding: 0;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+body {
+  font-size: 14px;
+  color: black;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  width: 100%;
+  height: 250vh;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.comp {
+  width: 100%;
+  height: 194px;
+  text-align: center;
+}
+.comp .monitor {
+  width: 475px;
+  height: 281px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px 10px 0px 0px;
+  padding: 9px;
+  border: solid 1px #e0e2e2;
+  background-color: black;
+}
+.comp .mid {
+  float: left;
+  display: block;
+  height: 100%;
+  position: relative;
+  background-color: #abadc6;
+  width: 50%;
+}
+.comp .mid.codigo {
+  background-color: #22262b;
+}
+.comp .site {
+  overflow: hidden;
+  position: absolute;
+  width: 105px;
+  height: 138px;
+  bottom: 0;
+  right: 0;
+}
+.comp .site .topbar {
+  width: 100%;
+}
+.comp .site .cerrar {
+  width: 100%;
+  padding: 3px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px 4px 0px 0px;
+  background-color: #afa895;
+}
+.comp .site .cerrar > div {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: white;
+  margin: 0px 1px;
+}
+.comp .site .inhead {
+  padding: 2px;
+  height: 5px;
+  background-color: #ddd8cf;
+}
+.comp .site .inhead .item {
+  width: 10px;
+  height: 1px;
+  background-color: #d1c9bf;
+  margin: 0 1px;
+  display: block;
+  float: left;
+}
+.comp .txr {
+  text-align: right;
+}
+.comp .txr .item {
+  float: right;
+}
+.comp .inslid {
+  width: 100%;
+  height: 33px;
+  background-color: #efebe2;
+}
+.comp .incont {
+  padding-top: 10px;
+  background: #fefaf0;
+}
+.comp .incont .item {
+  background-color: #d1c9bf;
+  width: 53px;
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1px;
+}
+.comp .incont .item:nth-child(1) {
+  width: 20px;
+}
+.comp .incont .item:nth-child(2) {
+  margin-top: 3px;
+  width: 41px;
+}
+.comp .incont .item:nth-child(3) {
+  width: 32px;
+}
+.comp .incont .item:nth-child(4) {
+  width: 23px;
+}
+.comp .incont .wid {
+  width: 100%;
+  padding: 8px 1px;
+}
+.comp .incont .wid .itwid {
+  width: 33.333%;
+  float: left;
+  height: 26px;
+  padding: 0px 3px;
+}
+.comp .incont .wid .itwid > div {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f1e6;
+  position: relative;
+}
+.comp .incont .wid .itwid > div .contfoot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background-color: #ebe5dc;
+}
+.comp .incont .infoot {
+  background-color: #efebe2;
+  height: 26px;
+  width: 100%;
+}
+@-webkit-keyframes code {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes code {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.comp .codigo {
+  padding: 14px 0px 14px 14px;
+}
+.comp .codigo .var {
+  background-color: #ac5e47;
+  -webkit-animation: code;
+          animation: code;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.comp .codigo .cont {
+  background-color: #464748;
+  -webkit-animation: code;
+          animation: code;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.comp .codigo .fun {
+  background-color: #fbb053;
+  -webkit-animation: code;
+          animation: code;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.comp .codigo .atr {
+  background-color: #645572;
+  -webkit-animation: code;
+          animation: code;
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.comp .codigo .item {
+  height: 3px;
+  width: 20px;
+  float: left;
+  margin-right: 3px;
+}
+.comp .codigo .item.min {
+  width: 13px;
+}
+.comp .codigo .item.lrg {
+  width: 30px;
+}
+.comp .codigo .line {
+  padding: 2px 0;
+  width: 100%;
+}
+.comp .codigo .tab1 {
+  padding-left: 5px;
+}
+.comp .codigo .tab2 {
+  padding-left: 8px;
+}
+.comp .codigo .tab3 {
+  padding-left: 10px;
+}
+.comp .codigo .tab4 {
+  padding-left: 12px;
+}
+
+.base {
+  width: 538px;
+  height: 12px;
+  background: #e0e2e2;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0px 0px 6px 6px;
+}
