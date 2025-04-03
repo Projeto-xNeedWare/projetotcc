@@ -16,13 +16,15 @@ body {
 
 /* ==================== CABEÇALHO ==================== */
 .cabecalho {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 104px;
   top: 0;
   left: 1px;
   background-color: transparent;
   z-index: 1000;
+  display: flex;
+
 }
 
 .itens-cabecalho {
@@ -38,7 +40,7 @@ body {
   position: absolute;
   top: 9px;
   left: 0;
-  padding: 10px;
+  padding: 100px;
 }
 
 .logo-texto {
@@ -56,7 +58,7 @@ body {
 }
 .moldura-cabecalho {
   display: flex;
-  width: 760px;
+  width: 100%;
   gap: 52px;
   position: absolute;
   top: 31px;
@@ -498,3 +500,8 @@ border-radius: 40px;
   margin-right: 10px;
 }
 
+@media (max-width: 1537px) {
+  .cabecalho {
+    margin: auto;
+  }
+}
