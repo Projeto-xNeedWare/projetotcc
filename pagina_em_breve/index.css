@@ -43,79 +43,9 @@ html, body {
     transform: translate(-50%, -50%);
     font-size: 24px;
     font-family: Inter, sans-serif;
-  }
-.me-notifique {
-    position: relative;
-    font-weight: 500;
-    width: 162px;
-}
-.icone_enviar {
-    width: 40px;  /* Aumentando a largura do ícone */
-    height: 40px; /* Aumentando a altura do ícone */
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.grupo_me_notifique {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-}
-/* Estilização dos botões "Me notifique" e "Voltar para página anterior" */
-.me_notifique,
-.me_notifique1 {
-    position: absolute;
-    border-radius: 40px;
-    background-color: #fff;
-    border: 1px solid #cbcbcb;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Animação suave */
-    width: 250px; /* Tamanho fixo igual para ambos */
-    height: 75px; /* Tamanho fixo igual para ambos */
-    font-size: 22px; /* Tamanho de fonte igual para ambos */
-    font-family: 'Poppins', sans-serif; /* Fonte igual para ambos */
-    white-space: nowrap;
     z-index: 2;
-}
+  }
 
-/* Estilização do botão "Me notifique" */
-.me_notifique {
-    top: 48px;
-    left: 70%;
-    color: #2d2d2d;
-    margin-right: 10px;
-}
-
-/* Estilização do botão "Voltar para página anterior" */
-.me_notifique1 {
-    top: 48px;
-    left: 85%;
-    color: #000;
-    width: 350px; /* Aumentando a largura do botão */
-    font-size: 22px; /* Aumentando o tamanho da fonte */
-}
-
-/* Ícone do botão "Me notifique" */
-.icone_enviar {
-    width: 40px;
-    height: 20px;
-    margin-left: 8px; /* Espaço entre o texto e o ícone */
-}
-
-/* Efeito de zoom quando passa o mouse sobre os botões */
-.me_notifique:hover,
-.me_notifique1:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do botão */
-}
 
 .logos_redes_sociais {
     width: 40px;

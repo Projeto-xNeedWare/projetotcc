@@ -1,3 +1,19 @@
+// Função para adicionar evento de clique em botões
+function addClickEvent(selector, url) {
+	var elements = document.querySelectorAll(selector); // Usa querySelectorAll para pegar todos os elementos
+	elements.forEach(function (element) {
+	  element.addEventListener("click", function () {
+		window.location.href = url; // Redireciona para a URL
+	  });
+	});
+  }
+
+addClickEvent(".texto_novos_projetos", "../Dev_About/index.html"); // Adiciona evento de clique para os botões com a classe "botao"
+
+
+
+
+
 var voltarInicio = document.getElementById("voltarInicio");
 			if (voltarInicio) {
 				voltarInicio.addEventListener("click", function () {
@@ -13,7 +29,9 @@ if (xneedware) {
     });
 }
 
-			//Pega um biblioteca JQuery para executar o que estiver dentro da função 
+
+
+//Pega um biblioteca JQuery para executar o que estiver dentro da função 
 			// e inicializa variáveis que serão usadas ao longo do código
 			$(function(){
 
