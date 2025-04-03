@@ -13,7 +13,8 @@ if (xneedware) {
     });
 }
 
-			//Pega um biblioteca JQuery para executar o que estiver dentro da função, e inicializa variáveis que serão usadas ao longo do código
+			//Pega um biblioteca JQuery para executar o que estiver dentro da função 
+			// e inicializa variáveis que serão usadas ao longo do código
 			$(function(){
 
 				var canvas, gl,
@@ -181,12 +182,11 @@ if (xneedware) {
 				}
 				
 				function initCanvasCachedGradient() {
-					// START CANVAS CACHED GRADIENT
+					//Função que cria um gradiente para as estrelas
 					canvas2 = document.createElement('canvas');
 					var w2 = canvas2.width = 100;
 					var h2 = canvas2.height = 100;
 					ctx2 = canvas2.getContext("2d");
-					// draw a big beefy gradient in the center of the dummy canvas
 					var gradientCache = ctx2.createRadialGradient(
 						w2 / 2,
 						h2 / 2,
@@ -203,7 +203,7 @@ if (xneedware) {
 					ctx2.beginPath();
 					ctx2.arc(w2 / 2, h2 / 2, w2 / 2, 0, Math.PI * 2);
 					ctx2.fill();
-					// END CANVAS CACHED GRADIENT
+					// Termina o gradiente
 				}
 				
 				function initStarsAnimation() {
@@ -213,9 +213,11 @@ if (xneedware) {
 					for (var i = 0; i < maxStars; i++) {
 						new Star();
 					}
+					//Pega a função de gradiente criada acima e inicia aqui
 					initCanvasCachedGradient();
 				}
 				
+				//Cria uma funçção de inicialização para iniciar a função para iniciar a animação
 				function startStarsAnimation() {
 					starsAnimation();
 				}
@@ -232,6 +234,7 @@ if (xneedware) {
 				}
 				
 				$(function(event, data) {
+					//Inicia a ação das estrelas
 					initAnimationScene();
 				});
 				

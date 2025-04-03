@@ -1,26 +1,31 @@
+//Inicia uma var com 0, e index, que irá servir para contagem
 let slideIndex = 0;
+
 showSlides();
 
-// Next-previous control
+//Função para o próximo slide
 function nextSlide() {
-  slideIndex++;
-  showSlides();
-  timer = _timer; // reset timer
+  slideIndex++; //Incrementa 1 ao indice
+  showSlides(); //Atualiza a imagem do slide á seguir
+  timer = _timer; //Reseta o índice
 }
 
+//Função para voltar para o slide anterior
 function prevSlide() {
   slideIndex--;
   showSlides();
   timer = _timer;
 }
 
-// Thumbnail image controlls
+
+//Função para escolher o slide que deseja
 function currentSlide(n) {
   slideIndex = n - 1;
   showSlides();
   timer = _timer;
 }
 
+//Função para exibir os slides
 function showSlides() {
   let slides = document.querySelectorAll(".mySlides");
   let dots = document.querySelectorAll(".dots");
@@ -43,16 +48,16 @@ function showSlides() {
   dots[slideIndex].classList.add("active");
 }
 
-// autoplay slides --------
+//Função para o slide passe sozinho, sem o usuário fazer alterações
 let timer = 20; // sec
 const _timer = timer;
 
-// this function runs every 1 second
+//Executa a função a cada 1 minuto
 setInterval(() => {
   timer--;
 
   if (timer < 1) {
     nextSlide();
-    timer = _timer; // reset timer
+    timer = _timer; 
   }
 }, 1000); // 1sec
