@@ -1,5 +1,9 @@
+body { overflow-x: hidden; }
+
+
 body {
   margin: 0px;
+  	
   }
 
 
@@ -174,6 +178,7 @@ body {
     position: relative;
     top: 150px; /* Ajustado para não sobrepor o cabeçalho */
     justify-content: center;
+    margin-bottom: 200px;
 }
 
 .container-1 {
@@ -191,7 +196,7 @@ body {
   background-color: #000000;
   border-radius: 1rem;
   text-align: left;
-  background-image: url("assets/pexels-galih-suryana-putra-2150839441-31356361.jpg");
+  background-image: url("assets/pexels-casia-charlie-1270232-2451043.jpg");
   background-size: cover;
   background-position: center;
   padding: 1.5rem;
@@ -206,21 +211,26 @@ body {
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
     color: white; /* Ajustado para contraste com o fundo */
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 50px;
 }
 
 .container-1 h2,
 .container-2 h2 {
+    background-color: rgba(0, 0, 0, 0.144);
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: white;
     font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
 }
 
 .container-1 p,
 .container-2 p {
     font-size: 1.3rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.144);
     color: #ffffff; /* Ajustado para contraste */
+    border-radius:20px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
 }
@@ -230,30 +240,45 @@ body {
     
   color: #000000;
   font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
+  
   font-size: 30px;
   text-align: center;
   display: block;
   margin: 0 auto;
   margin-top: 200px;
   border-radius: 1rem;
-  
-  
-  
-   
 }
-  
-  
-  
-  
+
 .video-page {
-    width: 1000px;
+    width: 60%;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgb(0, 0, 0);
-    
     align-content: center;
     margin-top: 10px;
     margin-bottom: 100px;
+  }
+  
+  .saiba-mais {
+  text-align: center;   
+  margin-bottom: 100px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+  .redes-sociais img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    
+    
+  }
+    
+   
+  
+  
+  
+  
+    
     
     
     
@@ -267,7 +292,6 @@ body {
     
     
 
-}
     
     
     
