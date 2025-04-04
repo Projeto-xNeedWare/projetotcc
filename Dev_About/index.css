@@ -180,28 +180,33 @@ body {
     justify-content: center;
     margin-bottom: 200px;
 }
-
-.container-1 {
-    background-color: #000000;
-    border-radius: 1rem;
-    text-align: left;
-    background-image: url("assets/pexels-evgeny-tchebotarev-1058775-2187605.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 1.5rem;
-    max-height: 800px;
-    box-shadow: 0 4px 10px rgb(0, 0, 0);
-}
-.container-2 {
-  background-color: #000000;
+.container-1, .container-2 {
+  position: relative;
   border-radius: 1rem;
   text-align: left;
-  background-image: url("assets/pexels-casia-charlie-1270232-2451043.jpg");
-  background-size: cover;
-  background-position: center;
   padding: 1.5rem;
   max-height: 800px;
-  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  
+  background-color: transparent; /* Remove o fundo preto */
+  overflow: hidden; /* Evita que o pseudo-elemento ultrapasse as bordas */
+}
+
+.container-1::before, .container-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2.8px);
+  z-index: -1;
+}
+
+.container-1::before {
+  background-image: url("assets/pexels-evgeny-tchebotarev-1058775-2187605.jpg");
+}
+
+.container-2::before {
+  background-image: url("assets/pexels-casia-charlie-1270232-2451043.jpg");
 }
 
 /* Estilizar elementos internos */
@@ -211,13 +216,13 @@ body {
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
     color: white; /* Ajustado para contraste com o fundo */
-    background-color: rgba(0, 0, 0, 0.144);
+    
     border-radius: 50px;
 }
 
 .container-1 h2,
 .container-2 h2 {
-    background-color: rgba(0, 0, 0, 0.144);
+    
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: white;
@@ -228,7 +233,7 @@ body {
 .container-1 p,
 .container-2 p {
     font-size: 1.3rem;
-    background-color: rgba(0, 0, 0, 0.144);
+    
     color: #ffffff; /* Ajustado para contraste */
     border-radius:20px;
     font-weight: 500;
@@ -249,6 +254,21 @@ body {
   border-radius: 1rem;
 }
 
+
+.container-3 h1 {
+  color: #1D1D1F; /* Preto intenso */
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+.container-3 h2 {
+  color: #6E6E73; /* Cinza médio */
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+
 .video-page {
     width: 60%;
     border-radius: 20px;
@@ -257,10 +277,21 @@ body {
     margin-top: 10px;
     margin-bottom: 100px;
   }
+
+  .saiba-mais  {
+    margin-top: 400px;
   
-  .saiba-mais {
+  }
+  
+  .saiba-mais h1 {
   text-align: center;   
-  margin-bottom: 100px;
+  
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.saiba-mais p {
+  text-align: center;
   font-family: 'Poppins', sans-serif;
 
 }
@@ -269,9 +300,19 @@ body {
     width: 30px;
     height: 30px;
     margin: 0 10px; /* Espaçamento entre os ícones */
+    align-items: left;
     
     
   }
+
+  .redes-sociais {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+  }
+
+
     
    
   
