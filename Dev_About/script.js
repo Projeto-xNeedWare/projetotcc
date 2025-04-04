@@ -24,3 +24,14 @@ function addClickEvent(selector, url) {
   
   // Aplique o evento de clique em todos os botões de compra
   addClickEvent(".botao-comprar", "../pagina_pagamento/index.html");
+
+
+// Mobile first js
+
+
+// Controle do Menu Mobile
+
+
+
+
+  
