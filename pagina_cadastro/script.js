@@ -1,17 +1,11 @@
-var lineRoundedCloseIcon = document.getElementById("lineRoundedCloseIcon");
-    		if(lineRoundedCloseIcon) {
-      			lineRoundedCloseIcon.addEventListener("click", function (e) {
-                    window.history.back();
-      			});
-    		}
+function verificarSenhasIguais() {
+    const senha = document.getElementById("senha").value;
+    const confirmarSenha = document.getElementById("confirmar_senha").value;
 
-			function toggleCheckbox() {
-				let checkbox = document.querySelector(".checkbox");
-				checkbox.classList.toggle("checked");
-			  }
+    if (senha !== confirmarSenha) {
+        alert("As senhas não coincidem.");
+        return false; // Impede o envio do formulário
+    }
 
-			function fazerCadastro() {
-				alert("Botão funcionando");
-				// Redirecionar para outra página
-				// window.location.href = "pagina_de_cadastro.html";
-			  }
+    return true; // Permite o envio do formulário
+}

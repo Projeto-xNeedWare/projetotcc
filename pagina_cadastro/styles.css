@@ -1,0 +1,160 @@
+/* Estilos básicos (MOBILE FIRST) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container do cadastro */
+.area-cadastro {
+    width: 100%;
+    height: 75%;
+    margin-bottom: 60px;
+    background: #111;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    margin-bottom: 1.5rem;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+/* Campos de entrada */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    margin-left: 5%;
+}
+
+input {
+    margin-left: 5%;
+    padding: 13px;
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    outline: none;
+    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    width: 90%;
+    max-width: 350px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input:focus {
+    background: #f0f0f0;
+    border-color: #000000;
+    transform: scale(1.02);
+}
+
+/* Botão de cadastro */
+.botao-cadastrar {
+    background: #333333;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 70%;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+.botao-cadastrar:hover {
+    background: #6d6d6d;
+    transform: scale(1.05);
+}
+
+/* Link para login */
+.link-login {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.link-login a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-login a:hover {
+    color: #6d6d6d;
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+/* TABLETS */
+@media (min-width: 600px) {
+    .area-cadastro {
+        max-width: 400px;
+        padding: 2.5rem;
+    }
+}
+
+/* DESKTOPS */
+@media (min-width: 1024px) {
+    body {
+        padding: 0;
+    }
+
+    .area-cadastro {
+        max-width: 450px;
+        padding: 3rem;
+        height: 87%;
+    }
+
+    label {
+        margin-left: 0%;
+    }
+
+    input {
+        padding: 18px;
+        font-size: 1rem;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .botao-cadastrar {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    .botao-cadastrar:hover {
+        transform: scale(1.08);
+    }
+}

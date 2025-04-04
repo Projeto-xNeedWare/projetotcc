@@ -1,111 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-	<title>Cadastro</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-	<link rel="website icon" type="jpg" href="./assets/favicon.ico"/>
-  	<link rel="stylesheet"  href="../pagina_cadastro/css/botao.css" />
-  	<link rel="stylesheet"  href="../pagina_cadastro/css/index.css" />
-  	<link rel="stylesheet"  href="../pagina_cadastro/css/botao.css" />
-  	<link rel="stylesheet"  href="../pagina_cadastro/css/input.css" />
-  	<link rel="stylesheet"  href="../pagina_cadastro/css/imagens.css" />
-  	<link rel="stylesheet"  href="../pagina_cadastro/css/pagina_toda.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF Pro Display:wght@500&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" />
-  	
-  	
-  	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="website icon" type="jpg" href="./assets/favicon.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  	
-  	<div class="pagina-de-cadastro">    		
-    		<div class="grupo_cadastro">
-				<!-- <div class="textFormasCadastro">Cadastro com outros</div> -->
-				<div class="grupo_formas_cadastro">
-      			</div>
-				  
-      			<b class="textCadastro">Cadastro</b>
-				  <!-- Caixa de input com e-mail, senha e confirmação de senha -->
-				<div class="container_input">
-					<!-- Campo de e-mail -->
-					<div class="campo_input">
-					<label for="email" class="label_input">E-mail</label>
-					<input type="email" id="email" name="email" class="input_cadastro" placeholder="Digite seu e-mail" required>
-					<img class="icone_cadastro" alt="Ícone de e-mail" src="assets/email.svg">
-					</div>
-				
-					<!-- Campo de senha -->
-					<div class="campo_input">
-					<label for="senha" class="label_input">Senha</label>
-					<input type="password" id="senha" name="senha" class="input_cadastro" placeholder="Digite sua senha" required>
-					<img class="icone_cadastro" alt="Ícone de senha" src="assets/Frame.png">
-					</div>
-				
-					<!-- Campo de confirmação de senha -->
-					<div class="campo_input">
-					<label for="confirmar_senha" class="label_input">Confirme sua senha</label>
-					<input type="password" id="confirmar_senha" name="confirmar_senha" class="input_cadastro" placeholder="Confirme sua senha" required>
-					<img class="icone_cadastro" alt="Ícone de confirmação de senha" src="assets/Frame.png">
-					</div>
-				</div>
-  
-      			<div class="container_cadastro">
-					<div class="grupo_botao_cadastro" onclick="fazerCadastro()">
-					  <b class="textCadastro1">CADASTRAR</b>
-					</div>
-				  </div>
-
-				<!-- Não esquecer de permitir login com o google 
-      			<div class="group-container">
-        				<div class="group-div">
-          					<div class="rectangle-div">
-          					</div>
-          					<div class="login-with-google-parent">
-            						<div class="login-with-google-container">
-              							<span>Login with</span>
-              							<b>Google</b>
-            						</div>
-            						<img class="google-1-icon" alt="" src="assets/google 1.png">
-            						
-          					</div>
-        				</div>	
-      			</div>-->
-
-    		</div>
-    		
-      			
-    		</div>
-    		<div class="grupo_imagens">
-      			<img class="retangulo_cinza" alt="" src="assets/retangulo_cinza.png">
-      			
-      			<div class="enquadramento3">
-      			</div>
-      			<img class="mulher_tablet" alt="" src="assets/mulher_tablet.png">
-      			
-      			<div class="grupo_circulo">
-        				<div class="circulo_div">
-        				</div>
-        				<img class="circulo_raio" alt="" src="assets/circulo_raio.png">
-        				
-      			</div>
-    		</div>
-    		<img class="icone_fechar" alt="" src="./assets/icone_fechar.svg" id="iconeFechar">
-
+    <div class="area-cadastro">
+        <div class="caixa-cadastro">
+            <h2>Cadastro</h2>
+            <form>
+                <div class="grupo-campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="grupo-campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <div class="grupo-campo">
+                    <label for="confirmar_senha">Confirme sua senha</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme sua senha" required>
+                </div>
+                <button type="submit" class="botao-cadastrar">Cadastrar</button>
+            </form>
+            <p class="link-login">Já tem uma conta? <a href="../pagina_login/login.html">Faça login</a></p>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2025 xNeedWare. All rights reserved.  
-            <a href="politica-de-privacidade.html">Privacy Policy</a>
+        <p>&copy; 2025 xNeedWare. Todos os direitos reservados.  
+            <a href="politica-de-privacidade.html">Política de Privacidade</a>
         </p>
     </footer>
-			
-    		
-  	
-  	
-  	
-  	
-  	
-  	<script src="script.js"></script>
-		</body>
+    <script src="script.js"></script>
+</body>
+
 </html>

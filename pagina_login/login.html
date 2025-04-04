@@ -1,76 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<title>Login</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-	  <link rel="website icon" type="jpg" href="./assets_login/favicon.ico"/>
-  	<link rel="stylesheet"  href="./index.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF Pro Display:wght@500&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400&display=swap" />
-  	
-  	
-  	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="website icon" type="jpg" href="./assets/favicon.ico"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  	
-  	<div class="pagina-login">
-    		<div class="login-parent">
-      			<b class="login">Login</b>
-      			<div class="rectangle-parent">
-        				<div class="group-child">
-        				</div>
-        				<div class="senha">Senha</div>
-        				<img class="frame-icon" alt="" src="./assets_login/senha_icon.svg">
-        				
-      			</div>
-      			
-        				
-				  <div class="container_input">
-					<!-- Campo de e-mail -->
-					<div class="campo_input">
-					<label for="email" class="label_input">E-mail</label>
-					<input type="email" id="email" name="email" class="input_cadastro" placeholder="Digite seu e-mail" required>
-					<img class="icone_cadastro" alt="Ícone de e-mail" src="assets/email.svg">
-					</div>
-					
-      			<div class="rectangle-container">
-        				<div class="group-inner">
-        				</div>
-        				<b class="login1">LOGIN</b>
-      			</div>
-      			
-    		</div>
+    <!-- Container principal do login -->
+    <div class="container-login">
+        <div class="caixa-login">
+            <h2>Login</h2>
 
-    		<div class="rectangle-parent2">
-      			<img class="rectangle-icon" alt="" src="./assets_login/rectangle_img.png">
-      			
-      			<div class="group-child2"></div>
-      			<img class="women-with-tab-1" alt="" src="./assets_login/women_img.png">
-    		</div>
-    		
-    		<img class="line-roundedclose-icon" alt="" src="./assets_login/fechar_icon.svg" id="lineRoundedCloseIcon">
-    		
-    		<div class="rodape">
-      			<div class="wrapper">
-        				<div class="copyright-wrapper">
-          					<div class="copyright">Copyright © 2025 xNeedWare Enterprise</div>
-        				</div>
-        				<div class="footer-right">
-          					<span class="all-rights-reserved">All Rights Reserved | </span>
-          					<span class="terms-and-conditions">Terms and Conditions</span>
-          					<span class="all-rights-reserved"> | </span>
-          					<span class="terms-and-conditions">Privacy Policy</span>
-        				</div>
-      			</div>
-    		</div>
-  	</div>
-  	
-  	
-  	
-  	
-  	<script src="script.js"></script>
-		</body>
+            <form>
+                <!-- Campo de e-mail -->
+                <div class="grupo-input">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <!-- Campo de senha -->
+                <div class="grupo-input">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <!-- Botão de login -->
+                <button type="submit" class="botao-login">Entrar</button>
+            </form>
+
+            <p class="link-cadastro">Não tem uma conta? <a href="../pagina_cadastro/index.html">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 xNeedWare. Todos os direitos reservados.  
+            <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </p>
+    </footer>
+</body>
 </html>
