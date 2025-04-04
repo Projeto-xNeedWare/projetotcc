@@ -9,3 +9,7 @@ function verificarSenhasIguais() {
 
     return true; // Permite o envio do formulário
 }
+
+function voltarPagina() {
+    window.history.back();
+}
