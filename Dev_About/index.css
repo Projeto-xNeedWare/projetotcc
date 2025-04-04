@@ -181,6 +181,7 @@ p {
       display: none;
   }
 
+
   .menu {
       display: flex;
       position: static;
@@ -193,7 +194,6 @@ p {
   .cabecalho {
       padding: 1rem 2rem;
   }
-
   .container-principal {
       flex-direction: row;
   }
