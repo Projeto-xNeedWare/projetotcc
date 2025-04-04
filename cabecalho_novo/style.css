@@ -1,0 +1,25 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    display: flex;
+
+    text-align: center;
+}
+.botao-cabecalho {
+    background-color: transparent;
+}
+.avatar {
+    display: block;
+}
+.itens-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: auto;
+    
+}
+.avatar {
+    margin-right: 2%;
+    padding-top: 3px;
+}
