@@ -115,7 +115,7 @@ body {
 }
 
 .botao-primario, .botao-secundario {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 25px;
   font-size: 1rem;
   cursor: pointer;
