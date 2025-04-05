@@ -1,245 +1,202 @@
+/* Reset Mobile-First */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Para garantir que 100vh funcione corretamente */
-    width: 100%;
-  }
-  
-  .pagina-em-breve {
-    position: relative;
-    width: 100%;
-    min-height: 100vh; /* Ocupa pelo menos toda a tela */
-    background-color: #000; /* Evita que apareça fundo branco */
-    overflow: hidden;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-    font-family: Poppins, sans-serif;
-  }
-  
-  .imagem_espaco {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cobre todo o container */
-  }
-  
-  /* Em vez de usar top fixo como 423px, tente centralizar via transform */
-  .texto_estamos_criando {
-    position: absolute;
-    top: 50%; /* 50% da altura do container */
-    left: 50%; 
-    transform: translate(-50%, -50%); /* Centraliza no meio */
-    font-size: 48px;
-    font-weight: 500;
-  }
-  
-  .texto_novos_projetos {
-    position: absolute;
-    top: 60%; /* Ajuste conforme desejar */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-family: Inter, sans-serif;
-  }
-.me-notifique {
-    position: relative;
-    font-weight: 500;
-    width: 162px;
-}
-.icone_enviar {
-    width: 40px;  /* Aumentando a largura do ícone */
-    height: 40px; /* Aumentando a altura do ícone */
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-.grupo_me_notifique {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-}
-/* Estilização dos botões "Me notifique" e "Voltar para página anterior" */
-.me_notifique,
-.me_notifique1 {
-    position: absolute;
-    border-radius: 40px;
-    background-color: #fff;
-    border: 1px solid #cbcbcb;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Animação suave */
-    width: 250px; /* Tamanho fixo igual para ambos */
-    height: 75px; /* Tamanho fixo igual para ambos */
-    font-size: 22px; /* Tamanho de fonte igual para ambos */
-    font-family: 'Poppins', sans-serif; /* Fonte igual para ambos */
-    white-space: nowrap;
-    z-index: 2;
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #000;
 }
 
-/* Estilização do botão "Me notifique" */
-.me_notifique {
-    top: 48px;
-    left: 70%;
-    color: #2d2d2d;
-    margin-right: 10px;
+/* Camadas de animação */
+#star-canvas, #space-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
-/* Estilização do botão "Voltar para página anterior" */
-.me_notifique1 {
-    top: 48px;
-    left: 85%;
-    color: #000;
-    width: 350px; /* Aumentando a largura do botão */
-    font-size: 22px; /* Aumentando o tamanho da fonte */
+#space-canvas {
+  z-index: 0;
 }
-
-/* Ícone do botão "Me notifique" */
-.icone_enviar {
-    width: 40px;
-    height: 20px;
-    margin-left: 8px; /* Espaço entre o texto e o ícone */
-}
-
-/* Efeito de zoom quando passa o mouse sobre os botões */
-.me_notifique:hover,
-.me_notifique1:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do botão */
-}
-
-.logos_redes_sociais {
-    width: 40px;
-    position: relative;
-    height: 40px;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-/* Estilização das redes sociais */
-.redes_sociais {
-    position: absolute;
-    bottom: 48px;
-    left: calc(50% - 108px);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 48px;
-    z-index: 2;
-}
-
-/* Estilização das imagens das redes sociais */
-.redes_sociais img {
-    width: 30px; /* Defina o tamanho das imagens */
-    height: 30px; /* Tamanho proporcional */
-    transition: transform 0.3s ease-in-out; /* Animação suave */
-}
-
-/* Efeito de zoom quando passa o mouse sobre as imagens das redes sociais */
-.redes_sociais img:hover {
-    transform: scale(1.5); /* Aumenta o tamanho da imagem */
-}
-
-.xneedware {
-    position: absolute;
-    top: 48px;
-    left: 45px;
-    font-size: 36px;
-    font-weight: 600;
-    font-family: Poppins;
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-    height: 41px;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Animação suave */
-    z-index: 2;
-}
-
-/* Efeito de zoom quando passa o mouse sobre o texto */
-.xneedware:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do texto */
-}
-
-
 
 .pagina-em-breve {
-    width: 100%;
-    position: relative;
-    background-color: #fff;
-    height: 100px;
-    overflow: hidden;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-    font-family: Poppins;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
 }
 
-.animation-wrapper {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: transparent;
+.imagem-espaco {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.72);
+  z-index: 3;
+}
+
+.conteudo {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Restante do CSS mantido igual ao anterior */
+
+.texto-container {
+  text-align: center;
+  margin-top: 40vh;
+}
+
+.texto-estamos-criando {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.texto-novos-projetos {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 2rem;
+}
+
+/* Estilização do Botão Dev Mode */
+.botao-dev-mode {
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #000;
+  padding: 1em 2em;
+  margin-top: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.botao-dev-mode a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  background: linear-gradient(-45deg, #2e2e2e, #d400ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.botao-dev-mode::after,
+.botao-dev-mode::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+      var(--rotate),
+      #313131 0%,
+      #000000 30%,
+      #9900ff 70%,
+      #aa0dff 100%
+  );
+  width: 105%;
+  height: 110%;
+  left: -2.5%;
+  top: -5%;
+  border-radius: 10px;
+  z-index: -1;
+  transition: --rotate 9999s linear;
+}
+
+.botao-dev-mode:hover::after,
+.botao-dev-mode:hover::before {
+  --rotate: 3600deg;
+  transition: --rotate 20s linear;
+}
+
+.botao-dev-mode:hover::before {
+  animation: fade 1.2s;
+}
+
+.redes-sociais {
+  position: fixed;
+  bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 3;
+  top: 95% ;
+}
+
+.redes-sociais img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .logo {
+      font-size: 2rem;
+      top: 2rem;
+      right: 2rem;
   }
-  
-  .animation-wrapper canvas {
-    width: 100%;
-    height: 100%;
+
+  .texto-estamos-criando {
+      font-size: 2.5rem;
   }
-  
-  .animation-wrapper .image {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: opacity 2s;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover !important;
-    min-height: 100%;
-    min-width: 100%;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+
+  .texto-novos-projetos {
+      font-size: 1.3rem;
   }
-  
-  #animation-canvas {
-    position: fixed;
-    z-index: -1;
+
+  .redes-sociais {
+      gap: 2.5rem;
   }
-  
-  #animation-space-canvas {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 2s;
+
+  .redes-sociais img {
+      width: 20px;
+      height: 20px;
   }
-  
-  .animation-wrapper.active #animation-space-canvas {
-    opacity: 1;
+}
+
+@keyframes fade {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(10px);
   }
-  
-  .animation-wrapper.active .image {
-    opacity: 1;
+  100% {
+      opacity: 0;
+      transform: scale(1.4);
+      filter: blur(10px);
   }
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 130deg;
+  inherits: false;
+}
