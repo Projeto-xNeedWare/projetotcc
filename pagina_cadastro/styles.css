@@ -23,7 +23,7 @@ body {
 
 /* Container do cadastro */
 .area-cadastro {
-    margin-top: -30px;
+    margin-top: 30px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -36,8 +36,8 @@ body {
 
 .botao-fechar {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 5px;
+    right: 5px;
     font-size: 24px;
     color: #fff;
     cursor: pointer;
@@ -158,7 +158,7 @@ footer {
     .area-cadastro {
         max-width: 450px;
         padding: 3rem;
-        height: 87%;
+        height: 50%;
     }
 
     label {
