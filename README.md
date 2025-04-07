@@ -10,9 +10,9 @@
 
 - [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/pagina_assinaturas/)  
 
-- [⚙️ Página Funcionalidades](https://projeto-xneedware.github.io/projetotcc/pagina_funcionalidades/)  
+- [⚙️ Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/pagina_sobre-nos/)  
 
-- [🔑 Página Login](https://projeto-xneedware.github.io/projetotcc/pagina_login/index.html)  
+- [🔑 Página Login](https://projeto-xneedware.github.io/projetotcc/pagina_login/)  
 
 - [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/pagina_pagamento/)  
 
