@@ -1,0 +1,265 @@
+/* === BASE === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* === CABEÇALHO === */
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .menu-hamburguer {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: block;
+  }
+  
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .menu.active {
+    display: flex;
+  }
+  
+  .botao_cabecalho {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .acoes {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .botao-cadastro {
+    background: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: none;
+  }
+
+
+.container-1 {
+    
+    background-color: rgb(255, 255, 255);
+    width: 80rem;
+    height: 40rem;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 100px;
+
+}
+
+.imagem-produto {
+    
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.158);
+    width: 30%;
+    height: 50%;
+    margin-left: 5%;
+    margin-top: 5%;
+    position: absolute;
+    
+    
+    
+}
+    
+
+.nome-produto {
+    left: 56.7%;
+    margin-top: 5%;
+    position: absolute;
+    color: var(--Text-Main, #1E1E1E);
+    font-family: "A1 Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    
+}
+
+.preco-produto  {
+    position: absolute;
+    left: 56.7%;
+    display: flex;
+    margin-top: 10%;
+    
+}
+
+.preco-produto h2 {
+    color: var(--Text-Main, #1E1E1E);
+    font-family: "A1 Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 50px;
+    
+}
+
+.preco-produto p {
+    color: var(--Text-Main, #1E1E1E);
+    font-family: "A1 Sans";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 50px;
+}
+
+.botoes-comprar {
+    left: 56.7%;
+    position: absolute;
+    margin-top: 25%;
+    
+}
+
+.botao-1 {
+    display: flex;
+    width: 230px;
+    padding: 13px 0px 15px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: #000;
+    color: #FFF;
+}
+
+
+.container-2 {
+    width: 80rem;
+    height: 40rem;  
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.158);
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 10%;
+}
+
+.titulo-detalhes {
+    color: #1E1E1E;
+    text-align: center;
+    font-family: "A1 Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.subtitulo-detalhes {
+    font-family: "A1 Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 343.714px;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+
+
+
+  /* === DESKTOP === */
+@media (min-width: 768px) {
+    .menu-hamburguer {
+      display: none;
+    }
+  
+    .menu {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      gap: 2rem;
+    }
+  
+    .cabecalho {
+      padding: 1rem 2rem;
+    }
+  
+    .acoes {
+      display: flex;
+    }
+  
+    .botao-cadastro {
+      display: inline-block;
+    }
+  
+    .avatar {
+      display: block;
+    }
+  
+    .grade-produtos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+
+  @font-face {
+    font-family: "A1 Sans";
+    src: url("https://db.onlinewebfonts.com/t/8e4b8cb6c9ef503769bf424ac4162d63.eot");
+    src: url("https://db.onlinewebfonts.com/t/8e4b8cb6c9ef503769bf424ac4162d63.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8e4b8cb6c9ef503769bf424ac4162d63.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8e4b8cb6c9ef503769bf424ac4162d63.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/8e4b8cb6c9ef503769bf424ac4162d63.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8e4b8cb6c9ef503769bf424ac4162d63.svg#A1 Sans")format("svg");
+}
