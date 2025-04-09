@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 35px;
-margin: auto;
+    margin: auto;
 
     
 }
@@ -60,7 +60,7 @@ margin: auto;
     color: white;    top: 0;
     padding-top: 10px;
     padding-bottom: 0;
-        width: 125px;
+    width: 125px;
     background-color: #00000069;
     
 }
