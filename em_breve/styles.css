@@ -57,6 +57,9 @@ body {
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0,0,0,0.72);
   z-index: 3;
+  color: #fff;
+  background-color: black;
+  border: none;
 }
 
 .conteudo {
