@@ -166,13 +166,19 @@ body {
 }
 
 .card-recurso {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0, 0, 0, 0.514) 35%);;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 40px;
   text-align: center;
-  color: #EFEFEF;
+  color: #000000;
   transition: transform 0.3s ease;
 }
+
+.card-recurso img {
+  border-radius: 20px;
+}
+  
+
 
 .icone-recurso {
   width: 100px;
@@ -184,13 +190,39 @@ body {
 .titulo-card {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #000000;
 }
 
 .texto-recurso {
   font-size: 1rem;
   line-height: 1.5;
-  color: #e0e0e0;
+  color: #000000;
+}
+
+
+
+/* REDES SOCIAIS */
+.redes-sociais {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #ffffff;
+}
+
+.icones-redes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.icones-redes img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icones-redes img:hover {
+  transform: scale(1.1);
 }
 
 /* Media Queries para Desktop */
