@@ -88,6 +88,10 @@ body {
   background-color: #00000025;
   border-radius: 5px;
 }
+.barra {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14pt;
+}
 
 /* === CONTAINER PRODUTO SEM IMAGEM === */
 .container-1 {
