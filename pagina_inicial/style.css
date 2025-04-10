@@ -115,8 +115,7 @@ body {
 }
 
 .texto-apresentacao {
-  background: var(--gradiente-texto);
-  -webkit-background-clip: text;
+  background: rgb(75, 75, 75) ;
   background-clip: text;
   color: transparent;
   font-size: 2.5rem;

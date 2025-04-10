@@ -28,8 +28,15 @@ body {
   font-size: 18pt;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
   cursor: pointer;
+  border: #fff;
+  background-color: #fff; ;
+  
+}
+
+.texto-logo {
   text-decoration: none;
 }
+  
 
 .menu-hamburguer {
   background: none;
@@ -91,6 +98,7 @@ body {
 .barra {
   font-family: 'Courier New', Courier, monospace;
   font-size: 14pt;
+  display: none;
 }
 
 /* === BANNER === */
@@ -129,7 +137,7 @@ body {
   background: #000;
   color: #fff;
   border: none;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -137,7 +145,7 @@ body {
   background: #f5f5f5;
   color: #000;
   border: 1px solid #ddd;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
