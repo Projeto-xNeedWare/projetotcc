@@ -1,4 +1,4 @@
-/* Mobile First Approach */
+
 :root {
   --gradiente-texto: linear-gradient(180deg, #FFF 0%, #6F6F6F 100%);
   --cor-secundaria: #867777;
@@ -6,7 +6,7 @@
   --sombra: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-* {
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #F5F5F5;
+  background-color: #ffffff;
 }
 
 .container {
@@ -22,7 +22,9 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
+  
 }
+
 
 /* === CABEÇALHO === */
 .cabecalho {
@@ -31,15 +33,16 @@ body {
   align-items: center;
   padding: 1rem;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #000;
+  font-weight: 600;
+  color: #000000b7;
+  font-size: 18pt;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+  cursor: pointer;
 }
 
 .menu-hamburguer {
@@ -69,14 +72,12 @@ body {
 }
 
 .botao_cabecalho {
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: 1rem;
+  background-color: transparent;
   cursor: pointer;
-  padding: 0.5rem;
-  color: #333;
-  transition: color 0.3s ease;
+  border: 0;
+  color: #000000c7;
+  font-size: 14pt;
+  transition: 0.8s;
 }
 
 .acoes {
@@ -85,22 +86,27 @@ body {
   gap: 1rem;
 }
 
-.botao-cadastro {
-  background: #000;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 2rem;
-  border: none;
+.botao-cadastro,
+.botao-login {
+  background-color: transparent;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  border: 0;
+  color: #000000c7;
+  font-size: 14pt;
+  transition: 0.8s;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: none;
+.botao-cadastro:hover,
+.botao-login:hover,
+.botao_cabecalho:hover {
+  background-color: #00000025;
+  border-radius: 5px;
 }
+.barra {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14pt;
+  display: none;
+} 
 
 /* Hero Section */
 .hero {
@@ -160,7 +166,7 @@ body {
 }
 
 .card-recurso {
-  background: linear-gradient(180deg, #0E0E0E 0%, #FFE4D1 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0, 0, 0, 0.514) 35%);;
   padding: 2rem;
   border-radius: 40px;
   text-align: center;
@@ -230,36 +236,33 @@ body {
 
 /* ===== DESKTOP ===== */
 @media (min-width: 768px) {
-  .menu-hamburguer {
-      display: none;
-  }
-
-
-  .menu {
-      display: flex;
-      position: static;
-      flex-direction: row;
-      background: none;
-      box-shadow: none;
-      padding: 0;
-  }
-
   .cabecalho {
-      padding: 1rem 2rem;
-  }
+    padding: 1rem 2rem;
+}
 
-  .menu-links {
-      flex-direction: row;
-      gap: 2rem;
-  }
+.menu-hamburguer {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 2rem;
+}
+
+.barra {
+    display: block;
+}
 
   .texto-apresentacao {
       font-size: 3.5rem;
   }
 
-  .animacao-computador {
-      transform: scale(1);
-  }
+
 
   .cards-container {
       grid-template-columns: repeat(3, 3fr);
