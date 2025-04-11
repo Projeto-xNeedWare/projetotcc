@@ -23,7 +23,7 @@ body {
 
 /* Container do cadastro */
 .area-cadastro {
-    margin-top: 30px;
+    margin-top: -40px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -55,41 +55,60 @@ h2 {
     font-weight: 700;
 }
 
-/* Campos de entrada */
+/* INPUT */
 .grupo-campo {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
+    position: relative;
 }
 
 label {
     font-size: 0.9rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     margin-left: 5%;
+    color: #000000;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 input {
     margin-left: -10px;
-    padding: 13px;
-    border: 1px solid #fff;
-    background: #fff;
-    color: #000;
-    border-radius: 10px;
+    padding: 13px 10px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 15px;
     outline: none;
-    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
     width: 110%;
+    height: 45px;
     max-width: 350px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
 }
 
 input::placeholder {
-    color: rgba(0, 0, 0, 0.6);
+    color: #c7c7c7;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 input:focus {
-    background: #f0f0f0;
+    background: #ffffff;
     border-color: #000000;
-    transform: scale(1.02);
+    transform: scale(1.04);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+.grupo-campo:focus-within label {
+    color: #f5f5f5;
+    transform: translateX(5px);
 }
 
 /* Botão de Cadastro */
@@ -104,23 +123,22 @@ input:focus {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out, background 0.3s;
-    margin-top: 6px;
+    margin-top: 25px;
 }
 
 .botao-cadastrar:hover {
-    background: #000000;
-    color: #fff;
-    transform: scale(1.03);
+    transform: scale(1.0);
 }
 
 /* Link para login */
 .link-login {
+    color: #f0f0f0;
     margin-top: 1rem;
     font-size: 0.9rem;
 }
 
 .link-login a {
-    color: #bebebe;
+    color: #a5a5a5;
     text-decoration: none;
     font-weight: bold;
 }
@@ -157,18 +175,21 @@ footer {
 
     .area-cadastro {
         max-width: 450px;
-        padding: 3rem;
-        height: 50%;
+        max-height: 500px;
+        margin-bottom: 60px;
+        margin-top: 20px;
+        height: 100%;
+        width: 100%;
     }
 
     label {
-        margin-left: 0%;
+        margin-left: 1%;
     }
 
     input {
         padding: 18px;
         font-size: 1rem;
-        margin-left: 0;
+        margin-left: 2%;
         width: 100%;
     }
 

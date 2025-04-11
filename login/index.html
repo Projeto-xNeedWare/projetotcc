@@ -1,42 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - xNeedWare(BR)</title>
+    <title>Login - xNeedWare(BR)</title>
     <link rel="icon" type="image/x-icon" href="../assets_geral/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="area-cadastro">
-        <div class="caixa-cadastro">
+    <!-- Container principal do login -->
+    <div class="container-login">
+        <div class="caixa-login">
             <span class="botao-fechar" onclick="voltarPagina()">×</span>
+            <h2>Login</h2>
 
-
-            <h2>Cadastro</h2>
             <form>
-                <div class="grupo-campo">
+                <!-- Campo de e-mail -->
+                <div class="grupo-input">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                 </div>
-                <div class="grupo-campo">
+
+                <!-- Campo de senha -->
+                <div class="grupo-input">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                 </div>
-                <div class="grupo-campo">
-                    <label for="confirmar_senha">Confirme sua senha</label>
-                    <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme sua senha" required>
-                </div>
-                <button type="submit" class="botao-cadastrar">Cadastrar</button>
+
+                <!-- Botão de login -->
+                <button type="submit" class="botao-login">Entrar</button>
             </form>
-            <p class="link-login">Já tem uma conta? <a href="../login/index.html">Faça login</a></p>
+
+            <p class="link-cadastro">Não tem uma conta? <a href="../cadastro/index.html"><br>Crie uma aqui</a></p>
         </div>
     </div>
+
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 xNeedWare. Todos os direitos reservados.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
-
-</html>
+</html
