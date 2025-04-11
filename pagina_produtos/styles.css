@@ -296,6 +296,9 @@ body {
   .grade-produtos {
     grid-template-columns: repeat(2, 1fr);
   }
+  .barra {
+    display: block;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -322,6 +325,10 @@ body {
 
   .preco {
     font-size: 2rem;
+  }
+
+  .barra {
+    display: block;
   }
 }
 

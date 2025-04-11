@@ -18,85 +18,7 @@ body {
   background: #f8f9fa;
 }
 
-/* Cabeçalho */
-.cabecalho {
-  position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
-}
 
-.cabecalho-container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-texto {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-}
-
-.menu-hamburguer {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.menu-hamburguer span {
-  width: 25px;
-  height: 3px;
-  background: #1a1a1a;
-  transition: all 0.3s ease;
-}
-
-.menu-links {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-links.aberto {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.botao-nav {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  color: #333;
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.botao-cadastro {
-  background: #1a1a1a;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: transform 0.2s ease;
-}
 
 /* Conteúdo Principal */
 .contato-container {
@@ -185,18 +107,7 @@ body {
 
 /* Media Queries */
 @media (min-width: 768px) {
-  .menu-hamburguer {
-      display: none;
-  }
-
-  .menu-links {
-      position: static;
-      display: flex;
-      gap: 2rem;
-      background: none;
-      box-shadow: none;
-      padding: 0;
-  }
+  
 
   .contato-conteudo {
       display: grid;

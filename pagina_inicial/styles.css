@@ -26,87 +26,7 @@ body {
 }
 
 
-/* === CABEÇALHO === */
-.cabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #fff;
-  position: relative;
-  z-index: 1000;
-}
 
-.logo {
-  font-weight: 600;
-  color: #000000b7;
-  font-size: 18pt;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
-  cursor: pointer;
-}
-
-.menu-hamburguer {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  display: block;
-}
-
-.menu {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.menu.active {
-  display: flex;
-}
-
-.botao_cabecalho {
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-  color: #000000c7;
-  font-size: 14pt;
-  transition: 0.8s;
-}
-
-.acoes {
-  display: none;
-  align-items: center;
-  gap: 1rem;
-}
-
-.botao-cadastro,
-.botao-login {
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-  color: #000000c7;
-  font-size: 14pt;
-  transition: 0.8s;
-}
-
-.botao-cadastro:hover,
-.botao-login:hover,
-.botao_cabecalho:hover {
-  background-color: #00000025;
-  border-radius: 5px;
-}
-.barra {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 14pt;
-  display: none;
-} 
 
 /* Hero Section */
 .hero {
@@ -267,27 +187,7 @@ body {
 
 /* ===== DESKTOP ===== */
 @media (min-width: 768px) {
-  .cabecalho {
-    padding: 1rem 2rem;
-}
-
-.menu-hamburguer {
-    display: none;
-}
-
-.menu {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    gap: 2rem;
-}
-
-.barra {
-    display: block;
-}
+  
 
   .texto-apresentacao {
       font-size: 3.5rem;
