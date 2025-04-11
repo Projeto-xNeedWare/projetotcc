@@ -8,7 +8,7 @@
 
 - [📝 Página Cadastro](https://projeto-xneedware.github.io/projetotcc/pagina_cadastro/)  
 
-- [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/pagina_assinaturas/)  
+- [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/assinaturas/)  
 
 - [⚙️ Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/pagina_sobre-nos/)  
 
