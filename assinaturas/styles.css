@@ -183,35 +183,28 @@ footer .social {
 }
 
 @media (min-width: 1024px) {
-    .pagina-assinatura {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
+    
+    .containerCorporativo {
+        margin-left: -205px;
     }
-  
-    .planos {
-      justify-content: space-around;
-      gap: 2rem;
-    }
-  
-    .containerBasico,
-    .containerCorporativo,
-    .containerEmpresarial {
-      width: 25%;
-      max-width: 300px;
-    }
-  
-    .textNossasAssinaturas {
-      font-size: 2.5rem;
-    }
-  
-    .textSelecionePlano {
-      font-size: 1.2rem;
-    }
-  
     .containerMensais {
-      margin-left: 0;
-      align-self: center;
+        margin-left: 35%;
+    }
+    .containerEmpresarial,
+    .containerCorporativo,
+    .containerBasico {
+        width: 200%;
+        max-width: 900px;
+        align-items: center;
+    }
+
+    .pagina-assinatura {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
   }
   
