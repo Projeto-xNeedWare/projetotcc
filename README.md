@@ -2,7 +2,7 @@
 
 - [🏠 Página Inicial](pagina_inicial/index.html)
 
-- [🚧 Página Em Breve](pagina_em_breve/index.html)
+- [🚧 Página Em Breve](https://projeto-xneedware.github.io/projetotcc/em_breve/)
 
 - [📞 Página Contatos](https://projeto-xneedware.github.io/projetotcc/pagina_contatos/)
 
