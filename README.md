@@ -1,6 +1,6 @@
 ## 🌍 Links do Projeto  
 
-- [🏠 Página Inicial](pagina_inicial/index.html)
+- [🏠 Página Inicial](https://projeto-xneedware.github.io/projetotcc/pagina_inicial/)
 
 - [🚧 Página Em Breve](https://projeto-xneedware.github.io/projetotcc/em_breve/)
 
