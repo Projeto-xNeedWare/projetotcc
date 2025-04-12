@@ -53,13 +53,20 @@ body {
     align-items: center;
 }
 
-.containerBasico,
+.containerBasico {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
 .containerCorporativo,
 .containerEmpresarial {
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* sombra preta suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .retangulo_mensalidade {
