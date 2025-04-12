@@ -4,8 +4,8 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #ffffff;
     color: #000000;
-    margin: 0;
-    padding: 0;
+    margin-right: 10%;
+    padding: 10;
 }
   
 .pagina-assinatura {
@@ -167,7 +167,6 @@ footer.rodape {
     text-align: center;
     padding: 1rem 0.5rem;
     width: 100%;
-    margin: 0 auto;
 }
 
 footer .social {
