@@ -1,14 +1,20 @@
-/* Mobile First - Estilo principal para dispositivos móveis */
+/* ============================
+   ESTILO GLOBAL - MOBILE FIRST
+============================ */
 
 body {
     font-family: 'Arial', sans-serif;
     background-color: #ffffff;
     color: #000000;
-    margin: 0; /* zera margens no body */
+    margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Remove scroll horizontal */
     box-sizing: border-box;
 }
+
+/* ========================
+   CONTAINER PRINCIPAL
+======================== */
 
 .pagina-assinatura {
     margin-right: 0.5rem;
@@ -17,6 +23,10 @@ body {
     flex-direction: column;
     gap: 2rem;
 }
+
+/* ========================
+   TEXTOS INICIAIS
+======================== */
 
 .tituloNossasAssinaturas {
     text-align: center;
@@ -29,11 +39,14 @@ body {
 
 .textSelecionePlano {
     font-size: 1rem;
-    color:#8a8a8a;
+    color: #8a8a8a;
     margin-top: 0.5rem;
 }
 
-/* MENSAIS */
+/* ========================
+   SEÇÃO PLANOS MENSAIS
+======================== */
+
 .containerMensais {
     margin: 20px auto;
     background-color: #aaa;
@@ -49,6 +62,10 @@ body {
     font-weight: bold;
 }
 
+/* ========================
+   CONTEÚDO DOS PLANOS
+======================== */
+
 .planos {
     display: flex;
     flex-direction: column;
@@ -56,22 +73,27 @@ body {
     align-items: center;
 }
 
+/* ========================
+   CONTAINERS DE PLANOS
+======================== */
+
 .containerBasico {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0;
     border-radius: 10px;
     width: 330px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-
 .containerCorporativo,
 .containerEmpresarial {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
+/* ========================
+   BLOCO DA MENSALIDADE
+======================== */
 
 .retangulo_mensalidade {
     background-color: #111;
@@ -124,6 +146,30 @@ body {
     color: #aaa;
 }
 
+/* ========================
+   BOTÃO COMPRAR
+======================== */
+
+.btn-comprar {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+  
+    .btn-comprar:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+  
+
 .comprar-container {
     position: relative;
     background-color: #fff;
@@ -137,6 +183,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* ========================
+   VANTAGENS DO PLANO
+======================== */
+
 .container_vantagens {
     margin-top: 1rem;
 }
@@ -148,12 +198,10 @@ body {
 }
 
 .grupo_vantagens {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem 2rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 2rem;
 }
 
 .textVantagem {
@@ -172,12 +220,17 @@ body {
     margin: 2px;
 }
 
+/* ========================
+   FOOTER / RODAPÉ
+======================== */
+
 footer.rodape {
     background-color: #111;
     color: #fff;
     text-align: center;
     padding: 1rem 0.5rem;
     width: 100%;
+    margin: 0;
 }
 
 footer .social {
@@ -193,10 +246,15 @@ footer .social {
     height: 24px;
 }
 
+/* ========================
+   DESKTOP / RESPONSIVO
+======================== */
+
 @media (min-width: 1024px) {
     .containerCorporativo {
         margin-left: -205px;
     }
+
     .containerEmpresarial,
     .containerCorporativo,
     .containerBasico {
@@ -208,8 +266,7 @@ footer .social {
     .pagina-assinatura {
         width: 100%;
         max-width: 900px;
-        margin: 140px;
-        margin-top: 30px;
+        margin: 30px auto 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -217,7 +274,8 @@ footer .social {
 
     footer.rodape {
         padding: 2rem;
-        margin-left: -80px;    
+        max-width: 100%;
+        margin: 0;
     }
 
     footer .social {
@@ -228,5 +286,4 @@ footer .social {
         width: 32px;
         height: 32px;
     }
-  }
-  
+}

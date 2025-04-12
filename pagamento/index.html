@@ -1,73 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<title>Pagamento - xNeedWare(BR)</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	<link rel="website icon" type="jpg" href="../assets_geral/favicon.ico"/>
-  	<link rel="stylesheet"  href="styles.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
-  	
-  	
-  	
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="icon" type="image/x-icon" href="../assets_geral/favicon.ico">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+	<link rel="stylesheet" href="styles.css">
 </head>
+
+<header>
+	<a href="../pagina_inicial/index.html">
+		<button class="logo">
+			xNeedWare
+		</button>
+	</a>
+</header>
+
 <body>
-  	
-  	<div class="pagina-pagamento">
-    		<div class="group-parent">
-      			<div class="rectangle-parent">
-        				<div class="group-child">
-        				</div>
-        				<div class="group-item">
-        				</div>
-        				<div class="group-inner">
-        				</div>
-        				<div class="rectangle-div">
-        				</div>
-        				<div class="group-child1">
-        				</div>
-        				<div class="group-child2">
-        				</div>
-      			</div>
-      			<b class="faa-o-seu">Faça o seu pagamento</b>
-      			<div class="adicione-abaixo-os"> Adicione abaixo os dados de seu cartão de credito/debito </div>
-      			<div class="cardholders-name">Cardholder’s Name</div>
-      			<div class="card-number">Card Number</div>
-      			<div class="expiry">Expiry</div>
-      			<div class="discount-code">Discount Code</div>
-      		
-      		
-      
-      			
-      	
-      			<b class="aplique">Aplique</b>
-      			<b class="pagamento">Pagamento</b>
-      			<div class="cvc">CVC</div>
-      			<img class="mastercard-1-icon" alt="" src="./assets/mastercard-1.png">
-      			
-    		</div>
-    		<img class ="b" alt="" src="./assets/$450.png">
-    		<div class="pagina-pagamento-child">
-    		</div>
-    		<div class="voc-est-pagando">Você está pagando</div>
-    		<div class="tipo-de-plano">Tipo de Plano: Anual</div>
-    		<b class="plano-basico">Plano Basico</b>
-    		<div class="div3">$ 99.00</div>
-    		<div class="div4">$ 0.00</div>
-    		<div class="div5">$ 0.00</div>
-    		<div class="div6">$ 99.00</div>
-    		<b class="desconto-ofertas">Desconto & ofertas</b>
-    		<b class="total">Total</b>
-    		<b class="imposto">Imposto</b>
-    		
-    		
-    		<img class="line-roundedclose-icon" alt="" src="./assets/line-rounded-close.svg" id="botaoFecharicon">
-    		
-  	</div>
-  	
-  	
-  	
-  	
-  	<script src="script.js"></script>
-		</body>
+  <div class="pagina-pagamento">
+
+    <h1>Faça o seu pagamento</h1>
+    <p>Adicione abaixo os dados de seu cartão de crédito/débito</p>
+	<button class="botao-fechar" onclick="voltarPagina()">×</button>
+
+    <div class="form-group">
+      <label for="nome">Nome no Cartão</label>
+      <input type="text" id="nome" placeholder="Ex: João Silva">
+
+      <label for="numero">Número do Cartão</label>
+      <input type="text" id="numero" placeholder="0000 0000 0000 0000">
+
+      <div class="row">
+        <div>
+          <label for="validade">Validade</label>
+          <input type="text" id="validade" placeholder="MM/AA">
+        </div>
+
+        <div>
+          <label for="cvc">CVC</label>
+          <input type="text" id="cvc" placeholder="123">
+        </div>
+      </div>
+
+      <label for="desconto">Código de Desconto</label>
+      <input type="text" id="desconto" placeholder="PROMO2025">
+    </div>
+
+    <div class="resumo-pagamento">
+      <div class="resumo-item">
+        <span>Plano Básico (Anual)</span>
+        <span>R$ XX,XX</span>
+      </div>
+      <div class="resumo-item">
+        <span>Descontos & Ofertas</span>
+        <span>- R$ X,XX</span>
+      </div>
+      <div class="resumo-item total">
+        <span>Total</span>
+        <span>R$ XX,XX</span>
+      </div>
+    </div>
+
+    <button class="botao-pagar">Confirmar Pagamento</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
