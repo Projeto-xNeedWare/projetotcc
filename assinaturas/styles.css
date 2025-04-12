@@ -4,8 +4,11 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #ffffff;
     color: #000000;
-    margin-right: 10%;
-    padding: 10;
+    margin: 0;
+    margin-right: 50px; /* zera todas as margens */
+    padding: 0;
+    overflow-x: hidden; /* impede scroll horizontal */
+    box-sizing: border-box;
 }
   
 .pagina-assinatura {
@@ -57,7 +60,7 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 290px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -214,7 +217,7 @@ footer .social {
 
     footer.rodape {
         padding: 2rem;
-        margin-left: -105px;    
+        margin-left: -80px;    
     }
 
     footer .social {
