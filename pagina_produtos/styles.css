@@ -36,7 +36,9 @@ body {
 .texto-logo {
   text-decoration: none;
 }
-  
+
+
+
 
 .menu-hamburguer {
   background: none;
@@ -261,6 +263,41 @@ body {
   margin-top: 3rem;
 }
 
+.beneficios {
+  display: grid;
+  padding: 10rem 5rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+  margin: 2% auto;
+  border-radius: 16px;
+  
+  
+  
+  
+  
+}
+
+.beneficios img {
+  width: 20%;
+  
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.beneficio {
+ 
+  margin: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+
+
+
+
+
+
 /* === DESKTOP === */
 @media (min-width: 768px) {
   .menu-hamburguer {
@@ -304,7 +341,7 @@ body {
 @media (min-width: 1024px) {
   .grade-produtos {
     grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+    gap: 1rem;
   }
 
   .banner h1 {
@@ -312,11 +349,11 @@ body {
   }
 
   .card {
-    padding: 2rem;
+    padding: 0.5rem;
   }
 
   .img-produto {
-    height: 250px;
+    height: 180px;
   }
 
   .nome {
@@ -329,6 +366,30 @@ body {
 
   .barra {
     display: block;
+  }
+
+  .beneficios {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 120rem;
+    height: 45rem;
+    
+    border-radius: 10px;
+
+
+  }
+
+  .beneficio {
+    border-radius: 20PX;
+  }
+
+  .beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .botao-secundario {
+    width: 50%;
   }
 }
 
