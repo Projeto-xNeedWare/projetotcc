@@ -32,10 +32,12 @@
  
   .pagina-pagamento {
     max-width: 480px;
+    margin: 2rem auto 0 auto;
     margin-top: 2rem;
-    background-color: #000000;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 8px rgba(0.4,0.4,0.4,0.4);
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -141,5 +143,6 @@
     .pagina-pagamento {
       max-width: 600px;
       padding: 2rem;
+      margin: 1;
     }
   }
