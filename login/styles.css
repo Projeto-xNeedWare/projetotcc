@@ -163,7 +163,8 @@ footer {
 
     input {
         margin-left: 3.5%;
-        width: 100%;
+        width: 80%;
+        max-width: 100%;
         padding: 16px;
         font-size: 1rem;
     }

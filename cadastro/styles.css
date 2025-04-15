@@ -90,12 +90,7 @@ input {
     max-width: 300px;
   }
   
-  input:focus {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: #7885ff; /* tom de azul bonito */
-    box-shadow: 0 0 0 4px rgba(90, 103, 216, 0.3);
-    transform: scale(1.03);
-  }
+
 
 /* Botão de Cadastro */
 .botao-cadastrar {
@@ -171,7 +166,8 @@ footer {
         padding: 18px;
         font-size: 1rem;
         margin-left: 2%;
-        width: 100%;
+        max-width: 100%;
+        width: 95%;
     }
 
     .botao-cadastrar {
