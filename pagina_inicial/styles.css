@@ -17,6 +17,14 @@ body {
   background-color: #ffffff;
 }
 
+.menu-hamburguer {
+  color: #000000;
+}
+
+.menu-hamburguer:hover {
+  transform: scale(1.05);
+}
+
 .container {
   width: 100%;
   max-width: 1440px;

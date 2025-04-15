@@ -15,7 +15,6 @@ body {
 /* ========================
    CONTAINER PRINCIPAL
 ======================== */
-
 .pagina-assinatura {
     margin-right: 0.5rem;
     padding: 1rem;
@@ -27,6 +26,10 @@ body {
 /* ========================
    TEXTOS INICIAIS
 ======================== */
+
+.menu-hamburguer {
+    color: #000000;
+  }
 
 .tituloNossasAssinaturas {
     text-align: center;

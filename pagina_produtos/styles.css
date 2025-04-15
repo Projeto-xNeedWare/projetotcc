@@ -41,6 +41,7 @@ body {
 
 
 .menu-hamburguer {
+  color: #000;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -102,6 +103,7 @@ body {
   font-size: 14pt;
   display: none;
 }
+
 
 /* === BANNER === */
 .banner {
