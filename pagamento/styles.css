@@ -11,6 +11,11 @@
     padding: 1rem;
   }
 
+  .header {
+    display: flex;
+    margin-bottom: 10%;
+  }
+
   .logo {
     font-weight: 600;
     color: #000000b7;
@@ -19,7 +24,6 @@
     cursor: pointer;
     border: #fff;
     background-color: #fff; ;
-    
   }
   
   .texto-logo {
@@ -28,6 +32,7 @@
  
   .pagina-pagamento {
     max-width: 480px;
+    margin-top: 2rem;
     margin: auto;
     background-color: #fff;
     border-radius: 10px;
