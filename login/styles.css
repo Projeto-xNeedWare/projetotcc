@@ -44,9 +44,10 @@ body {
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    width: 80%;
     max-width: 400px;
+    margin: 4%;
 }
 
 /* Título */
@@ -72,31 +73,35 @@ label {
 }
 
 input {
-    padding: 13px;
-    border: 1px solid #fff;
-    background: #fff;
-    color: #000;
-    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    color: #333;
+    border: 1px solid rgba(200, 200, 200, 0.826);
+    border-radius: 12px;
     outline: none;
-    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    transition: 
+      background 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.3s ease;
     width: 90%;
     max-width: 350px;
-}
-
-input::placeholder {
-    color: rgba(0, 0, 0, 0.6);
-}
-
-input:focus {
-    background: #f0f0f0;
-    border-color: #000000;
-    transform: scale(1.02);
-}
+  }
+  
+  input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #7885ff; /* tom de azul bonito */
+    box-shadow: 0 0 0 4px rgba(90, 103, 216, 0.3);
+    transform: scale(1.03);
+  }
+  
 
 /* Botão de login */
 .botao-login {
-    background: #ffffff;
-    color: #000000;
+    background: #000000;
+    color: #ffffff;
     border: none;
     padding: 12px;
     width: 100%;
@@ -108,12 +113,12 @@ input:focus {
 }
 
 .botao-login:hover {
-    transform: scale(1.0);
+    transform: scale(1.1);
 }
 
 /* Link de cadastro */
 .link-cadastro {
-    color: #ffffff;
+    color: #000000;
     margin-top: 1rem;
     font-size: 15px;
 }
@@ -122,10 +127,6 @@ input:focus {
     color: #9b9b9b;
     text-decoration: none;
     font-weight: bold;
-}
-
-.link-cadastro a:hover {
-    color: #ffffff;
 }
 
 /* Rodapé */
