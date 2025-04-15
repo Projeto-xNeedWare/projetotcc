@@ -22,8 +22,8 @@
     font-size: 18pt;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
     cursor: pointer;
-    border: #fff;
-    background-color: #fff; ;
+    border: #ffffff;
+    background-color: #ffffff; ;
   }
   
   .texto-logo {
@@ -33,8 +33,7 @@
   .pagina-pagamento {
     max-width: 480px;
     margin-top: 2rem;
-    margin: auto;
-    background-color: #fff;
+    background-color: #000000;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 2rem 1rem;
