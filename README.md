@@ -10,7 +10,7 @@
 
 - [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/assinaturas/)  
 
-- [⚙️ Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/sobre_nos/)  
+- [👥 Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/sobre_nos/)  
 
 - [🔑 Página Login](https://projeto-xneedware.github.io/projetotcc/login/)  
 
