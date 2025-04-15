@@ -24,22 +24,21 @@ body {
 /* Container do cadastro */
 .area-cadastro {
     margin-top: -40px;
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    width: 90%;
     max-width: 400px;
 }
 
 .botao-fechar {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: -25px;
+    right: -20px;
     font-size: 24px;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
     font-weight: bold;
     z-index: 2;
@@ -74,47 +73,34 @@ label {
 }
 
 input {
-    margin-left: -10px;
-    padding: 13px 10px;
-    border: 1px solid #ffffff;
-    background: #ffffff;
-    color: #000000;
-    border-radius: 15px;
+    padding: 14px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    color: #333;
+    border: 1px solid rgba(200, 200, 200, 0.826);
+    border-radius: 12px;
     outline: none;
-    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-    width: 110%;
-    height: 45px;
-    max-width: 350px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    font-size: 0.95rem;
-}
-
-input::placeholder {
-    color: #c7c7c7;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-input:focus {
-    background: #ffffff;
-    border-color: #000000;
-    transform: scale(1.04);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-input:focus::placeholder {
-    opacity: 0;
-}
-
-.grupo-campo:focus-within label {
-    color: #f5f5f5;
-    transform: translateX(5px);
-}
+    transition: 
+      background 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #7885ff; /* tom de azul bonito */
+    box-shadow: 0 0 0 4px rgba(90, 103, 216, 0.3);
+    transform: scale(1.03);
+  }
 
 /* Botão de Cadastro */
 .botao-cadastrar {
-    background: #ffffff;
-    color: #000000;
+    background: #000000;
+    color: #ffffff;
     border: none;
     padding: 12px;
     width: 100%;
@@ -132,20 +118,15 @@ input:focus::placeholder {
 
 /* Link para login */
 .link-login {
-    color: #f0f0f0;
+    color: #000000;
     margin-top: 1rem;
     font-size: 0.9rem;
 }
 
 .link-login a {
-    color: #a5a5a5;
+    color: #2d2aff;
     text-decoration: none;
     font-weight: bold;
-}
-
-.link-login a:hover {
-    color: #6d6d6d;
-    text-decoration: underline;
 }
 
 /* Rodapé */
