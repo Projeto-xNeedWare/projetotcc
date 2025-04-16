@@ -27,6 +27,9 @@ body {
    TEXTOS INICIAIS
 ======================== */
 
+.logo {
+    margin-left: -6px;
+}
 .menu-hamburguer {
     color: #000000;
   }
