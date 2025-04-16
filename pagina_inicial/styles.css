@@ -200,12 +200,11 @@ body {
 }
 
 
-
-/* REDES SOCIAIS */
 .redes-sociais {
+  background-color: #ffffff;
+  padding: 2rem 0;
   text-align: center;
-  padding: 3rem 1rem;
-  background: #ffffff;
+  color: #000000;
 }
 
 .icones-redes {
