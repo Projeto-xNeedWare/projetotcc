@@ -1,4 +1,4 @@
-/* style.css */
+/* styles.css */
 /* Reset Mobile-First */
 * {
   margin: 0;
@@ -13,7 +13,6 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
   color: #333;
   background: #ffffff;
 }
