@@ -6,7 +6,8 @@
   padding: 1rem;
   background-color: #fff;
   position: relative;
-  z-index: 1000; /* Garante que fique acima de outros elementos */
+  z-index: 1000;
+  /* Garante que fique acima de outros elementos */
 }
 
 /* === LOGO === */
@@ -32,7 +33,8 @@
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
-  display: block; /* Visível apenas em mobile */
+  display: block;
+  /* Visível apenas em mobile */
 }
 
 /* === MENU DE NAVEGAÇÃO (Mobile) === */
@@ -46,7 +48,7 @@
   right: 0;
   background: #fff;
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Quando o menu está ativo (via JS) */
@@ -107,7 +109,7 @@
 
 /* Elemento visual para separar itens */
 .barra {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 14pt;
   display: none;
 }

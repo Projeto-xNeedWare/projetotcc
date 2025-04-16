@@ -13,7 +13,8 @@ body {
     color: #000000;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Remove scroll horizontal */
+    overflow-x: hidden;
+    /* Remove scroll horizontal */
     box-sizing: border-box;
 }
 
@@ -34,7 +35,7 @@ body {
 
 .menu-hamburguer {
     color: #000000;
-  }
+}
 
 .tituloNossasAssinaturas {
     text-align: center;
@@ -171,12 +172,12 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
 }
-  
-    .btn-comprar:hover {
+
+.btn-comprar:hover {
     transform: scale(1.05);
     text-decoration: none;
 }
-  
+
 
 .comprar-container {
     position: relative;
