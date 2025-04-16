@@ -224,32 +224,6 @@ body {
 }
 
 /* ========================
-   FOOTER / RODAPÉ
-======================== */
-
-footer.rodape {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0.5rem;
-    width: 100%;
-    margin: 0;
-}
-
-footer .social {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.logos_redes_sociais {
-    width: 24px;
-    height: 24px;
-}
-
-/* ========================
    DESKTOP / RESPONSIVO
 ======================== */
 
