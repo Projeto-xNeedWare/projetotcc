@@ -1,25 +1,29 @@
-@ -1,179 +0,0 @@
 /* Estilos básicos (MOBILE FIRST) */
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 1;
     padding: 0;
 }
 
-body {
-    margin: 6px;
-    padding: 0;
+html, body {
+    height: 100%;
     font-family: Arial, sans-serif;
-    background-image: url('./assets/login_page_img.webp');
+}
+
+body {
     background-size: cover;
-    backdrop-filter: blur(5px);
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    padding: 6px;
 }
 
 .botao-fechar {
@@ -39,15 +43,28 @@ body {
 
 /* Container do login */
 .container-login {
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    width: 80%;
-    max-width: 400px;
-    margin: 4%;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 7%;
+}
+
+.logo {
+    font-weight: 600;
+    color: #000000b7;
+    font-size: 18pt;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.72);
+    cursor: pointer;
+    background-color: #fff;
+    border: #fff;
+  }
+  
+.texto-logo {
+    text-decoration: none;
 }
 
 /* Título */
@@ -86,7 +103,7 @@ input {
       border-color 0.3s ease,
       transform 0.2s ease,
       box-shadow 0.3s ease;
-    width: 85%;
+    width: 100%;
     max-width: 300px;
   }
   
@@ -131,13 +148,13 @@ input {
 
 /* Rodapé */
 footer {
-    color: #f0f0f0;
-    position: absolute;
-    bottom: 10px;
     text-align: center;
     width: 100%;
     font-size: 0.9rem;
     padding: 10px;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(4px);
+    margin-top: auto;
 }
 
 /* (TABLETS) */

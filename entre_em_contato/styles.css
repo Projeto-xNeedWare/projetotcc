@@ -1,4 +1,6 @@
-/* Reset Mobile-First */
+/* ======================================================
+   RESET GERAL - MOBILE FIRST
+====================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -17,17 +19,21 @@ body {
   overflow-x: hidden;
 }
 
-/* Cabeçalho opcional */
+/* ======================================================
+   CABEÇALHO (barra de separação visual opcional)
+====================================================== */
 .barra {
   font-family: "Courier New", Courier, monospace;
   font-size: 14pt;
   display: none;
 }
 
-/* Container de contato */
+/* ======================================================
+   CONTAINER DE CONTATO
+====================================================== */
 .contato-container {
   padding: 2rem 1rem;
-  background-image: url("pexels-karen-w-lim-415441-1089318.jpg");
+  background-image: url("../entre_em_contato/assets/pexels-karen-w-lim-415441-1089318.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,7 +43,9 @@ body {
   border-radius: 20px;
 }
 
-/* Título */
+/* ======================================================
+   TÍTULOS E SUBTÍTULOS
+====================================================== */
 .contato-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -50,11 +58,13 @@ body {
 }
 
 .contato-subtitulo {
-  color: #ffffff;
   font-size: 1rem;
+  color: #ffffff;
 }
 
-/* Formulário */
+/* ======================================================
+   FORMULÁRIO DE CONTATO
+====================================================== */
 .formulario-contato {
   display: grid;
   gap: 1.5rem;
@@ -76,6 +86,7 @@ body {
   min-height: 150px;
 }
 
+/* Botão Enviar */
 .botao-enviar {
   background: #ffffff;
   color: #000000;
@@ -88,7 +99,9 @@ body {
   width: 100%;
 }
 
-/* Informações */
+/* ======================================================
+   INFORMAÇÕES DE CONTATO
+====================================================== */
 .contato-info {
   background: #fff;
   padding: 2rem;
@@ -108,6 +121,7 @@ body {
   color: #1a1a1a;
 }
 
+/* Redes sociais */
 .redes-sociais {
   display: flex;
   flex-wrap: wrap;
@@ -121,7 +135,9 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Layout responsivo */
+/* ======================================================
+   RESPONSIVIDADE
+====================================================== */
 @media (min-width: 768px) {
   .contato-conteudo {
     display: grid;
@@ -160,7 +176,9 @@ body {
   }
 }
 
-/* Efeitos hover */
+/* ======================================================
+   EFEITOS HOVER (somente para dispositivos com mouse)
+====================================================== */
 @media (hover: hover) {
   .botao-enviar:hover {
     transform: scale(1.05);
@@ -169,5 +187,4 @@ body {
   .redes-sociais a:hover {
     color: #007aff;
   }
-
 }
