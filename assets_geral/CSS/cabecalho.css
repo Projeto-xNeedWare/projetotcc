@@ -26,6 +26,7 @@
 
 /* === BOTÃO MENU HAMBÚRGUER (Mobile) === */
 .menu-hamburguer {
+  color: #000;
   background: none;
   border: none;
   font-size: 1.5rem;
