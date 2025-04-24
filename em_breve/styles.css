@@ -1,0 +1,218 @@
+/* Reset Mobile-First */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #000;
+}
+
+/* Camadas de animação */
+#star-canvas, #space-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#space-canvas {
+  z-index: 0;
+}
+
+.pagina-em-breve {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.imagem-espaco {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.72);
+  z-index: 3;
+  color: #fff;
+  background-color: black;
+  border: none;
+}
+
+.conteudo {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Restante do CSS mantido igual ao anterior */
+
+.texto-container {
+  text-align: center;
+  margin-top: 40vh;
+}
+
+.texto-estamos-criando {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.texto-novos-projetos {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 2rem;
+}
+
+/* Estilização do Botão Dev Mode */
+.botao-dev-mode {
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  cursor: progress;
+  background: #000;
+  padding: 1em 2em;
+  margin-top: 1.5rem;
+  transition: transform 0.2s ease;
+  --rotate: 0deg;
+}
+
+.botao-dev-mode a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  background: linear-gradient(-45deg, #2e2e2e, #d400ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.botao-dev-mode::after,
+.botao-dev-mode::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+      var(--rotate),
+      #313131 0%,
+      #000000 30%,
+      #9900ff 70%,
+      #aa0dff 100%
+  );
+  width: 105%;
+  height: 110%;
+  left: -2.5%;
+  top: -5%;
+  border-radius: 10px;
+  z-index: -1;
+  animation: rotate 20s linear infinite;
+}
+
+.botao-dev-mode::before {
+  animation: rotate 20s linear infinite, fade 1.2s infinite alternate;
+}
+
+@keyframes rotate {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 3600deg;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.redes-sociais {
+  position: fixed;
+  bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 3;
+  top: 95% ;
+}
+
+.redes-sociais img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .logo {
+      font-size: 2rem;
+      top: 2rem;
+      right: 2rem;
+  }
+
+  .texto-estamos-criando {
+      font-size: 2.5rem;
+  }
+
+  .texto-novos-projetos {
+      font-size: 1.3rem;
+  }
+
+  .redes-sociais {
+      gap: 2.5rem;
+  }
+
+  .redes-sociais img {
+      width: 20px;
+      height: 20px;
+  }
+}
+
+@keyframes fade {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(10px);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1.4);
+      filter: blur(10px);
+  }
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 130deg;
+  inherits: false;
+}
