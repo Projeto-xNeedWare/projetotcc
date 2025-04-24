@@ -1,0 +1,23 @@
+/* REDES SOCIAIS */
+.rodape {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #ffffff;
+  }
+  
+  .redes_rodape {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .redes_rodape img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .redes_rodape img:hover {
+    transform: scale(1.1);
+  }
