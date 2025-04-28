@@ -1,4 +1,50 @@
 /* Reset e estilos base */
+/* Base Styles */
+:root {
+    --color-black: #000000;
+    --color-dark: #0f0920;
+    --color-gray-900: #111827;
+    --color-gray-800: #1f2937;
+    --color-gray-700: #374151;
+    --color-gray-600: #4b5563;
+    --color-gray-500: #6b7280;
+    --color-gray-400: #9ca3af;
+    --color-gray-300: #d1d5db;
+    --color-gray-200: #e5e7eb;
+    --color-gray-100: #f3f4f6;
+    --color-white: #ffffff;
+    
+    --color-purple-900: #4c1d95;
+    --color-purple-800: #5b21b6;
+    --color-purple-700: #6d28d9;
+    --color-purple-600: #7c3aed;
+    --color-purple-500: #8b5cf6;
+    --color-purple-400: #a78bfa;
+    --color-purple-300: #c4b5fd;
+    --color-purple-200: #ddd6fe;
+    --color-purple-100: #ede9fe;
+    --color-purple-50: #f5f3ff;
+    
+    --color-blue-900: #1e3a8a;
+    --color-blue-800: #1e40af;
+    --color-blue-700: #1d4ed8;
+    --color-blue-600: #2563eb;
+    --color-blue-500: #3b82f6;
+    --color-blue-400: #60a5fa;
+    --color-blue-300: #93c5fd;
+    --color-blue-200: #bfdbfe;
+    --color-blue-100: #dbeafe;
+    --color-blue-50: #eff6ff;
+    
+    --border-radius-sm: 0.25rem;
+    --border-radius: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    --border-radius-2xl: 1.5rem;
+    --border-radius-full: 9999px;
+  }
+
+
 * {
     margin: 0;
     padding: 0;
