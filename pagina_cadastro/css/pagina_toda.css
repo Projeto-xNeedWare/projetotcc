@@ -1,0 +1,146 @@
+.icone_fechar {
+    position: absolute;
+    top: 29px;
+    left: 25px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.pagina-de-cadastro {
+    width: 100%;
+    position: relative;
+    border-radius: 24px;
+    background-color: #fff;
+    height: 937px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 12px;
+    color: #1c1c1c;
+    font-family: Poppins;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Poppins";
+}
+
+footer {
+    background-color: white;
+    border-top: 2px solid #ccc;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Garante que o conteúdo principal ocupe o espaço disponível */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    font: 1em sans-serif;
+    background-color: white;
+    border-top: 2px solid #ccc;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Ajusta imagens para que não estourem o layout */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adiciona responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .pagina-de-cadastro {
+        padding: 15px;
+    }
+
+    .pagina-de-cadastro-item {
+        width: 90%;
+        height: auto;
+        left: 5%;
+        top: auto;
+    }
+
+    .grupo_cadastro {
+        width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+
+    .container_email, .container_cadastro, .container_confirmar {
+        width: 90%;
+        left: 5%;
+    }
+
+    .continue-with-apple-left-ali {
+        width: 90%;
+        left: 5%;
+    }
+
+    .grupo_captcha {
+        width: 90%;
+        left: 5%;
+    }
+
+    /* Torna os botões mais acessíveis */
+    .group-container {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .alinhamento_cadastro {
+        top: auto;
+        width: 100%;
+    }
+
+    /* Reduz o tamanho dos ícones para telas pequenas */
+    .icone_cadastro, .icone_captcha {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Para celulares muito pequenos */
+@media screen and (max-width: 480px) {
+    .pagina-de-cadastro {
+        padding: 10px;
+    }
+
+    .textCadastro {
+        font-size: 24px;
+    }
+
+    .container_email, .container_cadastro, .container_confirmar {
+        width: 100%;
+        left: 0;
+    }
+
+    .continue-with-apple-left-ali {
+        width: 100%;
+        left: 0;
+    }
+
+    .grupo_captcha {
+        width: 100%;
+        left: 0;
+    }
+}
