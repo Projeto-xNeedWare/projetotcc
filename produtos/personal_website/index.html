@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Website - xNeedWare(BR)</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cabecalho.css">
+    
+    <link rel="icon" type="image/x-icon" href="../../assets_geral/favicon.ico">
+    <link href="https://db.onlinewebfonts.com/c/8e4b8cb6c9ef503769bf424ac4162d63?family=A1+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="../pagina_inicial/index.html">
+
+            <button class="logo">
+                xNeedWare
+            </button>
+        </a>
+        
+        <nav class="navegacao">
+            <button class="menu-hamburguer" aria-expanded="false">☰</button>
+            <div class="menu">
+                
+              
+                <a href="../../pagina_produtos/index.html">
+                  <button class="botao_cabecalho">Produtos</button>
+                </a>
+                
+                
+                
+                <a href="../../sobre_nos/index.html">
+                  <button class="botao_cabecalho">Sobre Nós</button>
+                </a>
+                
+                
+                <a href="../../assinaturas/index.html">
+                  <button class="botao_cabecalho">Assinaturas</button>
+                </a>
+                
+                
+                <a href="../../entre_em_contato/index.html">
+                  <button class="botao_cabecalho">Contatos</button>
+                </a>
+                
+                
+                <a href="../../em_breve/index.html">
+                  <button class="botao_cabecalho">Para Desenvolvedores</button>
+                </a>
+
+                <div class = "barra">
+                    |
+                </div>
+                    
+
+                
+                <a href="../../cadastro/index.html">
+                  <button class="botao-cadastro">Cadastro</button>
+                </a>
+
+            
+    
+                
+            </div>
+        </nav>
+        
+        <div class="acoes">
+        </div>
+    </header>
+    
+
+
+    <div class = container-principal>
+        <div class="container-1" >
+            <div class="nome-produto">
+                <h1>Personal Website</h1>
+            </div>
+            <div class = "preco-produto">
+                <h2>preço: </h2>
+                <p>$65.00</p>
+            </div>
+                
+                
+
+            
+            
+
+
+
+            <div class="botoes-comprar">
+                <a href="../../pagamento/index.html" class="botao-1">Comprar</a>
+            </div>
+
+
+
+            
+        </div>
+
+        <div class="container-2" >
+            <h1 class="titulo-detalhes">
+                Detalhes do produto
+            </h1>
+
+            
+            <div class = informacoes>
+                <p>Desenvolvemos sites personalizados, criados do zero com base nas preferências e necessidades de cada cliente. Desde o layout até as funcionalidades, tudo é pensado para refletir a identidade da marca e oferecer uma experiência única ao usuário.</p>
+
+<p>O foco é entregar páginas modernas, responsivas e otimizadas, que se adaptam a qualquer dispositivo e destacam o conteúdo de forma clara e profissional. Cada projeto é feito com atenção aos detalhes e ao que o cliente realmente deseja transmitir.</p>
+
+            </div>
+                
+
+        </div>
+
+    </div>
+
+
+</body>
+<script>
+    // Menu Hamburguer
+    const menuButton = document.querySelector('.menu-hamburguer');
+    const menu = document.querySelector('.menu');
+
+    menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('active');
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !menuButton.contains(e.target)) {
+            menu.classList.remove('active');
+            menuButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+</script>
+</html>
