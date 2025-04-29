@@ -66,6 +66,7 @@ ul {
     list-style: none;
 }
 
+<<<<<<< HEAD:prototipo/assinaturas/styles.css
 
 /* Buttons */
 .btn {
@@ -116,109 +117,82 @@ ul {
 /* Header */
 .header {
     position: fixed;
+=======
+/* Cabeçalho e navegação */
+header {
+    background-color: #000000;
+    position: sticky;
+>>>>>>> parent of 33d0873 (Merge branch 'projetotcc' of https://github.com/Projeto-xNeedWare/projetotcc into projetotcc):prototipo/pagamentos/styles.css
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 1.25rem 0;
-    transition: all 0.3s ease;
-  }
-  
-  .header.scrolled {
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 0.75rem 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  .header .container {
+    z-index: 100;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
     font-size: 1.5rem;
   /* Base Styles */
     font-weight: 700;
-  }
-  
-  .logo-x {
-    color: var(--color-white);
-  }
-  
-  .logo-text {
-    background: linear-gradient(to right, var(--color-purple-500), var(--color-blue-500), var(--color-purple-700));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  
-  .nav-desktop {
+    color: #ffffff;
+}
+
+.logo-x {
+    color: #ffffff;
+}
+
+.logo-needware {
+    color: #8a5cf5;
+}
+
+.nav-links {
     display: flex;
-    align-items: center;
     gap: 2rem;
-  }
-  
-  .nav-link {
-    color: var(--color-gray-300);
-    font-size: 0.875rem;
+}
+
+.nav-links a {
     font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: var(--color-white);
-  }
-  
-  .mobile-menu-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--color-white);
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
-  .mobile-menu {
-    display: none;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+}
+
+.nav-links a.active::after {
+    content: '';
     position: absolute;
-    top: 100%;
+    bottom: 0;
     left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1rem 0;
-    border-top: 1px solid var(--color-gray-800);
-    transform: translateY(-10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .mobile-menu.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .nav-mobile {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  .nav-mobile .nav-link {
-    padding: 0.75rem 0;
-    font-size: 1rem;
-  }
-  
-  .nav-mobile .btn {
-    margin-top: 1rem;
     width: 100%;
-  }
+    height: 2px;
+    background: linear-gradient(90deg, #8a5cf5 0%, #3b82f6 100%);
+}
+
+.header-cta {
+    background-color: #8a5cf5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.header-cta:hover {
+    background-color: #7349d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 92, 245, 0.4);
+}
 
 
 /* Seção principal */
