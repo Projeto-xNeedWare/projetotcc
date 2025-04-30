@@ -16,4 +16,4 @@
 
 - [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/pagamento/)  
 
-- [🛍️ Página Produtos](https://projeto-xneedware.github.io/projetotcc/pagina_produtos/)  
+- [🛍️ Página Produtos](https://projeto-xneedware.github.io/projetotcc/prototipo/)  
