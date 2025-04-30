@@ -154,25 +154,18 @@ img {
   transform: translateY(-2px);
 }
 
-/* Header */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 1.25rem 0;
-  transition: all 0.3s ease;
+/* Estilos do cabeçalho */
+.xneedware-header {
+  background-color: #000000;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
 }
 
-.header.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 0.75rem 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.header .container {
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -196,76 +189,113 @@ img {
   color: transparent;
 }
 
-.nav-desktop {
+/* Estilos da navegação */
+.main-nav ul {
   display: flex;
+  list-style: none;
   align-items: center;
-  gap: 2rem;
 }
 
-.nav-link {
-  color: var(--color-gray-300);
-  font-size: 0.875rem;
-  font-weight: 500;
+.main-nav li {
+  margin-left: 30px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: var(--color-white);
+.main-nav a:hover {
+  color: #8a5cf6;
 }
 
-.mobile-menu-btn {
+/* Botão do menu hambúrguer - escondido por padrão */
+.menu-toggle {
   display: none;
-  background: transparent;
-  border: none;
-  color: var(--color-white);
-  font-size: 1.5rem;
+  color: white;
+  font-size: 24px;
   cursor: pointer;
+  transition: color 0.3s ease;
+  background-color: transparent;
+  border: 0;
 }
 
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 1rem 0;
-  border-top: 1px solid var(--color-gray-800);
-  transform: translateY(-10px);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+.menu-toggle:hover {
+  color: #8a5cf6;
 }
 
-.mobile-menu.active {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
+/* Estilos para demonstração - não fazem parte do cabeçalho */
+.content-placeholder {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.nav-mobile {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+/* Responsividade */
+@media (max-width: 768px) {
+  .header-container {
+      flex-wrap: wrap;
+  }
+  
+  /* Mostrar o botão do menu hambúrguer */
+  .menu-toggle {
+      display: block;
+      order: 2;
+      
+  }
+  
+  /* Ajustes para o logo e navegação */
+  .logo {
+      order: 1;
+  }
+  
+  /* Esconder a navegação por padrão */
+  .main-nav {
+      width: 100%;
+      order: 3;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+  }
+  
+  /* Quando a navegação está ativa */
+  .main-nav.active {
+      max-height: 300px;
+      margin-top: 20px;
+  }
+  
+  /* Reorganizar os itens do menu para vertical */
+  .main-nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .main-nav li {
+      margin: 10px 0;
+      width: 100%;
+  }
+  
+  .main-nav a {
+      display: block;
+      padding: 5px 0;
+  }
 }
 
-.nav-mobile .nav-link {
-  padding: 0.75rem 0;
-  font-size: 1rem;
-}
 
-.nav-mobile .btn {
-  margin-top: 1rem;
-  width: 100%;
-}
+
+
+
+
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
-  padding: 8rem 0 4rem;
+  padding: 1rem 0 4rem;
   position: relative;
   overflow: hidden;
 }

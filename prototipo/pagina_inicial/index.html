@@ -9,36 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
+    <!-- Início do cabeçalho reutilizável -->
+    <header class="xneedware-header">
+        <div class="header-container">
             <a href="#" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="nav-desktop">
-                    <li><a href="../produtos/index.html">Produtos</a></li>
-                    <li><a href="../sobre/index.html">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
-                
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            
+            <button class="menu-toggle" id="mobile-menu">
                 <i class="fas fa-bars"></i>
             </button>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div class="mobile-menu" id="mobileMenu">
-            <nav class="nav-mobile">
-                <a href="#produtos" class="nav-link">Produtos</a>
-                <a href="../sobre/index.html" class="nav-link">Sobre</a>
-                <a href="#contato" class="nav-link">Contato</a>
-                <a href="../assinaturas/index.html" class="nav-link">Assinaturas</a>
-                
+        
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/produtos">Produtos</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/assinaturas">Assinaturas</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -508,58 +497,9 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+    <script src="animation-scroll.js"></script>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
-        });
+    <script src="header-script.js"></script>
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-mobile .nav-link, .nav-mobile .btn').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
-                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 10) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Scroll animation
-        const fadeElements = document.querySelectorAll('.fade-in-scroll');
-        
-        const fadeInScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-        
-        // Initial check
-        fadeInScroll();
-        
-        // Check on scroll
-        window.addEventListener('scroll', fadeInScroll);
-
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
