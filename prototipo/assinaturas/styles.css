@@ -66,8 +66,6 @@ ul {
     list-style: none;
 }
 
-<<<<<<< HEAD:prototipo/assinaturas/styles.css
-
 /* Buttons */
 .btn {
     display: inline-flex;
@@ -117,12 +115,12 @@ ul {
 /* Header */
 .header {
     position: fixed;
-=======
+}
+
 /* Cabeçalho e navegação */
 header {
     background-color: #000000;
     position: sticky;
->>>>>>> parent of 33d0873 (Merge branch 'projetotcc' of https://github.com/Projeto-xNeedWare/projetotcc into projetotcc):prototipo/pagamentos/styles.css
     top: 0;
     z-index: 100;
     padding: 1rem 2rem;

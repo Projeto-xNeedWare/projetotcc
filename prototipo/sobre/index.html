@@ -8,17 +8,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo"><span class="logo-x">x</span><span class="logo-needware">NeedWare</span></div>
-            <ul class="nav-links">
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#" class="active">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Assinaturas</a></li>
-            </ul>
-            <a href="#" class="cta-button header-cta">Começar Agora</a>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../pagina_inicial/index.html" class="logo">
+                <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                    <li><a href="../produtos/index.html">Produtos</a></li>
+                    <li><a href="../sobre/index.html">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
+                
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="nav-mobile">
+                <a href="#produtos" class="nav-link">Produtos</a>
+                <a href="../sobre/index.html" class="nav-link">Sobre</a>
+                <a href="#contato" class="nav-link">Contato</a>
+                <a href="../assinaturas/index.html" class="nav-link">Assinaturas</a>
+                
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -93,8 +114,8 @@
                     <div class="member-photo">
                         <div class="photo-placeholder"></div>
                     </div>
-                    <h3>Ana Silva</h3>
-                    <p class="member-title">CEO & Fundadora</p>
+                    <h3>Gabriel Marin</h3>
+                    <p class="member-title">Product Manager</p>
                     <p class="member-bio">Com mais de 15 anos de experiência em tecnologia e empreendedorismo, Ana lidera a visão estratégica da xNeedWare com paixão e inovação.</p>
                     <div class="social-links">
                         <a href="#" class="social-link linkedin"></a>
@@ -105,8 +126,8 @@
                     <div class="member-photo">
                         <div class="photo-placeholder"></div>
                     </div>
-                    <h3>Ricardo Mendes</h3>
-                    <p class="member-title">CTO</p>
+                    <h3>Bruno Correr</h3>
+                    <p class="member-title">Desenvolvedor <br> Full-Stack</p>
                     <p class="member-bio">Especialista em arquitetura de software e inteligência artificial, Ricardo é responsável por liderar as inovações tecnológicas da empresa.</p>
                     <div class="social-links">
                         <a href="#" class="social-link linkedin"></a>
@@ -117,8 +138,8 @@
                     <div class="member-photo">
                         <div class="photo-placeholder"></div>
                     </div>
-                    <h3>Carla Oliveira</h3>
-                    <p class="member-title">COO</p>
+                    <h3>Matheus De Mello</h3>
+                    <p class="member-title">Desenvolvedor <br> Full-Stack</p>
                     <p class="member-bio">Com vasta experiência em operações e gestão, Carla garante a excelência operacional e a satisfação dos clientes em todos os níveis.</p>
                     <div class="social-links">
                         <a href="#" class="social-link linkedin"></a>
@@ -129,8 +150,8 @@
                     <div class="member-photo">
                         <div class="photo-placeholder"></div>
                     </div>
-                    <h3>Marcos Santos</h3>
-                    <p class="member-title">Diretor de Produto</p>
+                    <h3>Felipe Lotério</h3>
+                    <p class="member-title">Analista de <br> Banco de Dados</p>
                     <p class="member-bio">Visionário e estrategista, Marcos lidera o desenvolvimento de produtos inovadores que atendem às necessidades do mercado.</p>
                     <div class="social-links">
                         <a href="#" class="social-link linkedin"></a>
@@ -216,7 +237,7 @@
                     <div class="testimonial-author">
                         <div class="author-photo"></div>
                         <div class="author-info">
-                            <h4>Roberto Almeida</h4>
+                            <h4>Isadora Santana</h4>
                             <p>CEO, TechSolutions Brasil</p>
                         </div>
                     </div>
@@ -227,8 +248,8 @@
                     <div class="testimonial-author">
                         <div class="author-photo"></div>
                         <div class="author-info">
-                            <h4>Fernanda Costa</h4>
-                            <p>Diretora de Marketing, Grupo Inovare</p>
+                            <h4>Kaiky Nishiyama</h4>
+                            <p>CEO, 技術ソリューション</p>
                         </div>
                     </div>
                 </div>
@@ -238,8 +259,8 @@
                     <div class="testimonial-author">
                         <div class="author-photo"></div>
                         <div class="author-info">
-                            <h4>Carlos Mendonça</h4>
-                            <p>CFO, Construtora Horizonte</p>
+                            <h4>Pedro Mata</h4>
+                            <p>Representante da Venezuela</p>
                         </div>
                     </div>
                 </div>
