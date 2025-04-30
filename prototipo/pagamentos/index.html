@@ -31,24 +31,24 @@
         <section class="checkout-container">
             <div class="checkout-form">
                 <div class="form-progress">
-                    <div class="progress-step active">
+                    <div class="passo-progressivo active">
                         <div class="step-number">1</div>
                         <div class="step-text">Plano</div>
                     </div>
                     <div class="progress-line"></div>
-                    <div class="progress-step">
+                    <div class="passo-progressivo">
                     <div class="passo-progressivo">
                         <div class="step-number">2</div>
                         <div class="step-text">Dados</div>
                     </div>
                     <div class="progress-line"></div>
-                    <div class="progress-step">
+                    <div class="passo-progressivo">
                     <div class="passo-progressivo">
                         <div class="step-number">3</div>
                         <div class="step-text">Pagamento</div>
                     </div>
                     <div class="progress-line"></div>
-                    <div class="progress-step">
+                    <div class="passo-progressivo">
                     <div class="passo-progressivo">
                         <div class="step-number">4</div>
                         <div class="step-text">Confirmação</div>
@@ -56,7 +56,7 @@
 
                 <form id="payment-form">
                     <!-- Etapa 1: Seleção de Plano -->
-                    <div class="form-step" id="step-1">
+                    <div class="form-step" id="passo-1">
                     <div class="form-step" id="passo-1">
                         <h2>Escolha seu plano</h2>
                         <div class="plan-options">
@@ -107,13 +107,13 @@
                         </div>
 
                         <div class="form-actions">
-                            <button type="button" class="btn-next" onclick="nextStep(1)">Continuar</button>
+                            <button type="button" class="btn-next" onclick="proximoPasso(1)">Continuar</button>
                             <button type="button" class="btn-next" onclick="proximoPasso(1)">Continuar</button>
                         </div>
                     </div>
 
                     <!-- Etapa 2: Informações Pessoais -->
-                    <div class="form-step hidden" id="step-2">
+                    <div class="form-step hidden" id="passo-2">
                     <div class="form-step hidden" id="passo-2">
                         <h2>Informações pessoais</h2>
                         
@@ -122,14 +122,14 @@
 
                         <div class="form-actions">
                             <button type="button" class="btn-back" onclick="prevStep(2)">Voltar</button>
-                            <button type="button" class="btn-next" onclick="nextStep(2)">Continuar</button>
+                            <button type="button" class="btn-next" onclick="proximoPasso(2)">Continuar</button>
                             <button type="button" class="btn-back" onclick="passoAnterior(2)">Voltar</button>
                             <button type="button" class="btn-next" onclick="proximoPasso(2)">Continuar</button>
                         </div>
                     </div>
 
                     <!-- Etapa 3: Informações de Pagamento -->
-                    <div class="form-step hidden" id="step-3">
+                    <div class="form-step hidden" id="passo-3">
                     <div class="form-step hidden" id="passo-3">
                         <h2>Informações de pagamento</h2>
                         
@@ -169,14 +169,14 @@
 
                         <div class="form-actions">
                             <button type="button" class="btn-back" onclick="prevStep(3)">Voltar</button>
-                            <button type="button" class="btn-next" onclick="nextStep(3)">Continuar</button>
+                            <button type="button" class="btn-next" onclick="proximoPasso(3)">Continuar</button>
                             <button type="button" class="btn-back" onclick="passoAnterior(3)">Voltar</button>
                             <button type="button" class="btn-next" onclick="proximoPasso(3)">Continuar</button>
                         </div>
                     </div>
 
                     <!-- Etapa 4: Confirmação -->
-                    <div class="form-step hidden" id="step-4">
+                    <div class="form-step hidden" id="passo-4">
                     <div class="form-step hidden" id="passo-4">
                         <h2>Confirme seu pedido</h2>
                         
@@ -238,44 +238,51 @@
 
     <script>
         // Funções para navegação entre etapas do formulário
-        function nextStep(currentStep) {
-            document.getElementById(`step-${currentStep}`).classList.add('hidden');
-            document.getElementById(`step-${currentStep + 1}`).classList.remove('hidden');
+        function proximoPasso(passoAtual) {
+            document.getElementById(`passo-${passoAtual}`).classList.add('hidden');
+            document.getElementById(`passo-${passoAtual + 1}`).classList.remove('hidden');
+        }
         //Cria uma função próximo passo
         function proximoPasso(passoAtual) {
             document.getElementById(`passo-${passoAtual}`).classList.add('hidden');
             document.getElementById(`passo-${passoAtual + 1}`).classList.remove('hidden');
             
             // Atualiza a barra de progresso
-            const steps = document.querySelectorAll('.progress-step');
-            steps[currentStep].classList.add('active');
+            const passos = document.querySelectorAll('.passo-progressivo');
+            passos[passoAtual].classList.add('active');
             const passo = document.querySelectorAll('.passo-progressivo');
             passo[passoAtual].classList.add('active');
         }
         
-        function prevStep(currentStep) {
-            document.getElementById(`step-${currentStep}`).classList.add('hidden');
-            document.getElementById(`step-${currentStep - 1}`).classList.remove('hidden');
+        function prevStep(passoAtual) {
+            document.getElementById(`step-${passoAtual}`).classList.add('hidden');
+            document.getElementById(`step-${passoAtual - 1}`).classList.remove('hidden');
+        }
         function passoAnterior(passoAtual) {
             document.getElementById(`passo-${passoAtual}`).classList.add('hidden');
             document.getElementById(`passo-${passoAtual - 1}`).classList.remove('hidden');
+        
             
             // Atualiza a barra de progresso
-            const steps = document.querySelectorAll('.progress-step');
-            steps[currentStep - 1].classList.remove('active');
+            const steps = document.querySelectorAll('.passo-progressivo');
+            steps[passoAtual - 1].classList.remove('active');
             const passo = document.querySelectorAll('.passo-progressivo');
             passo[passoAtual - 1].classList.remove('active');
         }
         
         // Alternar entre métodos de pagamento
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded'), function() {
             const paymentTabs = document.querySelectorAll('.payment-tab');
             const tabelaPagamentos = document.querySelectorAll('.tabela-pagamentos');
+        }
+    
+        
+        
             
             paymentTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-            tabelaPagamentos.forEach(tabela => {
-                tabela.addEventListener('click', function() {
+                    tab.addEventListener('click', function() {
+                    tabelaPagamentos.forEach(tabela => {
+                    tabela.addEventListener('click', function() {
                     // Remove a classe active de todas as abas
                     paymentTabs.forEach(t => t.classList.remove('active'));
                     tabelaPagamentos.forEach(tab => tab.classList.remove('active'));
