@@ -1,19 +1,16 @@
 ## 🌍 Links do Projeto  
 
-- [🏠 Página Inicial](https://projeto-xneedware.github.io/projetotcc/pagina_inicial/)
+- [🏠 Página Inicial](https://projeto-xneedware.github.io/projetotcc/prototipo/pagina_inicial/index.html)
 
-- [🚧 Página Em Breve](https://projeto-xneedware.github.io/projetotcc/em_breve/)
 
-- [📞 Página Contatos](https://projeto-xneedware.github.io/projetotcc/entre_em_contato/)
 
-- [📝 Página Cadastro](https://projeto-xneedware.github.io/projetotcc/cadastro/)  
 
-- [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/assinaturas/)  
+- [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/prototipo/assinaturas/index.html)  
 
-- [👥 Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/sobre_nos/)  
+- [👥 Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/prototipo/sobre/index.html)  
 
-- [🔑 Página Login](https://projeto-xneedware.github.io/projetotcc/login/)  
+- [🔑 Página Login](https://projeto-xneedware.github.io/projetotcc/prototipo/Apis/index.html)  
 
-- [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/pagamento/)  
+- [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/prototipo/pagamento/pagamento/index.html)  
 
-- [🛍️ Página Produtos](https://projeto-xneedware.github.io/projetotcc/prototipo/)  
+- [🛍️ Página Produtos](https://projeto-xneedware.github.io/projetotcc/prototipo/produtos/index.html)  
