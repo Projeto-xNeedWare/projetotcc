@@ -11,6 +11,6 @@
 
 - [🔑 Página Apis](https://projeto-xneedware.github.io/projetotcc/prototipo/Apis/index.html)  
 
-- [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/prototipo//pagamento/index.html)  
+- [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/prototipo//pagamentos/index.html)  
 
 - [🛍️ Página Produtos](https://projeto-xneedware.github.io/projetotcc/prototipo/produtos/index.html)  
