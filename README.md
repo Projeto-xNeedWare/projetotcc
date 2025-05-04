@@ -9,8 +9,8 @@
 
 - [👥 Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/prototipo/sobre/index.html)  
 
-- [🔑 Página Login](https://projeto-xneedware.github.io/projetotcc/prototipo/Apis/index.html)  
+- [🔑 Página Apis](https://projeto-xneedware.github.io/projetotcc/prototipo/Apis/index.html)  
 
-- [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/prototipo/pagamento/pagamento/index.html)  
+- [💳 Página Pagamento](https://projeto-xneedware.github.io/projetotcc/prototipo//pagamento/index.html)  
 
 - [🛍️ Página Produtos](https://projeto-xneedware.github.io/projetotcc/prototipo/produtos/index.html)  
