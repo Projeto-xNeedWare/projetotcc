@@ -211,6 +211,23 @@ img {
   color: #8a5cf6;
 }
 
+.header- {
+  margin-left: 30px;
+  background-color: #8a5cf5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.header-cta:hover {
+  background-color: #7349d3;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(138, 92, 245, 0.4);
+  color: white;
+}
+
 /* Botão do menu hambúrguer - escondido por padrão */
 .menu-toggle {
   display: none;

@@ -10,17 +10,28 @@
 <body>
     
 
-    <header>
-        <nav>
-            <div class="logo"><span class="logo-x">x</span><span class="logo-needware">NeedWare</span></div>
-            <ul class="nav-links">
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#" class="active">Assinaturas</a></li>
-            </ul>
-            <a href="#" class="cta-button header-cta">Começar Agora</a>
-        </nav>
+    <!-- Início do cabeçalho reutilizável -->
+    <header class="xneedware-header">
+        <div class="header-container">
+            <a href="../pagina_inicial/index.html" class="logo">
+                <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../produtos/index.html">Produtos</a></li>
+                    <li><a href="../sobre/index.html">Sobre</a></li>
+                    <li><a href="../contato/index.html">Contato</a></li>
+                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
+                    <a href=".//../cadastro/index.html" class="cta-button header-cta">Começar Agora</a>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
