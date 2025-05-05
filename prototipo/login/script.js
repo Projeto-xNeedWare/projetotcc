@@ -19,6 +19,7 @@
         if (resposta.ok) {
             mensagem.textContent = dados.message;
             mensagem.style.color = "green"
+            window.location.href = '../pagina_inicial/index.html'
         } else {
             mensagem.textContent = dados.message;
             mensagem.style.color = "red"
