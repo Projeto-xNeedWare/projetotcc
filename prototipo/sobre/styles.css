@@ -218,6 +218,7 @@ main {
     text-align: center;
     margin-bottom: 3rem;
     padding: 3rem 0;
+    display: none;
 }
 
 .hero h1 {
