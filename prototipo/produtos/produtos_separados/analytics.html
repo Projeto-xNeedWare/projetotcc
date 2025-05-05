@@ -6,18 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xNeed Analytics - Análise de dados avançada</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./../../bootstraps/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">xNeed</div>
-            <ul class="nav-links">
-                <li><a href="analytics.html" class="active">Analytics</a></li>
-                <li><a href="crm.html">CRM</a></li>
-                <li><a href="erp.html">ERP</a></li>
-            </ul>
-        </nav>
+    <!-- Início do cabeçalho reutilizável -->
+    <header class="xneedware-header">
+        <div class="header-container">
+            <a href="../pagina_inicial/index.html" class="logo">
+                <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../produtos/index.html">Produtos</a></li>
+                    <li><a href="../sobre/index.html">Sobre</a></li>
+                    <li><a href="../contato/index.html">Contato</a></li>
+                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
+                    <i class="fa-brands fa-jedi-order"></i>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -113,5 +129,7 @@
             &copy; 2025 xNeed. Todos os direitos reservados.
         </div>
     </footer>
+
+    <script src="../header-script.js"></script>
 </body>
 </html>
