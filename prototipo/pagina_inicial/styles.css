@@ -228,6 +228,28 @@ img {
   color: white;
 }
 
+.icone-grande {
+  margin-left: 30px;
+  font-size: 48px;
+  color: #6c00ff;
+}
+
+.icone-grande:hover {
+  margin-left: 30px;
+  font-size: 55px;
+  color: #6c00ff;
+  animation: brilho-pulsante 1s infinite alternate;
+}
+
+@keyframes brilho-pulsante {
+  0% {
+    text-shadow: 0 0 5px #6c00ff, 0 0 10px #6c00ff, 0 0 15px #6c00ff;
+  }
+  100% {
+    text-shadow: 0 0 15px #6c00ff, 0 0 30px #6c00ff, 0 0 45px #00d2ff;
+  }
+}
+
 /* Botão do menu hambúrguer - escondido por padrão */
 .menu-toggle {
   display: none;
