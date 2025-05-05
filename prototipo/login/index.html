@@ -20,11 +20,11 @@
         <p>Entre com sua conta para continuar</p>
       </div>
 
-      <form class="auth-form">
+      <form class="auth-form" id="loginForm">
         <div class="form-group">
           <label for="email">Email</label>
           <div class="input-wrapper">
-            <input type="email" id="email" placeholder="seu@email.com" required>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
             <div class="input-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -40,7 +40,7 @@
             <a href="#" class="forgot-password">Esqueceu a senha?</a>
           </div>
           <div class="input-wrapper">
-            <input type="password" id="password" placeholder="••••••••" required>
+            <input type="password" name="password" id="password" placeholder="••••••••" required>
             <div class="input-icon toggle-password">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
@@ -59,6 +59,7 @@
         </div>
 
         <button type="submit" class="btn-primary">Entrar</button>
+        <p id="mensagem"></p>
       </form>
 
       <div class="auth-divider">
@@ -94,30 +95,6 @@
     <div class="bg-pattern"></div>
   </div>
 
-  <script>
-    // Toggle password visibility
-    document.querySelector('.toggle-password').addEventListener('click', function() {
-      const passwordInput = document.getElementById('password');
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        this.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
-            <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
-            <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
-            <line x1="2" x2="22" y1="2" y2="22"></line>
-          </svg>
-        `;
-      } else {
-        passwordInput.type = 'password';
-        this.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-            <circle cx="12" cy="12" r="3" />
-          </svg>
-        `;
-      }
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>

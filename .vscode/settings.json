@@ -1,3 +1,8 @@
 {
-    "liveServer.settings.port": 5502
-}
+    "liveServer.settings.port": 5502,
+    "liveServer.settings.ignoreFiles": [
+      "**/*.git/**",
+      "**/.vscode/**",
+      "**/node_modules/**"
+    ]
+  }

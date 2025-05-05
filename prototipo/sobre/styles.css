@@ -82,7 +82,7 @@ ul {
 
 /* Estilos do cabeçalho */
 .xneedware-header {
-    background-color: #000000;
+    background-color: transparent;
     width: 100%;
     padding: 20px 0;
     position: relative;
@@ -1133,8 +1133,20 @@ footer {
     background-repeat: no-repeat;
 }
 
-.twitter {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z'%3E%3C/path%3E%3C/svg%3E");
+/* 
+  Estamos usando uma imagem SVG diretamente no CSS com data URI.
+  Isso evita carregar um arquivo externo e deixa o código mais portátil.
+
+  - "data:image/svg+xml" diz que o conteúdo é um SVG.
+  - Os caracteres especiais no SVG são convertidos para URL encoding, por isso parecem códigos doidos (%3C = <).
+  - O SVG aqui é um ícone vetorial (no caso, do Instagram) com:
+    - tamanho 16x16
+    - traço branco
+    - sem preenchimento (fill='none')
+*/
+
+.instagram {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' ry='5'/%3E%3Cpath d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z'/%3E%3Cline x1='17.5' y1='6.5' x2='17.5' y2='6.5'/%3E%3C/svg%3E");
     background-position: center;
     background-repeat: no-repeat;
 }

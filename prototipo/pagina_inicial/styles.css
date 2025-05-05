@@ -453,26 +453,26 @@ img {
 }
 
 .dashboard-card.purple {
-  background: linear-gradient(to bottom right, rgba(124, 58, 237, 0.1), rgba(124, 58, 237, 0.05));
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  background-color: transparent;
+  
 }
 
 .dashboard-card.blue {
-  background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
-  border: 1px solid rgba(37, 99, 235, 0.3);
+  background-color: transparent;
+  
 }
 
 .card-bar {
   height: 0.5rem;
   width: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  
   border-radius: var(--border-radius-sm);
 }
 
 .card-content {
   height: 1.5rem;
   width: 75%;
-  background-color: rgba(255, 255, 255, 0.1);
+  
   border-radius: var(--border-radius-sm);
 }
 

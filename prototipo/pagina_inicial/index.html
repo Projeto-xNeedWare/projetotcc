@@ -12,7 +12,7 @@
     <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="../pagina_inicial/index.html" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -23,10 +23,10 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="/produtos">Produtos</a></li>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/contato">Contato</a></li>
-                    <li><a href="/assinaturas">Assinaturas</a></li>
+                    <li><a href="../produtos/index.html">Produtos</a></li>
+                    <li><a href="../sobre/index.html">Sobre</a></li>
+                    <li><a href="../contato/index.html">Contato</a></li>
+                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +39,7 @@
         <div class="bg-blob blob3"></div>
 
         <div class="container">
-            <div class="hero-grid">
+            <div class="hero-grid"> <!-- Seção Hero: parte principal do site que aparece primeiro, usada pra chamar atenção com imagem, título e botão -->
                 <div class="hero-content fade-in">
                     <h1 class="hero-title">
                         Software Premium para 
@@ -59,36 +59,87 @@
                     </div>
                 </div>
 
+                                <!-- Início da imagem de fundo com animação de fade-in e delay -->
                 <div class="hero-image fade-in delay-200">
+                    
+                    <!-- Início da área de pré-visualização do dashboard -->
                     <div class="dashboard-preview">
+                        
+                        <!-- Início do cabeçalho do dashboard -->
                         <div class="dashboard-header">
                             <div class="dashboard-dots">
-                                <div class="dot red"></div>
-                                <div class="dot yellow"></div>
-                                <div class="dot green"></div>
+                                <!-- Botão de fechar (representado por um ponto vermelho) -->
+                                <div class="dot red" title="Close"></div>
+                                <!-- Botão de minimizar (representado por um ponto amarelo) -->
+                                <div class="dot yellow" title="Minimize"></div>
+                                <!-- Botão de maximizar (representado por um ponto verde) -->
+                                <div class="dot green" title="Maximize"></div>
                             </div>
+                            <!-- Título do dashboard -->
                             <div class="dashboard-title">xNeedWare Dashboard</div>
                         </div>
+                        
+                        <!-- Início do conteúdo do dashboard -->
                         <div class="dashboard-content">
-                            <div class="dashboard-bar"></div>
-                            <div class="dashboard-grid">
-                                <div class="dashboard-card purple">
-                                    <div class="card-bar"></div>
-                                    <div class="card-content"></div>
-                                </div>
-                                <div class="dashboard-card blue">
-                                    <div class="card-bar"></div>
-                                    <div class="card-content"></div>
+                            
+                            <!-- Barra de progresso para carregar dados -->
+                            <div class="dashboard-bar">
+                                <div style="width: 75%; height: 100%; background: linear-gradient(to right, rgba(124, 58, 237, 0.7), rgba(37, 99, 235, 0.7)); border-radius: inherit; animation: loading 2s ease-in-out infinite;">
+                                    <!-- Texto exibido durante o carregamento -->
+                                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: rgba(255, 255, 255, 0.8); font-size: 0.75rem;">
+                                        Carregando dados...
+                                    </div>
                                 </div>
                             </div>
-                            <div class="dashboard-chart"></div>
-                            <div class="dashboard-footer">
-                                <div class="footer-bar"></div>
-                                <div class="footer-button"></div>
+                            
+                            <!-- Grid de cards do dashboard -->
+                            <div class="dashboard-grid">
+                                
+                                <!-- Card de "Usuários ativos" -->
+                                <div class="dashboard-card purple">
+                                    <div class="card-content" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                        <!-- Título do card -->
+                                        <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Usuários ativos</div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <!-- Número de usuários ativos -->
+                                            <strong style="color: white; font-size: 1.25rem;">124</strong>
+                                            <!-- Percentual de variação -->
+                                            <span style="color: #34d399; font-size: 0.7rem;">↑ 8%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card de "Novas vendas" -->
+                                <div class="dashboard-card blue">
+                                    <div class="card-content" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                        <!-- Título do card -->
+                                        <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Novas vendas</div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <!-- Número de novas vendas -->
+                                            <strong style="color: white; font-size: 1.25rem;">37</strong>
+                                            <!-- Percentual de variação -->
+                                            <span style="color: #34d399; font-size: 0.7rem;">↑ 12%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
+                        <!-- Rodapé do dashboard -->
+                        <div class="dashboard-footer">
+                            
+                            <!-- Barra de rodapé exibindo a receita total -->
+                            <div class="footer-bar" style="display: flex; align-items: center; padding: 1 1rem; margin-top: 2rem">
+                               
+                                <!-- Texto exibindo a receita total -->
+                                <span style="color: rgba(255, 255, 255, 0.7); font-size: 0.75rem; margin-left: 1rem">Receita: $ 120.450</span>
+                            </div>
+                            
+                        </div>
+                        
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -120,7 +171,7 @@
                         <li><i class="fas fa-check"></i> Integração com múltiplas fontes de dados</li>
                         <li><i class="fas fa-check"></i> Alertas inteligentes</li>
                     </ul>
-                    <a href="../produtos/analytics.html" class="product-link">
+                    <a href="../produtos/produtos_separados/analytics.html" class="product-link">
                         Saiba mais <i class="fas fa-arrow-up-right"></i>
                     </a>
                 </div>
@@ -139,7 +190,7 @@
                         <li><i class="fas fa-check"></i> Gestão de contatos</li>
                         <li><i class="fas fa-check"></i> Integração com e-mail</li>
                     </ul>
-                    <a href="../produtos/crm.html" class="product-link">
+                    <a href="../produtos/produtos_separados/crm.html" class="product-link">
                         Saiba mais <i class="fas fa-arrow-up-right"></i>
                     </a>
                 </div>
@@ -158,7 +209,7 @@
                         <li><i class="fas fa-check"></i> Recursos humanos</li>
                         <li><i class="fas fa-check"></i> Relatórios gerenciais</li>
                     </ul>
-                    <a href="../produtos/erp.html" class="product-link">
+                    <a href="../produtos/produtos_separados/erp.html" class="product-link">
                         Saiba mais <i class="fas fa-arrow-up-right"></i>
                     </a>
                 </div>
@@ -175,7 +226,7 @@
                         Sobre a <span class="gradient-text">xNeedWare</span>
                     </h2>
                     <p class="about-description">
-                        Fundada em 2020, a xNeedWare nasceu com a missão de transformar a maneira como as empresas utilizam software para impulsionar seus negócios. Nossa equipe de especialistas em tecnologia trabalha incansavelmente para desenvolver soluções que combinam inovação, usabilidade e eficiência.
+                        Fundada em 2025 por 4 jovens desenvolvedores apaixonados pela tecnologia, a xNeedWare nasceu com a missão de transformar a maneira como as empresas utilizam software para impulsionar seus negócios. Nossa equipe de especialistas em tecnologia trabalha incansavelmente para desenvolver soluções que combinam inovação, usabilidade e eficiência.
                     </p>
                     <p class="about-description">
                         Atendemos desde startups até grandes corporações, sempre com o compromisso de oferecer produtos de alta qualidade e um suporte excepcional. Nossa abordagem centrada no cliente nos permite criar soluções verdadeiramente alinhadas às necessidades do mercado.
@@ -273,8 +324,8 @@
                         </div>
                         <div class="contact-details">
                             <h3 class="contact-title">Telefone</h3>
-                            <p>+55 (11) 3456-7890</p>
-                            <p>+55 (11) 9876-5432</p>
+                            <p>+55 (19) 99693-7305</p>
+                            <p>+55 (11) 99761-5610</p>
                         </div>
                     </div>
 
@@ -346,7 +397,9 @@
                         <li><i class="fas fa-check"></i> Suporte por email</li>
                         <li><i class="fas fa-check"></i> Atualizações gratuitas</li>
                     </ul>
-                    <button class="btn btn-primary">Começar Agora</button>
+                    <a href="../assinaturas/index.html">
+                        <button class="btn btn-primary">Começar Agora</button>
+                    </a>
                 </div>
 
                 <div class="plan-card popular fade-in-scroll delay-100">
@@ -366,7 +419,9 @@
                         <li><i class="fas fa-check"></i> API de integração</li>
                         <li><i class="fas fa-check"></i> Relatórios avançados</li>
                     </ul>
-                    <button class="btn btn-primary">Começar Agora</button>
+                    <a href="../assinaturas/index.html">
+                        <button class="btn btn-primary">Começar Agora</button>
+                    </a>
                 </div>
 
                 <div class="plan-card fade-in-scroll delay-200">
@@ -387,7 +442,10 @@
                         <li><i class="fas fa-check"></i> Ambiente dedicado</li>
                         <li><i class="fas fa-check"></i> Gerente de conta exclusivo</li>
                     </ul>
-                    <button class="btn btn-primary">Começar Agora</button>
+                    <a href="../assinaturas/index.html">
+                        <button class="btn btn-primary">Começar Agora</button>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -455,38 +513,37 @@
                         Transformando empresas através de soluções de software inovadoras e eficientes.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        
+                        <a href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/analytics.html">xNeed Analytics</a></li>
-                        <li><a href="../produtos/crm.html">xNeed CRM</a></li>
-                        <li><a href="../produtos/erp.html">xNeed ERP</a></li>
-                        <li><a href="../">Integrações</a></li>
-                        <li><a href="../">API</a></li>
+                        <li><a href="../produtos/produtos_separados/analytics.html">xNeed Analytics</a></li>
+                        <li><a href="../produtos/produtos_separados/crm.html">xNeed CRM</a></li>
+                        <li><a href="../produtos/produtos_separados/erp.html">xNeed ERP</a></li>
+                        
+                        <li><a href="../Apis/index.html">API</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="../sobre/index.html">Sobre Nós</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
-                        <li><a href="#">Documentação</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
+                        
+                        
+                        <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
                     </ul>
                 </div>
             </div>
