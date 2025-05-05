@@ -55,7 +55,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5; /* Apenas para demonstração */
+    background-color: #000000; /* Apenas para demonstração */
 }
 
 /* Estilos do cabeçalho */
@@ -118,15 +118,17 @@ body {
 /* Botão do menu hambúrguer - escondido por padrão */
 .menu-toggle {
     display: none;
-    color: #ffffff;
+    color: white;
     font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .menu-toggle:hover {
     color: #8a5cf6;
-}
+  }
 
 /* Estilos para demonstração - não fazem parte do cabeçalho */
 .content-placeholder {
