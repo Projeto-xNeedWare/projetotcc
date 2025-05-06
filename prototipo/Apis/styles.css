@@ -53,7 +53,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #080a13;
+    background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -363,59 +363,6 @@ main {
     box-shadow: 0 5px 15px rgba(138, 92, 245, 0.4);
 }
 
-/* Rodapé */
-footer {
-    background-color: #0a0d1a;
-    padding: 3rem 2rem 1.5rem;
-    margin-top: 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.footer-content p {
-    max-width: 500px;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-.copyright {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.875rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 /* Estilos específicos para a página de APIs */
 .api-endpoints {
