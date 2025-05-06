@@ -68,36 +68,25 @@ ul {
     list-style: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos do cabeçalho */
+/* 5.1 Cabeçalho */
 .xneedware-header {
-    background-color: transparent;
+    background-color: #00000000;
     width: 100%;
     padding: 20px 0;
     position: relative;
-}
-
-.header-container {
+  }
+  
+  .header-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
+  }
+  
+  /* Logo */
+  .logo {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -114,41 +103,67 @@ ul {
     background-clip: text;
     color: transparent;
   }
-
-/* Estilos da navegação */
-.main-nav ul {
+  
+  /* Navegação principal */
+  .main-nav ul {
     display: flex;
     list-style: none;
     align-items: center;
-}
-
-.main-nav li {
+  }
+  
+  .main-nav li {
     margin-left: 30px;
-}
-
-.main-nav a {
+  }
+  
+  .main-nav a {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
+  }
+  
+  .main-nav a:hover {
     color: #8a5cf6;
-}
-
-/* Botão do menu hambúrguer - escondido por padrão */
-.menu-toggle {
-    display: none;
-    color: #ffffff;
+  }
+  
+  /* Ícone grande com animação */
+  .icone-grande {
+    margin-left: 30px;
+    font-size: 27px;
+    color: #6c00ff;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .icone-grande:hover {
+    color: #6c00ff;
+    transform: scale(1.22);
+    animation: brilho-pulsante 1s infinite alternate;
+  }
+  
+  @keyframes brilho-pulsante {
+    0% {
+      text-shadow: 0 0 5px #6c00ff, 0 0 10px #6c00ff, 0 0 15px #6c00ff;
+    }
+    100% {
+      text-shadow: 0 0 15px #6c00ff, 0 0 30px #6c00ff, 0 0 45px #00d2ff;
+    }
+  }
+  
+  /* Menu mobile */
+  .menu-toggle {
+    display: none; /* Escondido por padrão, visível apenas em telas menores */
+    color: white;
     font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .menu-toggle:hover {
     color: #8a5cf6;
-}
+  }
 
 /* Estilos para demonstração - não fazem parte do cabeçalho */
 .content-placeholder {
