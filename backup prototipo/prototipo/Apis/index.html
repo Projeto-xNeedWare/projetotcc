@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xNeedWare APIs - Integração avançada para seu negócio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./../bootstraps/header.css">
+    <link rel="stylesheet" href="./../bootstraps/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
+</head>
+<body>
+    <!-- Início do cabeçalho reutilizável -->
+    <header class="xneedware-header">
+        <div class="header-container">
+            <a href="../pagina_inicial/index.html" class="logo">
+                <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../produtos/index.html">Produtos</a></li>
+                    <li><a href="../sobre/index.html">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
+                    <a href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
+                    </a>
+                        
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>xNeedWare APIs</h1>
+            <p class="subtitle">Integração poderosa e flexível para conectar seus sistemas e aplicações.</p>
+        </section>
+
+        <section class="product-details">
+            <div class="product-card apis">
+                <div class="icon-container apis-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34"></path>
+                        <path d="M3 15h8"></path>
+                        <path d="M17 8l5 5-5 5"></path>
+                    </svg>
+                </div>
+                <h2>xNeedWare APIs</h2>
+                <p class="description">Conjunto completo de APIs RESTful para integrar seus sistemas com nossa plataforma.</p>
+                
+                <ul class="feature-list">
+                    <li>
+                        <span class="check-icon apis-check">✓</span>
+                        <span>Documentação completa e interativa</span>
+                    </li>
+                    <li>
+                        <span class="check-icon apis-check">✓</span>
+                        <span>Autenticação OAuth 2.0</span>
+                    </li>
+                    <li>
+                        <span class="check-icon apis-check">✓</span>
+                        <span>Suporte a webhooks</span>
+                    </li>
+                    <li>
+                        <span class="check-icon apis-check">✓</span>
+                        <span>SDKs para diversas linguagens</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3>Por que usar nossas APIs?</h3>
+                <p>
+                    As APIs do xNeedWare foram projetadas para oferecer integração simples e robusta com nossa plataforma.
+                    Com elas, você pode automatizar processos, sincronizar dados e estender as funcionalidades dos nossos produtos
+                    para atender às necessidades específicas do seu negócio.
+                </p>
+                <p>
+                    Nossa arquitetura RESTful segue as melhores práticas do mercado, com respostas JSON padronizadas,
+                    versionamento claro e limites de taxa generosos. Além disso, oferecemos suporte técnico especializado
+                    para ajudar você a implementar as integrações de forma rápida e eficiente.
+                </p>
+            </div>
+
+            <div class="api-endpoints">
+                <h3>Principais endpoints</h3>
+                <div class="endpoint">
+                    <div class="endpoint-method get">GET</div>
+                    <div class="endpoint-path">/api/v1/users</div>
+                    <div class="endpoint-desc">Lista todos os usuários</div>
+                </div>
+                <div class="endpoint">
+                    <div class="endpoint-method post">POST</div>
+                    <div class="endpoint-path">/api/v1/users</div>
+                    <div class="endpoint-desc">Cria um novo usuário</div>
+                </div>
+                <div class="endpoint">
+                    <div class="endpoint-method get">GET</div>
+                    <div class="endpoint-path">/api/v1/products</div>
+                    <div class="endpoint-desc">Lista todos os produtos</div>
+                </div>
+                <div class="endpoint">
+                    <div class="endpoint-method put">PUT</div>
+                    <div class="endpoint-path">/api/v1/products/{id}</div>
+                    <div class="endpoint-desc">Atualiza um produto</div>
+                </div>
+                <div class="endpoint">
+                    <div class="endpoint-method delete">DELETE</div>
+                    <div class="endpoint-path">/api/v1/products/{id}</div>
+                    <div class="endpoint-desc">Remove um produto</div>
+                </div>
+            </div>
+
+            <div class="code-example">
+                <h3>Exemplo de uso</h3>
+                <pre><code>// Exemplo de requisição usando JavaScript
+fetch('https://api.xneedware.com/v1/products', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Erro:', error));</code></pre>
+            </div>
+
+            <div class="benefits-section">
+                <h3>Benefícios</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="check-icon apis-check">✓</span>
+                        <span>Integração com sistemas existentes</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check-icon apis-check">✓</span>
+                        <span>Automação de processos</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check-icon apis-check">✓</span>
+                        <span>Sincronização de dados em tempo real</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check-icon apis-check">✓</span>
+                        <span>Desenvolvimento de aplicações personalizadas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="#" class="cta-button apis-cta">Acessar documentação</a>
+            </div>
+        </section>
+    </main>
+
+    
+  <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo">
+                    <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+                </a>
+                <p class="footer-description">
+                    Transformando empresas através de soluções de software inovadoras e eficientes.
+                </p>
+                <div class="social-links">
+                    
+                    <a href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-title">Produtos</h3>
+                <ul>
+                    <li><a href="../produtos/produtos_separados/analytics.html">xNeed Analytics</a></li>
+                    <li><a href="../produtos/produtos_separados/crm.html">xNeed CRM</a></li>
+                    <li><a href="../produtos/produtos_separados/erp.html">xNeed ERP</a></li>
+                    
+                    <li><a href="../Apis/index.html">API</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-title">Empresa</h3>
+                <ul>
+                    <li><a href="../sobre/index.html">Sobre Nós</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-title">Suporte</h3>
+                <ul>
+                    
+                    
+                    <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="./../bootstraps/header-script.js"></script>
+</body>
+</html>
