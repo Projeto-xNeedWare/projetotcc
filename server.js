@@ -1,17 +1,21 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
+
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const Usuario = require('./models/usuario');
 const session = require('express-session');
-require('dotenv').config(); // <- ISSO AQUI
+
 
 const app = express();
 
+require('dotenv').config(); // carrega o .env
+
+const mongoose = require('mongoose');
+
 mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 })
 .then(() => console.log('MongoDB conectado!'))
 .catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
