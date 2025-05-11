@@ -1,7 +1,5 @@
-// Seleciona o elemento onde o nome do usuário será exibido
 const nomeSpan = document.getElementById('nomeUsuario');
 
-// Seleciona os campos do formulário
 const nameField = document.getElementById('name');
 const emailField = document.getElementById('email');
 const phoneField = document.getElementById('phone');
@@ -11,20 +9,17 @@ const cityField = document.getElementById('city');
 const stateField = document.getElementById('state');
 const zipField = document.getElementById('zip');
 
-// Função para buscar dados do usuário logado
 fetch('/usuario-logado')
   .then(res => {
     if (!res.ok) throw new Error('Usuário não autenticado');
     return res.json();
   })
   .then(usuario => {
-    // Exibe o nome do usuário no topo da página
     nomeSpan.textContent = usuario.nome;
 
-    // Preenche os campos do formulário com as informações do usuário
     nameField.value = usuario.nome;
     emailField.value = usuario.email;
-    phoneField.value = usuario.telefone || '';  // Caso o telefone não esteja definido, deixa em branco
+    phoneField.value = usuario.telefone || '';
     cpfField.value = usuario.cpf || '';
     addressField.value = usuario.endereco || '';
     cityField.value = usuario.cidade || '';
@@ -32,16 +27,12 @@ fetch('/usuario-logado')
     zipField.value = usuario.cep || '';
   })
   .catch(() => {
-    // Se o usuário não estiver autenticado, redireciona para o login
     window.location.href = '/login';
   });
 
-// Seleciona o botão de salvar alterações
 const saveButton = document.querySelector('.form-actions button');
 
-// Função para salvar as alterações
 saveButton.addEventListener('click', () => {
-  // Coleta os valores dos campos
   const dadosAtualizados = {
     nome: nameField.value,
     email: emailField.value,
@@ -53,7 +44,6 @@ saveButton.addEventListener('click', () => {
     cep: zipField.value,
   };
 
-  // Faz a requisição para atualizar os dados do usuário
   fetch('/atualizar-dados', {
     method: 'POST',
     headers: {
@@ -61,17 +51,15 @@ saveButton.addEventListener('click', () => {
     },
     body: JSON.stringify(dadosAtualizados),
   })
-    .then((res) => res.json())
-    .then((data) => {
-      // Exibe a mensagem de sucesso
+    .then(res => res.json())
+    .then(data => {
       alert(data.sucesso || data.erro);
       if (data.sucesso) {
-        // Atualiza o nome exibido no topo da página
         nomeSpan.textContent = dadosAtualizados.nome;
       }
     })
-    .catch((err) => {
+    .catch(err => {
       console.error(err);
-      alert('Erro ao atualizar os dados. Tente novamente.');
+      alert('Erro ao atualizar os dados.');
     });
 });
