@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Seu Site</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <main>
+
+      <form class="auth-container" id="form-cadastro" action="/cadastro" method="POST">
+            <div class="auth-card">
+              <div class="auth-header">
+                <div class="logo">
+                  <a href="../pagina_inicial/index.html" class="logo">
+                    <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+                  </a>
+                </div>
+                <h1>Crie sua conta</h1>
+                <p>Preencha os dados abaixo para começar</p>
+              </div>
+          
+              <div class="auth-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">Nome</label>
+                    <div class="input-wrapper">
+                      <input type="text" id="first-name" name="nome" placeholder="Seu nome" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Sobrenome</label>
+                    <div class="input-wrapper">
+                      <input type="text" id="last-name" name="sobrenome" placeholder="Seu sobrenome" required>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    <div class="input-icon">
+                      <!-- Ícone de e-mail -->
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="form-group">
+                  <label for="password">Senha</label>
+                  <div class="input-wrapper">
+                    <input type="password" id="password" name="senha" placeholder="••••••••" required>
+                    <div class="input-icon toggle-password">
+                      <!-- Ícone de olho -->
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar senha</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirm-password" name="confirm-senha" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <input type="submit" class="btn-primary" value="Criar conta"></input>
+              </div>
+        </form>
+          
+          
+              <div class="auth-divider">
+                <span>ou cadastre-se com</span>
+              </div>
+          
+              <div class="social-login">
+                <button type="button" class="social-btn google">
+                  <!-- Ícone Google -->
+                  Google
+                </button>
+                <button type="button" class="social-btn github">
+                  <!-- Ícone GitHub -->
+                  GitHub
+                </button>
+              </div>
+          
+              <div class="auth-footer">
+                <p>Já tem uma conta? <a href="../login/index.html">Faça login</a></p>
+              </div>
+            </div>
+    </main>
+      
+
+  <div class="auth-background">
+    <div class="bg-gradient"></div>
+    <div class="bg-pattern"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

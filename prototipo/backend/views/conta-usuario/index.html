@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - xNeedWare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./../bootstraps/header.css">
+    <!-- redirecionar.html -->
+    
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <!-- Início do cabeçalho reutilizável -->
+     <header class="xneedware-header">
+        <div class="header-container">
+            <a href="../pagina_inicial/index.html" class="logo">
+                <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../produtos/index.html">Produtos</a></li>
+                    <li><a href="../sobre/index.html">Sobre</a></li>
+                    <li><a href="./../pagina_inicial/index.html#contato">Contato</a></li>
+                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
+                    <a href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
+                    </a>
+                        
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <h1 class="page-title">Minha Conta</h1>
+        <h1>Bem-vindo, <span id="nomeUsuario"></span>!</h1>
+
+        <!-- Cards de Estatísticas -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="stat-info">
+                    <p class="stat-label">Total de Compras</p>
+                    <h3 class="stat-value">12</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="stat-info">
+                    <p class="stat-label">Assinaturas Ativas</p>
+                    <h3 class="stat-value">2</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon indigo">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="stat-info">
+                    <p class="stat-label">Valor Total</p>
+                    <h3 class="stat-value">R$ 1.249,90</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sistema de Abas -->
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="info">Dados Pessoais</button>
+                <button class="tab-btn" data-tab="purchases">Compras</button>
+                <button class="tab-btn" data-tab="settings">Configurações</button>
+            </div>
+
+            <!-- Conteúdo da Aba: Dados Pessoais -->
+            <div class="tab-content active" id="info">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Dados Pessoais</h2>
+                        <p class="card-description">Gerencie suas informações pessoais</p>
+                    </div>
+                    <div class="card-content">
+                        <form class="user-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nome</label>
+                                    <input type="text" id="name" value="" placeholder="Seu nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" value="" placeholder="seu@email.com">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Telefone</label>
+                                    <input type="text" id="phone" value="" placeholder="(00) 00000-0000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" id="cpf" value="" placeholder="000.000.000-00">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Endereço</label>
+                                <input type="text" id="address" value="" placeholder="Seu endereço">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Cidade</label>
+                                    <input type="text" id="city" value="" placeholder="Sua cidade">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">Estado</label>
+                                    <input type="text" id="state" value="" placeholder="Seu estado">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">CEP</label>
+                                    <input type="text" id="zip" value="" placeholder="00000-000">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" id="saveButton">Salvar Alterações</button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo da Aba: Compras -->
+            <div class="tab-content" id="purchases">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Histórico de Compras</h2>
+                        <p class="card-description">Veja todas as suas compras e assinaturas</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-container">
+                            <table class="purchases-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Produto</th>
+                                        <th>Data</th>
+                                        <th>Valor</th>
+                                        <th>Status</th>
+                                        <th>Tipo</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>INV-001</td>
+                                        <td>Software Premium - Plano Anual</td>
+                                        <td>15/04/2025</td>
+                                        <td>R$ 599,90</td>
+                                        <td><span class="badge green">Ativo</span></td>
+                                        <td><span class="badge purple">Assinatura</span></td>
+                                        <td class="actions">
+                                            <button class="icon-btn"><i class="fas fa-download"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-external-link-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-002</td>
+                                        <td>Módulo Financeiro</td>
+                                        <td>10/03/2025</td>
+                                        <td>R$ 349,90</td>
+                                        <td><span class="badge blue">Concluído</span></td>
+                                        <td><span class="badge indigo">Compra</span></td>
+                                        <td class="actions">
+                                            <button class="icon-btn"><i class="fas fa-download"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-external-link-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-003</td>
+                                        <td>Módulo de Recursos Humanos</td>
+                                        <td>28/02/2025</td>
+                                        <td>R$ 299,90</td>
+                                        <td><span class="badge blue">Concluído</span></td>
+                                        <td><span class="badge indigo">Compra</span></td>
+                                        <td class="actions">
+                                            <button class="icon-btn"><i class="fas fa-download"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-external-link-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-004</td>
+                                        <td>Suporte Premium - 3 meses</td>
+                                        <td>15/01/2025</td>
+                                        <td>R$ 149,90</td>
+                                        <td><span class="badge green">Ativo</span></td>
+                                        <td><span class="badge purple">Assinatura</span></td>
+                                        <td class="actions">
+                                            <button class="icon-btn"><i class="fas fa-download"></i></button>
+                                            <button class="icon-btn"><i class="fas fa-external-link-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo da Aba: Configurações -->
+            <div class="tab-content" id="settings">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Configurações</h2>
+                        <p class="card-description">Gerencie suas preferências de conta</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="settings-list">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3 class="setting-title">Notificações por email</h3>
+                                    <p class="setting-description">Receba atualizações sobre seus produtos</p>
+                                </div>
+                                <div class="toggle active">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h3 class="setting-title">Autenticação em dois fatores</h3>
+                                    <p class="setting-description">Adicione uma camada extra de segurança</p>
+                                </div>
+                                <div class="toggle">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Script simples para alternar entre as abas
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remover classe active de todos os botões e conteúdos
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Adicionar classe active ao botão clicado
+                    button.classList.add('active');
+                    
+                    // Mostrar o conteúdo correspondente
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Toggle switches
+            const toggles = document.querySelectorAll('.toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    toggle.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+    <script src="./../bootstraps/header-script.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
