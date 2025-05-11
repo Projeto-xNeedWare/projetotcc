@@ -5,15 +5,16 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const Usuario = require('./models/usuario');
 const session = require('express-session');
+require('dotenv').config(); // <- ISSO AQUI
 
 const app = express();
 
-// Conexão com o MongoDB
-mongoose.connect('mongodb+srv://xNeedDatabase:xNeed768@xneed-database.pxzkxo5.mongodb.net/xNeedDB?retryWrites=true&w=majority&appName=xNeed-Database', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then(() => console.log('MongoDB conectado!'))
-  .catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
+})
+.then(() => console.log('MongoDB conectado!'))
+.catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
 
 // Middleware para processar o corpo da requisição como JSON
 app.use(express.json());
