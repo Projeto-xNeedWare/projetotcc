@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const Usuario = require('./models/usuario');
 const session = require('express-session');
-require('dotenv').config(); // carrega o .env
+require('dotenv').config();
 
 const app = express();
 
@@ -21,16 +21,19 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ Servir arquivos estáticos das pastas 'public' e 'views'
+// Arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 
-// Configurar sessão
+// Sessão com cookie persistente
 app.use(session({
   secret: 'secret-key',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false } // true em produção com HTTPS
+  cookie: {
+    secure: false,             // true se HTTPS
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 7 dias
+  }
 }));
 
 // Rotas GET
@@ -53,7 +56,7 @@ app.get('/dashboard', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/conta-usuario/index.html'));
 });
 
-// Rota POST: Cadastro
+// POST: Cadastro
 app.post('/cadastro', async (req, res) => {
   const { nome, sobrenome, email, senha } = req.body;
 
@@ -89,7 +92,7 @@ app.post('/cadastro', async (req, res) => {
   }
 });
 
-// Rota POST: Login
+// POST: Login
 app.post('/login', async (req, res) => {
   const { email, senha } = req.body;
   const usuario = await Usuario.findOne({ email });
@@ -109,7 +112,7 @@ app.post('/login', async (req, res) => {
   res.status(200).json({ sucesso: 'Login realizado com sucesso!' });
 });
 
-// Rota GET: Verificar usuário logado
+// GET: Verificar usuário logado
 app.get('/usuario-logado', (req, res) => {
   if (!req.session.usuario) {
     return res.status(401).json({ erro: 'Usuário não autenticado' });
@@ -127,7 +130,7 @@ app.get('/usuario-logado', (req, res) => {
   });
 });
 
-// Rota POST: Atualizar dados do usuário
+// POST: Atualizar dados do usuário
 app.post('/atualizar-dados', async (req, res) => {
   if (!req.session.usuario) {
     return res.status(401).json({ erro: 'Usuário não autenticado' });
