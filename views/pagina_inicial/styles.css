@@ -222,6 +222,13 @@
     transform: translateY(-2px);
   }
   
+  button{
+    background-color: transparent;
+    border: none;
+    border-color: transparent;
+
+  }
+
   /* 4.2 Cards */
   /* Os estilos de cards estão distribuídos nas seções específicas */
   
