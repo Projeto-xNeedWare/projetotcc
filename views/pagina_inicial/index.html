@@ -15,7 +15,7 @@
 
 
 </head>
-<body>
+<body onload="numRandom('num-random', 'num-random2', 'num-random3', 'num-random4')">
     <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
         <div class="header-container">
@@ -118,9 +118,9 @@
                                         <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Usuários ativos</div>
                                         <div style="display: flex; align-items: center; gap: 0.5rem;">
                                             <!-- Número de usuários ativos -->
-                                            <strong style="color: white; font-size: 1.25rem;">124</strong>
+                                            <strong id="num-random" style="color: white; font-size: 1.25rem;">124</strong>
                                             <!-- Percentual de variação -->
-                                            <span style="color: #34d399; font-size: 0.7rem;">↑ 8%</span>
+                                            <span id="num-random4" style="color: #34d399; font-size: 0.7rem;">↑ 8%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -132,9 +132,9 @@
                                         <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Novas vendas</div>
                                         <div style="display: flex; align-items: center; gap: 0.5rem;">
                                             <!-- Número de novas vendas -->
-                                            <strong style="color: white; font-size: 1.25rem;">37</strong>
+                                            <strong id="num-random3" style="color: white; font-size: 1.25rem;">37</strong>
                                             <!-- Percentual de variação -->
-                                            <span style="color: #34d399; font-size: 0.7rem;">↑ 12%</span>
+                                            <span id="num-random2" style="color: #34d399; font-size: 0.7rem;">↑ 12%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -573,6 +573,8 @@
     <script src="/header-script.js"></script>
 
     <script src="/animation-scroll.js"></script>
+
+    <script src="/random.js"></script>
 
 </body>
 </html>
