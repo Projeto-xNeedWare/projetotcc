@@ -16,8 +16,6 @@ Sistema de gerenciamento de pedidos de desenvolvimento de softwares personalizad
 - Envio de e-mails automatizados
 - Validação e animações frontend com JavaScript
 
----
-
 ## 📁 Estrutura de Pastas
 
 ```bash
