@@ -8,7 +8,6 @@ require('dotenv').config();
 
 const app = express();
 
-// Conexão com MongoDB
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -17,26 +16,22 @@ mongoose.connect(process.env.MONGODB_URI, {
 .then(() => console.log('MongoDB conectado!'))
 .catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
 
-// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 
-// Sessão com cookie persistente
 app.use(session({
   secret: 'secret-key',
   resave: false,
   saveUninitialized: true,
   cookie: {
-    secure: false,             // true se HTTPS
-    maxAge: 1000 * 60 * 60 * 24 * 7 // 7 dias
+    secure: false,
+    maxAge: 1000 * 60 * 60 * 24 * 7
   }
 }));
 
-// Rotas GET
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/pagina_inicial/index.html'));
 });
@@ -56,7 +51,6 @@ app.get('/dashboard', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/conta-usuario/index.html'));
 });
 
-// POST: Cadastro
 app.post('/cadastro', async (req, res) => {
   const { nome, sobrenome, email, senha } = req.body;
 
@@ -92,7 +86,6 @@ app.post('/cadastro', async (req, res) => {
   }
 });
 
-// POST: Login
 app.post('/login', async (req, res) => {
   const { email, senha } = req.body;
   const usuario = await Usuario.findOne({ email });
@@ -112,7 +105,6 @@ app.post('/login', async (req, res) => {
   res.status(200).json({ sucesso: 'Login realizado com sucesso!' });
 });
 
-// GET: Verificar usuário logado
 app.get('/usuario-logado', (req, res) => {
   if (!req.session.usuario) {
     return res.status(401).json({ erro: 'Usuário não autenticado' });
@@ -130,7 +122,6 @@ app.get('/usuario-logado', (req, res) => {
   });
 });
 
-// POST: Atualizar dados do usuário
 app.post('/atualizar-dados', async (req, res) => {
   if (!req.session.usuario) {
     return res.status(401).json({ erro: 'Usuário não autenticado' });
@@ -165,7 +156,6 @@ app.post('/atualizar-dados', async (req, res) => {
   }
 });
 
-// Inicia o servidor
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);

@@ -331,7 +331,7 @@
    /* 5.4 Rodapé */
    footer {
      padding: 20px 0;
-     text-align: center;
+     text-align: left;
      color: #777777;
      font-size: 14px;
    }

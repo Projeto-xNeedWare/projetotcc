@@ -8,7 +8,6 @@ require('dotenv').config();
 
 const app = express();
 
-// Conexão com MongoDB
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -17,7 +16,6 @@ mongoose.connect(process.env.MONGODB_URI, {
 .then(() => console.log('MongoDB conectado!'))
 .catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
 
-// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

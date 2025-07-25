@@ -541,7 +541,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, var(--color-purple-500), var(--color-blue-600));
+    background: radial-gradient(circle at center, var(--color-purple-900), var(--color-blue-1000));
     opacity: 0.2;
     border-radius: var(--border-radius-xl);
     z-index: -1;

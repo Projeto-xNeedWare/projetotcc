@@ -130,17 +130,17 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.analytics-icon {
+.downloader-icon {
   background-color: rgba(138, 92, 245, 0.2);
   color: #8a5cf5;
 }
 
-.crm-icon {
+.message-icon {
   background-color: rgba(59, 130, 246, 0.2);
   color: #3b82f6;
 }
 
-.erp-icon {
+.chatbot-icon {
   background-color: rgba(138, 92, 245, 0.2);
   color: #8a5cf5;
 }
@@ -171,15 +171,15 @@ main {
   font-weight: bold;
 }
 
-.analytics-check {
+.downloader-check {
   color: #8a5cf5;
 }
 
-.crm-check {
+.message-check {
   color: #3b82f6;
 }
 
-.erp-check {
+.chatbot-check {
   color: #8a5cf5;
 }
 
@@ -227,34 +227,34 @@ main {
   transition: all 0.3s ease;
 }
 
-.analytics-cta {
+.downloader-cta {
   background-color: #8a5cf5;
   color: white;
 }
 
-.analytics-cta:hover {
+.downloader-cta:hover {
   background-color: #7349d3;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(138, 92, 245, 0.4);
 }
 
-.crm-cta {
+.message-cta {
   background-color: #3b82f6;
   color: white;
 }
 
-.crm-cta:hover {
+.message-cta:hover {
   background-color: #2563eb;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
 }
 
-.erp-cta {
+.chatbot-cta {
   background-color: #8a5cf5;
   color: white;
 }
 
-.erp-cta:hover {
+.chatbot-cta:hover {
   background-color: #7349d3;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(138, 92, 245, 0.4);

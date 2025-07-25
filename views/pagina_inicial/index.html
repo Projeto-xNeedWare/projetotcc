@@ -33,7 +33,6 @@
                     <li><a href="../produtos/index.html">Produtos</a></li>
                     <li><a href="../sobre/index.html">Sobre</a></li>
                     <li><a href="./../pagina_inicial/index.html#contato">Contato</a></li>
-                    <li><a href="../assinaturas/index.html">Assinaturas</a></li>
                     <button class="avatar" id="btnEntrarConta">Entrar na Conta
                       <i class="fa-light fa-user-bounty-hunter icone-grande"></i>  
                     </button>
@@ -65,7 +64,7 @@
                         Transforme sua empresa com soluções de software inovadoras e personalizadas para atender às suas necessidades específicas.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#produtos" class="btn btn-primary">
+                        <a href="../produtos/index.html" class="btn btn-primary">
                             Explorar Produtos
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -160,7 +159,7 @@
         </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- Products Section 
     <section id="produtos" class="products">
         <div class="container">
             <div class="section-header">
@@ -231,9 +230,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- About Section -->
+    <!-- About Section
     <section id="sobre" class="about">
         <div class="container">
             <div class="about-grid">
@@ -307,14 +306,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contato" class="contact">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    Entre em <span class="gradient-text">Contato</span>
+                    Entre em <span class="gradient-text">Contato</span> e faça sua <span class="gradient-text">Cotação</span>
                 </h2>
                 <p class="section-description">
                     Estamos prontos para ajudar sua empresa a alcançar o próximo nível. Entre em contato conosco para saber mais sobre nossas soluções.
@@ -358,7 +357,8 @@
                 </div>
 
                 <div class="contact-form-container fade-in-scroll delay-200">
-                    <form class="contact-form">
+                    <form class="contact-form" action="../../enviar.php" method="POST">
+                        <h3 class="form-title" style="margin-bottom: 20px;">Dados Pessoais</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="name">Nome</label>
@@ -368,14 +368,23 @@
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" id="telefone" name="telefone" required>
+                            </div>
+                        </div>
+                        <h3 class="form-title" style="margin-bottom: 20px;">Dados Empresariais</h3>
+                        <div class="form-group">
+                            <label for="nomeempresa">Nome da Empresa</label>
+                            <input type="text" id="nomeempresa" name="nomeempresa" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" id="cnpj" name="cnpj" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Especifique como funcionará o seu Software" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             Enviar Mensagem <i class="fas fa-paper-plane"></i>
@@ -386,7 +395,7 @@
         </div>
     </section>
 
-    <!-- Subscription Section -->
+    <!-- Subscription Section 
     <section id="assinaturas" class="subscription">
         <div class="container">
             <div class="section-header">
@@ -465,7 +474,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Coming Soon Section -->
     <section class="coming-soon">
@@ -539,11 +548,10 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/produtos_separados/analytics.html">xNeed Analytics</a></li>
-                        <li><a href="../produtos/produtos_separados/crm.html">xNeed CRM</a></li>
-                        <li><a href="../produtos/produtos_separados/erp.html">xNeed ERP</a></li>
-                        
-                        <li><a href="../Apis/index.html">API</a></li>
+                        <li><a href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
+                        <li><a href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
+                        <li><a href="../produtos/produtos_separados/message.html">xNeed Message</a></li>
+                        <li><a href="../apis/index.html">API</a></li>
                     </ul>
                 </div>
 
