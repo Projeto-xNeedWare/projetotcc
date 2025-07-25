@@ -1,11 +1,11 @@
 ## 🌍 Links do Projeto  
 
-- [🏠 Página Inicial](https://projeto-xneedware.github.io/projetotcc/prototipo/pagina_inicial/index.html)
+- [🏠 Página Inicial](https://projeto-xneedware.github.io/projetotcc/views/pagina_inicial/index.html)
 
 
 
 
-- [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/prototipo/assinaturas/index.html)  
+- [📜 Página Assinaturas](https://projeto-xneedware.github.io/projetotcc/views/assinaturas/index.html)  
 
 - [👥 Página Sobre Nós](https://projeto-xneedware.github.io/projetotcc/prototipo/sobre/index.html)  
 
