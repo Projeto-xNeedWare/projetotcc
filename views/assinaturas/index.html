@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xNeedWare - Formulário de Pagamento</title>
+    <title>xNeedWare - Pagamento</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./../bootstraps/header.css">
     <link rel="stylesheet" href="./../bootstraps/footer.css">
@@ -31,7 +31,6 @@
                 <i class="fas fa-bars"></i>
             </button>
         
-            
             <nav class="main-nav">
                 <ul>
                     <li><a href="../produtos/index.html">Produtos</a></li>
@@ -500,12 +499,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             const paymentTabs = document.querySelectorAll('.payment-tab');
             
+            // teste fazendskd 
             paymentTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    // Remove a classe active de todas as abas
                     paymentTabs.forEach(t => t.classList.remove('active'));
                     
-                    // Adiciona a classe active na aba clicada
                     this.classList.add('active');
                     
                     // Esconde todos os conteúdos
