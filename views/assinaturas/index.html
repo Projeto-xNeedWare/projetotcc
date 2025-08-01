@@ -477,18 +477,22 @@
     </footer>
 
     <script>
-        // Funções para navegação entre etapas do formulário
+        //Cria uma função chamada próximoPasso com um parâmetro para indicar o índice atual
         function nextStep(currentStep) {
+            //Pega o id no html com base no parâmetro e o esconde
             document.getElementById(`step-${currentStep}`).classList.add('hidden');
+            //Pega um índice a mais e o faz aparecer, as informações de cada passo
             document.getElementById(`step-${currentStep + 1}`).classList.remove('hidden');
             
             // Atualiza a barra de progresso
             const steps = document.querySelectorAll('.progress-step');
             steps[currentStep].classList.add('active');
         }
-        
+        //Cria uma função passoAnterior, com o parâmetro do índice atual, igual o anterior
         function prevStep(currentStep) {
+            //Pega o índice atual, a etapa, e a esconde
             document.getElementById(`step-${currentStep}`).classList.add('hidden');
+            ///Pega o índice anterior e o faz aparecer
             document.getElementById(`step-${currentStep - 1}`).classList.remove('hidden');
             
             // Atualiza a barra de progresso
@@ -503,7 +507,7 @@
             paymentTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     // Remove a classe active de todas as abas
-                    paymentTabs.forEach(t => t.classList.remove('active'));
+                    paymentTabs.forEach(t => t.classList.remove('active'));                 
                     
                     // Adiciona a classe active na aba clicada
                     this.classList.add('active');
