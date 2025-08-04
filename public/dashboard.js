@@ -1,3 +1,4 @@
+
 const nomeSpan = document.getElementById('nomeUsuario');
 
 const nameField = document.getElementById('name');
