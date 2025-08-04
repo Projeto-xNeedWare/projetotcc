@@ -323,25 +323,25 @@ main {
 }
 
 /* Seleção de Plano */
-.plan-options {
+.product-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.plan-option {
+.product-option {
     position: relative;
 }
 
-.plan-option input[type="radio"] {
+.product-option input[type="radio"] {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.plan-label {
+.product-label {
     display: block;
     background-color: rgba(15, 21, 36, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -351,17 +351,17 @@ main {
     transition: all 0.3s ease;
 }
 
-.plan-label:hover {
+.product-label:hover {
     border-color: rgba(138, 92, 245, 0.5);
     transform: translateY(-2px);
 }
 
-.plan-option input[type="radio"]:checked + .plan-label {
+.product-option input[type="radio"]:checked + .product-label {
     border-color: #8a5cf5;
     box-shadow: 0 0 0 2px rgba(138, 92, 245, 0.5);
 }
 
-.plan-label.recommended {
+.product-label.recommended {
     border-color: #3b82f6;
     position: relative;
 }
@@ -378,42 +378,38 @@ main {
     border-radius: 20px;
 }
 
-.plan-header {
+.product-header {
     margin-bottom: 1rem;
 }
 
-.plan-header h3 {
+.product-header h3 {
     font-size: 1.25rem;
     margin: 0 0 0.5rem;
 }
 
-.plan-price {
+.product-price {
     display: flex;
     align-items: baseline;
 }
 
-.plan-price .price {
+.product-price .price {
     font-size: 1.75rem;
     font-weight: 700;
 }
 
-.plan-price .period {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-left: 0.25rem;
-}
 
-.plan-features {
+
+.product-features {
     margin-top: 1rem;
 }
 
-.plan-features li {
+.product-features li {
     display: flex;
     align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.plan-features .check-icon {
+.product-features .check-icon {
     color: #8a5cf5;
     margin-right: 0.5rem;
 }
@@ -459,14 +455,7 @@ main {
     background-color: rgba(138, 92, 245, 0.1);
 }
 
-.discount {
-    font-size: 0.75rem;
-    background-color: rgba(59, 130, 246, 0.2);
-    color: #3b82f6;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    margin-left: 0.5rem;
-}
+
 
 /* Campos do Formulário */
 .form-group {
@@ -601,11 +590,7 @@ select:focus {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.summary-divider {
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 1rem 0;
-}
+
 
 .summary-item.total {
     font-weight: 700;
@@ -1023,7 +1008,7 @@ footer {
       text-align: center;
     }
   
-    .plan-options {
+    .product-options {
       grid-template-columns: 1fr;
     }
   

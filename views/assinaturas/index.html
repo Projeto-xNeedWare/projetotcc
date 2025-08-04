@@ -56,7 +56,7 @@
                 <div class="form-progress">
                     <div class="progress-step active">
                         <div class="step-number">1</div>
-                        <div class="step-text">Plano</div>
+                        <div class="step-text">Produto</div>
                     </div>
                     <div class="progress-line"></div>
                     <div class="progress-step">
@@ -76,21 +76,85 @@
                 </div>
 
                 <form id="payment-form">
-                    <!-- Etapa 1: Seleção de Plano -->
+                    <!-- Etapa 1: Seleção de Produto -->
                     <div class="form-step" id="step-1">
-                        <h2>Escolha seu plano</h2>
-                        <div class="plan-options">
-                            <div class="plan-option">
-                                <input type="radio" name="plan" id="plan-basic" value="basic">
-                                <label for="plan-basic" class="plan-label">
-                                    <div class="plan-header">
-                                        <h3>Básico</h3>
-                                        <div class="plan-price">
-                                            <span class="price">R$ 49</span>
-                                            <span class="period">/mês</span>
+                        <h2>Escolha seu produto</h2>
+                        <div class="product-options">
+                            <div class="product-option">
+                                <input type="radio" name="product" id="product-chatbot" value="chatbot">
+                                <label for="product-chatbot" class="product-label">
+                                    <div class="product-header">
+                                        <h3>xNeed chatbot </h3>
+                                        <div class="product-price">
+                                            <span class="price">R$ 99,00</span>
+                                            
                                         </div>
                                     </div>
-                                    <ul class="plan-features">
+                                    <ul class="product-features">
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Redução de custos com suport</span>
+                                        </li>
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Coleta de dados automatizada</span>
+                                        </li>
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Escalabilidade no atendimento</span>
+                                        </li>
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Conversões mais eficientes</span>
+                                        </li>
+                                    </ul>
+                                </label>
+                            </div>
+
+
+                            <div class="product-option">
+                                <input type="radio" name="product" id="product-downloader" value="downloader">
+                                <label for="product-downloader" class="product-label">
+                                    <div class="product-header">
+                                        <h3>xNeed Downloader</h3>
+                                        <div class="product-price">
+                                            <span class="price">39,00</span>
+                                            
+                                        </div>
+                                    </div>
+                                    <ul class="product-features">
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Funcionamento simples feito em python</span>
+                                        </li>
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Download rapido</span>
+                                        </li>
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Interação natural</span>
+                                        </li>
+                                        <li>
+                                            <span class="check-icon">✓</span>
+                                            <span>Integração com sistemas</span>
+                                        </li>
+                                    </ul>
+                                </label>
+                            </div>
+
+
+                            <div class="product-option">
+                                <input type="radio" name="product" id="product-basic" value="basic">
+                                <label for="product-basic" class="product-label">
+                                    <div class="product-header">
+                                        <h3>Básico</h3>
+                                        <div class="product-price">
+                                            <span class="price">R$ 49</span>
+                                            
+                                        </div>
+                                    </div>
+                                    <ul class="product-features">
                                         <li>
                                             <span class="check-icon">✓</span>
                                             <span>Acesso a recursos básicos</span>
@@ -111,18 +175,18 @@
                                 </label>
                             </div>
 
-                            <div class="plan-option">
-                                <input type="radio" name="plan" id="plan-pro" value="pro" checked>
-                                <label for="plan-pro" class="plan-label recommended">
+                            <div class="product-option">
+                                <input type="radio" name="product" id="product-pro" value="pro" checked>
+                                <label for="product-pro" class="product-label recommended">
                                     <div class="recommended-badge">Recomendado</div>
-                                    <div class="plan-header">
+                                    <div class="product-header">
                                         <h3>Profissional</h3>
-                                        <div class="plan-price">
+                                        <div class="product-price">
                                             <span class="price">R$ 99</span>
-                                            <span class="period">/mês</span>
+                                            
                                         </div>
                                     </div>
-                                    <ul class="plan-features">
+                                    <ul class="product-features">
                                         <li>
                                             <span class="check-icon">✓</span>
                                             <span>Todos os recursos do Básico</span>
@@ -143,17 +207,17 @@
                                 </label>
                             </div>
 
-                            <div class="plan-option">
-                                <input type="radio" name="plan" id="plan-enterprise" value="enterprise">
-                                <label for="plan-enterprise" class="plan-label">
-                                    <div class="plan-header">
+                            <div class="product-option">
+                                <input type="radio" name="product" id="product-enterprise" value="enterprise">
+                                <label for="product-enterprise" class="product-label">
+                                    <div class="product-header">
                                         <h3>Empresarial</h3>
-                                        <div class="plan-price">
+                                        <div class="product-price">
                                             <span class="price">R$ 199</span>
-                                            <span class="period">/mês</span>
+                                            
                                         </div>
                                     </div>
-                                    <ul class="plan-features">
+                                    <ul class="product-features">
                                         <li>
                                             <span class="check-icon">✓</span>
                                             <span>Todos os recursos do Profissional</span>
@@ -329,13 +393,10 @@
                             
                             <div class="summary-item">
                                 <div class="summary-label">Plano</div>
-                                <div class="summary-value" id="summary-plan">Profissional</div>
+                                <div class="summary-value" id="summary-product">Profissional</div>
                             </div>
                             
-                            <div class="summary-item">
-                                <div class="summary-label">Ciclo de cobrança</div>
-                                <div class="summary-value" id="summary-cycle">Mensal</div>
-                            </div>
+                           
                             
                             <div class="summary-item">
                                 <div class="summary-label">Forma de pagamento</div>
@@ -344,17 +405,10 @@
                             
                             <div class="summary-divider"></div>
                             
-                            <div class="summary-item">
-                                <div class="summary-label">Subtotal</div>
-                                <div class="summary-value">R$ 99,00</div>
-                            </div>
                             
-                            <div class="summary-item discount">
-                                <div class="summary-label">Desconto</div>
-                                <div class="summary-value">- R$ 0,00</div>
-                            </div>
                             
-                            <div class="summary-item total">
+                            
+                            <div class=>"summary-item total">
                                 <div class="summary-label">Total</div>
                                 <div class="summary-value" id="summary-total">R$ 99,00</div>
                             </div>
@@ -382,7 +436,7 @@
                     
                     <div class="summary-item">
                         <div class="summary-label">Plano</div>
-                        <div class="summary-value" id="sidebar-plan">Profissional</div>
+                        <div class="summary-value" id="sidebar-product">Profissional</div>
                     </div>
                     
                     <div class="summary-item">
@@ -519,15 +573,15 @@
                 });
             });
             
-            // Atualiza o resumo quando o plano é alterado
-            const planOptions = document.querySelectorAll('input[name="plan"]');
-            planOptions.forEach(option => {
+            // Atualiza o resumo quando o producto é alterado
+            const productOptions = document.querySelectorAll('input[name="product"]');
+            productOptions.forEach(option => {
                 option.addEventListener('change', function() {
-                    const planName = document.querySelector(`label[for="${this.id}"] h3`).textContent;
-                    document.getElementById('summary-plan').textContent = planName;
-                    document.getElementById('sidebar-plan').textContent = planName;
+                    const productName = document.querySelector(`label[for="${this.id}"] h3`).textContent;
+                    document.getElementById('summary-product').textContent = productName;
+                    document.getElementById('sidebar-product').textContent = productName;
                     
-                    // Atualiza o preço baseado no plano selecionado
+                    // Atualiza o preço baseado no producto selecionado
                     updatePrice();
                 });
             });
@@ -545,22 +599,29 @@
                 });
             });
             
-            // Função para atualizar o preço baseado no plano e ciclo selecionados
+            // Função para atualizar o preço baseado no producto e ciclo selecionados
             function updatePrice() {
-                const selectedPlan = document.querySelector('input[name="plan"]:checked').value;
+                const selectedPlan = document.querySelector('input[name="product"]:checked').value;
                 const isAnnual = document.getElementById('cycle-annual').checked;
                 
                 let price = 0;
                 
                 switch(selectedPlan) {
-                    case 'basic':
-                        price = 49;
+                    case 'chatbot':
+                        price = 99.00;
                         break;
-                    case 'pro':
-                        price = 99;
+                    case 'downloader':
+                        price = 39.00;
                         break;
-                    case 'enterprise':
-                        price = 199;
+                    
+                    case 'message':
+                        price = 59.00;
+                        break;
+                    case 'qr_code':
+                        price = 9.90;
+                        break;
+                    case 'excel':
+                        price = 49.90;
                         break;
                 }
                 
