@@ -1,4 +1,7 @@
 <?php
+// PÁGINA UTILIZADA PARA O ENVIO DE EMAILS, ESTA PÁGINA É RESPONSÁVEL POR CONFIGURAR E ENVIAR EMAILS UTILIZANDO A CLASSE PHPMailer
+// para aparecer isso usamos o comando "composer require phpmailer/phpmailer" no terminal e surgiu a pasta vendor
+// não é necessário editar este arquivo, ele é gerado automaticamente pelo Composer
 
 /**
  * PHPMailer RFC821 SMTP email transport class.
