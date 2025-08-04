@@ -220,8 +220,8 @@ main {
 
 .cta-button {
   display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -259,6 +259,7 @@ main {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(138, 92, 245, 0.4);
 }
+
 
 /* Rodapé */
 footer {
