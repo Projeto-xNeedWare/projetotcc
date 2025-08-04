@@ -808,59 +808,80 @@ select:focus {
     color: #7349d3;
 }
 
-/* Rodapé */
-footer {
-    background-color: #0a0d1a;
-    padding: 3rem 2rem 1.5rem;
-    margin-top: 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+/* 5.8 Rodapé */
+  .footer {
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-gray-800);
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-about {
+    max-width: 20rem;
+  }
+  
+  .footer-description {
+    color: var(--color-gray-400);
+    margin: 1rem 0;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray-400);
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background-color: var(--color-gray-700);
+    color: var(--color-white);
+    transform: translateY(-3px);
+  }
+  
+  .footer-title {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+  }
+  
+  .footer-links ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.footer-content p {
-    max-width: 500px;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
+    gap: 0.75rem;
+  }
+  
+  .footer-links a {
+    color: var(--color-gray-400);
     transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-.copyright {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.875rem;
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-white);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid var(--color-gray-800);
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    text-align: center;
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+  }
 
 .about-hero {
     position: relative;
@@ -1120,6 +1141,7 @@ footer {
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
+    filter: grayscale(100%);
 }
 
 .photo-placeholder {
