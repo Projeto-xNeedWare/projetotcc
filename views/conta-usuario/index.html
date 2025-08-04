@@ -259,10 +259,13 @@
     <script>
         // Script simples para alternar entre as abas
         document.addEventListener('DOMContentLoaded', function() {
+            //Pega os elementos html e os coloca em variáveis
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
             
+            //Cria um array com todos os tabButtons, e faz um foreach para listar todos
             tabButtons.forEach(button => {
+                //Para cada um vai fazer um evento click
                 button.addEventListener('click', () => {
                     // Remover classe active de todos os botões e conteúdos
                     tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -277,10 +280,11 @@
                 });
             });
 
-            // Toggle switches
+            //Seleciona todas as classes toggle
             const toggles = document.querySelectorAll('.toggle');
-            toggles.forEach(toggle => {
+            toggles.forEach(toggle => { //Para cada toggle adiciona um onclick
                 toggle.addEventListener('click', () => {
+                    //inverte a classe
                     toggle.classList.toggle('active');
                 });
             });

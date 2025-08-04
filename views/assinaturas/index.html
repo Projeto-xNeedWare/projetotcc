@@ -605,17 +605,19 @@
 
     <script>
 
-
+        //Pega elementos do html para criar um menu mobile
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
+        //Quando clicar nesse elemento do html
+        //Ele irá usar um active para exibir visualmente esses dois
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
             mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
             mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
         });
 
-        // Close mobile menu when clicking on a link
+        /*Quando o usuário clica num link dentro desse elemento, ele fecha o menu mobile automaticamente*/
         document.querySelectorAll('.nav-mobile .nav-link, .nav-mobile .btn').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
@@ -623,39 +625,6 @@
                 mobileMenuBtn.querySelector('i').classList.remove('fa-times');
             });
         });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 10) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Scroll animation
-        const fadeElements = document.querySelectorAll('.fade-in-scroll');
-        
-        const fadeInScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-        
-        // Initial check
-        fadeInScroll();
-        
-        // Check on scroll
-        window.addEventListener('scroll', fadeInScroll);
-
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
     
 </body>

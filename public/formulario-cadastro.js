@@ -34,6 +34,6 @@ document.getElementById('form-cadastro').addEventListener('submit', async functi
         }
     } catch (erro) {
         // Se acontecer algum erro na comunicação com o servidor, exibe no console
-        console.log(erro); // Corrigido para "erro" (antes estava "error")
+        console.log(erro); 
     }
 });
