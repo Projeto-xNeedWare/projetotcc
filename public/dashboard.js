@@ -1,3 +1,4 @@
+
 const nomeSpan = document.getElementById('nomeUsuario');
 //Pega todas as informações wsedrftgyhujikolpç´~[]
 const nameField = document.getElementById('name');
