@@ -1,6 +1,6 @@
 <?php
 // PÁGINA UTILIZADA PARA TRATAR EXCEÇÕES DO PHPMailer
-// para aparcer isso usamos o comando "composer require phpmailer/phpmailer" no terminal e surgiu a pasta vendor
+// para aparecer isso, usamos o comando "composer require phpmailer/phpmailer" no terminal e surgiu a pasta vendor
 // não é necessário editar este arquivo, ele é gerado automaticamente pelo Composer
 
 /**
@@ -32,7 +32,7 @@ namespace PHPMailer\PHPMailer;
 class Exception extends \Exception
 {
     /**
-     * Prettify error message output.
+     * Deixar a saída das mensagens de erro mais legível/bonita.
      *
      * @return string
      */
