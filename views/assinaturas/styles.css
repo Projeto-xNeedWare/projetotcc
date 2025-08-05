@@ -51,11 +51,12 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #000000;
-    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--color-white);
+    background: linear-gradient(to bottom, var(--color-black), var(--color-dark)) fixed;
     line-height: 1.6;
-}
+    overflow-x: hidden;
+  }
 
 a {
     text-decoration: none;
