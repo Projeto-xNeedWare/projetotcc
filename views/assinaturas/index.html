@@ -93,7 +93,7 @@
                                     <ul class="product-features">
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>Redução de custos com suport</span>
+                                            <span>Redução de custos com Suporte</span>
                                         </li>
                                         <li>
                                             <span class="check-icon">✓</span>
@@ -118,7 +118,7 @@
                                     <div class="product-header">
                                         <h3>xNeed Downloader</h3>
                                         <div class="product-price">
-                                            <span class="price">39,00</span>
+                                            <span class="price">R$ 39,00</span>
                                             
                                         </div>
                                     </div>
@@ -145,63 +145,63 @@
 
 
                             <div class="product-option">
-                                <input type="radio" name="product" id="product-basic" value="basic">
+                                <input type="radio" name="product" id="product-basic" value="qr_code">
                                 <label for="product-basic" class="product-label">
                                     <div class="product-header">
-                                        <h3>Básico</h3>
+                                        <h3>xNeed QrGenerator</h3>
                                         <div class="product-price">
-                                            <span class="price">R$ 49</span>
+                                            <span class="price">R$ 9,90</span>
                                             
                                         </div>
                                     </div>
                                     <ul class="product-features">
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>Acesso a recursos básicos</span>
+                                            <span>Redução de custos com geração manual</span>
                                         </li>
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>Até 3 usuários</span>
+                                            <span>Automatização na criação de QR Code</span>
                                         </li>
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>5GB de armazenamento</span>
+                                            <span>Escalabilidade na geração e distribuição </span>
                                         </li>
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>Suporte por e-mail</span>
+                                            <span>Facilidade na personalização e uso</span>
                                         </li>
                                     </ul>
                                 </label>
                             </div>
 
                             <div class="product-option">
-                                <input type="radio" name="product" id="product-pro" value="pro" checked>
-                                <label for="product-pro" class="product-label recommended">
+                                <input type="radio" name="product" id="product-message" value="message" checked>
+                                <label for="product-message" class="product-label recommended">
                                     <div class="recommended-badge">Recomendado</div>
                                     <div class="product-header">
-                                        <h3>Profissional</h3>
+                                        <h3>xNeed Message</h3>
                                         <div class="product-price">
-                                            <span class="price">R$ 99</span>
+                                            <span class="price">R$ 59,00</span>
                                             
                                         </div>
                                     </div>
                                     <ul class="product-features">
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>Todos os recursos do Básico</span>
+                                            <span>Envio de mensagens 24 horas por dia.</span>
                                         </li>
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>Até 10 usuários</span>
+                                            <span>Mensagens enviadas instantaneamente.</span>
                                         </li>
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>20GB de armazenamento</span>
+                                            <span>Comunicação automática com linguagem natural.</span>
                                         </li>
                                         <li>
                                             <span class="check-icon">✓</span>
-                                            <span>Suporte prioritário</span>
+                                            <span>Integração com sistemas</span>
                                         </li>
                                     </ul>
                                 </label>
@@ -239,20 +239,7 @@
                             </div>
                         </div>
 
-                        <div class="billing-cycle">
-                            <h3>Ciclo de cobrança</h3>
-                            <div class="cycle-options">
-                                <div class="cycle-option">
-                                    <input type="radio" name="cycle" id="cycle-monthly" value="monthly" checked>
-                                    <label for="cycle-monthly">Mensal</label>
-                                </div>
-                                <div class="cycle-option">
-                                    <input type="radio" name="cycle" id="cycle-annual" value="annual">
-                                    <label for="cycle-annual">Anual <span class="discount">Economize 20%</span></label>
-                                </div>
-                            </div>
-                        </div>
-
+                        
                         <div class="form-actions">
                             <button type="button" class="btn-next" onclick="nextStep(1)">Continuar</button>
                         </div>
@@ -435,26 +422,17 @@
                     <h3>Resumo do pedido</h3>
                     
                     <div class="summary-item">
-                        <div class="summary-label">Plano</div>
                         <div class="summary-value" id="sidebar-product">Profissional</div>
                     </div>
+                        
                     
-                    <div class="summary-item">
-                        <div class="summary-label">Ciclo de cobrança</div>
-                        <div class="summary-value" id="sidebar-cycle">Mensal</div>
-                    </div>
                     
-                    <div class="summary-divider"></div>
                     
-                    <div class="summary-item">
-                        <div class="summary-label">Subtotal</div>
-                        <div class="summary-value">R$ 99,00</div>
-                    </div>
                     
-                    <div class="summary-item discount">
-                        <div class="summary-label">Desconto</div>
-                        <div class="summary-value">- R$ 0,00</div>
-                    </div>
+                    
+                    
+                    
+                    
                     
                     <div class="summary-item total">
                         <div class="summary-label">Total</div>
@@ -602,7 +580,6 @@
             // Função para atualizar o preço baseado no producto e ciclo selecionados
             function updatePrice() {
                 const selectedPlan = document.querySelector('input[name="product"]:checked').value;
-                const isAnnual = document.getElementById('cycle-annual').checked;
                 
                 let price = 0;
                 
@@ -625,13 +602,10 @@
                         break;
                 }
                 
-                let discount = 0;
                 let total = price;
                 
-                if (isAnnual) {
-                    discount = price * 0.2;
-                    total = price - discount;
-                }
+                
+                
                 
                 // Atualiza os valores no resumo
                 document.getElementById('summary-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;

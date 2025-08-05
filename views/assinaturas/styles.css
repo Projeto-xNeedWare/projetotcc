@@ -576,6 +576,7 @@ select:focus {
     margin-bottom: 2rem;
 }
 
+
 .order-summary h3 {
     margin-bottom: 1rem;
 }
@@ -710,6 +711,10 @@ select:focus {
     position: sticky;
     top: 100px;
     align-self: flex-start;
+}
+
+#sidebar-product {
+    color: #8a5cf5;
 }
 
 .order-summary-card {
