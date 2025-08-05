@@ -669,17 +669,23 @@
     <script> //Essa sessão cuida totalmente da interação dentro do formulario, como alteração de produtos.
         
         // Funções para navegação entre etapas do formulário
+    <script>
+        //Cria uma função chamada próximoPasso com um parâmetro para indicar o índice atual
         function nextStep(currentStep) {
+            //Pega o id no html com base no parâmetro e o esconde
             document.getElementById(`step-${currentStep}`).classList.add('hidden');
+            //Pega um índice a mais e o faz aparecer, as informações de cada passo
             document.getElementById(`step-${currentStep + 1}`).classList.remove('hidden');
             
             // Atualiza a barra de progresso
             const steps = document.querySelectorAll('.progress-step');
             steps[currentStep].classList.add('active');
         }
-        
+        //Cria uma função passoAnterior, com o parâmetro do índice atual, igual o anterior
         function prevStep(currentStep) {
+            //Pega o índice atual, a etapa, e a esconde
             document.getElementById(`step-${currentStep}`).classList.add('hidden');
+            ///Pega o índice anterior e o faz aparecer
             document.getElementById(`step-${currentStep - 1}`).classList.remove('hidden');
             
             // Atualiza a barra de progresso
@@ -690,7 +696,12 @@
         // Alternar entre métodos de pagamento
         document.addEventListener('DOMContentLoaded', function() {
             const paymentTabs = document.querySelectorAll('.payment-tab');
-            
+            //Para cada paymentTab, ele adiciona uma função de clique
+            paymentTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove a classe active de todas as abas
+                    //Exibe, tira o comando que a esconde
+                    paymentTabs.forEach(t => t.classList.remove('active'));                             
             // teste fazendskd 
             paymentTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
@@ -718,6 +729,18 @@
                     const productName = document.querySelector(`label[for="${this.id}"] h3`).textContent;
                     document.getElementById('summary-product').textContent = productName;
                     document.getElementById('sidebar-product').textContent = productName;
+            // Atualiza o resumo quando o plano é alterado
+            //Pega os nomes de plano do html e salva nessa variável como se fosse um array
+            const planOptions = document.querySelectorAll('input[name="plan"]');
+            planOptions.forEach(option => {
+                //Para cada plano cria uma função que pega o id e identifica o id
+                option.addEventListener('change', function() {
+                    const planName = document.querySelector(`label[for="${this.id}"] h3`).textContent;
+                    /*Atualiza no código conforme o plano que o usuário escolhe,
+                    usando os elementos html que foram guardados nas variáveis.*/
+
+                    document.getElementById('summary-plan').textContent = planName;
+                    document.getElementById('sidebar-plan').textContent = planName;
                     
                     // Atualiza o preço baseado no producto selecionado
                     updatePrice();
@@ -725,12 +748,31 @@
             });
             
             // Função para atualizar o preço baseado no producto e ciclo selecionados
+            // Atualiza o resumo quando o ciclo é alterado
+            const cycleOptions = document.querySelectorAll('input[name="cycle"]');
+            //Para cada ciclo, cria uma função de "Escolha"
+            cycleOptions.forEach(option => {
+                option.addEventListener('change', function() {
+                    //Pega se o plano é mensal ou anual pelo id
+                    const cycleName = this.id === 'cycle-monthly' ? 'Mensal' : 'Anual';
+                    //Atualiza o conteúdo conforme o plano escolhido
+                    document.getElementById('summary-cycle').textContent = cycleName;
+                    document.getElementById('sidebar-cycle').textContent = cycleName;
+                    
+                    // Atualiza o preço baseado no ciclo selecionado
+                    updatePrice();
+                });
+            });
             
             function updatePrice() {
                 const selectedPlan = document.querySelector('input[name="product"]:checked').value;
+                //Atribui o plano atual e um id para variáveis
+                const selectedPlan = document.querySelector('input[name="plan"]:checked').value;
+                const isAnnual = document.getElementById('cycle-annual').checked;
                 
                 let price = 0;
                 
+                //Faz um switch case para ir atuaizando os preços para a variável price
                 switch(selectedPlan) {
                     case 'chatbot':
                         price = 99.00;
@@ -753,11 +795,18 @@
                 let total = price;
                 
                 // Atualiza os valores no resumo
+                if (isAnnual) {
+                    discount = price * 0.2;
+                    total = price - discount;
+                }
+                
+                // Atualiza o conteúdo no resumo
                 document.getElementById('summary-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
                 document.getElementById('sidebar-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
             }
             
             // Inicializa o formulário
+            //Para um clique de submit ele atribui uma função de anti-carregamento e um alerta para confirmação.
             document.getElementById('payment-form').addEventListener('submit', function(e) {
                 e.preventDefault();
                 alert('Pagamento processado com sucesso! Obrigado por comprar com a xNeedWare.');
@@ -768,9 +817,13 @@
 
     <script>
         // Mobile Menu button
+
+        //Pega elementos do html para criar um menu mobile
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
+        //Quando clicar nesse elemento do html
+        //Ele irá usar um active para exibir visualmente esses dois
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
             mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
@@ -778,6 +831,7 @@
         });
 
         // Fecha o botão menu quando clica em um link
+        /*Quando o usuário clica num link dentro desse elemento, ele fecha o menu mobile automaticamente*/
         document.querySelectorAll('.nav-mobile .nav-link, .nav-mobile .btn').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
