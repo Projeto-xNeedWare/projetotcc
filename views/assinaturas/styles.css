@@ -51,12 +51,11 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--color-white);
-    background: linear-gradient(to bottom, var(--color-black), var(--color-dark)) fixed;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
     line-height: 1.6;
-    overflow-x: hidden;
-  }
+}
 
 a {
     text-decoration: none;
@@ -324,25 +323,25 @@ main {
 }
 
 /* Seleção de Plano */
-.product-options {
+.plan-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.product-option {
+.plan-option {
     position: relative;
 }
 
-.product-option input[type="radio"] {
+.plan-option input[type="radio"] {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.product-label {
+.plan-label {
     display: block;
     background-color: rgba(15, 21, 36, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -352,17 +351,17 @@ main {
     transition: all 0.3s ease;
 }
 
-.product-label:hover {
+.plan-label:hover {
     border-color: rgba(138, 92, 245, 0.5);
     transform: translateY(-2px);
 }
 
-.product-option input[type="radio"]:checked + .product-label {
+.plan-option input[type="radio"]:checked + .plan-label {
     border-color: #8a5cf5;
     box-shadow: 0 0 0 2px rgba(138, 92, 245, 0.5);
 }
 
-.product-label.recommended {
+.plan-label.recommended {
     border-color: #3b82f6;
     position: relative;
 }
@@ -379,38 +378,42 @@ main {
     border-radius: 20px;
 }
 
-.product-header {
+.plan-header {
     margin-bottom: 1rem;
 }
 
-.product-header h3 {
+.plan-header h3 {
     font-size: 1.25rem;
     margin: 0 0 0.5rem;
 }
 
-.product-price {
+.plan-price {
     display: flex;
     align-items: baseline;
 }
 
-.product-price .price {
+.plan-price .price {
     font-size: 1.75rem;
     font-weight: 700;
 }
 
+.plan-price .period {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 0.25rem;
+}
 
-
-.product-features {
+.plan-features {
     margin-top: 1rem;
 }
 
-.product-features li {
+.plan-features li {
     display: flex;
     align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.product-features .check-icon {
+.plan-features .check-icon {
     color: #8a5cf5;
     margin-right: 0.5rem;
 }
@@ -456,7 +459,14 @@ main {
     background-color: rgba(138, 92, 245, 0.1);
 }
 
-
+.discount {
+    font-size: 0.75rem;
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+}
 
 /* Campos do Formulário */
 .form-group {
@@ -577,7 +587,6 @@ select:focus {
     margin-bottom: 2rem;
 }
 
-
 .order-summary h3 {
     margin-bottom: 1rem;
 }
@@ -592,7 +601,11 @@ select:focus {
     color: rgba(255, 255, 255, 0.7);
 }
 
-
+.summary-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+}
 
 .summary-item.total {
     font-weight: 700;
@@ -712,10 +725,6 @@ select:focus {
     position: sticky;
     top: 100px;
     align-self: flex-start;
-}
-
-#sidebar-product {
-    color: #8a5cf5;
 }
 
 .order-summary-card {
@@ -1014,7 +1023,7 @@ footer {
       text-align: center;
     }
   
-    .product-options {
+    .plan-options {
       grid-template-columns: 1fr;
     }
   
