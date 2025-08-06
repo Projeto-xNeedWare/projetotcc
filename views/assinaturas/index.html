@@ -393,7 +393,16 @@
 
                         <div class="form-actions">
                             <button type="button" class="btn-back" onclick="prevStep(2)">Voltar</button>
-                            <button type="button" class="btn-next" onclick="nextStep(2)">Continuar</button>
+                            <button type="button" class="btn-next" onclick="irParaPagamento()">
+                                Continuar
+                            </button>
+
+                            <script>
+                                function irParaPagamento() {
+                                    window.location.href = "https://www.paypal.com/ncp/payment/E443PN6KWSMBQ";
+                                }
+                            </script>
+
                         </div>
                     
                     </div>
@@ -667,7 +676,7 @@
     
     </footer>
 
-    <script src="/pagamento.js"></script>
+    <script src="../../public/pagamento.js"></script>
 
     <script>
         // Mobile Menu button
