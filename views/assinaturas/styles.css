@@ -51,11 +51,12 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #000000;
-    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--color-white);
+    background: linear-gradient(to bottom, var(--color-black), var(--color-dark)) fixed;
     line-height: 1.6;
-}
+    overflow-x: hidden;
+  }
 
 a {
     text-decoration: none;
@@ -66,6 +67,12 @@ ul {
     list-style: none;
 }
 
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 /* Buttons */
 .btn {
     display: inline-flex;
@@ -323,25 +330,25 @@ main {
 }
 
 /* Seleção de Plano */
-.plan-options {
+.product-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.plan-option {
+.product-option {
     position: relative;
 }
 
-.plan-option input[type="radio"] {
+.product-option input[type="radio"] {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.plan-label {
+.product-label {
     display: block;
     background-color: rgba(15, 21, 36, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -351,17 +358,17 @@ main {
     transition: all 0.3s ease;
 }
 
-.plan-label:hover {
+.product-label:hover {
     border-color: rgba(138, 92, 245, 0.5);
     transform: translateY(-2px);
 }
 
-.plan-option input[type="radio"]:checked + .plan-label {
+.product-option input[type="radio"]:checked + .product-label {
     border-color: #8a5cf5;
     box-shadow: 0 0 0 2px rgba(138, 92, 245, 0.5);
 }
 
-.plan-label.recommended {
+.product-label.recommended {
     border-color: #3b82f6;
     position: relative;
 }
@@ -378,42 +385,38 @@ main {
     border-radius: 20px;
 }
 
-.plan-header {
+.product-header {
     margin-bottom: 1rem;
 }
 
-.plan-header h3 {
+.product-header h3 {
     font-size: 1.25rem;
     margin: 0 0 0.5rem;
 }
 
-.plan-price {
+.product-price {
     display: flex;
     align-items: baseline;
 }
 
-.plan-price .price {
+.product-price .price {
     font-size: 1.75rem;
     font-weight: 700;
 }
 
-.plan-price .period {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-left: 0.25rem;
-}
 
-.plan-features {
+
+.product-features {
     margin-top: 1rem;
 }
 
-.plan-features li {
+.product-features li {
     display: flex;
     align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.plan-features .check-icon {
+.product-features .check-icon {
     color: #8a5cf5;
     margin-right: 0.5rem;
 }
@@ -459,14 +462,7 @@ main {
     background-color: rgba(138, 92, 245, 0.1);
 }
 
-.discount {
-    font-size: 0.75rem;
-    background-color: rgba(59, 130, 246, 0.2);
-    color: #3b82f6;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    margin-left: 0.5rem;
-}
+
 
 /* Campos do Formulário */
 .form-group {
@@ -587,6 +583,7 @@ select:focus {
     margin-bottom: 2rem;
 }
 
+
 .order-summary h3 {
     margin-bottom: 1rem;
 }
@@ -601,11 +598,7 @@ select:focus {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.summary-divider {
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 1rem 0;
-}
+
 
 .summary-item.total {
     font-weight: 700;
@@ -727,6 +720,10 @@ select:focus {
     align-self: flex-start;
 }
 
+#sidebar-product {
+    color: #8a5cf5;
+}
+
 .order-summary-card {
     background-color: #0f1524;
     border-radius: 12px;
@@ -786,59 +783,80 @@ select:focus {
     color: #7349d3;
 }
 
-/* Rodapé */
-footer {
-    background-color: #0a0d1a;
-    padding: 3rem 2rem 1.5rem;
-    margin-top: 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+/* 5.8 Rodapé */
+  .footer {
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-gray-800);
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-about {
+    max-width: 20rem;
+  }
+  
+  .footer-description {
+    color: var(--color-gray-400);
+    margin: 1rem 0;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-gray-800);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray-400);
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background-color: var(--color-gray-700);
+    color: var(--color-white);
+    transform: translateY(-3px);
+  }
+  
+  .footer-title {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+  }
+  
+  .footer-links ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.footer-content p {
-    max-width: 500px;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
+    gap: 0.75rem;
+  }
+  
+  .footer-links a {
+    color: var(--color-gray-400);
     transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-.copyright {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.875rem;
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-white);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid var(--color-gray-800);
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    text-align: center;
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+  }
 
 /* Animations */
 @keyframes blob {
@@ -1023,7 +1041,7 @@ footer {
       text-align: center;
     }
   
-    .plan-options {
+    .product-options {
       grid-template-columns: 1fr;
     }
   
