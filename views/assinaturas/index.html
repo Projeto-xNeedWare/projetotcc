@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./../bootstraps/header.css">
     <link rel="stylesheet" href="./../bootstraps/footer.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
@@ -17,8 +18,13 @@
 
 </head>
 <body>
+    
+
+    <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
+        
         <div class="header-container">
+            
             <a href="../pagina_inicial/index.html" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
@@ -36,12 +42,22 @@
                    
                     <a href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
                     </a>
-                </ul>  
+                
+                </ul>
+            
             </nav>
         </div>
+    
     </header>
-           
+                        
+
+
+    
+    
+    
+    
     <main>
+        
         <section class="hero">
             <h1>Pagamento xNeedWare</h1>
             <p class="subtitle">Complete seu pagamento para ter acesso ao produto da plataforma.</p>
@@ -79,15 +95,19 @@
                 <form id="payment-form">
                     <!-- Etapa 1: Seleção de Produto -->
                     <div class="form-step" id="step-1">
+                        
                         <h2>Escolha seu produto</h2>
                         
                         <div class="product-options">
+                            
                             <div class="product-option">
+                                
                                 <input type="radio" name="product" id="product-chatbot" value="chatbot">
-                                <label for="product-chatbot" class="product-label recommended">
-                                    <div class="recommended-badge">Recomendado</div>
+                                <label for="product-chatbot" class="product-label">
+                                    
                                     <div class="product-header">
-                                        <h3>xNeed ChatBot</h3>
+                                        
+                                        <h3>xNeed chatbot </h3>
                                         
                                         <div class="product-price">
                                             <span class="price">R$ 99,00</span>
@@ -116,21 +136,30 @@
                                             <span>Conversões mais eficientes</span>
                                         </li>
                                     </ul>
+                                
                                 </label>
+                            
                             </div>
 
 
                             <div class="product-option">
+                                
                                 <input type="radio" name="product" id="product-downloader" value="downloader">
+                                
                                 <label for="product-downloader" class="product-label">
+                                    
                                     <div class="product-header">
+                                        
                                         <h3>xNeed Downloader</h3>
+                                        
                                         <div class="product-price">
                                             <span class="price">R$ 39,00</span>
                                         </div>
+                                            
                                     </div>
                                     
                                     <ul class="product-features">
+                                        
                                         <li>
                                             <span class="check-icon">✓</span>
                                             <span>Funcionamento simples feito em python</span>
@@ -150,19 +179,29 @@
                                             <span class="check-icon">✓</span>
                                             <span>Integração com sistemas</span>
                                         </li>
+                                    
                                     </ul>
+                                
                                 </label>
+                            
                             </div>
 
+
                             <div class="product-option">
+                                
                                 <input type="radio" name="product" id="product-basic" value="qr_code">
                                 <label for="product-basic" class="product-label">
+                                    
                                     <div class="product-header">
+                                        
                                         <h3>xNeed QrGenerator</h3>
+                                        
                                         <div class="product-price">
                                             <span class="price">R$ 9,90</span>
-                                        </div>  
+                                        </div>
+                                            
                                     </div>
+                                    
                                     <ul class="product-features">
                                         <li>
                                             <span class="check-icon">✓</span>
@@ -183,21 +222,33 @@
                                             <span class="check-icon">✓</span>
                                             <span>Facilidade na personalização e uso</span>
                                         </li>
+                                    
                                     </ul>
+                                
                                 </label>
+                            
                             </div>
 
                             <div class="product-option">
+                                
                                 <input type="radio" name="product" id="product-message" value="message" checked>
-                                <label for="product-message" class="product-label">
+                                
+                                <label for="product-message" class="product-label recommended">
+                                    
+                                    <div class="recommended-badge">Recomendado</div>
+                                    
                                     <div class="product-header">
+                                        
                                         <h3>xNeed Message</h3>
+                                        
                                         <div class="product-price">
                                             <span class="price">R$ 59,00</span>
-                                        </div>   
+                                        </div>
+                                            
                                     </div>
                                     
                                     <ul class="product-features">
+                                        
                                         <li>
                                             <span class="check-icon">✓</span>
                                             <span>Envio de mensagens 24 horas por dia.</span>
@@ -217,21 +268,30 @@
                                             <span class="check-icon">✓</span>
                                             <span>Integração com sistemas</span>
                                         </li>
+                                    
                                     </ul>
                                 </label>
+                            
                             </div>
 
                             <div class="product-option">
+                                
                                 <input type="radio" name="product" id="product-enterprise" value="excel">
+                                
                                 <label for="product-enterprise" class="product-label">
+                                    
                                     <div class="product-header">
+                                        
                                         <h3>xNeed Graphics</h3>
+                                        
                                         <div class="product-price">
                                             <span class="price">R$ 49,90</span>
                                         </div>
+                                            
                                     </div>
                                     
                                     <ul class="product-features">
+                                        
                                         <li>
                                             <span class="check-icon">✓</span>
                                             <span>Redução de custos com suporte</span>
@@ -251,20 +311,27 @@
                                             <span class="check-icon">✓</span>
                                             <span>Escalabilidade no atendimento</span>
                                         </li>
+                                    
                                     </ul>
+                                
                                 </label>
+                            
                             </div>
+                        
                         </div>
+
                         
                         <div class="form-actions">
                             <button type="button" class="btn-next" onclick="nextStep(1)">Continuar</button>
                         </div>
+                    
                     </div>
 
                     <!-- Etapa 2: Informações Pessoais -->
                     <div class="form-step hidden" id="step-2">
+                        
                         <h2>Informações pessoais</h2>
-
+                        
                         <div class="form-group">
                             <label for="name">Nome completo</label>
                             <input type="text" id="name" name="name" required>
@@ -290,6 +357,8 @@
                             
                         </div>
                             
+                        
+                        
                         <h3>Informações da empresa</h3>
                         
                         <div class="form-group">
@@ -298,6 +367,7 @@
                         </div>
                         
                         <div class="form-row">
+                            
                             <div class="form-group">
                                 <label for="cnpj">CNPJ</label>
                                 <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">
@@ -308,13 +378,17 @@
                                 <label for="company-size">Tamanho da empresa</label>
                                 
                                 <select id="company-size" name="company-size">
+                                    
                                     <option value="">Selecione</option>
                                     <option value="1-10">1-10 funcionários</option>
                                     <option value="11-50">11-50 funcionários</option>
                                     <option value="51-200">51-200 funcionários</option>
                                     <option value="201+">201+ funcionários</option>
+                                
                                 </select>
+                            
                             </div>
+                        
                         </div>
 
                         <div class="form-actions">
@@ -326,204 +400,286 @@
 
                     <!-- Etapa 3: Informações de Pagamento -->
                     <div class="form-step hidden" id="step-3">
+                        
                         <h2>Informações de pagamento</h2>
                         
                         <div class="payment-methods">
+                            
                             <div class="payment-method-tabs">
+                                
                                 <button type="button" class="payment-tab active" data-method="credit-card">Cartão de crédito</button>
                                 <button type="button" class="payment-tab" data-method="pix">PIX</button>
                                 <button type="button" class="payment-tab" data-method="boleto">Boleto</button>
                             </div>
                             
                             <div class="payment-method-content" id="credit-card-content">
+                                
                                 <div class="form-group">
+                                    
                                     <label for="card-number">Número do cartão</label>
                                     <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" required>
+                                
                                 </div>
                                 
                                 <div class="form-row">
-                                    <div class="form-group">  
+                                    
+                                    <div class="form-group">
+                                        
                                         <label for="card-name">Nome no cartão</label>
                                         <input type="text" id="card-name" name="card-name" required>
+                                    
                                     </div>
+                                
                                 </div>
                                 
                                 <div class="form-row">
+                                    
                                     <div class="form-group">
+                                        
                                         <label for="card-expiry">Validade</label>
                                         <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" required>
+                                    
                                     </div>
                                     
                                     <div class="form-group">
+                                        
                                         <label for="card-cvv">CVV</label>
                                         <input type="text" id="card-cvv" name="card-cvv" placeholder="000" required>
+                                    
                                     </div>
+                                
                                 </div>
+                                
                             </div>
                                 
                             
                             <div class="payment-method-content hidden" id="pix-content">
+                                
                                 <div class="pix-info">
+                                    
                                     <p>Ao finalizar sua compra, você receberá um QR Code para pagamento via PIX.</p>
                                     <p>O pagamento via PIX é processado instantaneamente.</p>
                                     <div class="pix-icon"></div>
+                                
                                 </div>
+                            
                             </div>
                             
                             <div class="payment-method-content hidden" id="boleto-content">
+                                
                                 <div class="boleto-info">
+                                    
                                     <p>Ao finalizar sua compra, você receberá um boleto bancário para pagamento.</p>
                                     <p>O boleto tem vencimento em 3 dias úteis e a confirmação do pagamento pode levar até 2 dias úteis.</p>
                                     <div class="boleto-icon"></div>
+                                
                                 </div>
+                            
                             </div>
+                        
                         </div>
 
                         <div class="form-actions">
+                            
                             <button type="button" class="btn-back" onclick="prevStep(3)">Voltar</button>
                             <button type="button" class="btn-next" onclick="nextStep(3)">Continuar</button>
+                        
                         </div>
+                    
                     </div>
 
                     <!-- Etapa 4: Confirmação -->
                     <div class="form-step hidden" id="step-4">
+                        
                         <h2>Confirme seu pedido</h2>
                         
                         <div class="order-summary">
+                            
                             <h3>Resumo da compra</h3>
                             
                             <div class="summary-item">
+                                
                                 <div class="summary-label">Produto</div>
                                 <div class="summary-value" id="summary-product"></div>
+                            
                             </div>
+                            
+                           
                             
                             <div class="summary-item">
+                                
                                 <div class="summary-label">Forma de pagamento</div>
                                 <div class="summary-value" id="summary-payment">Cartão de crédito</div>
+                            
                             </div>
                             
+                            
+                            
+                            
+                            
                             <div class=>
+                                
                                 <div class="summary-label">Total</div>
                                 <div class="summary-value" id="summary-total">R$ 99,00</div>
+                            
                             </div>
+                        
                         </div>
                         
                         <div class="terms-agreement">
+                            
                             <label class="checkbox-container">
+                                
                                 <input type="checkbox" id="terms" name="terms" required>
                                 <span class="checkmark"></span>
                                 <span>Concordo com os <a href="#" class="terms-link">Termos de Serviço</a> e <a href="#" class="terms-link">Política de Privacidade</a></span>
+                            
                             </label>
+                        
                         </div>
 
                         <div class="form-actions">
+                            
                             <button type="button" class="btn-back" onclick="prevStep(4)">Voltar</button>
                             <button type="submit" class="btn-submit">Finalizar compra</button>
+                        
                         </div>
+                    
                     </div>
+                
                 </form>
+            
             </div>
             
             <div class="checkout-sidebar">
+                
                 <div class="order-summary-card">
+                    
                     <h3>Resumo do pedido</h3>
-
+                    
                     <div class="summary-item">
+                        
                         <div class="summary-value" id="sidebar-product">Profissional</div>
+                    
                     </div>
                     
                     <div class="summary-item total">
+                        
                         <div class="summary-label">Total</div>
                         <div class="summary-value" id="sidebar-total">R$ 99,00</div>
+                    
                     </div>
+                
                 </div>
                 
                 <div class="secure-payment">
+                    
                     <div class="secure-icon"></div>
                     <p>Pagamento 100% seguro</p>
+                
                 </div>
                 
                 <div class="help-section">
+                    
                     <h4>Precisa de ajuda?</h4>
                     <p>Entre em contato com nosso suporte:</p>
                     <a href="mailto:suporte@xneedware.com" class="support-link">suporte@xneedware.com</a>
                     <a href="tel:+551199999999" class="support-link">+55 11 9999-9999</a>
+                
                 </div>
+            
             </div>
+        
         </section>
+    
     </main>
 
     <!-- Footer -->
     <footer class="footer">
+        
         <div class="container">
+            
             <div class="footer-grid">
+                
                 <div class="footer-about">
+                    
                     <a href="index.html" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
+                    
                     <p class="footer-description">
                         Transformando empresas através de soluções de software inovadoras e eficientes.
                     </p>
+                    
                     <div class="social-links">
                         
                         <a href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
+                    
                     </div>
+                
                 </div>
 
                 <div class="footer-links">
+                    
                     <h3 class="footer-title">Produtos</h3>
+                    
                     <ul>
                         <li><a href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
                         <li><a href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
                         <li><a href="../produtos/produtos_separados/message.html">xNeed Message</a></li>
                         <li><a href="../apis/index.html">API</a></li>
                     </ul>
+                
                 </div>
 
                 <div class="footer-links">
+                    
                     <h3 class="footer-title">Empresa</h3>
+                    
                     <ul>
                         <li><a href="../sobre/index.html">Sobre Nós</a></li>
                     </ul>
+                
                 </div>
 
                 <div class="footer-links">
+                    
                     <h3 class="footer-title">Suporte</h3>
+                    
                     <ul>
-                        
-                        
                         <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
                     </ul>
+                
                 </div>
+            
             </div>
 
             <div class="footer-bottom">
+                
                 <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
+            
             </div>
+        
         </div>
+    
     </footer>
 
     <script> //Essa sessão cuida totalmente da interação dentro do formulario, como alteração de produtos.
         
         // Funções para navegação entre etapas do formulário
-        //Cria uma função chamada próximoPasso com um parâmetro para indicar o índice atual
         function nextStep(currentStep) {
-            //Pega o id no html com base no parâmetro e o esconde
             document.getElementById(`step-${currentStep}`).classList.add('hidden');
-            //Pega um índice a mais e o faz aparecer, as informações de cada passo
             document.getElementById(`step-${currentStep + 1}`).classList.remove('hidden');
             
             // Atualiza a barra de progresso
             const steps = document.querySelectorAll('.progress-step');
             steps[currentStep].classList.add('active');
         }
-        //Cria uma função passoAnterior, com o parâmetro do índice atual, igual o anterior
+        
         function prevStep(currentStep) {
-            //Pega o índice atual, a etapa, e a esconde
             document.getElementById(`step-${currentStep}`).classList.add('hidden');
-            ///Pega o índice anterior e o faz aparecer
             document.getElementById(`step-${currentStep - 1}`).classList.remove('hidden');
             
             // Atualiza a barra de progresso
@@ -534,12 +690,7 @@
         // Alternar entre métodos de pagamento
         document.addEventListener('DOMContentLoaded', function() {
             const paymentTabs = document.querySelectorAll('.payment-tab');
-            //Para cada paymentTab, ele adiciona uma função de clique
-            paymentTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // Remove a classe active de todas as abas
-                    //Exibe, tira o comando que a esconde
-                    paymentTabs.forEach(t => t.classList.remove('active'));                             
+            
             // teste fazendskd 
             paymentTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
@@ -567,18 +718,6 @@
                     const productName = document.querySelector(`label[for="${this.id}"] h3`).textContent;
                     document.getElementById('summary-product').textContent = productName;
                     document.getElementById('sidebar-product').textContent = productName;
-            // Atualiza o resumo quando o plano é alterado
-            //Pega os nomes de plano do html e salva nessa variável como se fosse um array
-            const planOptions = document.querySelectorAll('input[name="plan"]');
-            planOptions.forEach(option => {
-                //Para cada plano cria uma função que pega o id e identifica o id
-                option.addEventListener('change', function() {
-                    const planName = document.querySelector(`label[for="${this.id}"] h3`).textContent;
-                    /*Atualiza no código conforme o plano que o usuário escolhe,
-                    usando os elementos html que foram guardados nas variáveis.*/
-
-                    document.getElementById('summary-plan').textContent = planName;
-                    document.getElementById('sidebar-plan').textContent = planName;
                     
                     // Atualiza o preço baseado no producto selecionado
                     updatePrice();
@@ -586,31 +725,12 @@
             });
             
             // Função para atualizar o preço baseado no producto e ciclo selecionados
-            // Atualiza o resumo quando o ciclo é alterado
-            const cycleOptions = document.querySelectorAll('input[name="cycle"]');
-            //Para cada ciclo, cria uma função de "Escolha"
-            cycleOptions.forEach(option => {
-                option.addEventListener('change', function() {
-                    //Pega se o plano é mensal ou anual pelo id
-                    const cycleName = this.id === 'cycle-monthly' ? 'Mensal' : 'Anual';
-                    //Atualiza o conteúdo conforme o plano escolhido
-                    document.getElementById('summary-cycle').textContent = cycleName;
-                    document.getElementById('sidebar-cycle').textContent = cycleName;
-                    
-                    // Atualiza o preço baseado no ciclo selecionado
-                    updatePrice();
-                });
-            });
             
             function updatePrice() {
                 const selectedPlan = document.querySelector('input[name="product"]:checked').value;
-                //Atribui o plano atual e um id para variáveis
-                const selectedPlan = document.querySelector('input[name="plan"]:checked').value;
-                const isAnnual = document.getElementById('cycle-annual').checked;
                 
                 let price = 0;
                 
-                //Faz um switch case para ir atuaizando os preços para a variável price
                 switch(selectedPlan) {
                     case 'chatbot':
                         price = 99.00;
@@ -633,32 +753,24 @@
                 let total = price;
                 
                 // Atualiza os valores no resumo
-                if (isAnnual) {
-                    discount = price * 0.2;
-                    total = price - discount;
-                }
-                
-                // Atualiza o conteúdo no resumo
                 document.getElementById('summary-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
                 document.getElementById('sidebar-total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
             }
             
             // Inicializa o formulário
-            //Para um clique de submit ele atribui uma função de anti-carregamento e um alerta para confirmação.
             document.getElementById('payment-form').addEventListener('submit', function(e) {
                 e.preventDefault();
                 alert('Pagamento processado com sucesso! Obrigado por comprar com a xNeedWare.');
             });
         });
     
-        // Mobile Menu button
+    </script>
 
-        //Pega elementos do html para criar um menu mobile
+    <script>
+        // Mobile Menu button
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
-        //Quando clicar nesse elemento do html
-        //Ele irá usar um active para exibir visualmente esses dois
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
             mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
@@ -666,7 +778,6 @@
         });
 
         // Fecha o botão menu quando clica em um link
-        /*Quando o usuário clica num link dentro desse elemento, ele fecha o menu mobile automaticamente*/
         document.querySelectorAll('.nav-mobile .nav-link, .nav-mobile .btn').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
