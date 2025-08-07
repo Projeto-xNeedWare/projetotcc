@@ -79,7 +79,7 @@
                     
                     case 'message':
                         document.getElementById('sidebar-product').innerHTML = `
-                            <img src="assets/message.png" alt="Message" class="product-image" style="width: 300px; height: 300px; border-radius: 8px; object-fit: cover;">
+                            <img src="assets/message.png" alt="Message" class="product-image" style="width: 300px; height: 200px; border-radius: 8px; object-fit: cover;">
                         `;
                         price = 59.00;
                         break;
