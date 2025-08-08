@@ -67,7 +67,7 @@ ul {
     list-style: none;
 }
 
-* Estilos do cabeçalho */
+/* Estilos do cabeçalho */
 .xneedware-header {
   background-color: #000000;
   width: 100%;
@@ -103,6 +103,13 @@ ul {
 }
 
 /* Estilos da navegação */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
 .main-nav ul {
   display: flex;
   list-style: none;
