@@ -2,9 +2,9 @@
 let paymentsClient;
 let currentStep = 1;
 let selectedProduct = {
-    id: 'message',
-    name: 'xNeed Message',
-    price: '59.00'
+    id: '',
+    name: '',
+    price: '00.00'
 };
 
 // Configuração base do Google Pay
