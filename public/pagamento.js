@@ -65,19 +65,34 @@
                 
                 switch(selectedPlan) {
                     case 'chatbot':
+                        document.getElementById('sidebar-product').innerHTML = `
+                            <img src="assets/chatbot.png" alt="ChatBot" class="product-image" style="width: 300px; height: 200px; border-radius: 8px; object-fit: cover;">
+                        `;
                         price = 99.00;
                         break;
                     case 'downloader':
+                        document.getElementById('sidebar-product').innerHTML = `
+                            <img src="assets/downloader.png" alt="Downloader" class="product-image" style="width: 300px; height: 200px; border-radius: 8px; object-fit: cover;">
+                        `;
                         price = 39.00;
                         break;
                     
                     case 'message':
+                        document.getElementById('sidebar-product').innerHTML = `
+                            <img src="assets/message.png" alt="Message" class="product-image" style="width: 300px; height: 200px; border-radius: 8px; object-fit: cover;">
+                        `;
                         price = 59.00;
                         break;
                     case 'qr_code':
+                        document.getElementById('sidebar-product').innerHTML = `
+                            <img src="assets/qrcodegenerator.png" alt="QR Code" class="product-image" style="width: 300px; height: 200px; border-radius: 8px; object-fit: cover;">
+                        `;
                         price = 9.90;
                         break;
                     case 'excel':
+                        document.getElementById('sidebar-product').innerHTML = `
+                            <img src="assets/graphics.png" alt="Excel" class="product-image" style="width: 300px; height: 200px; border-radius: 8px; object-fit: cover;">
+                        `;
                         price = 49.90;
                         break;
                 }
