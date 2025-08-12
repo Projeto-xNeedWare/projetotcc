@@ -12,7 +12,6 @@
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 </head>
 
 <body onload="numRandom('num-random', 'num-random2', 'num-random3', 'num-random4')">
@@ -27,14 +26,16 @@
                 <i class="fas fa-bars"></i>
             </button>
         
+            
             <nav class="main-nav">
                 <ul>
                     <li><a href="../produtos/index.html">Produtos</a></li>
                     <li><a href="../sobre/index.html">Sobre</a></li>
                     <li><a href="./../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
-                    </a>
-                    <script src="../../public/entrar.js"></script>
+                    <button class="avatar" id="btnEntrarConta">Entrar na Conta
+                      <i class="fa-light fa-user-bounty-hunter icone-grande"></i>  
+                    </button>
+                    <script src="/entrar.js"></script>
 
                     <a href="../login/index.html">
                     </a>
@@ -350,10 +351,11 @@
         </div>
     </footer>
 
+    <script src="/header-script.js"></script>
 
     <script src="/animation-scroll.js"></script>
 
-    <script src="../../public/random.js"></script>
+    <script src="/random.js"></script>
 
 </body>
 </html>
