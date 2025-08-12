@@ -73,6 +73,93 @@ ul {
     margin: 0 auto;
     padding: 0 1rem;
   }
+
+/* Google Pay Styles */
+.google-pay-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.google-pay-info {
+    margin-bottom: 25px;
+}
+
+.google-pay-info p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.payment-security {
+    color: #28a745 !important;
+    font-weight: 500;
+}
+
+#google-pay-button-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#google-pay-button {
+    width: 100%;
+    height: 50px;
+}
+
+/* PIX and Boleto Info */
+.pix-info, .boleto-info {
+    text-align: center;
+    padding: 30px 20px;
+    background: #00000000;
+    border-radius: 8px;
+}
+
+.pix-info p, .boleto-info p {
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.pix-icon, .boleto-icon {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px 15px;
+    }
+    
+    .form-progress {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .progress-line {
+        display: none;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .payment-method-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .checkout-form {
+        padding: 20px;
+    }
+  }
+
 /* Buttons */
 .btn {
     display: inline-flex;
