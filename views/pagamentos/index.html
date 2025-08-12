@@ -278,7 +278,8 @@
                             </div>
                             <div class="summary-item total">
                                 <div class="summary-label">Total</div>
-                                <div class="summary-value" id="summary-total">R$ 00,00</div>
+                                <div class="summary-value" id="summary-total">R$ 99,00</div>
+                            
                             </div>
                         </div>
                         
@@ -304,6 +305,7 @@
                     <h3>Resumo do pedido</h3>
                     <div class="summary-item">
                         <div class="summary-value" id="sidebar-product"></div>
+                    </div>
                     </div>
                     <div class="summary-item total">
                         <div class="summary-label">Total</div>
@@ -358,6 +360,7 @@
                     </ul>
                 </div>
                 <div class="footer-links">
+
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
                         <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
@@ -372,6 +375,62 @@
 
     <script src="../../public/pagamento.js"></script>
     <script src="../../public/google-pay.js"></script>
+
+    <script>
+        // Mobile Menu button
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Fecha o botão menu quando clica em um link
+        document.querySelectorAll('.nav-mobile .nav-link, .nav-mobile .btn').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Efeito de scroll no header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animação de scroll na pagina inteira
+        const fadeElements = document.querySelectorAll('.fade-in-scroll');
+        
+        const fadeInScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Checkagem inicial
+        fadeInScroll();
+        
+        // Checkagem do scroll
+        window.addEventListener('scroll', fadeInScroll);
+
+        // Atualiza o ano atual no rodapé
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    </script>
+>>>>>>> 9d6b905891c84f9f73c9f2647333de085694e3d7:views/assinaturas/index.html
     
 </body>
 </html>
