@@ -16,6 +16,7 @@
 </head>
 
 <body onload="numRandom('num-random', 'num-random2', 'num-random3', 'num-random4')">
+    
     <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
         <div class="header-container">
@@ -32,7 +33,7 @@
                     <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.html">Produtos</a></li>
                     <li><a title="Saiba mais sobre a nossa empresa" href="../sobre/index.html">Sobre</a></li>
                     <li><a title="Entre em contato conosco" href="./../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a title="Entre na sua conta" href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
+                    <a title="Entre na sua conta" href="../login/index.html"><i class="fa-thin fa-circle-user" style="font-size: 2rem;"></i>
                     </a>
                     <script src="../../public/entrar.js"></script>
 
@@ -40,11 +41,16 @@
                     </a>
                 </ul>
             </nav>
+
+            <script src="../../public/entrar.js"></script>
+        
         </div>
+    
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
+        
         <div class="bg-blob blob1"></div>
         <div class="bg-blob blob2"></div>
         <div class="bg-blob blob3"></div>
@@ -74,7 +80,7 @@
                 <div class="hero-image">
                     
                     <!-- Início da área de pré-visualização do dashboard -->
-                    <div class="dashboard-preview">
+                    <div class="dashboard-fundo">
                         
                         <!-- Início do cabeçalho do dashboard -->
                         <div class="dashboard-header">
@@ -102,6 +108,7 @@
                                     </div>
                                 </div>
                             </div>
+                
                             
                             <!-- Grid de cards do dashboard -->
                             <div class="dashboard-grid">
@@ -153,42 +160,53 @@
                 
             </div>
         </div>
+    
     </section>
 
-    <!-- Contact Section -->
+    <!-- Sessão de contato -->
     <section id="contato" class="contact">
+        
         <div class="container">
+            
             <div class="section-header">
+                
                 <h2 class="section-title">
                     Entre em <span class="gradient-text">Contato</span> e faça sua <span class="gradient-text">Cotação</span>
                 </h2>
+                
                 <p class="section-description">
                     Estamos prontos para ajudar sua empresa a alcançar o próximo nível. Entre em contato conosco para saber mais sobre nossas soluções.
                 </p>
             </div>
 
             <div class="contact-grid">
+                
                 <div class="contact-info">
-                    <div class="contact-card">
+                    
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
+                        
                         <div class="contact-details">
                             <h3 class="contact-title">Email</h3>
                             <p>contato@xneedware.com</p>
                             <p>suporte@xneedware.com</p>
                         </div>
+                    
                     </div>
 
                     <div class="contact-card">
+                        
                         <div class="contact-icon blue">
                             <i class="fas fa-phone"></i>
                         </div>
+                        
                         <div class="contact-details">
                             <h3 class="contact-title">Telefone</h3>
                             <p>+55 (19) 99693-7305</p>
                             <p>+55 (11) 99761-5610</p>
                         </div>
+                    
                     </div>
 
                     <div class="contact-card">
@@ -204,45 +222,62 @@
                 </div>
 
                 <div class="contact-form-container">
+                    
                     <form class="contact-form" action="../../enviar.php" method="POST">
+                        
                         <h3 class="form-title" style="margin-bottom: 20px;">Dados Pessoais</h3>
+                        
                         <div class="form-grid">
+                            
                             <div class="form-group">
                                 <label for="name">Nome</label>
                                 <input type="text" id="name" name="name" title="Digite seu nome completo" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" title="Digite seu email" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="telefone">Telefone</label>
                                 <input type="text" id="telefone" name="telefone" title="Digite seu telefone" required>
                             </div>
+                        
                         </div>
+                        
                         <h3 class="form-title" style="margin-bottom: 20px;">Dados Empresariais</h3>
+                        
                         <div class="form-group">
                             <label for="nomeempresa">Nome da Empresa</label>
                             <input type="text" id="nomeempresa" name="nomeempresa" title="Digite o nome da sua empresa" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="cnpj">CNPJ</label>
                             <input type="text" id="cnpj" name="cnpj" title="Digite o CNPJ da sua empresa" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="message">Mensagem</label>
                             <textarea id="message" name="message" rows="5" placeholder="Especifique como funcionará o seu Software" title="Digite sua mensagem" required></textarea>
                         </div>
+                        
                         <button type="submit" class="btn btn-primary">
                             Enviar Mensagem <i class="fas fa-paper-plane"></i>
                         </button>
+                    
                     </form>
+                
                 </div>
+            
             </div>
+        
         </div>
+    
     </section>
 
-    <!-- Coming Soon Section -->
+    <!-- sessão em breve -->
     <section class="coming-soon">
         <div class="bg-blob blob1"></div>
         <div class="bg-blob blob2"></div>
@@ -262,6 +297,7 @@
                     <div class="coming-soon-icon">
                         <i class="fas fa-code"></i>
                     </div>
+                    
                     <div class="coming-soon-content">
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -270,16 +306,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        
                         <h3 class="coming-soon-title">Marketplace para Desenvolvedores</h3>
                         <p class="coming-soon-description">
                             Em breve, desenvolvedores poderão vender seus próprios softwares na plataforma xNeedWare. Uma oportunidade incrível para expandir seu alcance e monetizar suas criações.
                         </p>
+                        
                         <div class="tags">
                             <span class="tag">Marketplace</span>
                             <span class="tag blue">Desenvolvedores</span>
                             <span class="tag">Monetização</span>
                         </div>
+                    
                     </div>
+                
                 </div>
 
                 <div class="coming-soon-form">
@@ -288,31 +328,41 @@
                         <button type="submit" class="btn btn-primary">Receber Atualizações</button>
                     </form>
                 </div>
+            
             </div>
         </div>
+    
     </section>
 
     <!-- Footer -->
     <footer class="footer">
+        
         <div class="container">
+            
             <div class="footer-grid">
+                
                 <div class="footer-about">
+                    
                     <a href="index.html" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
+                    
                     <p class="footer-description">
                         Transformando empresas através de soluções de software inovadoras e eficientes.
                     </p>
+                    
                     <div class="social-links">
-
                         <a title="Visite nosso Instagram" href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a title="Visite nosso LinkedIn" href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a title="Visite nosso GitHub" href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
+                
                 </div>
 
                 <div class="footer-links">
+                    
                     <h3 class="footer-title">Produtos</h3>
+                    
                     <ul>
                         <li><a title="Adquira o produto Chatbot" href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
                         <li><a title="Adquira o produto Downloader" href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
@@ -320,33 +370,40 @@
                         <li><a title="Adquira o produto QrGenerator" href="../produtos/produtos_separados/QrGenerator.html">xNeed QrGenerator</a></li>
                         <li><a title="Adquira o produto Excel" href="../produtos/produtos_separados/Excel.html">xNeed Excel</a></li>
                     </ul>
+                
                 </div>
 
                 <div class="footer-links">
+                    
                     <h3 class="footer-title">Empresa</h3>
+                    
                     <ul>
                         <li><a title="Saiba mais sobre nós" href="../sobre/index.html">Sobre Nós</a></li>
                     </ul>
+                
                 </div>
 
                 <div class="footer-links">
+                    
                     <h3 class="footer-title">Suporte</h3>
+                    
                     <ul>
-
-
                         <li><a title="Acesse nossa política de privacidade" href="../politica_privacidade/index.html">Política de Privacidade</a></li>
                     </ul>
+                
                 </div>
+            
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
             </div>
+        
         </div>
+    
     </footer>
 
 
-    <script src="/animation-scroll.js"></script>
 
     <script src="../../public/random.js"></script>
 
