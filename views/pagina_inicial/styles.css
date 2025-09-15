@@ -206,7 +206,7 @@
   .form-group input,
   .form-group textarea {
     width: 100%;
-    background-color: var(--color-gray-800);
+    background-color: transparent;
     border: 1px solid var(--color-gray-700);
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
@@ -621,7 +621,7 @@
   .contact-card {
     background: linear-gradient(to bottom right, var(--color-gray-900), var(--color-gray-800));
     border: 1px solid var(--color-gray-700);
-    border-radius: var(--border-radius-lg);
+    border-radius: 15px;
     padding: 1.5rem;
     display: flex;
     transition: all 0.3s ease;
@@ -664,7 +664,7 @@
   .contact-form-container {
     background: linear-gradient(to bottom right, var(--color-gray-900), var(--color-gray-800));
     border: 1px solid var(--color-gray-700);
-    border-radius: var(--border-radius-xl);
+    border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   }
@@ -706,7 +706,7 @@
   .coming-soon-card {
     background: linear-gradient(to bottom right, var(--color-gray-900), var(--color-gray-800));
     border: 1px solid var(--color-gray-700);
-    border-radius: var(--border-radius-xl);
+    border-radius: 15px;
     padding: 2rem;
     max-width: 64rem;
     margin: 0 auto;
@@ -829,24 +829,30 @@
   
   .social-links {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    box-shadow: 0px 0px 15px #00000027;
+    padding: 15px 10px;
+    border-radius: 5em;
   }
   
   .social-link {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--color-gray-800);
-    border-radius: var(--border-radius);
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: var(--color-gray-400);
-    transition: all 0.3s ease;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: black;
+    box-shadow: 0px 0px 4px #00000027;
+    transition: 0.3s;
   }
   
   .social-link:hover {
     background-color: var(--color-gray-700);
-    color: var(--color-white);
+    color: var(--color-black);
     transform: translateY(-3px);
   }
   
