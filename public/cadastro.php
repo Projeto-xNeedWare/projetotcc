@@ -51,7 +51,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $nome, $sobrenome, $email, $senhaHash);
 
 if ($stmt->execute()) {
-    echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='/projetotcc/views/login/index.html';</script>";
+    echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='/projetotcc/views/conta-usuario/minha-conta.html';</script>";
 } else {
     echo "<script>alert('Erro ao cadastrar usuário.'); window.location.href='/projetotcc/views/cadastro/index.html';</script>";
 }
