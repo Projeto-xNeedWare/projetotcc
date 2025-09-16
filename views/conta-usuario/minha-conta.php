@@ -22,7 +22,7 @@
      <!-- Cabeçalho -->
      <header class="xneedware-header">
         <div class="header-container">
-            <a href="../pagina_inicial/index.html" class="logo">
+            <a href="../pagina_inicial/index.php" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -32,10 +32,10 @@
     
         <nav class="main-nav">
             <ul>
-                <li><a href="../produtos/index.html">Produtos</a></li>
-                <li><a href="../sobre/index.html">Sobre</a></li>
-                <li><a href="./../pagina_inicial/index.html#contato">Contato</a></li>
-                <a href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i></a>
+                <li><a href="../produtos/index.php">Produtos</a></li>
+                <li><a href="../sobre/index.php">Sobre</a></li>
+                <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
+                <?php include '../../public/header-usuario.php'; ?>
             </ul>
         </nav>
     </div>
@@ -44,7 +44,7 @@
 <!-- Conteúdo Principal -->
 <main class="container">
     <h1 class="page-title">Minha Conta</h1>
-    <h1>Bem-vindo, <span id="nomeUsuario"><?php echo $login_cookie; ?></span>!</h1>
+    <h1><?php include '../../public/nome-usuario.php'; ?></h1>
 
     <!-- Cards de Estatísticas -->
     <div class="stats-grid">
@@ -89,7 +89,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Nome</label>
-                                <input type="text" id="name" value="<?php echo $login_cookie; ?>" placeholder="Seu nome">
+                                <input type="text" id="name" value="" placeholder="Seu nome">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>

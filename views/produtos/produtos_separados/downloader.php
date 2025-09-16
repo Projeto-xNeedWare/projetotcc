@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>xNeed Message</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="../../bootstraps/header.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
-        <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xNeed Downloader – Software para download de vídeos do YouTube.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../bootstraps/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+
+</head>
 <body>
     <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../../pagina_inicial/index.html" class="logo">
+            <a href="../../pagina_inicial/index.php" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -31,13 +31,10 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html">Produtos</a></li>
-                    <li><a href="../../sobre/index.html">Sobre</a></li>
-                    <li><a href="../../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a href="../../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
-                    </a>
-                        
-
+                    <li><a href="../index.php">Produtos</a></li>
+                    <li><a href="../../sobre/index.php">Sobre</a></li>
+                    <li><a href="../../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../../public/header-usuario-products.php'; ?>
                 </ul>
             </nav>
         </div>
@@ -45,37 +42,33 @@
 
     <main>
         <section class="hero">
-            <h1>xNeed Message</h1>
-            <p class="subtitle">O xNeed Message automatiza o envio de mensagens para seus clientes com respostas inteligentes, rápidas e personalizadas, 
-                funcionando 24/7 para manter a comunicação sempre ativa.</p>
+            <h1>xNeed Downloader</h1>
+            <p class="subtitle">O xNeed Downloader realiza o download de videos e audios do youtube de forma gratuita e sem anuncios </p>
         </section>
 
         <section class="product-details">
             <div class="product-card">
                 <div class="icon-container">
                     <div class="icon">
-
-                        <i class="fa-solid fa-comments"></i>
+                        <i class="fa-solid fa-download"></i>
                     </div>
-
+                    
                 </div>
-                <h2>xNeed ChatBot</h2>
-                <p class="description">Sistema de envio automático de mensagens para gerenciar a comunicação com os clientes.</p>
+                <h2>xNeed Downloader</h2>
+                <p class="description">Sistema de download de videos</p>
 
                 <ul class="feature-list">
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>Envio de mensagens 24 horas por dia.</span>
+                        <span>Funcionamento simples feito em python</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>
-                            Mensagens enviadas instantaneamente.
-                        </span>
+                        <span>Download rapido</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>Comunicação automática com linguagem natural.</span>
+                        <span>Interação natural</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
@@ -85,17 +78,16 @@
             </div>
 
             <div class="info-section">
-                <h3>Por que escolher o xNeed Message</h3>
+                <h3>Por que escolher o xNeed Downloader?</h3>
                 <p>
-                    O <strong>xNeed Message</strong> ChatGPT said:
-
-                    É a solução perfeita para empresas que querem automatizar o envio de mensagens e melhorar a experiência do cliente. Com tecnologia inteligente e linguagem natural, 
-                    ele envia comunicações relevantes, coleta dados e guia o usuário de forma prática, rápida e eficiente.
+                    O <strong>xNeed ChatBot</strong> é a solução perfeita para empresas que querem automatizar 
+                    o atendimento e melhorar a experiência do cliente. Com tecnologia inteligente e linguagem natural, 
+                    ele responde dúvidas frequentes, coleta dados e conduz o usuário de forma prática, rápida e eficiente.
                 </p>
                 <p>
                     Com funcionamento 24/7, integração com APIs e plataformas de mensagens, e opções de personalização, 
-                    o xNeed ChatBot automatiza o envio de mensagens, reduz custos operacionais e aumenta a produtividade da sua equipe. Seja para vendas, 
-                    suporte ou triagem, ele se adapta perfeitamente ao seu negócio.
+                    o xNeed ChatBot torna o suporte mais ágil, reduz custos operacionais e aumenta a produtividade da 
+                    sua equipe. Seja para vendas, suporte ou triagem, ele se adapta ao seu negócio.
                 </p>
             </div>
 
@@ -104,29 +96,25 @@
                 <div class="benefits-grid">
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
-                        <span>
-                            Redução de custos com envio de mensagens automáticas.
-                        </span>
+                        <span>Redução de custos com suporte</span>
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
-                        <span>
-                             Escalabilidade no envio de mensagens para clientes.
-                        </span>
+                        <span>Coleta de dados automatizada</span>
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
-                        <span>Escalabilidade no envio automático de mensagens.</span>
+                        <span>Escalabilidade no atendimento</span>
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
-                        <span>Conversões mais eficientes via mensagens automatizadas.</span>
+                        <span>Conversões mais eficientes</span>
                     </div>
                 </div>
             </div>
 
             <div class="cta-section"> <!-- Call to Action Section -->
-                <a href="../../pagamentos/index.html" class="cta-button chatbot-cta">Comprar</a>
+                <a href="../../pagamentos/index.php" class="cta-button chatbot-cta">Comprar</a>
             </div>
                 
                 
@@ -159,9 +147,9 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
-                        <li><a href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
-                        <li><a href="../produtos/produtos_separados/message.html">xNeed Message</a></li>
+                        <li><a href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
+                        <li><a href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
                     </ul>
                 </div>
 

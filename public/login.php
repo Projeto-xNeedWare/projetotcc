@@ -20,12 +20,13 @@ $result = $stmt->get_result();
 if ($user = $result->fetch_assoc()) {
     if (password_verify($senha, $user['senha'])) {
         $_SESSION['usuario'] = $user['id'];
-        header('Location: /projetotcc/views/pagina_inicial/index.php');
+        $_SESSION['usuario_nome'] = $user['nome'];
+        header('Location: ../views/pagina_inicial/index.php');
         exit;
     } else {
-        echo "<script>alert('Senha incorreta!'); window.location.href='/projetotcc/views/login/index.html';</script>";
+        echo "<script>alert('Senha incorreta!'); window.location.href='../views/login/index.html';</script>";
     }
 } else {
-    echo "<script>alert('Usuário não encontrado!'); window.location.href='/projetotcc/views/login/index.html';</script>";
+    echo "<script>alert('Usuário não encontrado!'); window.location.href='../views/cadastro/index.html';</script>";
 }
 ?>

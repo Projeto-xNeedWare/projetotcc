@@ -34,7 +34,7 @@
                     <li><a href="../produtos/index.html">Produtos</a></li>
                     <li><a href="../sobre/index.html">Sobre</a></li>
                     <li><a href="./../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i></a>
+                    <?php include '../../public/header-usuario.php'; ?>
                 </ul>
             </nav>
         </div>
