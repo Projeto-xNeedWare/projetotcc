@@ -20,7 +20,7 @@
     <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../pagina_inicial/index.html" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
+            <a href="../pagina_inicial/index.php" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -30,15 +30,10 @@
         
             <nav class="main-nav">
                 <ul>
-                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.html">Produtos</a></li>
-                    <li><a title="Saiba mais sobre a nossa empresa" href="../sobre/index.html">Sobre</a></li>
-                    <li><a title="Entre em contato conosco" href="./../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a title="Entre na sua conta" href="../login/index.html"><i class="fa-thin fa-circle-user" style="margin-left: 20px; font-size: 2rem;"></i>
-                    </a>
-                    <script src="../../public/entrar.js"></script>
-
-                    <a href="../login/index.html">
-                    </a>
+                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.php">Produtos</a></li>
+                    <li><a title="Saiba mais sobre a nossa empresa" href="../sobre/index.php">Sobre</a></li>
+                    <li><a title="Entre em contato conosco" href="../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../public/header-usuario.php'; ?>
                 </ul>
             </nav>
 

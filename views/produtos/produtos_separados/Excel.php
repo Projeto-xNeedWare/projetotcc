@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xNeed Downloader – Software para download de vídeos do YouTube.</title>
+    <title>xNeed Graphics</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../../bootstraps/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
     <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../../pagina_inicial/index.html" class="logo">
+            <a href="../../pagina_inicial/index.php" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -31,13 +31,10 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html">Produtos</a></li>
-                    <li><a href="../../sobre/index.html">Sobre</a></li>
-                    <li><a href="../../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a href="../../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
-                    </a>
-                        
-
+                    <li><a href="../index.php">Produtos</a></li>
+                    <li><a href="../../sobre/index.php">Sobre</a></li>
+                    <li><a href="../../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../../public/header-usuario-products.php'; ?>
                 </ul>
             </nav>
         </div>
@@ -45,29 +42,29 @@
 
     <main>
         <section class="hero">
-            <h1>xNeed Downloader</h1>
-            <p class="subtitle">O xNeed Downloader realiza o download de videos e audios do youtube de forma gratuita e sem anuncios </p>
+            <h1>xNeed Graphics</h1>
+            <p class="subtitle">O xNeed Graphics analisa planilhas em formato CSV, geralmente criadas no Excel, e transforma os dados em gráficos.</p>
         </section>
 
         <section class="product-details">
             <div class="product-card">
                 <div class="icon-container">
                     <div class="icon">
-                        <i class="fa-solid fa-download"></i>
+                        <i class="fa-solid fa-chart-mixed-up-circle-currency"></i>
                     </div>
                     
                 </div>
-                <h2>xNeed Downloader</h2>
-                <p class="description">Sistema de download de videos</p>
+                <h2>xNeed Graphics</h2>
+                <p class="description">Sistema automatizado em Python que processa dados de arquivos CSV e gera gráficos para facilitar a análise das informações.</p>
 
                 <ul class="feature-list">
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>Funcionamento simples feito em python</span>
+                        <span>Uso ilimitado</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>Download rapido</span>
+                        <span>Respostas instantâneas</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
@@ -81,16 +78,16 @@
             </div>
 
             <div class="info-section">
-                <h3>Por que escolher o xNeed Downloader?</h3>
+                <h3>Por que escolher o xNeed ChatBot?</h3>
                 <p>
-                    O <strong>xNeed ChatBot</strong> é a solução perfeita para empresas que querem automatizar 
-                    o atendimento e melhorar a experiência do cliente. Com tecnologia inteligente e linguagem natural, 
-                    ele responde dúvidas frequentes, coleta dados e conduz o usuário de forma prática, rápida e eficiente.
+                  O <strong>xNeed Graphics</strong> é a solução ideal para empresas que querem automatizar o atendimento e melhorar a experiência do cliente. Feito em Python, 
+                  ele processa dados de arquivos Excel (CSV) e gera gráficos, respondendo dúvidas frequentes, 
+                  coletando dados e guiando o usuário de forma prática, rápida e eficiente.
                 </p>
                 <p>
-                    Com funcionamento 24/7, integração com APIs e plataformas de mensagens, e opções de personalização, 
-                    o xNeed ChatBot torna o suporte mais ágil, reduz custos operacionais e aumenta a produtividade da 
-                    sua equipe. Seja para vendas, suporte ou triagem, ele se adapta ao seu negócio.
+                   Com funcionamento 24/7, integração com APIs e plataformas de mensagens, 
+                    e opções de personalização, o xNeed ChatBot torna o suporte mais ágil, reduz custos operacionais e aumenta a produtividade da sua equipe. Feito em Python, 
+                    ele processa dados em Excel (CSV) e gera gráficos, se adaptando para vendas, suporte ou triagem no seu negócio.
                 </p>
             </div>
 
@@ -103,7 +100,7 @@
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
-                        <span>Coleta de dados automatizada</span>
+                        <span>Coleta automatizada de dados</span>
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
@@ -117,7 +114,7 @@
             </div>
 
             <div class="cta-section"> <!-- Call to Action Section -->
-                <a href="../../pagamentos/index.html" class="cta-button chatbot-cta">Comprar</a>
+                <a href="../../pagamentos/index.php" class="cta-button chatbot-cta">Comprar</a>
             </div>
                 
                 
@@ -150,9 +147,9 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
-                        <li><a href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
-                        <li><a href="../produtos/produtos_separados/message.html">xNeed Message</a></li>
+                        <li><a href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
+                        <li><a href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
                     </ul>
                 </div>
 

@@ -19,10 +19,10 @@
     
 </head>
 <body>
-     <!-- Início do cabeçalho reutilizável -->
-     <header class="xneedware-header">
+    <!-- Início do cabeçalho reutilizável -->
+    <header class="xneedware-header">
         <div class="header-container">
-            <a href="../pagina_inicial/index.html" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
+            <a href="../pagina_inicial/index.php" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -33,13 +33,10 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.html">Produtos</a></li>
-                    <li><a title="Saiba mais sobre nós" href="../sobre/index.html">Sobre</a></li>
-                    <li><a title="Entre em contato conosco" href="./../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a title="Entre na sua conta" href="../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
-                    </a>
-                        
-
+                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.php">Produtos</a></li>
+                    <li><a title="Saiba mais sobre nós" href="../sobre/index.php">Sobre</a></li>
+                    <li><a title="Entre em contato conosco" href="./../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../public/header-usuario.php'; ?>
                 </ul>
             </nav>
         </div>
@@ -72,7 +69,7 @@
                         <li><i class="fas fa-check"></i> 100% confiável</li>
                         <li><i class="fas fa-check"></i> 100% gratuito</li>
                     </ul>
-                    <a href="../produtos/produtos_separados/downloader.html" class="learn-more" title="Saiba mais sobre o xNeed Downloader">Saiba mais</a>
+                    <a href="../produtos/produtos_separados/downloader.php" class="learn-more" title="Saiba mais sobre o xNeed Downloader">Saiba mais</a>
                 </div>
 
                 <div class="card">
@@ -89,7 +86,7 @@
                         <li><i class="fas fa-check"></i> Não pague nada por isso</li>
                         <li><i class="fas fa-check"></i> Simples e prático</li>
                     </ul>
-                    <a href="../produtos/produtos_separados/message.html" class="learn-more" title="Saiba mais sobre o xNeed Message">Saiba mais</a>
+                    <a href="../produtos/produtos_separados/message.php" class="learn-more" title="Saiba mais sobre o xNeed Message">Saiba mais</a>
                 </div>
 
                 <div class="card">
@@ -106,7 +103,7 @@
                         <li><i class="fas fa-check"></i> Atendimento 24/7</li>
                         <li><i class="fas fa-check"></i> Melhora a experiência do usuário</li>
                     </ul>
-                    <a href="../produtos/produtos_separados/chatbot.html" class="learn-more" title="Saiba mais sobre o xNeed Chat Bot">Saiba mais</a>
+                    <a href="../produtos/produtos_separados/chatbot.php" class="learn-more" title="Saiba mais sobre o xNeed Chat Bot">Saiba mais</a>
                 </div>
                 <div class="card">
                     <div class="icon">
@@ -122,7 +119,7 @@
                         <li><i class="fas fa-check"></i> Oferecemos suporte 24/7</li>
                         <li><i class="fas fa-check"></i> Melhora a experiência do seu negócio</li>
                     </ul>
-                    <a href="../produtos/produtos_separados/QrGenerator.html" class="learn-more" title="Saiba mais sobre o xNeed QR Generator">Saiba mais</a>
+                    <a href="../produtos/produtos_separados/QrGenerator.php" class="learn-more" title="Saiba mais sobre o xNeed QR Generator">Saiba mais</a>
                 </div>
                 <div class="card">
                     <div class="icon">
@@ -138,7 +135,7 @@
                         <li><i class="fas fa-check"></i> Atendimento 24/7</li>
                         <li><i class="fas fa-check"></i> Melhora a experiência do usuário</li>
                     </ul>
-                    <a href="../produtos/produtos_separados/Excel.html" class="learn-more" title="Saiba mais sobre o xNeed Graphics">Saiba mais</a>
+                    <a href="../produtos/produtos_separados/Excel.php" class="learn-more" title="Saiba mais sobre o xNeed Graphics">Saiba mais</a>
                 </div>
                 <div class="card">
                     <div class="icon">
@@ -154,7 +151,7 @@
                         <li><i class="fas fa-check"></i> Redução de erros no gerenciamento</li>
                         <li><i class="fas fa-check"></i> Suporte e escalabilidade garantidos</li>
                     </ul>
-                    <a href="../produtos/produtos_separados/Excel.html" class="learn-more" title="Saiba mais sobre o xNeed Manage">Saiba mais</a>
+                    <a href="../produtos/produtos_separados/Excel.php" class="learn-more" title="Saiba mais sobre o xNeed Manage">Saiba mais</a>
                 </div>
             </div>
         </div>

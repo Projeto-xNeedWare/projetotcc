@@ -168,7 +168,7 @@ function showPaymentSuccess() {
             <p style="color: #666; font-size: 14px; margin-bottom: 30px;">
                 Você receberá um email com as instruções de download em breve.
             </p>
-            <button onclick="window.location.href='../produtos/index.html'" style="
+            <button onclick="window.location.href='../produtos/index.php'" style="
                 background: #28a745;
                 color: white;
                 border: none;

@@ -20,7 +20,7 @@
     <!-- Início do cabeçalho reutilizável -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../../pagina_inicial/index.html" class="logo">
+            <a href="../../pagina_inicial/index.php" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -31,13 +31,10 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html">Produtos</a></li>
-                    <li><a href="../../sobre/index.html">Sobre</a></li>
-                    <li><a href="../../pagina_inicial/index.html#contato">Contato</a></li>
-                    <a href="../../login/index.html"><i class="fa-light fa-user-bounty-hunter icone-grande"></i>
-                    </a>
-                        
-
+                    <li><a href="../index.php">Produtos</a></li>
+                    <li><a href="../../sobre/index.php">Sobre</a></li>
+                    <li><a href="../../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../../public/header-usuario-products.php'; ?>
                 </ul>
             </nav>
         </div>
@@ -116,7 +113,7 @@
             </div>
 
             <div class="cta-section"> <!-- Call to Action Section -->
-                <a href="#" class="cta-button chatbot-cta">Comprar</a>
+                <a href="../../pagamentos/index.php" class="cta-button chatbot-cta">Comprar</a>
             </div>
                 
                 
@@ -149,9 +146,9 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
-                        <li><a href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
-                        <li><a href="../produtos/produtos_separados/message.html">xNeed Message</a></li>
+                        <li><a href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
+                        <li><a href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
                     </ul>
                 </div>
 
