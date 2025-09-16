@@ -84,50 +84,21 @@
                     <h2 class="card-title">Dados Pessoais</h2>
                     <p class="card-description">Gerencie suas informações pessoais</p>
                 </div>
+                <?php
+                $nome = $_SESSION['usuario_nome'] ?? $_COOKIE['nome'] ?? 'Usuário';
+                $email = $_SESSION['usuario_email'] ?? '';
+                ?>
                 <div class="card-content">
-                    <form class="user-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Nome</label>
-                                <input type="text" id="name" value="" placeholder="Seu nome">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" value="" placeholder="seu@email.com">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Telefone</label>
-                                <input type="text" id="phone" value="" placeholder="(00) 00000-0000">
-                            </div>
-                            <div class="form-group">
-                                <label for="cpf">CPF</label>
-                                <input type="text" id="cpf" value="" placeholder="000.000.000-00">
-                            </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <span class="user-info"><?php echo htmlspecialchars($nome); ?></span>
                         </div>
                         <div class="form-group">
-                            <label for="address">Endereço</label>
-                            <input type="text" id="address" value="" placeholder="Seu endereço">
+                            <label for="email">Email</label>
+                            <span class="user-info"><?php echo htmlspecialchars($usuario_email); ?></span>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="city">Cidade</label>
-                                <input type="text" id="city" value="" placeholder="Sua cidade">
-                            </div>
-                            <div class="form-group">
-                                <label for="state">Estado</label>
-                                <input type="text" id="state" value="" placeholder="Seu estado">
-                            </div>
-                            <div class="form-group">
-                                <label for="zip">CEP</label>
-                                <input type="text" id="zip" value="" placeholder="00000-000">
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="button" class="btn btn-primary" id="saveButton">Salvar Alterações</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

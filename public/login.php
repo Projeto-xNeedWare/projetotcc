@@ -21,6 +21,7 @@ if ($user = $result->fetch_assoc()) {
     if (password_verify($senha, $user['senha'])) {
         $_SESSION['usuario'] = $user['id'];
         $_SESSION['usuario_nome'] = $user['nome'];
+        $_SESSION['usuario_email'] = $user['email'];
         header('Location: ../views/pagina_inicial/index.php');
         exit;
     } else {

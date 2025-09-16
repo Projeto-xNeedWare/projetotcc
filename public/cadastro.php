@@ -51,6 +51,9 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $nome, $sobrenome, $email, $senhaHash);
 
 if ($stmt->execute()) {
+    session_start();
+    $_SESSION['usuario_nome'] = $nome;
+    $_SESSION['usuario_email'] = $email;
     echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='../views/conta-usuario/minha-conta.php';</script>";
 } else {
     echo "<script>alert('Erro ao cadastrar usuário.'); window.location.href='../views/cadastro/index.php';</script>";
