@@ -21,7 +21,7 @@
 <body>
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../pagina_inicial/index.html" class="logo">
+            <a href="../pagina_inicial/index.php" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -31,9 +31,9 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../produtos/index.html">Produtos</a></li>
-                    <li><a href="../sobre/index.html">Sobre</a></li>
-                    <li><a href="./../pagina_inicial/index.html#contato">Contato</a></li>
+                    <li><a href="../produtos/index.php">Produtos</a></li>
+                    <li><a href="../sobre/index.php">Sobre</a></li>
+                    <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
                     <?php include '../../public/header-usuario.php'; ?>
                 </ul>
             </nav>
@@ -300,7 +300,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.html" class="logo">
+                    <a href="index.php" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
                     <p class="footer-description">
@@ -315,21 +315,21 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
-                        <li><a href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
-                        <li><a href="../produtos/produtos_separados/message.html">xNeed Message</a></li>
+                        <li><a href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
+                        <li><a href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a href="../sobre/index.html">Sobre Nós</a></li>
+                        <li><a href="../sobre/index.php">Sobre Nós</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
-                        <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
+                        <li><a href="../politica_privacidade/index.php">Política de Privacidade</a></li>
                     </ul>
                 </div>
             </div>

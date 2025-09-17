@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    <!-- Início do cabeçalho reutilizável -->
+    <!-- CABEÇALHO REUTILIZÁVEL -->
     <header class="xneedware-header">
         <div class="header-container">
             <a href="../../pagina_inicial/index.php" class="logo">
@@ -28,7 +28,6 @@
                 <i class="fas fa-bars"></i>
             </button>
         
-            
             <nav class="main-nav">
                 <ul>
                     <li><a href="../index.php">Produtos</a></li>
@@ -52,8 +51,8 @@
                     <div class="icon">
                         <i class="fa-solid fa-download"></i>
                     </div>
-                    
                 </div>
+
                 <h2>xNeed Downloader</h2>
                 <p class="description">Sistema de download de videos</p>
 
@@ -113,31 +112,26 @@
                 </div>
             </div>
 
-            <div class="cta-section"> <!-- Call to Action Section -->
+            <div class="cta-section">
                 <a href="../../pagamentos/index.php" class="cta-button chatbot-cta">Comprar</a>
             </div>
-                
-                
-
         </section>
-
-        
-
     </main>
 
-     <!-- Footer -->
+     <!-- RODAPÉ REUTILIZÁVEL -->
      <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.html" class="logo">
+                    <a href="downloader.php" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
+
                     <p class="footer-description">
                         Transformando empresas através de soluções de software inovadoras e eficientes.
                     </p>
+
                     <div class="social-links">
-                        
                         <a href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
@@ -147,24 +141,24 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
-                        <li><a href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
-                        <li><a href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
+                        <li><a title="Adquira o produto Chatbot" href="chatbot.php">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="downloader.php">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="message.php">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="QrGenerator.php">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="Excel.php">xNeed Excel</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a href="../sobre/index.html">Sobre Nós</a></li>
+                        <li><a href="../../sobre/index.php">Sobre Nós</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
-                    <ul>
-                        
-                        
+                    <ul>                      
                         <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
                     </ul>
                 </div>
@@ -175,8 +169,5 @@
             </div>
         </div>
     </footer>
-    
-
-    
 </body>
 </html>

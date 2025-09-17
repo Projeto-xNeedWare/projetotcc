@@ -360,7 +360,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.html" class="logo">
+                    <a href="index.php" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
                     <p class="footer-description">
@@ -376,18 +376,18 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a title="Adquira o produto Chatbot" href="../produtos/produtos_separados/chatbot.html">xNeed Chatbot</a></li>
-                        <li><a title="Adquira o produto Downloader" href="../produtos/produtos_separados/downloader.html">xNeed Downloader</a></li>
-                        <li><a title="Adquira o produto Message" href="../produtos/produtos_separados/message.html">xNeed Message</a></li>
-                        <li><a title="Adquira o produto QrGenerator" href="../produtos/produtos_separados/QrGenerator.html">xNeed QrGenerator</a></li>
-                        <li><a title="Adquira o produto Excel" href="../produtos/produtos_separados/Excel.html">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Chatbot" href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="../produtos/produtos_separados/QrGenerator.php">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="../produtos/produtos_separados/Excel.php">xNeed Excel</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a title="Saiba mais sobre nós" href="../sobre/index.html">Sobre Nós</a></li>
+                        <li><a title="Saiba mais sobre nós" href="../sobre/index.php">Sobre Nós</a></li>
                     </ul>
                 </div>
 

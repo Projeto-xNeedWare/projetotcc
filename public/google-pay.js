@@ -242,7 +242,6 @@ function updatePaymentSummary(method) {
         'google-pay': 'Google Pay',
         'credit-card': 'Cartão de crédito',
         'pix': 'PIX',
-        'boleto': 'Boleto bancário'
     };
     
     const summaryPayment = document.getElementById('summary-payment');
@@ -341,18 +340,6 @@ function validateCurrentStep(step) {
             }
             return true;
             
-        case 2:
-            // Validar campos obrigatórios
-            const requiredFields = ['name', 'email', 'cpf', 'phone'];
-            for (let field of requiredFields) {
-                const input = document.getElementById(field);
-                if (!input || !input.value.trim()) {
-                    alert(`Por favor, preencha o campo ${field}.`);
-                    return false;
-                }
-            }
-            return true;
-            
         case 3:
             // Validar método de pagamento selecionado
             const activeTab = document.querySelector('.payment-tab.active');
@@ -418,10 +405,6 @@ document.getElementById('payment-form').addEventListener('submit', function(e) {
         case 'pix':
             processPixPayment();
             break;
-            
-        case 'boleto':
-            processBoletoPayment();
-            break;
     }
 });
 
@@ -433,78 +416,3 @@ function processCardPayment() {
         showPaymentSuccess();
     }, 2000);
 }
-
-// Processar pagamento PIX
-function processPixPayment() {
-    console.log('Gerando QR Code PIX...');
-    setTimeout(() => {
-        showPaymentSuccess();
-    }, 1000);
-}
-
-// Processar pagamento boleto
-function processBoletoPayment() {
-    console.log('Gerando boleto...');
-    setTimeout(() => {
-        showPaymentSuccess();
-    }, 1000);
-}
-
-// Máscaras para campos
-document.addEventListener('DOMContentLoaded', function() {
-    // Máscara CPF
-    const cpfInput = document.getElementById('cpf');
-    if (cpfInput) {
-        cpfInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/(\d{3})(\d)/, '$1.$2');
-            value = value.replace(/(\d{3})(\d)/, '$1.$2');
-            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-            this.value = value;
-        });
-    }
-    
-    // Máscara CNPJ
-    const cnpjInput = document.getElementById('cnpj');
-    if (cnpjInput) {
-        cnpjInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/^(\d{2})(\d)/, '$1.$2');
-            value = value.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
-            value = value.replace(/\.(\d{3})(\d)/, '.$1/$2');
-            value = value.replace(/(\d{4})(\d)/, '$1-$2');
-            this.value = value;
-        });
-    }
-    
-    // Máscara telefone
-    const phoneInput = document.getElementById('phone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/^(\d{2})(\d)/, '($1) $2');
-            value = value.replace(/(\d{5})(\d{4})$/, '$1-$2');
-            this.value = value;
-        });
-    }
-    
-    // Máscara cartão
-    const cardInput = document.getElementById('card-number');
-    if (cardInput) {
-        cardInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
-            this.value = value;
-        });
-    }
-    
-    // Máscara validade
-    const expiryInput = document.getElementById('card-expiry');
-    if (expiryInput) {
-        expiryInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/(\d{2})(\d)/, '$1/$2');
-            this.value = value;
-        });
-    }
-});
