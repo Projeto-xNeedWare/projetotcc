@@ -173,51 +173,21 @@
                     </div>
 
                     <div class="form-step hidden" id="step-2">
-                        <h2>Informações pessoais</h2>
+                        <h2>Confirme seus dados clicando em "Continuar"</h2>
                         
-                        <div class="form-group">
-                            <label for="name">Nome completo</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="cpf">CPF</label>
-                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Telefone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
-                            </div>
-                        </div>
+                        <?php
+                        $nome = $_SESSION['usuario_nome'] ?? '';
+                        $email = $_SESSION['usuario_email'] ?? '';
+                        ?>
 
-                        <h3>Informações da empresa</h3>
-                        
                         <div class="form-group">
-                            <label for="company">Nome da empresa</label>
-                            <input type="text" id="company" name="company">
+                            <label for="nome">Nome</label>
+                            <span class="user-info"><?php echo htmlspecialchars($nome); ?></span>
                         </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="cnpj">CNPJ</label>
-                                <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">
-                            </div>
-                            <div class="form-group">
-                                <label for="company-size">Tamanho da empresa</label>
-                                <select id="company-size" name="company-size">
-                                    <option value="">Selecione</option>
-                                    <option value="1-10">1-10 funcionários</option>
-                                    <option value="11-50">11-50 funcionários</option>
-                                    <option value="51-200">51-200 funcionários</option>
-                                    <option value="201+">201+ funcionários</option>
-                                </select>
-                            </div>
+                        <div class="form-group">
+                            <label for="email">Email para receber o arquivo</label>
+                            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
+                            <small>Você pode alterar o email para receber o arquivo em outro endereço.</small>
                         </div>
 
                         <div class="form-actions">

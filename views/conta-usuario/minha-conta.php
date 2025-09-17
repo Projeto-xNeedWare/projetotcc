@@ -41,12 +41,31 @@
     </div>
 </header>
 
+<?php
+    $usuario_id = $_SESSION['usuario'] ?? null;
+    $total_compras = 0;
+    $gasto_total = 0.00;
+
+    if ($usuario_id) {
+        $conn = new mysqli('127.0.0.1', 'root', '', 'xneedware');
+        if (!$conn->connect_error) {
+            $sql = "SELECT COUNT(*) AS total, SUM(valor) AS gasto FROM historico_compras WHERE usuario_id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('i', $usuario_id);
+            $stmt->execute();
+            $stmt->bind_result($total_compras, $gasto_total);
+            $stmt->fetch();
+            $stmt->close();
+            $conn->close();
+        }
+    }
+?>
+
 <!-- Conteúdo Principal -->
 <main class="container">
     <h1 class="page-title">Minha Conta</h1>
     <h1><?php include '../../public/nome-usuario.php'; ?></h1>
-
-    <!-- Cards de Estatísticas -->
+    
     <div class="stats-grid">
         <div class="stat-card">
             <div class="stat-icon purple">
@@ -54,17 +73,17 @@
             </div>
             <div class="stat-info">
                 <p class="stat-label">Total de Compras</p>
-                <h3 class="stat-value">0</h3>
+                <h3 class="stat-value"><?php echo $total_compras; ?></h3>
             </div>
         </div>
-     
+    
         <div class="stat-card">
-            <div class="stat-icon indigo">
-                <i class="fas fa-chart-bar"></i>
+            <div class="stat-icon purple">
+                <i class="fas fa-dollar-sign"></i>
             </div>
             <div class="stat-info">
-                <p class="stat-label">Valor Total</p>
-                <h3 class="stat-value">R$ 0,00</h3>
+                <p class="stat-label">Gasto Total</p>
+                <h3 class="stat-value">R$ <?php echo number_format($gasto_total, 2, ',', '.'); ?></h3>
             </div>
         </div>
     </div>
@@ -86,7 +105,7 @@
                 </div>
                 <?php
                 $nome = $_SESSION['usuario_nome'] ?? $_COOKIE['nome'] ?? 'Usuário';
-                $email = $_SESSION['usuario_email'] ?? '';
+                $email = $_SESSION['usuario_email'] ?? $_COOKIE['email'] ?? 'email@exemplo.com';
                 ?>
                 <div class="card-content">
                     <div class="form-row">
@@ -96,7 +115,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <span class="user-info"><?php echo htmlspecialchars($usuario_email); ?></span>
+                            <span class="user-info"><?php echo htmlspecialchars($email); ?></span>
                         </div>
                     </div>
                 </div>
@@ -105,12 +124,26 @@
 
         <!-- Aba: Compras -->
         <div class="tab-content" id="purchases">
-            <!-- Seu conteúdo de histórico de compras -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Histórico de Compras</h2>
+                    <p class="card-description">Veja todas as suas compras anteriores</p>
+                </div>
+                <div class="tab-content" id="purchases">
+                <?php include '../../public/historico-compras.php'; ?>
+            </div>
         </div>
 
         <!-- Aba: Configurações -->
         <div class="tab-content" id="settings">
-            <!-- Seu conteúdo de configurações -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Configurações da Conta</h2>
+                    <p class="card-description">Altere suas informações de acesso</p>
+                </div>
+                <div class="tab-content" id="settings">
+                <?php include '../../public/historico-compras.php'; ?>
+            </div>
         </div>
     </div>
 </main>

@@ -1,6 +1,6 @@
 <?php
 // Conexão com banco de dados (MySQLi orientado a objeto)
-$servername = "127.0.0.1"; // ou o host da sua hospedagem
+$servername = "127.0.0.1";
 $username   = "root";
 $password   = "";
 $dbname     = "xneedware";
