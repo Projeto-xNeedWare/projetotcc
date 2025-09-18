@@ -152,7 +152,13 @@ function processGooglePayPayment(paymentData) {
 function showPaymentSuccess() {
     // Ir para o step final
     nextStep(4);
-    
+
+    fetch('../../public/historico-pagamento.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `produto=${encodeURIComponent(selectedProduct.name)}&valor=${encodeURIComponent(selectedProduct.price)}`
+    });
+
     // Mostrar mensagem de sucesso
     const step4 = document.getElementById('step-4');
     step4.innerHTML = `

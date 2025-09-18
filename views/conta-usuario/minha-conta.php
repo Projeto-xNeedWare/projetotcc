@@ -76,7 +76,7 @@
                 <h3 class="stat-value"><?php echo $total_compras; ?></h3>
             </div>
         </div>
-    
+
         <div class="stat-card">
             <div class="stat-icon purple">
                 <i class="fas fa-dollar-sign"></i>
@@ -147,8 +147,6 @@
         </div>
     </div>
 </main>
-
-
 
 <script>
     // Script de alternância de abas
