@@ -26,40 +26,18 @@
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
-                    <button class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </button>
-    
-        <nav class="main-nav">
-            <ul>
-                <li><a href="../produtos/index.php">Produtos</a></li>
-                <li><a href="../sobre/index.php">Sobre</a></li>
-                <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
-                <?php include '../../public/header-usuario.php'; ?>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<?php
-    $usuario_id = $_SESSION['usuario'] ?? null;
-    $total_compras = 0;
-    $gasto_total = 0.00;
-
-    if ($usuario_id) {
-        $conn = new mysqli('127.0.0.1', 'root', '', 'xneedware');
-        if (!$conn->connect_error) {
-            $sql = "SELECT COUNT(*) AS total, SUM(valor) AS gasto FROM historico_compras WHERE usuario_id = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param('i', $usuario_id);
-            $stmt->execute();
-            $stmt->bind_result($total_compras, $gasto_total);
-            $stmt->fetch();
-            $stmt->close();
-            $conn->close();
-        }
-    }
-?>
+            <button class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></button>
+        
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../produtos/index.php">Produtos</a></li>
+                    <li><a href="../sobre/index.php">Sobre</a></li>
+                    <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../public/header-usuario.php'; ?>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 <!-- Conteúdo Principal -->
 <main class="container">
@@ -73,7 +51,7 @@
             </div>
             <div class="stat-info">
                 <p class="stat-label">Total de Compras</p>
-                <h3 class="stat-value"><?php echo $total_compras; ?></h3>
+                <h3 class="stat-value">0</h3>
             </div>
         </div>
 
@@ -83,7 +61,7 @@
             </div>
             <div class="stat-info">
                 <p class="stat-label">Gasto Total</p>
-                <h3 class="stat-value">R$ <?php echo number_format($gasto_total, 2, ',', '.'); ?></h3>
+                <h3 class="stat-value">R$ 00,00</h3>
             </div>
         </div>
     </div>
