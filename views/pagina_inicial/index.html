@@ -38,20 +38,20 @@
             </nav>
 
             <script src="../../public/entrar.js"></script>
-        
         </div>
-    
     </header>
 
-    <!-- Hero Section -->
+    <!-- Seção Inicial -->
     <section class="hero">
-        
+        <!-- Luzes de fundo gradiante -->
         <div class="bg-blob blob1"></div>
         <div class="bg-blob blob2"></div>
         <div class="bg-blob blob3"></div>
 
+        <!-- Seção Hero: parte principal do site que aparece primeiro, usada pra chamar atenção com título, descrição e dashboard -->
         <div class="container">
-            <div class="hero-grid"> <!-- Seção Hero: parte principal do site que aparece primeiro, usada pra chamar atenção com imagem, título e botão -->
+            <div class="hero-grid">
+                <!-- Título, Descrição e Botões "Explorar" e "Fale Conosco" -->
                 <div class="hero-content">
                     <h1 class="hero-title">
                         Software Premium para 
@@ -71,100 +71,74 @@
                     </div>
                 </div>
 
-                <!-- Início da imagem de fundo com animação de fade-in e delay -->
+                <!-- Dashboard em Forma de Cartão -->
                 <div class="hero-image">
-                    
-                    <!-- Início da área de pré-visualização do dashboard -->
+                    <!-- Fundo e cabeçalho do dashboard -->
                     <div class="dashboard-fundo">
-                        
-                        <!-- Início do cabeçalho do dashboard -->
                         <div class="dashboard-header">
                             <div class="dashboard-dots">
-                                <!-- Botão de fechar (representado por um ponto vermelho) -->
                                 <div class="dot red" title="Close"></div>
-                                <!-- Botão de minimizar (representado por um ponto amarelo) -->
                                 <div class="dot yellow" title="Minimize"></div>
-                                <!-- Botão de maximizar (representado por um ponto verde) -->
                                 <div class="dot green" title="Maximize"></div>
                             </div>
-                            <!-- Título do dashboard -->
                             <div class="dashboard-title">xNeedWare Dashboard</div>
                         </div>
                         
-                        <!-- Início do conteúdo do dashboard -->
+                        <!-- Conteúdo do dashboard-->
                         <div class="dashboard-content">
-                            
-                            <!-- Barra de progresso para carregar dados -->
                             <div class="dashboard-bar">
                                 <div style="width: 75%; height: 100%; background: linear-gradient(to right, rgba(124, 58, 237, 0.7), rgba(37, 99, 235, 0.7)); border-radius: inherit; animation: loading 2s ease-in-out infinite;">
-                                    <!-- Texto exibido durante o carregamento -->
                                     <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: rgba(255, 255, 255, 0.8); font-size: 0.75rem;">
                                         Carregando dados...
                                     </div>
                                 </div>
                             </div>
-                
                             
-                            <!-- Grid de cards do dashboard -->
+                            <!-- Grid Dashboard -->
                             <div class="dashboard-grid">
-                                
-                                <!-- Card de "Usuários ativos" -->
+                                <!-- Usuários ativos -->
                                 <div class="dashboard-card purple">
                                     <div class="card-content" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                        <!-- Título do card -->
                                         <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Usuários ativos</div>
                                         <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                            <!-- Número de usuários ativos -->
-                                            <strong id="num-random" style="color: white; font-size: 1.25rem;">124</strong>
-                                            <!-- Percentual de variação -->
-                                            <span id="num-random4" style="color: #34d399; font-size: 0.7rem;">↑ 8%</span>
+                                            <strong id="num-random" style="color: white; font-size: 1.25rem;"></strong> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
+                                            <span id="num-random4" style="color: #34d399; font-size: 0.7rem;"></span> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <!-- Card de "Novas vendas" -->
+                                <!-- Novas vendas -->
                                 <div class="dashboard-card blue">
                                     <div class="card-content" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                                        <!-- Título do card -->
                                         <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Novas vendas</div>
                                         <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                            <!-- Número de novas vendas -->
-                                            <strong id="num-random3" style="color: white; font-size: 1.25rem;">37</strong>
-                                            <!-- Percentual de variação -->
-                                            <span id="num-random2" style="color: #34d399; font-size: 0.7rem;">↑ 12%</span>
+                                            <strong id="num-random3" style="color: white; font-size: 1.25rem;"></strong> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
+                                            <span id="num-random2" style="color: #34d399; font-size: 0.7rem;"></span> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Rodapé do dashboard -->
+                        <!-- Rodapé do Dashboard com informação de Receita Fictícia -->
                         <div class="dashboard-footer">
-                            
-                            <!-- Barra de rodapé exibindo a receita total -->
                             <div class="footer-bar" style="display: flex; align-items: center; padding: 1 1rem; margin-top: 2rem">
-                               
-                                <!-- Texto exibindo a receita total -->
                                 <span style="color: rgba(255, 255, 255, 0.7); font-size: 0.75rem; margin-left: 1rem">Receita: $ 120.450</span>
                             </div>
-                            
                         </div>
-                        
                     </div>
                 </div>
-                
             </div>
         </div>
-    
     </section>
 
-    <!-- Sessão de contato -->
+    <!-- Sessão de Contato -->
     <section id="contato" class="contact">
         
         <div class="container">
             
-            <div class="section-header">
-                
+            <!-- -->
+            <div class="section-header"> 
                 <h2 class="section-title">
                     Entre em <span class="gradient-text">Contato</span> e faça sua <span class="gradient-text">Cotação</span>
                 </h2>
