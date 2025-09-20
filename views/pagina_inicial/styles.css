@@ -675,6 +675,43 @@
     gap: 1.5rem;
     margin-bottom: 1.5rem;
   }
+
+
+  /* 5.6 partners */
+  .partners {
+    padding: 3rem 0;
+    border-top: 1px solid var(--color-gray-800);
+    border-bottom: 1px solid var(--color-gray-800);
+  }
+  .partners-text {
+    
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .partners-grid img {
+    border-radius: 25px;
+
+    
+    transition: all 0.3s ease;
+    max-height: 200px; /* Limita a altura máxima das logos */
+    object-fit: contain; /* Mantém a proporção da imagem */
+  }
+
+  .partners-grid img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
   
   
   

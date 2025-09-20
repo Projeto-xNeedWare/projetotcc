@@ -246,6 +246,63 @@
     
     </section>
 
+    <section class="partners">
+
+
+        <div class="bg-blob blob1"></div>
+        <div class="bg-blob blob2"></div>
+        
+        
+        <div class="partners-text">
+            
+            <h1>Grupo xNeed</h1>
+            
+            <p>Conectando empresas com inovação: todos os sites do nosso grupo são criados pelo Grupo xNeed.</p>
+
+            <p>Descubra também nossos parceiros que fazem parte desta rede de soluções digitais.</p>
+            
+
+        </div>
+
+        <div class="container">
+            
+            <div class="partners-grid">
+                
+                <div class="partner-logo">
+                    <a href="https://macarvalho07.github.io/Pira-Tour/" target="_blank" rel="noopener">
+                        <img src="../assets/partners/pira_tour.png" alt="pira_tour.png" title="Parceiro Pira Tour">
+                    </a>
+                </div>
+                
+                <div class="partner-logo">
+                    <a href="https://macarvalho07.github.io/Always-Far/" target="_blank" rel="noopener">
+                        <img src="../assets/partners/always_far.png" alt="Always_Far.png" title="Parceiro Always Far">
+                    </a>
+                </div>
+
+                <div class="partner-logo">
+                    <a href="https://xneedwarebuilder-dse14tmo4-matheus-carvalhos-projects-4d8f70ca.vercel.app/" target="_blank" rel="noopener">
+                        <img src="../assets/partners/xneedware_builder.png" alt="xneedware_builder" title="Parceiro xNeedWare Builder">
+                    </a>
+                </div>
+                
+                <div class="partner-logo">
+                    <a href="https://nalift.com.br/ " target="_blank" rel="noopener">
+                        <img src="../assets/partners/nalift.png" alt="nalift" title="Parceiro NaLift">
+                    </a>
+                </div>
+                
+                <div class="partner-logo">
+                    <a href="">
+                        <img src="../assets/partners/cryptobr.png" alt="cryptobr" title="Parceiro CryptoBR">
+                    </a>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+        
+        
     <!-- sessão em breve -->
     <section class="coming-soon">
         <div class="bg-blob blob1"></div>
