@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xNeedWare - Soluções de Software Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../bootstraps/footer.css">
+    <link rel="stylesheet" href="../bootstraps/header.css">
+
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+</head>
+<body>
+    <!-- Início do cabeçalho reutilizável -->
+    <header class="xneedware-header">
+        <div class="header-container">
+            <a href="../pagina_inicial/index.php" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
+                <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.php">Produtos</a></li>
+                    <li><a title="Saiba mais sobre nós" href="../sobre/index.php">Sobre</a></li>
+                    <li><a title="Entre em contato conosco" href="./../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../public/header-usuario.php'; ?>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <h1>Nossos <span class="highlight">Produtos</span></h1>
+            <p class="subtitle">
+                Veja produtos feitos pela nossa equipe para atender às suas necessidades do dia a dia.
+            </p>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="product-cards">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2><span class="x">x</span>Need Downloader</h2>
+                    <p class="description">
+                        Baixe videos da internet de um maneira simples e rápida.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Sem anúncios</li>
+                        <li><i class="fas fa-check"></i> Apenas digite o URL do vídeo</li>
+                        <li><i class="fas fa-check"></i> 100% confiável</li>
+                        <li><i class="fas fa-check"></i> 100% gratuito</li>
+                    </ul>
+                    <a href="../produtos/produtos_separados/downloader.php" class="learn-more" title="Saiba mais sobre o xNeed Downloader">Saiba mais</a>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2><span class="x">x</span>Need Message</h2>
+                    <p class="description">
+                        Dipare mensagens de uma maneira rápida para vários contatos.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Envie a mensagem que desejar</li>
+                        <li><i class="fas fa-check"></i> Envie para quantos você quiser</li>
+                        <li><i class="fas fa-check"></i> Não pague nada por isso</li>
+                        <li><i class="fas fa-check"></i> Simples e prático</li>
+                    </ul>
+                    <a href="../produtos/produtos_separados/message.php" class="learn-more" title="Saiba mais sobre o xNeed Message">Saiba mais</a>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2><span class="x">x</span>Need Chat Bot</h2>
+                    <p class="description">
+                        Chatbot inteligente para responder dúvidas frequentes e oferecer suporte automático aos seus clientes.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Respostas instantâneas</li>
+                        <li><i class="fas fa-check"></i> Aprendizado contínuo</li>
+                        <li><i class="fas fa-check"></i> Atendimento 24/7</li>
+                        <li><i class="fas fa-check"></i> Melhora a experiência do usuário</li>
+                    </ul>
+                    <a href="../produtos/produtos_separados/chatbot.php" class="learn-more" title="Saiba mais sobre o xNeed Chat Bot">Saiba mais</a>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2><span class="x">x</span>Need QR Generator</h2>
+                    <p class="description">
+                        Gerador de QR Codes personalizados, sem anúncios e de forma rápida.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Sem anúncios</li>
+                        <li><i class="fas fa-check"></i> Totalmente automatizado</li>
+                        <li><i class="fas fa-check"></i> Oferecemos suporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Melhora a experiência do seu negócio</li>
+                    </ul>
+                    <a href="../produtos/produtos_separados/QrGenerator.php" class="learn-more" title="Saiba mais sobre o xNeed QR Generator">Saiba mais</a>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2><span class="x">x</span>Need Graphics</h2>
+                    <p class="description">
+                        Software que analisa dados em forma de CSV e cria graficos a partir dessas informações.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Respostas instantâneas</li>
+                        <li><i class="fas fa-check"></i> Graficos baseado </li>
+                        <li><i class="fas fa-check"></i> Atendimento 24/7</li>
+                        <li><i class="fas fa-check"></i> Melhora a experiência do usuário</li>
+                    </ul>
+                    <a href="../produtos/produtos_separados/Excel.php" class="learn-more" title="Saiba mais sobre o xNeed Graphics">Saiba mais</a>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2><span class="x">x</span>Need Manage</h2>
+                    <p class="description">
+                        Organiza e gerencia o cadastro de funcionários, armazenando dados importantes para facilitar a gestão de pessoas.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Cadastro rápido e intuitivo</li>
+                        <li><i class="fas fa-check"></i> Acesso seguro e em tempo real</li>
+                        <li><i class="fas fa-check"></i> Redução de erros no gerenciamento</li>
+                        <li><i class="fas fa-check"></i> Suporte e escalabilidade garantidos</li>
+                    </ul>
+                    <a href="../produtos/produtos_separados/Excel.php" class="learn-more" title="Saiba mais sobre o xNeed Manage">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.php" class="logo">
+                        <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+                    </a>
+                    <p class="footer-description">
+                        Transformando empresas através de soluções de software inovadoras e eficientes.
+                    </p>
+                    <div class="social-links">
+                        
+                        <a title="Visite nosso Instagram" href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a title="Visite nosso LinkedIn" href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a title="Visite nosso GitHub" title="Visite nosso Instagram" href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Produtos</h3>
+                    <ul>
+                        <li><a title="Adquira o produto Chatbot" href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="../produtos/produtos_separados/QrGenerator.php">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="../produtos/produtos_separados/Excel.php">xNeed Excel</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Empresa</h3>
+                    <ul>
+                        <li><a title="Saiba mais sobre nós" href="../sobre/index.php">Sobre Nós</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Suporte</h3>
+                    <ul>
+                        <li><a title="Acesse nossa política de privacidade" href="../politica_privacidade/index.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

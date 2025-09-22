@@ -2,7 +2,15 @@
 
 Sistema de gerenciamento de pedidos de desenvolvimento de softwares personalizados, voltado para atender empresas e indivíduos que desejam soluções sob medida. Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC) para o curso Técnico em Desenvolvimento de Sistemas.
 
----
+## Como rodar o localhost com PHP/XAMPP/MySQL Workbench
+Obs. Para funcionar:
+1. A pasta "projetotcc" deve estar em htdocs dentro do XAMPP
+2. O MySQL Workbench deve ser instalado e banco de dados que será conectado no código
+3. As tabelas devem estar criadas
+
+Após os passos acima:
+- Abra o terminal e coloque o seguinte comando PHP "php -S localhost:8000", assim o servidor começará a rodar
+- Logo em seguida, abra o seguinte link "http://localhost:8000/views/pagina_inicial/index.php"
 
 ## 🚀 Funcionalidades Principais
 

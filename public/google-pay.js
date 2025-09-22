@@ -152,7 +152,13 @@ function processGooglePayPayment(paymentData) {
 function showPaymentSuccess() {
     // Ir para o step final
     nextStep(4);
-    
+
+    fetch('../../public/historico-pagamento.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `produto=${encodeURIComponent(selectedProduct.name)}&valor=${encodeURIComponent(selectedProduct.price)}`
+    });
+
     // Mostrar mensagem de sucesso
     const step4 = document.getElementById('step-4');
     step4.innerHTML = `
@@ -168,7 +174,7 @@ function showPaymentSuccess() {
             <p style="color: #666; font-size: 14px; margin-bottom: 30px;">
                 Você receberá um email com as instruções de download em breve.
             </p>
-            <button onclick="window.location.href='../produtos/index.html'" style="
+            <button onclick="window.location.href='../produtos/index.php'" style="
                 background: #28a745;
                 color: white;
                 border: none;
@@ -242,7 +248,6 @@ function updatePaymentSummary(method) {
         'google-pay': 'Google Pay',
         'credit-card': 'Cartão de crédito',
         'pix': 'PIX',
-        'boleto': 'Boleto bancário'
     };
     
     const summaryPayment = document.getElementById('summary-payment');
@@ -341,18 +346,6 @@ function validateCurrentStep(step) {
             }
             return true;
             
-        case 2:
-            // Validar campos obrigatórios
-            const requiredFields = ['name', 'email', 'cpf', 'phone'];
-            for (let field of requiredFields) {
-                const input = document.getElementById(field);
-                if (!input || !input.value.trim()) {
-                    alert(`Por favor, preencha o campo ${field}.`);
-                    return false;
-                }
-            }
-            return true;
-            
         case 3:
             // Validar método de pagamento selecionado
             const activeTab = document.querySelector('.payment-tab.active');
@@ -418,10 +411,6 @@ document.getElementById('payment-form').addEventListener('submit', function(e) {
         case 'pix':
             processPixPayment();
             break;
-            
-        case 'boleto':
-            processBoletoPayment();
-            break;
     }
 });
 
@@ -433,78 +422,3 @@ function processCardPayment() {
         showPaymentSuccess();
     }, 2000);
 }
-
-// Processar pagamento PIX
-function processPixPayment() {
-    console.log('Gerando QR Code PIX...');
-    setTimeout(() => {
-        showPaymentSuccess();
-    }, 1000);
-}
-
-// Processar pagamento boleto
-function processBoletoPayment() {
-    console.log('Gerando boleto...');
-    setTimeout(() => {
-        showPaymentSuccess();
-    }, 1000);
-}
-
-// Máscaras para campos
-document.addEventListener('DOMContentLoaded', function() {
-    // Máscara CPF
-    const cpfInput = document.getElementById('cpf');
-    if (cpfInput) {
-        cpfInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/(\d{3})(\d)/, '$1.$2');
-            value = value.replace(/(\d{3})(\d)/, '$1.$2');
-            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-            this.value = value;
-        });
-    }
-    
-    // Máscara CNPJ
-    const cnpjInput = document.getElementById('cnpj');
-    if (cnpjInput) {
-        cnpjInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/^(\d{2})(\d)/, '$1.$2');
-            value = value.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
-            value = value.replace(/\.(\d{3})(\d)/, '.$1/$2');
-            value = value.replace(/(\d{4})(\d)/, '$1-$2');
-            this.value = value;
-        });
-    }
-    
-    // Máscara telefone
-    const phoneInput = document.getElementById('phone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/^(\d{2})(\d)/, '($1) $2');
-            value = value.replace(/(\d{5})(\d{4})$/, '$1-$2');
-            this.value = value;
-        });
-    }
-    
-    // Máscara cartão
-    const cardInput = document.getElementById('card-number');
-    if (cardInput) {
-        cardInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
-            this.value = value;
-        });
-    }
-    
-    // Máscara validade
-    const expiryInput = document.getElementById('card-expiry');
-    if (expiryInput) {
-        expiryInput.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
-            value = value.replace(/(\d{2})(\d)/, '$1/$2');
-            this.value = value;
-        });
-    }
-});

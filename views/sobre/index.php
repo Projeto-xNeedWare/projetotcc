@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a xNeedWare - Inovação e Excelência em Soluções Digitais</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header class="xneedware-header">
+        <div class="header-container">
+            <a href="../pagina_inicial/index.php" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
+                <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+
+            <button class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.php">Produtos</a></li>
+                    <li><a title="Saiba mais sobre a xNeedWare" href="../sobre/index.php">Sobre</a></li>
+                    <li><a title="Entre em contato conosco" href="./../pagina_inicial/index.php#contato">Contato</a></li>
+                    <?php include '../../public/header-usuario.php'; ?>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main>
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="vid_background.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+        <section class="hero about-hero">
+            <div class="hero-content">
+                <h1>Transformando o futuro digital</h1>
+                <p class="subtitle">A xNeedWare é uma empresa de tecnologia dedicada a criar soluções inovadoras que impulsionam o crescimento 
+                    e a eficiência dos negócios.</p>
+            </div>
+        </section>
+
+        <section class="about-intro">
+            <div class="section-header">
+                <h2>Nossa História</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <img src="empresa.avif" alt="" style="width: 100%;">
+                        </div>
+                            
+                        <div class="image-accent"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        Em 2025, quatro jovens apaixonados por tecnologia transformaram um simples projeto de TCC em algo muito maior: a <strong>xNeedWare</strong>. 
+                        Nascida dentro de uma sala de aula do ensino médio em Piracicaba, nossa empresa surgiu com um propósito claro — <strong>levar soluções 
+                        digitais de alto nível a todas as empresas, independentemente do tamanho</strong>.
+                    </p> 
+                    <p>
+                        De um trabalho escolar à conquista de clientes em todo o Brasil e América Latina, a nossa história é marcada por coragem, 
+                        aprendizado constante e a vontade de fazer diferente. Cada linha de código que escrevemos carrega o mesmo espírito ousado do começo:
+                        <strong>inovar, facilitar e transformar realidades empresariais por meio da tecnologia</strong>.
+                    </p> 
+                    <p>
+                        Hoje, a xNeedWare é mais do que uma empresa — é o reflexo do sonho de jovens que acreditaram que poderiam mudar o mundo com 
+                        suas ideias. E seguimos firmes, ajudando negócios a crescer com ferramentas inteligentes, acessíveis e criadas para impulsionar 
+                        resultados.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-values">
+            <div class="section-header">
+                <h2>Missão, Visão e Valores</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon mission-icon"></div>
+                    <h3>Missão</h3>
+                    <p>Ajudar empresas com tecnologias inovadoras que impulsionem seu crescimento e transformem a maneira como operam no mundo atual.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon vision-icon"></div>
+                    <h3>Visão</h3>
+                    <p>Ser reconhecida globalmente como líder em soluções tecnológicas que definem o futuro dos negócios e estabelecem novos padrões de 
+                        excelência.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon values-icon"></div>
+                    <h3>Valores</h3>
+                    <ul class="values-list">
+                        <li><span class="check-icon">✓</span> Inovação constante</li>
+                        <li><span class="check-icon">✓</span> Integridade e transparência</li>
+                        <li><span class="check-icon">✓</span> Foco no cliente</li>
+                        <li><span class="check-icon">✓</span> Colaboração e Respeito</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="section-header">
+                <h2>Nossa Liderança</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Conheça os visionários que estão à frente da xNeedWare</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="matheus.jpg" alt="Matheus de Mello" style="filter: grayscale(100%);">
+                    </div>
+                    <h3>Matheus Carvalho</h3>
+                    <p class="member-title">Liderança Técnica</p>
+                    <p class="member-bio">
+                        Fundador e CEO da xNeedWare, responsável por liderar a equipe de desenvolvimento e 
+                        impulsionar a inovação nos projetos da empresa. Atua diretamente na criação de soluções com foco 
+                        em design moderno e alto desempenho.
+                    </p>
+                    <div class="social-links">
+                        <a title="Visite o LinkedIn de Matheus Carvalho" href="#" class="social-link linkedin"></a>
+                        <a title="Visite o Instagram de Matheus Carvalho" href="#" class="social-link instagram"></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="felipe.jpeg" alt="Felipe Lotério" style="filter: grayscale(100%);">
+                    </div>
+                    <h3>Felipe Lotério</h3>
+                    <p class="member-title">Arquiteto de Dados e Back-end</p>
+                    <p class="member-bio">
+                        Gerente técnico especializado em Banco de Dados, lidera a modelagem, otimização e 
+                        implementação de soluções eficientes e seguras para os projetos da equipe e de nossos clientes.
+                    </p>
+                    <div class="social-links">
+                        <a title="Visite o LinkedIn de Felipe Lotério" href="https://www.linkedin.com/in/felipe-loterio-dos-santos-3156a2316/" class="social-link linkedin"></a>
+                        <a title="Visite o Instagram de Felipe Lotério" href="#" class="social-link instagram"></a>
+                    </div>
+                </div>
+                <div class="team-member" href="">
+                    <div class="member-photo">
+                        <img src="gabriel.jpeg" alt="Gabriel Marin" style="filter: grayscale(100%);">
+                    </div>
+                    <h3>Gabriel Marin</h3>
+                    <p class="member-title">COO & Product Manager</p>
+                    <p class="member-bio">
+                        Lidera a criação de soluções inteligentes de gestão para nossos clientes. Atua diretamente na definição de 
+                        estratégias, organização de fluxos e garantia da excelência operacional, assegurando que cada projeto atenda 
+                        altos padrões de qualidade e gere valor real aos usuários.
+                    </p>
+                    <div class="social-links">
+                        <a title="Visite o LinkedIn de Gabriel Marin" href="www.linkedin.com/in/gabriel-marin-26b33b248" class="social-link linkedin"></a>
+                        <a title="Visite o Instagram de Gabriel Marin" href="#" class="social-link instagram"></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="bruno.jpeg" alt="Bruno Correr" style="filter: grayscale(100%);">
+                    </div>
+                    <h3>Bruno Correr</h3>
+                    <p class="member-title">Desenvolvedor Full Stack</p>
+                    <p class="member-bio">
+                        Engenheiro de Software, Bruno atua no desenvolvimento de soluções dinâmicas 
+                        e interativas para nossos sistemas web. Especialista em lógica de programação, integra funcionalidades 
+                        no front-end e no back-end.
+                    </p>
+                    <div class="social-links">
+                        <a title="Visite o LinkedIn de Bruno Correr" href="https://www.linkedin.com/in/brunocorrercoa/" class="social-link linkedin"></a>
+                        <a title="Visite o Instagram de Bruno Correr" href="#" class="social-link instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="section-header">
+                <h2>xNeedWare em Números</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Clientes Ativos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Colaboradores</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Anos de Inovação</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Países Atendidos</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose">
+            <div class="section-header">
+                <h2>Por que escolher a xNeedWare?</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon innovation-icon"></div>
+                    <h3>Inovação Constante</h3>
+                    <p>Investimos continuamente em pesquisa do mercado e desenvolvimento para oferecer as soluções mais avançadas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon customization-icon"></div>
+                    <h3>Soluções Personalizadas</h3>
+                    <p>Entendemos que cada negócio é único, por isso nossas soluções são adaptáveis às necessidades específicas de cada cliente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon support-icon"></div>
+                    <h3>Suporte Excepcional</h3>
+                    <p>Nossa equipe de suporte está disponível 24/7 para garantir que você obtenha o máximo de nossas soluções.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon security-icon"></div>
+                    <h3>Segurança de Dados</h3>
+                    <p>Implementamos os mais altos padrões de segurança para proteger os dados de nossos clientes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon scalability-icon"></div>
+                    <h3>Escalabilidade</h3>
+                    <p>Nossas soluções crescem com o seu negócio, garantindo desempenho consistente em qualquer escala.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon integration-icon"></div>
+                    <h3>Integração Perfeita</h3>
+                    <p>Nossas ferramentas se integram facilmente com os sistemas existentes, minimizando interrupções nos negócios.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="section-header">
+                <h2>O que nossos clientes dizem</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="quote-icon"></div>
+                    <p class="testimonial-text">"Esse robozinho feito por esses meninos mudou a forma de trabalho da minha floricultura. 
+                        Agora, nem preciso ficar no celular respondendo mensagem, o robozinho já me traz o que a pessoa quer e pra quando."</p>
+                    <div class="testimonial-author">
+                        <div class="author-photo"></div>
+                        <div class="author-info">
+                            <h4>Dona Judite</h4>
+                            <p>Dono da Floricultura</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"></div>
+                    <p class="testimonial-text">"Eles fizeram um sistema de agendamento para minha barbearia que facilitou totalmente meu trabalho, agora 
+                        não preciso ficar atendendo ligação e marcando no caderno cada reserva, facilitou 100% meu trabalho"</p>
+                    <div class="testimonial-author">
+                        <div class="author-photo"></div>
+                        <div class="author-info">
+                            <h4>Seu Junin</h4>
+                            <p>Barbeiro da Junin Barbearia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"></div>
+                    <p class="testimonial-text">"Esses mulekes são incríveis, fizeram um sistema de chamado de manutenção para minha empresa e facilitou totalmente 
+                        minha comunicação com o cliente, agora conseguimos solicitar manutenções de máquinas e acompanhar o andamento por um dashboard"</p>
+                    <div class="testimonial-author">
+                        <div class="author-photo"></div>
+                        <div class="author-info">
+                            <h4>Kaiky Nishiyama</h4>
+                            <p>CEO da はホモ野郎だ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-arrow prev-arrow"></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-arrow next-arrow"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="section-header">
+                <h2>Nossos Parceiros</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo" style="display: flex; justify-content: center; align-items: center;">
+                  <a title="Parceiro Google" href="https://www.google.com" target="_blank">
+                    <i class="fab fa-google" style="font-size: 50px; color: #4285F4;"></i>
+                  </a>
+                </div>
+                <div class="partner-logo" style="display: flex; justify-content: center; align-items: center;">
+                  <a title="Parceiro Amazon" href="https://www.amazon.com" target="_blank">
+                    <i class="fab fa-amazon" style="font-size: 50px; color: #FF9900;"></i>
+                  </a>
+                </div>
+                <div class="partner-logo" style="display: flex; justify-content: center; align-items: center;">
+                  <a title="Parceiro Microsoft" href="https://www.microsoft.com" target="_blank">
+                    <i class="fab fa-microsoft" style="font-size: 50px; color: #00A4EF;"></i>
+                  </a>
+                </div>
+                <div class="partner-logo" style="display: flex; justify-content: center; align-items: center;">
+                  <a title="Parceiro Apple" href="https://www.apple.com" target="_blank">
+                    <i class="fab fa-apple" style="font-size: 50px; color: #ffffff;"></i>
+                  </a>
+                </div>
+                <div class="partner-logo" style="display: flex; justify-content: center; align-items: center;">
+                  <a title="Parceiro Meta" href="https://about.fb.com/" target="_blank">
+                    <i class="fab fa-meta" style="font-size: 50px; color: #1877F2;"></i>
+                  </a>
+                </div>
+                <div class="partner-logo" style="display: flex; justify-content: center; align-items: center;">
+                  <a title="Parceiro Spotify" href="https://www.spotify.com" target="_blank">
+                    <i class="fab fa-spotify" style="font-size: 50px; color: #1DB954;"></i>
+                  </a>
+                </div>
+              </div>
+        </section>
+
+        <section class="cta-section about-cta">
+            <div class="cta-content">
+                <h2>Pronto para transformar seu negócio?</h2>
+                <p>Junte-se a centenas de empresas que já estão aproveitando o poder das soluções xNeedWare.</p>
+                <div class="cta-buttons">
+                    <a title="Agende uma demonstração ou uma reunião" href="https://api.whatsapp.com/send?phone=5519996937305&text=Ol%C3%A1,%20quero%20agendar%20uma%20demonstra%C3%A7%C3%A3o!" class="cta-button primary-cta">Agendar Demonstração</a>
+                    <a title="Fale com um consultor" href="https://api.whatsapp.com/send?phone=5519997615610&text=Ol%C3%A1,%20quero%20falar%20com%20um%20consultor!" class="cta-button secondary-cta">Falar com Consultor</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.php" class="logo">
+                        <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+                    </a>
+                    <p class="footer-description">
+                        Transformando empresas através de soluções de software inovadoras e eficientes.
+                    </p>
+                    <div class="social-links" style="margin-left: -170px;">
+                        <a title="Visite nosso Instagram" href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a title="Visite nosso LinkedIn" href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a title="Visite nosso GitHub" href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Produtos</h3>
+                    <ul>
+                        <li><a title="Adquira o produto Chatbot" href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="../produtos/produtos_separados/QrGenerator.php">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="../produtos/produtos_separados/Excel.php">xNeed Excel</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Empresa</h3>
+                    <ul>
+                        <li><a title="Saiba mais sobre nós" href="../sobre/index.php">Sobre Nós</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-title">Suporte</h3>
+                    <ul>
+                        <li><a title="Acesse nossa política de privacidade" href="../politica_privacidade/index.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Script para controlar o slider de depoimentos
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonialCards = document.querySelectorAll('.testimonial-card'); //Seleciona todas as classes com esse nome
+            const dots = document.querySelectorAll('.dot');//Seleciona todas as classes com esse nome
+            const prevArrow = document.querySelector('.prev-arrow'); //Coloca o elemento html numa variável
+            const nextArrow = document.querySelector('.next-arrow'); //Coloca o elemento html numa variável
+            
+            let currentIndex = 0;
+            
+            // Função para mostrar o slide atual
+            function showSlide(index) {
+                // Esconde todos os slides
+                testimonialCards.forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                // Remove a classe active de todos os dots
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                // Mostra o slide atual
+                testimonialCards[index].style.display = 'block';
+                
+                // Adiciona a classe active ao dot atual
+                dots[index].classList.add('active');
+            }
+            
+            // Inicializa o slider
+            showSlide(currentIndex);
+            
+            // Event listeners para os dots
+            dots.forEach((dot, index) => {
+                //Adiciona um evento click para o dot
+                dot.addEventListener('click', () => {
+                    //Define o índice atual
+                    currentIndex = index;
+                    // Faz uma função para mostrar o slide
+                    showSlide(currentIndex);
+                });
+            });
+            
+            // Event listener para a seta anterior
+            prevArrow.addEventListener('click', () => {//Atribui uma função click para a flecha
+
+                currentIndex = (currentIndex - 1 + testimonialCards.length) % testimonialCards.length; // Faz um cálculo para o slide anterior
+                showSlide(currentIndex);
+            });
+            
+            // Event listener para a próxima seta
+            nextArrow.addEventListener('click', () => { //Atribui clique para a seta que vem
+                currentIndex = (currentIndex + 1) % testimonialCards.length; // Faz um cálculo para o slide à seguir
+                showSlide(currentIndex); //Mostra o slide
+            });
+            
+            // Rotação automática do slider a cada 5 segundos
+            setInterval(() => { //Se nao clicar em nada, acontece isso
+                currentIndex = (currentIndex + 1) % testimonialCards.length;
+                showSlide(currentIndex);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
