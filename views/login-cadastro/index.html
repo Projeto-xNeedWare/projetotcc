@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login & Cadastro | xNeedWare</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/css/login-cadastro.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 </head>
@@ -39,7 +39,7 @@
           <input type="submit" class="btn-primary" value="Entrar">
         </form>
 
-        <!-- Formulário de Cadastro (inicialmente oculto) -->
+        <!-- Formulário de Cadastro -->
         <form id="cadastroForm" class="auth-form" style="display:none;">
           <div class="form-row">
             <div class="form-group">
@@ -81,6 +81,8 @@
             Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>
           </p>
         </div>
+
+        <p id="msg" style="text-align:center; margin-top:10px; font-size:0.9rem;"></p>
       </div>
     </div>
   </main>
@@ -90,24 +92,6 @@
     <div class="bg-pattern"></div>
   </div>
 
-  <script src="/auth.js"></script>
-  <script>
-    function mostrarCadastro() {
-      document.getElementById('loginForm').style.display = 'none';
-      document.getElementById('cadastroForm').style.display = 'block';
-      document.getElementById('form-title').innerText = 'Crie sua conta';
-      document.getElementById('form-desc').innerText = 'Preencha os dados abaixo para começar';
-      document.getElementById('divider-text').innerText = 'ou cadastre-se com';
-      document.getElementById('toggle-link').innerHTML = 'Já tem uma conta? <a href="#" onclick="mostrarLogin()">Faça login</a>';
-    }
-    function mostrarLogin() {
-      document.getElementById('loginForm').style.display = 'block';
-      document.getElementById('cadastroForm').style.display = 'none';
-      document.getElementById('form-title').innerText = 'Entrar na sua conta';
-      document.getElementById('form-desc').innerText = 'Faça login para continuar';
-      document.getElementById('divider-text').innerText = 'ou cadastre-se com';
-      document.getElementById('toggle-link').innerHTML = 'Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>';
-    }
-  </script>
+  <script src="js/auth.js"></script>
 </body>
 </html>
