@@ -33,7 +33,6 @@
                     <li><a href="../produtos/index.php">Produtos</a></li>
                     <li><a href="../sobre/index.php">Sobre</a></li>
                     <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
-                    <?php include '../../public/header-usuario.php'; ?>
                 </ul>
             </nav>
         </div>
@@ -42,7 +41,7 @@
 <!-- Conteúdo Principal -->
 <main class="container">
     <h1 class="page-title">Minha Conta</h1>
-    <h1><?php include '../../public/nome-usuario.php'; ?></h1>
+    <h1>Olá, .....</h1>
     
     <div class="stats-grid">
         <div class="stat-card">
@@ -89,11 +88,11 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Nome</label>
-                            <span class="user-info"><?php echo htmlspecialchars($nome); ?></span>
+                            <span class="user-info">nome</span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <span class="user-info"><?php echo htmlspecialchars($email); ?></span>
+                            <span class="user-info">email@exemplo.com</span>
                         </div>
                     </div>
                 </div>
@@ -119,8 +118,6 @@
                     <h2 class="card-title">Configurações da Conta</h2>
                     <p class="card-description">Altere suas informações de acesso</p>
                 </div>
-                <div class="tab-content" id="settings">
-                <?php include '../../public/historico-compras.php'; ?>
             </div>
         </div>
     </div>
