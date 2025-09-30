@@ -1,59 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Carrinho | xNeedWare</title>
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | xNeedWare</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+  <link rel="stylesheet" href="/css/carrinho.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
-<h1>Seu Carrinho</h1>
-<div id="carrinhoContainer"></div>
-<p id="total"></p>
-<a href="/pagamentos" class="cta-button">Finalizar Compra</a>
+  <header class="xneedware-header">
+    <div class="header-container">
+      <a href="/" class="logo">
+        <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+      </a>
 
-<script>
-function atualizarCarrinho() {
-    const carrinhoContainer = document.getElementById("carrinhoContainer");
-    const totalEl = document.getElementById("total");
-    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-    
-    if (carrinho.length === 0) {
-        carrinhoContainer.innerHTML = "<p>O carrinho está vazio.</p>";
-        totalEl.textContent = "";
+      <button class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/produtos">Produtos</a></li>
+          <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/contato">Contato</a></li>
+          <div id="usuarioArea"></div>
+          <script src="/js/header-usuario.js"></script>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Seu Carrinho</h1>
+      <p class="subtitle">Revise seus produtos antes de finalizar a compra.</p>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="checkout-container">
+      <div class="checkout-form">
+        <h2>Produtos adicionados</h2>
+        <div id="carrinhoContainer" class="cart-items"></div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="checkout-sidebar">
+        <div class="order-summary-card">
+          <h3>Resumo do pedido</h3>
+          <div id="sidebar-products"></div>
+          <div class="summary-item total">
+            <div class="summary-label">Total</div>
+            <div class="summary-value" id="sidebar-total">R$ 00,00</div>
+          </div>
+        </div>
+
+        <div class="form-actions" style="margin-top:20px;">
+          <a href="/pagamentos" class="btn-next" style="width:100%; text-align:center;">Finalizar Compra</a>
+        </div>
+
+        <div class="secure-payment">
+          <div class="secure-icon">🔒</div>
+          <p>Pagamento 100% seguro</p>
+        </div>
+
+        <div class="help-section">
+          <h4>Precisa de ajuda?</h4>
+          <p>Entre em contato com nosso suporte:</p>
+          <a href="mailto:suporte@xneedware.com" class="support-link">suporte@xneedware.com</a>
+          <a href="tel:+551199999999" class="support-link">+55 11 9999-9999</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="/" class="logo">
+            <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+          </a>
+
+          <p class="footer-description">
+            Transformando empresas através de soluções de software inovadoras e eficientes.
+          </p>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">Produtos</h3>
+          <ul>
+            <li><a href="/chatbot">xNeed Chatbot</a></li>
+            <li><a href="/downloader">xNeed Downloader</a></li>
+            <li><a href="/message">xNeed Message</a></li>
+            <li><a href="/qrgenerator">xNeed QrGenerator</a></li>
+            <li><a href="/excel">xNeed Excel</a></li>
+            <li><a href="/manager">xNeed Manager</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">Empresa</h3>
+          <ul>
+            <li><a href="/sobre">Sobre Nós</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-title">Suporte</h3>
+          <ul>
+            <li><a href="/politica_privacidade">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function atualizarCarrinho() {
+      const carrinhoContainer = document.getElementById("carrinhoContainer");
+      const sidebarProducts = document.getElementById("sidebar-products");
+      const sidebarTotal = document.getElementById("sidebar-total");
+
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+      carrinhoContainer.innerHTML = "";
+      sidebarProducts.innerHTML = "";
+
+      if (carrinho.length === 0) {
+        carrinhoContainer.innerHTML = "<p>Seu carrinho está vazio.</p>";
+        sidebarTotal.textContent = "R$ 00,00";
         return;
-    }
+      }
 
-    carrinhoContainer.innerHTML = "";
-    let total = 0;
+      let total = 0;
 
-    carrinho.forEach(item => {
+      carrinho.forEach(item => {
         total += item.preco * item.quantidade;
+
+        // Lista principal
         const div = document.createElement("div");
+        div.classList.add("cart-item");
         div.innerHTML = `
-            <strong>${item.nome}</strong> - R$ ${item.preco.toFixed(2)} x ${item.quantidade}
-            <button class="remover-btn" data-id="${item.id}">Remover</button>
+          <div class="cart-item-info">
+            <h4>${item.nome}</h4>
+            <p>R$ ${item.preco.toFixed(2)} x 
+            <input type="number" min="1" value="${item.quantidade}" data-id="${item.id}" class="qtd-input"> 
+            = R$ ${(item.preco * item.quantidade).toFixed(2)}</p>
+          </div>
+          <button class="remover-btn" data-id="${item.id}"><i class="fas fa-trash"></i></button>
         `;
         carrinhoContainer.appendChild(div);
-    });
 
-    totalEl.textContent = `Total: R$ ${total.toFixed(2)}`;
+        // Sidebar resumo
+        const summaryDiv = document.createElement("div");
+        summaryDiv.classList.add("summary-item");
+        summaryDiv.innerHTML = `
+          <div class="summary-label">${item.nome}</div>
+          <div class="summary-value">R$ ${(item.preco * item.quantidade).toFixed(2)}</div>
+        `;
+        sidebarProducts.appendChild(summaryDiv);
+      });
 
-    // Remover item
-    const btns = document.querySelectorAll(".remover-btn");
-    btns.forEach(btn => {
+      sidebarTotal.textContent = `R$ ${total.toFixed(2)}`;
+
+      // Eventos de remover
+      document.querySelectorAll(".remover-btn").forEach(btn => {
         btn.addEventListener("click", () => {
-            const id = btn.dataset.id;
-            const index = carrinho.findIndex(p => p.id === id);
-            if (index > -1) {
-                carrinho.splice(index, 1);
-                localStorage.setItem("carrinho", JSON.stringify(carrinho));
-                atualizarCarrinho();
-            }
+          const id = btn.dataset.id;
+          const novoCarrinho = carrinho.filter(p => p.id !== id);
+          localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
+          atualizarCarrinho();
         });
-    });
-}
+      });
 
-window.addEventListener("DOMContentLoaded", atualizarCarrinho);
-</script>
+      // Eventos de atualizar quantidade
+      document.querySelectorAll(".qtd-input").forEach(input => {
+        input.addEventListener("change", () => {
+          const id = input.dataset.id;
+          const produto = carrinho.find(p => p.id === id);
+          if (produto) {
+            produto.quantidade = parseInt(input.value) || 1;
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            atualizarCarrinho();
+          }
+        });
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", atualizarCarrinho);
+  </script>
 </body>
 </html>

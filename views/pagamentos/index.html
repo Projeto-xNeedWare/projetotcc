@@ -52,28 +52,23 @@
         <section class="checkout-container">
             <div class="checkout-form">
                 <div class="form-progress">
-                    <div class="progress-step active">
-                        <div class="step-number">1</div>
-                        <div class="step-text">Produto</div>
-                    </div>
-                    <div class="progress-line"></div>
                     <div class="progress-step">
-                        <div class="step-number">2</div>
+                        <div class="step-number">1</div>
                         <div class="step-text">Dados</div>
                     </div>
                     <div class="progress-line"></div>
                     <div class="progress-step">
-                        <div class="step-number">3</div>
+                        <div class="step-number">2</div>
                         <div class="step-text">Pagamento</div>
                     </div>
                     <div class="progress-line"></div>
                     <div class="progress-step">
-                        <div class="step-number">4</div>
+                        <div class="step-number">3</div>
                         <div class="step-text">Confirmação</div>
                     </div>
                 </div>
 
-                <form id="payment-form">
+                <!-- <form id="payment-form">
                     <div class="form-step" id="step-1">
                         <h2>Escolha seu produto</h2>
                         
@@ -173,9 +168,9 @@
                         <div class="form-actions">
                             <button type="button" class="btn-next" onclick="nextStep(1)">Continuar</button>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="form-step hidden" id="step-2">
+                    <div class="form-step hidden" id="step-1">
                         <h2>Confirme seus dados clicando em "Continuar"</h2>
 
                         <div class="form-group">
@@ -213,7 +208,7 @@
                     });
                     </script>
 
-                    <div class="form-step hidden" id="step-3">
+                    <div class="form-step hidden" id="step-2">
                         <h2>Informações de pagamento</h2>
                         
                         <div class="payment-methods">
@@ -250,7 +245,7 @@
                         </div>
                     </div>
 
-                    <div class="form-step hidden" id="step-4">
+                    <div class="form-step hidden" id="step-2">
                         <h2>Confirme seu pedido</h2>
                         
                         <div class="order-summary">
