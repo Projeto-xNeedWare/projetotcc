@@ -20,6 +20,11 @@ app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "login-cadastro", "index.html"));
 });
 
+// rota de sair
+app.get("/sair", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "login-cadastro", "index.html"));
+});
+
 // rota de contato
 app.get("/contato", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "pagina-inicial", "index.html#contato"));
@@ -73,7 +78,7 @@ app.get("/message", (req, res) => {
 });
 
 // qrcode
-app.get("/qrcode", (req, res) => {
+app.get("/qrgenerator", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "produtos", "produtos-separados", "qrcode.html"));
 });
 

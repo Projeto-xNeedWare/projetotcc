@@ -62,7 +62,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   // Redirecionar após 1s
     setTimeout(() => {
-        window.location.href = "../conta-usuario/minha-conta.html";
+        window.location.href = "/conta";
     }, 1000);
     } else {
     msg.style.color = "red";

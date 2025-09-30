@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta - xNeedWare</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="./../bootstraps/header.css">
+    <link rel="stylesheet" href="/css/header.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
@@ -16,22 +16,22 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <script>
-// minha-conta.html
-window.onload = () => {
-  if (localStorage.getItem("logado") !== "true") {
-    window.location.href = "index.html"; // volta pro login
-  }
-};
+    // minha-conta.html
+    window.onload = () => {
+    if (localStorage.getItem("logado") !== "true") {
+        window.location.href = "index.html";
+    }
+    };
 </script>
 
 <body>
      <!-- Cabeçalho -->
      <header class="xneedware-header">
         <div class="header-container">
-            <a href="../pagina_inicial/index.php" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -39,14 +39,14 @@ window.onload = () => {
         
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../produtos/index.php">Produtos</a></li>
-                    <li><a href="../sobre/index.php">Sobre</a></li>
-                    <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
+                    <li><a href="/produtos">Produtos</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
                     <!-- Espaço para o usuário -->
                     <div id="usuarioArea"></div>
 
                     <!-- Linkando o JS externo -->
-                    <script src="../../public/header-usuario.js"></script>
+                    <script src="/js/header-usuario.js"></script>
                 </ul>
             </nav>
         </div>
@@ -160,11 +160,7 @@ window.onload = () => {
             });
         });
     });
-</script>
 
-<script src="/header-script.js"></script>
-<script src="/dashboard.js"></script>
-<script>
   const usuario = JSON.parse(localStorage.getItem("usuario"));
 
   if (usuario) {

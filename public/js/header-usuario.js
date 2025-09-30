@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Usuário logado
     usuarioArea.innerHTML = `
       <div class="usuario-menu" style="position: relative; display: inline-block;">
-        <a title="Acesse sua conta" href="../conta-usuario/minha-conta.html" style="margin-left: 20px; font-size: 1.2rem;">
+        <a title="Acesse sua conta" href="/login" style="margin-left: 20px; font-size: 1.2rem;">
           <i class="fa-thin fa-circle-user"></i> Olá, ${usuario.nome}
         </a>
         <div class="usuario-dropdown" style="display: none; padding: 10px; width: 150px; position: absolute; background: #000000ff; border: 1px solid #ccc; right: 0; z-index: 10;">
-          <a href="../conta-usuario/minha-conta.html">Minha Conta</a><br>
-          <a href="#" id="logoutLink">Sair</a>
+          <a href="/conta">Minha Conta</a><br>
+          <a href="/login" id="logoutLink">Sair</a>
         </div>
       </div>
     `;
