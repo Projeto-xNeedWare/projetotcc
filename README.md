@@ -7,49 +7,45 @@ Sistema de gerenciamento de pedidos de desenvolvimento de softwares personalizad
 - Cadastro e login de usuários
 - Formulário de solicitação de software
 - Página de gerenciamento de conta
-- Painel de controle com dashboard
-- API de envio de dados via PHP (PHPMailer)
 - Integração com banco de dados MySQL
-- Compatível com migração MongoDB → MySQL
 - Envio de e-mails automatizados
 - Validação e animações frontend com JavaScript
 
 ## 📁 Estrutura de Pastas
 
 ```bash
-├── banco_auto/                   # Scripts SQL de criação de banco
-├── migracao-mysql/              # Scripts de migração MySQL
-├── migracao-mongodb-mysql.js    # Script de migração Mongo → MySQL
-├── models/                      # Modelos JS (ex: usuario.js)
-├── public/                      # Arquivos JS e CSS públicos
-│   ├── animation-scroll.js
-│   ├── dashboard.js
-│   ├── formulario-cadastro.js
-│   ├── formulario-login.js
-│   ├── styles.css
-├── views/                       # Páginas HTML/PHP organizadas
-│   ├── login/
-│   ├── cadastro/
-│   ├── conta-usuario/
-│   ├── produtos/
+├── db/         
+│   └── conn.js
+├── node_modules/
 │   └── ...
-├── PHPMailer/                   # Biblioteca de envio de e-mail
-├── enviar.php                   # Manipulação do formulário
-├── autoload.php                 # Autoloader Composer
-├── .env                         # Variáveis de ambiente
-├── composer.json
-└── README.md                    # ← Você está aqui!
+├── public/
+│   ├── assets/
+│   ├── css/
+│   ├── js/
+│   └── favicon.ico
+├── routes/
+│   └── auth.js
+├── views/
+│   ├── conta-usuario/
+│   ├── login-cadastro/
+│   ├── pagamentos/
+│   ├── pagina-inicial/
+│   ├── politica-privacidade/
+│   ├── produtos/
+│   └── sobre/
+├── package-lock.json
+├── package.json
+├── README.md
+└── server.js
 
 🧰 Tecnologias Utilizadas
 Frontend: HTML5, CSS3, JavaScript
 
-Backend: PHP (com PHPMailer)
+Backend: Node.js e JavaScript
 
-Banco de Dados: MySQL (com opção de migração MongoDB)
+Banco de Dados: MySQL Workbench
 
 Gerenciador de Dependências: Composer
-
-Hospedagem sugerida: Hostinger
 
 🤝 Contribuição
 Contribuições são bem-vindas!
@@ -77,7 +73,7 @@ php -S localhost:8000 -t public
 
 👨‍💻 Desenvolvido por
 Gabriel Marin
-Matheus Mello
+Matheus de Mello
 Felipe Lotério
 Bruno Correr
 
