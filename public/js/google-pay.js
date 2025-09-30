@@ -1,4 +1,4 @@
-// Configuração do Google Pay
+// ==================== CONFIGURAÇÃO INICIAL ====================
 let paymentsClient;
 let currentStep = 1;
 let selectedProduct = {
@@ -23,31 +23,28 @@ const allowedPaymentMethods = [{
     tokenizationSpecification: {
         type: 'PAYMENT_GATEWAY',
         parameters: {
-            gateway: 'example', // Substitua pelo seu gateway
-            gatewayMerchantId: 'exampleGatewayMerchantId' // Substitua pelo seu merchant ID
+            gateway: 'example',
+            gatewayMerchantId: 'exampleGatewayMerchantId'
         }
     }
 }];
 
-// Inicializar quando a página carregar
+// ==================== INICIALIZAÇÃO ====================
 document.addEventListener('DOMContentLoaded', function() {
     initializeGooglePay();
     setupProductSelection();
     setupPaymentTabs();
     updateSidebar();
-    
-    // Definir ano atual no footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 });
 
-// Inicializar Google Pay
+// ==================== GOOGLE PAY ====================
 function initializeGooglePay() {
     if (window.google && window.google.payments) {
         paymentsClient = new google.payments.api.PaymentsClient({
-            environment: 'TEST' // Mude para 'PRODUCTION' em produção
+            environment: 'TEST'
         });
 
-        // Verificar se Google Pay está disponível
         const isReadyToPayRequest = {
             ...baseRequest,
             allowedPaymentMethods
@@ -56,15 +53,12 @@ function initializeGooglePay() {
         paymentsClient.isReadyToPay(isReadyToPayRequest)
             .then(function(response) {
                 if (response.result) {
-                    console.log('Google Pay está disponível');
                     createGooglePayButton();
                 } else {
-                    console.log('Google Pay não está disponível');
                     showGooglePayUnavailable();
                 }
             })
             .catch(function(err) {
-                console.error('Erro ao verificar Google Pay:', err);
                 showGooglePayUnavailable();
             });
     } else {
@@ -72,7 +66,6 @@ function initializeGooglePay() {
     }
 }
 
-// Criar botão do Google Pay
 function createGooglePayButton() {
     if (!paymentsClient) return;
 
@@ -87,32 +80,26 @@ function createGooglePayButton() {
             countryCode: 'BR'
         },
         merchantInfo: {
-            merchantId: '12345678901234567890', // Substitua pelo seu merchant ID
+            merchantId: '12345678901234567890',
             merchantName: 'xNeedWare'
         }
     };
 
-    try {
-        const button = paymentsClient.createButton({
-            onClick: () => handleGooglePayClick(paymentDataRequest),
-            allowedPaymentMethods,
-            buttonColor: 'black',
-            buttonType: 'buy',
-            buttonSizeMode: 'fill'
-        });
+    const button = paymentsClient.createButton({
+        onClick: () => handleGooglePayClick(paymentDataRequest),
+        allowedPaymentMethods,
+        buttonColor: 'black',
+        buttonType: 'buy',
+        buttonSizeMode: 'fill'
+    });
 
-        const container = document.getElementById('google-pay-button');
-        if (container) {
-            container.innerHTML = '';
-            container.appendChild(button);
-        }
-    } catch (error) {
-        console.error('Erro ao criar botão Google Pay:', error);
-        showGooglePayUnavailable();
+    const container = document.getElementById('google-pay-button');
+    if (container) {
+        container.innerHTML = '';
+        container.appendChild(button);
     }
 }
 
-// Mostrar mensagem quando Google Pay não está disponível
 function showGooglePayUnavailable() {
     const container = document.getElementById('google-pay-button');
     if (container) {
@@ -125,72 +112,21 @@ function showGooglePayUnavailable() {
     }
 }
 
-// Processar clique no Google Pay
 function handleGooglePayClick(paymentDataRequest) {
     paymentsClient.loadPaymentData(paymentDataRequest)
         .then(function(paymentData) {
-            console.log('Dados de pagamento recebidos:', paymentData);
             processGooglePayPayment(paymentData);
         })
         .catch(function(err) {
-            console.error('Erro no pagamento:', err);
             alert('Erro ao processar pagamento. Tente novamente.');
         });
 }
 
-// Processar pagamento do Google Pay
 function processGooglePayPayment(paymentData) {
-    // Aqui você enviaria os dados para seu servidor
-    console.log('Processando pagamento Google Pay para:', selectedProduct);
-    console.log('Dados do pagamento:', paymentData);
-
-    // Simular processamento
     showPaymentSuccess();
 }
 
-// Mostrar sucesso do pagamento
-function showPaymentSuccess() {
-    // Ir para o step final
-    nextStep(4);
-
-    fetch('../../public/historico-pagamento.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `produto=${encodeURIComponent(selectedProduct.name)}&valor=${encodeURIComponent(selectedProduct.price)}`
-    });
-
-    // Mostrar mensagem de sucesso
-    const step4 = document.getElementById('step-4');
-    step4.innerHTML = `
-        <div style="text-align: center; padding: 40px 20px;">
-            <div style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">
-                ✅
-            </div>
-            <h2 style="color: #28a745; margin-bottom: 15px;">Pagamento Aprovado!</h2>
-            <p style="color: #666; margin-bottom: 25px;">
-                Seu pagamento de <strong>R$ ${selectedProduct.price.replace('.', ',')}</strong> 
-                para <strong>${selectedProduct.name}</strong> foi processado com sucesso.
-            </p>
-            <p style="color: #666; font-size: 14px; margin-bottom: 30px;">
-                Você receberá um email com as instruções de download em breve.
-            </p>
-            <button onclick="window.location.href='../produtos/index.php'" style="
-                background: #28a745;
-                color: white;
-                border: none;
-                padding: 12px 30px;
-                border-radius: 6px;
-                font-size: 16px;
-                cursor: pointer;
-                font-weight: 600;
-            ">
-                Voltar aos Produtos
-            </button>
-        </div>
-    `;
-}
-
-// Configurar seleção de produtos
+// ==================== SELEÇÃO DE PRODUTOS ====================
 function setupProductSelection() {
     const productInputs = document.querySelectorAll('input[name="product"]');
     
@@ -205,7 +141,6 @@ function setupProductSelection() {
                 
                 updateSidebar();
                 
-                // Recriar botão Google Pay com novo preço
                 if (paymentsClient) {
                     createGooglePayButton();
                 }
@@ -214,7 +149,7 @@ function setupProductSelection() {
     });
 }
 
-// Configurar tabs de pagamento
+// ==================== TABS DE PAGAMENTO ====================
 function setupPaymentTabs() {
     const tabs = document.querySelectorAll('.payment-tab');
     const contents = document.querySelectorAll('.payment-method-content');
@@ -223,26 +158,21 @@ function setupPaymentTabs() {
         tab.addEventListener('click', function() {
             const method = this.dataset.method;
             
-            // Remover classe active de todas as tabs
             tabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
             
-            // Esconder todos os conteúdos
             contents.forEach(content => content.classList.add('hidden'));
             
-            // Mostrar conteúdo selecionado
             const targetContent = document.getElementById(method + '-content');
             if (targetContent) {
                 targetContent.classList.remove('hidden');
             }
             
-            // Atualizar resumo de pagamento
             updatePaymentSummary(method);
         });
     });
 }
 
-// Atualizar resumo de pagamento
 function updatePaymentSummary(method) {
     const paymentNames = {
         'google-pay': 'Google Pay',
@@ -256,7 +186,7 @@ function updatePaymentSummary(method) {
     }
 }
 
-// Atualizar sidebar
+// ==================== ATUALIZAÇÃO DA INTERFACE ====================
 function updateSidebar() {
     const sidebarProduct = document.getElementById('sidebar-product');
     const sidebarTotal = document.getElementById('sidebar-total');
@@ -269,7 +199,6 @@ function updateSidebar() {
         sidebarTotal.textContent = `R$ ${selectedProduct.price.replace('.', ',')}`;
     }
     
-    // Atualizar resumo final também
     const summaryProduct = document.getElementById('summary-product');
     const summaryTotal = document.getElementById('summary-total');
     
@@ -282,12 +211,9 @@ function updateSidebar() {
     }
 }
 
-// Navegação entre steps
+// ==================== NAVEGAÇÃO ENTRE STEPS ====================
 function nextStep(step) {
-    // Validar step atual antes de prosseguir
-    if (!validateCurrentStep(step)) {
-        return;
-    }
+    if (!validateCurrentStep(step)) return;
     
     const currentStepEl = document.getElementById(`step-${step}`);
     const nextStepEl = document.getElementById(`step-${step + 1}`);
@@ -295,12 +221,9 @@ function nextStep(step) {
     if (currentStepEl && nextStepEl) {
         currentStepEl.classList.add('hidden');
         nextStepEl.classList.remove('hidden');
-        
-        // Atualizar progress
         updateProgress(step + 1);
         currentStep = step + 1;
         
-        // Se chegou no step 4, atualizar resumo
         if (step + 1 === 4) {
             updateFinalSummary();
         }
@@ -314,14 +237,11 @@ function prevStep(step) {
     if (currentStepEl && prevStepEl) {
         currentStepEl.classList.add('hidden');
         prevStepEl.classList.remove('hidden');
-        
-        // Atualizar progress
         updateProgress(step - 1);
         currentStep = step - 1;
     }
 }
 
-// Atualizar barra de progresso
 function updateProgress(step) {
     const steps = document.querySelectorAll('.progress-step');
     
@@ -334,11 +254,10 @@ function updateProgress(step) {
     });
 }
 
-// Validar step atual
+// ==================== VALIDAÇÕES ====================
 function validateCurrentStep(step) {
     switch(step) {
         case 1:
-            // Verificar se um produto foi selecionado
             const selectedProductInput = document.querySelector('input[name="product"]:checked');
             if (!selectedProductInput) {
                 alert('Por favor, selecione um produto.');
@@ -347,14 +266,12 @@ function validateCurrentStep(step) {
             return true;
             
         case 3:
-            // Validar método de pagamento selecionado
             const activeTab = document.querySelector('.payment-tab.active');
             if (!activeTab) {
                 alert('Por favor, selecione um método de pagamento.');
                 return false;
             }
             
-            // Se for cartão de crédito, validar campos
             if (activeTab.dataset.method === 'credit-card') {
                 const cardFields = ['card-number', 'card-name', 'card-expiry', 'card-cvv'];
                 for (let field of cardFields) {
@@ -372,35 +289,71 @@ function validateCurrentStep(step) {
     }
 }
 
-// Atualizar resumo final
 function updateFinalSummary() {
     updateSidebar();
     
-    // Atualizar método de pagamento no resumo
     const activeTab = document.querySelector('.payment-tab.active');
     if (activeTab) {
         updatePaymentSummary(activeTab.dataset.method);
     }
 }
 
-// Submissão do formulário
+// ==================== PROCESSAMENTO DE PAGAMENTO ====================
+function showPaymentSuccess() {
+    nextStep(4);
+
+    // Enviar para histórico (mantido igual)
+    fetch('../../public/historico-pagamento.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `produto=${encodeURIComponent(selectedProduct.name)}&valor=${encodeURIComponent(selectedProduct.price)}`
+    });
+
+    const step4 = document.getElementById('step-4');
+    step4.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px;">
+            <div style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">
+                ✅
+            </div>
+            <h2 style="color: #28a745; margin-bottom: 15px;">Pagamento Aprovado!</h2>
+            <p style="color: #666; margin-bottom: 25px;">
+                Seu pagamento de <strong>R$ ${selectedProduct.price.replace('.', ',')}</strong> 
+                para <strong>${selectedProduct.name}</strong> foi processado com sucesso.
+            </p>
+            <p style="color: #666; font-size: 14px; margin-bottom: 30px;">
+                Você receberá um email com as instruções de download em breve.
+            </p>
+            <button onclick="window.location.href='/produtos'" style="
+                background: #28a745;
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: 600;
+            ">
+                Voltar aos Produtos
+            </button>
+        </div>
+    `;
+}
+
+// ==================== SUBMISSÃO DO FORMULÁRIO ====================
 document.getElementById('payment-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Verificar se os termos foram aceitos
     const termsCheckbox = document.getElementById('terms');
     if (!termsCheckbox.checked) {
         alert('Por favor, aceite os termos de serviço.');
         return;
     }
     
-    // Processar pagamento baseado no método selecionado
     const activeTab = document.querySelector('.payment-tab.active');
     const paymentMethod = activeTab ? activeTab.dataset.method : 'google-pay';
     
     switch(paymentMethod) {
         case 'google-pay':
-            // Google Pay já foi processado
             alert('Use o botão Google Pay para finalizar o pagamento.');
             break;
             
@@ -414,10 +367,14 @@ document.getElementById('payment-form').addEventListener('submit', function(e) {
     }
 });
 
-// Processar pagamento com cartão
 function processCardPayment() {
-    // Simular processamento
-    console.log('Processando pagamento com cartão...');
+    setTimeout(() => {
+        showPaymentSuccess();
+    }, 2000);
+}
+
+function processPixPayment() {
+    // Função mantida para compatibilidade
     setTimeout(() => {
         showPaymentSuccess();
     }, 2000);

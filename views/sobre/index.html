@@ -39,7 +39,7 @@
     <!-- CONTEÚDO -->
     <main>
         <video autoplay muted loop playsinline class="bg-video">
-            <source src="/video" type="video/mp4">
+            <source src="/assets/assets-sobre/vid_background.mp4" type="video/mp4">
             Seu navegador não suporta vídeo.
         </video>
         <section class="hero about-hero">
@@ -59,7 +59,7 @@
                 <div class="about-image">
                     <div class="image-container">
                         <div class="image-placeholder">
-                            <img src="empresa.avif" alt="" style="width: 100%;">
+                            <img src="/assets/assets-sobre/empresa.avif" alt="" style="width: 100%;">
                         </div>
                             
                         <div class="image-accent"></div>
@@ -124,7 +124,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="matheus.jpg" alt="Matheus de Mello" style="filter: grayscale(100%);">
+                        <img src="/assets/assets-sobre/matheus.jpg" alt="Matheus de Mello" style="filter: grayscale(100%);">
                     </div>
                     <h3>Matheus Carvalho</h3>
                     <p class="member-title">Liderança Técnica</p>
@@ -140,7 +140,7 @@
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="felipe.jpeg" alt="Felipe Lotério" style="filter: grayscale(100%);">
+                        <img src="/assets/assets-sobre/felipe.jpeg" alt="Felipe Lotério" style="filter: grayscale(100%);">
                     </div>
                     <h3>Felipe Lotério</h3>
                     <p class="member-title">Arquiteto de Dados e Back-end</p>
@@ -155,7 +155,7 @@
                 </div>
                 <div class="team-member" href="">
                     <div class="member-photo">
-                        <img src="gabriel.jpeg" alt="Gabriel Marin" style="filter: grayscale(100%);">
+                        <img src="/assets/assets-sobre/gabriel.jpeg" alt="Gabriel Marin" style="filter: grayscale(100%);">
                     </div>
                     <h3>Gabriel Marin</h3>
                     <p class="member-title">COO & Product Manager</p>
@@ -171,7 +171,7 @@
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="bruno.jpeg" alt="Bruno Correr" style="filter: grayscale(100%);">
+                        <img src="/assets/assets-sobre/bruno.jpeg" alt="Bruno Correr" style="filter: grayscale(100%);">
                     </div>
                     <h3>Bruno Correr</h3>
                     <p class="member-title">Desenvolvedor Full Stack</p>
@@ -252,60 +252,6 @@
             </div>
         </section>
 
-        <section class="testimonials">
-            <div class="section-header">
-                <h2>O que nossos clientes dizem</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-card">
-                    <div class="quote-icon"></div>
-                    <p class="testimonial-text">"Esse robozinho feito por esses meninos mudou a forma de trabalho da minha floricultura. 
-                        Agora, nem preciso ficar no celular respondendo mensagem, o robozinho já me traz o que a pessoa quer e pra quando."</p>
-                    <div class="testimonial-author">
-                        <div class="author-photo"></div>
-                        <div class="author-info">
-                            <h4>Dona Judite</h4>
-                            <p>Dono da Floricultura</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon"></div>
-                    <p class="testimonial-text">"Eles fizeram um sistema de agendamento para minha barbearia que facilitou totalmente meu trabalho, agora 
-                        não preciso ficar atendendo ligação e marcando no caderno cada reserva, facilitou 100% meu trabalho"</p>
-                    <div class="testimonial-author">
-                        <div class="author-photo"></div>
-                        <div class="author-info">
-                            <h4>Seu Junin</h4>
-                            <p>Barbeiro da Junin Barbearia</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon"></div>
-                    <p class="testimonial-text">"Esses mulekes são incríveis, fizeram um sistema de chamado de manutenção para minha empresa e facilitou totalmente 
-                        minha comunicação com o cliente, agora conseguimos solicitar manutenções de máquinas e acompanhar o andamento por um dashboard"</p>
-                    <div class="testimonial-author">
-                        <div class="author-photo"></div>
-                        <div class="author-info">
-                            <h4>Kaiky Nishiyama</h4>
-                            <p>CEO da はホモ野郎だ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-arrow prev-arrow"></button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="slider-arrow next-arrow"></button>
-                </div>
-            </div>
-        </section>
-
         <section class="partners">
             <div class="section-header">
                 <h2>Nossos Parceiros</h2>
@@ -362,7 +308,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.php" class="logo">
+                    <a href="/sobre" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
                     <p class="footer-description">
@@ -378,25 +324,26 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a title="Adquira o produto Chatbot" href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
-                        <li><a title="Adquira o produto Downloader" href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
-                        <li><a title="Adquira o produto Message" href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
-                        <li><a title="Adquira o produto QrGenerator" href="../produtos/produtos_separados/QrGenerator.php">xNeed QrGenerator</a></li>
-                        <li><a title="Adquira o produto Excel" href="../produtos/produtos_separados/Excel.php">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Chatbot" href="/chatbot">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="/downloader">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="/message">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="/qrgenerator">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="/excel">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Manager" href="/manager">xNeed Manager</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a title="Saiba mais sobre nós" href="../sobre/index.php">Sobre Nós</a></li>
+                        <li><a title="Saiba mais sobre nós" href="/sobre">Sobre Nós</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
-                        <li><a title="Acesse nossa política de privacidade" href="../politica_privacidade/index.html">Política de Privacidade</a></li>
+                        <li><a title="Acesse nossa política de privacidade" href="/politica_privacidade">Política de Privacidade</a></li>
                     </ul>
                 </div>
             </div>

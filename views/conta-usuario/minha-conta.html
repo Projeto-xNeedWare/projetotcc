@@ -18,14 +18,6 @@
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<script>
-    // minha-conta.html
-    window.onload = () => {
-    if (localStorage.getItem("logado") !== "true") {
-        window.location.href = "index.html";
-    }
-    };
-</script>
 
 <body>
      <!-- Cabeçalho -->
@@ -136,35 +128,30 @@
 </main>
 
 <script>
-  // minha-conta.js
+    async function carregarUsuario() {
+    try {
+        const res = await fetch("/api/usuario");
+        if (!res.ok) throw new Error("Não logado");
+        const usuario = await res.json();
 
-// Função para carregar dados do usuário
-async function carregarUsuario() {
-  try {
-    const res = await fetch("/api/usuario"); // rota que retorna os dados da sessão
-    if (!res.ok) throw new Error("Não logado"); // se não houver sessão ativa
-    const usuario = await res.json();
+        document.querySelector(".page-title + h1").textContent = `Olá, ${usuario.nome}!`;
+        document.getElementById("user-nome").textContent = `${usuario.nome} ${usuario.sobrenome}`;
+        document.getElementById("user-email").textContent = usuario.email;
+    } catch (err) {
+        window.location.href = "/login"; // força login se sessão não existir
+    }
+    }
 
-    // Preenche os elementos da página com os dados
-    document.querySelector(".page-title + h1").textContent = `Olá, ${usuario.nome}!`;
-    document.getElementById("user-nome").textContent = `${usuario.nome} ${usuario.sobrenome}`;
-    document.getElementById("user-email").textContent = usuario.email;
+    window.addEventListener("DOMContentLoaded", carregarUsuario);
 
-  }
-}
-
-// Chama a função ao carregar a página
-window.addEventListener("DOMContentLoaded", carregarUsuario);
-
-// Logout
-const logoutLink = document.getElementById("logoutLink");
-if (logoutLink) {
-  logoutLink.addEventListener("click", async (e) => {
-    e.preventDefault();
-    await fetch("/logout"); // chama rota de logout do servidor
-  });
-}
-
+    const logoutLink = document.getElementById("logoutLink");
+    if (logoutLink) {
+    logoutLink.addEventListener("click", async (e) => {
+        e.preventDefault();
+        await fetch("/logout");
+        window.location.href = "/login";
+    });
+    }
 </script>
 
 

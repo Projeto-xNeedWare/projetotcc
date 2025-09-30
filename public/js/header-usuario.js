@@ -1,13 +1,16 @@
 // header-user.js
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const usuarioArea = document.getElementById("usuarioArea");
-  const usuario = JSON.parse(localStorage.getItem("usuario"));
 
-  if (usuario) {
+  try {
+    const res = await fetch("/api/usuario");
+    if (!res.ok) throw new Error("Não logado");
+    const usuario = await res.json();
+
     // Usuário logado
     usuarioArea.innerHTML = `
       <div class="usuario-menu" style="position: relative; display: inline-block;">
-        <a title="Acesse sua conta" href="/login" style="margin-left: 20px; font-size: 1.2rem;">
+        <a title="Acesse sua conta" href="/conta" style="margin-left: 20px; font-size: 1.2rem;">
           <i class="fa-thin fa-circle-user"></i> Olá, ${usuario.nome}
         </a>
         <div class="usuario-dropdown" style="display: none; padding: 10px; width: 150px; position: absolute; background: #000000ff; border: 1px solid #ccc; right: 0; z-index: 10;">
@@ -28,13 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Logout
-    document.getElementById("logoutLink").addEventListener("click", (e) => {
+    document.getElementById("logoutLink").addEventListener("click", async (e) => {
       e.preventDefault();
-      localStorage.removeItem("usuario");
-      localStorage.removeItem("logado");
-      window.location.href = "/views/login-cadastro/index.html";
+      await fetch("/logout");
+      window.location.href = "/login";
     });
-  } else {
+
+  } catch (err) {
     // Usuário não logado
     usuarioArea.innerHTML = `
       <a title="Entre na sua conta" href="/login">

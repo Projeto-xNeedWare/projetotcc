@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xNeed Graphics</title>
-    <link rel="stylesheet" href="../../../public/css/produtos_separados.css">
-    <link rel="stylesheet" href="../../bootstraps/header.css">
+    <link rel="stylesheet" href="/css/produtos_separados.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
@@ -13,14 +13,13 @@
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
     <!-- CABEÇALHO REUTILIZÁVEL -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../../pagina_inicial/index.php" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -30,10 +29,12 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.php">Produtos</a></li>
-                    <li><a href="../../sobre/index.php">Sobre</a></li>
-                    <li><a href="../../pagina_inicial/index.php#contato">Contato</a></li>
-                    <?php include '../../../public/header-usuario-products.php'; ?>
+                    <li><a href="/produtos">Produtos</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <div id="usuarioArea"></div>
+
+                    <script src="/js/header-usuario.js"></script>
                 </ul>
             </nav>
         </div>
@@ -113,17 +114,17 @@
             </div>
 
             <div class="cta-section">
-                <a href="../../pagamentos/index.php" class="cta-button chatbot-cta">Comprar</a>
+                <a href="/pagamentos" class="cta-button chatbot-cta">Comprar</a>
             </div>
         </section>
     </main>
 
-     <!-- Footer -->
-     <footer class="footer">
+    <!-- RODAPÉ REUTILIZÁVEL -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="Excel.php" class="logo">
+                    <a href="/excel" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
 
@@ -141,25 +142,26 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a title="Adquira o produto Chatbot" href="chatbot.php">xNeed Chatbot</a></li>
-                        <li><a title="Adquira o produto Downloader" href="downloader.php">xNeed Downloader</a></li>
-                        <li><a title="Adquira o produto Message" href="message.php">xNeed Message</a></li>
-                        <li><a title="Adquira o produto QrGenerator" href="QrGenerator.php">xNeed QrGenerator</a></li>
-                        <li><a title="Adquira o produto Excel" href="Excel.php">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Chatbot" href="/chatbot">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="/downloader">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="/message">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="/qrgenerator">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="/excel">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Manager" href="/manager">xNeed Manager</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a href="../../sobre/index.php">Sobre Nós</a></li>
+                        <li><a href="/sobre">Sobre Nós</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
-                        <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
+                        <li><a href="/politica_privacidade">Política de Privacidade</a></li>
                     </ul>
                 </div>
             </div>

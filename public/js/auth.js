@@ -66,7 +66,8 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     msg.textContent = data;
 
     if (data.includes("Bem-vindo")) {
-      setTimeout(() => window.location.href = "/conta", 1000);
+      // redireciona para página protegida
+      window.location.href = "/conta";
     }
   } catch (err) {
     msg.style.color = "red";

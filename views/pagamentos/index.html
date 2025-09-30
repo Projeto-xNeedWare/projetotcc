@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xNeedWare - Pagamento</title>
-    <link rel="stylesheet" href="/css/pagamentos.css">
-    <link rel="stylesheet" href="./../bootstraps/header.css">
-    <link rel="stylesheet" href="./../bootstraps/footer.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
@@ -14,9 +12,12 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
-        <script src="https://pay.google.com/gp/p/js/pay.js"></script>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
+    <script src="https://pay.google.com/gp/p/js/pay.js"></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/pagamentos.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
     <header class="xneedware-header">
@@ -31,9 +32,9 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../produtos/index.php">Produtos</a></li>
-                    <li><a href="../sobre/index.php">Sobre</a></li>
-                    <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
+                    <li><a href="/produtos">Produtos</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
                     <div id="usuarioArea"></div>
 
                     <script src="/js/header-usuario.js"></script>
@@ -176,19 +177,14 @@
 
                     <div class="form-step hidden" id="step-2">
                         <h2>Confirme seus dados clicando em "Continuar"</h2>
-                        
-                        <?php
-                        $nome = $_SESSION['usuario_nome'] ?? '';
-                        $email = $_SESSION['usuario_email'] ?? '';
-                        ?>
 
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <span class="user-info"><?php echo htmlspecialchars($nome); ?></span>
+                            <span class="user-info" id="user-nome-step2"></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email para receber o arquivo</label>
-                            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
+                            <input type="email" id="email" name="email" required>
                             <small>Você pode alterar o email para receber o arquivo em outro endereço.</small>
                         </div>
 
@@ -197,6 +193,25 @@
                             <button type="button" class="btn-next" onclick="nextStep(2)">Continuar</button>
                         </div>
                     </div>
+
+                    <script>
+                    document.addEventListener("DOMContentLoaded", async () => {
+                        try {
+                            const res = await fetch("/api/usuario");
+                            if (!res.ok) throw new Error("Usuário não logado");
+                            const usuario = await res.json();
+
+                            // Preenche os campos com os dados do usuário
+                            document.getElementById("user-nome-step2").textContent = usuario.nome + " " + usuario.sobrenome;
+                            document.getElementById("email").value = usuario.email;
+                        } 
+                        catch (error) {
+                            console.error("Erro ao carregar dados do usuário:", error);
+                            // Redireciona para a página de login se o usuário não estiver logado
+                            window.location.href = "/login";
+                        }
+                    });
+                    </script>
 
                     <div class="form-step hidden" id="step-3">
                         <h2>Informações de pagamento</h2>
@@ -298,51 +313,60 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- RODAPÉ REUTILIZÁVEL -->
+     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.php" class="logo">
+                    <a href="/pagamentos" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
+
                     <p class="footer-description">
                         Transformando empresas através de soluções de software inovadoras e eficientes.
                     </p>
+
                     <div class="social-links">
                         <a href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
-                        <li><a href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
-                        <li><a href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
+                        <li><a title="Adquira o produto Chatbot" href="/chatbot">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="/downloader">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="/message">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="/qrgenerator">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="/excel">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Manager" href="/manager">xNeed Manager</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a href="../sobre/index.php">Sobre Nós</a></li>
+                        <li><a href="/sobre">Sobre Nós</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
-                        <li><a href="../politica_privacidade/index.php">Política de Privacidade</a></li>
+                        <li><a href="/politica_privacidade">Política de Privacidade</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../../public/pagamento.js"></script>
-    <script src="../../public/google-pay.js"></script>
-    
+    <script src="/js/google-pay.js"></script>
+
 </body>
 </html>

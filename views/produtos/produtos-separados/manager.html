@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>xNeed Message - Dispare mensagens automatizadas</title>
-        <link rel="stylesheet" href="../../../public/css/produtos_separados.css">
-        <link rel="stylesheet" href="../../bootstraps/header.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
-        <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
-        <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xNeed Manager - Sistema de Gestão de Funcionários</title>
+    <link rel="stylesheet" href="/css/produtos_separados.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
 <body>
     <!-- CABEÇALHO REUTILIZÁVEL -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../../pagina_inicial/index.php" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
             <button class="menu-toggle" id="mobile-menu">
                 <i class="fas fa-bars"></i>
             </button>
-        
+            
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.php">Produtos</a></li>
-                    <li><a href="../../sobre/index.php">Sobre</a></li>
-                    <li><a href="../../pagina_inicial/index.php#contato">Contato</a></li>
-                    <?php include '../../../public/header-usuario-products.php'; ?>
+                    <li><a href="/produtos">Produtos</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <div id="usuarioArea"></div>
+
+                    <script src="/js/header-usuario.js"></script>
                 </ul>
             </nav>
         </div>
@@ -40,9 +43,9 @@
 
     <main>
         <section class="hero">
-            <h1>xNeed Message</h1>
-            <p class="subtitle">O xNeed Message automatiza o envio de mensagens para seus clientes com respostas inteligentes, rápidas e personalizadas, 
-                funcionando 24/7 para manter a comunicação sempre ativa.</p>
+            <h1>xNeed Manager</h1>
+            <p class="subtitle">O xNeed Manager simplifica o cadastro e gestão de funcionários com
+                controles de acesso centralizados e relatórios automatizados, otimizando a administração do seu time.</p>
         </section>
 
         <section class="product-details">
@@ -53,43 +56,42 @@
                     </div>
                 </div>
 
-                <h2>xNeed ChatBot</h2>
-                <p class="description">Sistema de envio automático de mensagens para gerenciar a comunicação com os clientes.</p>
+                <h2>xNeed Manager</h2>
+                <p class="description">Sistema inteligente para cadastro, gestão e acompanhamento de funcionários com ferramentas completas de RH.</p>
 
                 <ul class="feature-list">
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>Envio de mensagens 24 horas por dia.</span>
+                        <span>Cadastro completo de funcionários</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>
-                            Mensagens enviadas instantaneamente.
-                        </span>
+                        <span>Organização por departamentos e cargos</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>Comunicação automática com linguagem natural.</span>
+                        <span>Gestão de férias e benefícios</span>
                     </li>
                     <li>
                         <span class="check-icon">✓</span>
-                        <span>Integração com sistemas</span>
+                        <span>Dashboard administrativo intuitivo</span>
                     </li>
                 </ul>
             </div>
 
             <div class="info-section">
-                <h3>Por que escolher o xNeed Message</h3>
+                <h3>Por que escolher o xNeed Manager</h3>
                 <p>
-                    O <strong>xNeed Message</strong> ChatGPT said:
-
-                    É a solução perfeita para empresas que querem automatizar o envio de mensagens e melhorar a experiência do cliente. Com tecnologia inteligente e linguagem natural, 
-                    ele envia comunicações relevantes, coleta dados e guia o usuário de forma prática, rápida e eficiente.
+                    O <strong>xNeed Manager</strong> revoluciona a gestão de pessoas com uma plataforma completa que elimina a papelada 
+                    e centraliza todas as informações da sua equipe em um único lugar. 
                 </p>
                 <p>
-                    Com funcionamento 24/7, integração com APIs e plataformas de mensagens, e opções de personalização, 
-                    o xNeed ChatBot automatiza o envio de mensagens, reduz custos operacionais e aumenta a produtividade da sua equipe. Seja para vendas, 
-                    suporte ou triagem, ele se adapta perfeitamente ao seu negócio.
+                    Automatize processos burocráticos, tenha controle total sobre horários e folha de ponto, 
+                    e acesse relatórios detalhados que ajudam na tomada de decisões estratégicas para seu negócio.
+                </p>
+                <p>
+                    Com interface intuitiva e segura, nosso sistema se adapta a empresas de todos os tamanhos, 
+                    oferecendo escalabilidade e eficiência na administração do seu capital humano.
                 </p>
             </div>
 
@@ -99,38 +101,38 @@
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
                         <span>
-                            Redução de custos com envio de mensagens automáticas.
+                            Reduz custos com processos de RH automatizados.
                         </span>
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
                         <span>
-                             Escalabilidade no envio de mensagens para clientes.
+                            Escalabilidade na gestão de equipes em crescimento.
                         </span>
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
-                        <span>Escalabilidade no envio automático de mensagens.</span>
+                        <span>Controle centralizado de dados dos funcionários.</span>
                     </div>
                     <div class="benefit-item">
                         <span class="check-icon">✓</span>
-                        <span>Conversões mais eficientes via mensagens automatizadas.</span>
+                        <span>Tomada de decisão com relatórios em tempo real.</span>
                     </div>
                 </div>
             </div>
 
             <div class="cta-section">
-                <a href="../../pagamentos/index.php" class="cta-button chatbot-cta">Comprar</a>
+                <a href="/pagamentos" class="cta-button chatbot-cta">Comprar</a>
             </div>
         </section>
     </main>
 
-     <!-- RODAPÉ REUTILIZÁVEL -->
+    <!-- RODAPÉ REUTILIZÁVEL -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="message.php" class="logo">
+                    <a href="/manager" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
 
@@ -148,25 +150,26 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Produtos</h3>
                     <ul>
-                        <li><a title="Adquira o produto Chatbot" href="chatbot.php">xNeed Chatbot</a></li>
-                        <li><a title="Adquira o produto Downloader" href="downloader.php">xNeed Downloader</a></li>
-                        <li><a title="Adquira o produto Message" href="message.php">xNeed Message</a></li>
-                        <li><a title="Adquira o produto QrGenerator" href="QrGenerator.php">xNeed QrGenerator</a></li>
-                        <li><a title="Adquira o produto Excel" href="Excel.php">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Chatbot" href="/chatbot">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="/downloader">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="/message">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="/qrgenerator">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="/excel">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Manager" href="/manager">xNeed Manager</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a href="../../sobre/index.php">Sobre Nós</a></li>
+                        <li><a href="/sobre">Sobre Nós</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
-                        <li><a href="../politica_privacidade/index.html">Política de Privacidade</a></li>
+                        <li><a href="/politica_privacidade">Política de Privacidade</a></li>
                     </ul>
                 </div>
             </div>
