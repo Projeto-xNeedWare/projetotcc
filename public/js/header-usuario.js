@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
         <div class="usuario-dropdown" style="display: none; padding: 10px; width: 150px; position: absolute; background: #000000ff; border: 1px solid #ccc; right: 0; z-index: 10;">
           <a href="/conta">Minha Conta</a><br>
-          <a href="/login" id="logoutLink">Sair</a>
+          <a href="/logout" id="logoutLink">Sair</a>
         </div>
       </div>
     `;

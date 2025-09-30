@@ -136,38 +136,35 @@
 </main>
 
 <script>
-    // Script de alternância de abas
-    document.addEventListener('DOMContentLoaded', function() {
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                button.classList.add('active');
-                const tabId = button.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
+  // minha-conta.js
 
-        // Toggle switches
-        const toggles = document.querySelectorAll('.toggle');
-        toggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                toggle.classList.toggle('active');
-            });
-        });
-    });
+// Função para carregar dados do usuário
+async function carregarUsuario() {
+  try {
+    const res = await fetch("/api/usuario"); // rota que retorna os dados da sessão
+    if (!res.ok) throw new Error("Não logado"); // se não houver sessão ativa
+    const usuario = await res.json();
 
-  const usuario = JSON.parse(localStorage.getItem("usuario"));
-
-  if (usuario) {
+    // Preenche os elementos da página com os dados
     document.querySelector(".page-title + h1").textContent = `Olá, ${usuario.nome}!`;
-    document.getElementById("user-nome").textContent = usuario.nome + " " + usuario.sobrenome;
+    document.getElementById("user-nome").textContent = `${usuario.nome} ${usuario.sobrenome}`;
     document.getElementById("user-email").textContent = usuario.email;
+
   }
+}
+
+// Chama a função ao carregar a página
+window.addEventListener("DOMContentLoaded", carregarUsuario);
+
+// Logout
+const logoutLink = document.getElementById("logoutLink");
+if (logoutLink) {
+  logoutLink.addEventListener("click", async (e) => {
+    e.preventDefault();
+    await fetch("/logout"); // chama rota de logout do servidor
+  });
+}
+
 </script>
 
 

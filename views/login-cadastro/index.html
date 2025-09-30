@@ -23,48 +23,48 @@
         </div>
 
         <!-- Formulário de Login -->
-        <form id="loginForm" class="auth-form">
+        <form id="loginForm" class="auth-form" method="POST" action="js/auth.js">
           <div class="form-group">
             <label for="loginEmail">Email</label>
             <div class="input-wrapper">
-              <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+              <input type="email" name="email" id="loginEmail" placeholder="seu@email.com" required>
             </div>
           </div>
           <div class="form-group">
             <label for="loginSenha">Senha</label>
             <div class="input-wrapper">
-              <input type="password" id="loginSenha" placeholder="••••••••" required>
+              <input type="password" name="senha" id="loginSenha" placeholder="••••••••" required>
             </div>
           </div>
           <input type="submit" class="btn-primary" value="Entrar">
         </form>
 
         <!-- Formulário de Cadastro -->
-        <form id="cadastroForm" class="auth-form" style="display:none;">
+        <form id="cadastroForm" class="auth-form" style="display:none;" method="POST" action="js/auth.js">
           <div class="form-row">
             <div class="form-group">
               <label for="cadastroNome">Nome</label>
               <div class="input-wrapper">
-                <input type="text" id="cadastroNome" placeholder="Seu nome" required>
+                <input type="text" name="nome" id="cadastroNome" placeholder="Seu nome" required>
               </div>
             </div>
             <div class="form-group">
               <label for="cadastroSobrenome">Sobrenome</label>
               <div class="input-wrapper">
-                <input type="text" id="cadastroSobrenome" placeholder="Seu sobrenome" required>
+                <input type="text" name="sobrenome" id="cadastroSobrenome" placeholder="Seu sobrenome" required>
               </div>
             </div>
           </div>
           <div class="form-group">
             <label for="cadastroEmail">Email</label>
             <div class="input-wrapper">
-              <input type="email" id="cadastroEmail" placeholder="seu@email.com" required>
+              <input type="email" name="email" id="cadastroEmail" placeholder="seu@email.com" required>
             </div>
           </div>
           <div class="form-group">
             <label for="cadastroSenha">Senha</label>
             <div class="input-wrapper">
-              <input type="password" id="cadastroSenha" placeholder="••••••••" required>
+              <input type="password" name="senha" id="cadastroSenha" placeholder="••••••••" required>
             </div>
           </div>
           <div class="form-group">
@@ -92,6 +92,6 @@
     <div class="bg-pattern"></div>
   </div>
 
-  <script src="js/auth.js"></script>
+  <script src="/js/auth.js"></script>
 </body>
 </html>

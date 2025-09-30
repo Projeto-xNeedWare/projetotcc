@@ -17,12 +17,11 @@ function mostrarLogin() {
     'Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>';
 }
 
-// Simulação de "banco" no localStorage
 const msg = document.getElementById("msg");
 
-document.getElementById("cadastroForm").addEventListener("submit", function (e) {
+// Cadastro via fetch para backend
+document.getElementById("cadastroForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-
   const nome = document.getElementById("cadastroNome").value;
   const sobrenome = document.getElementById("cadastroSobrenome").value;
   const email = document.getElementById("cadastroEmail").value;
@@ -35,38 +34,51 @@ document.getElementById("cadastroForm").addEventListener("submit", function (e) 
     return;
   }
 
-  // Salvar no localStorage
-  const usuario = { nome, sobrenome, email, senha };
-  localStorage.setItem("usuario", JSON.stringify(usuario));
-
-  msg.style.color = "lightgreen";
-  msg.textContent = "✅ Conta criada com sucesso! Agora faça login.";
-
-  mostrarLogin();
+  try {
+    const res = await fetch("/cadastro", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nome, sobrenome, email, senha })
+    });
+    const data = await res.text();
+    msg.style.color = "lightgreen";
+    msg.textContent = data;
+    mostrarLogin();
+  } catch (err) {
+    msg.style.color = "red";
+    msg.textContent = "❌ Erro ao cadastrar!";
+  }
 });
 
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+// Login via fetch para backend
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-
   const email = document.getElementById("loginEmail").value;
   const senha = document.getElementById("loginSenha").value;
 
-  const usuario = JSON.parse(localStorage.getItem("usuario"));
+  try {
+    const res = await fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, senha })
+    });
+    const data = await res.text();
+    msg.textContent = data;
 
-  if (usuario && email === usuario.email && senha === usuario.senha) {
-  msg.style.color = "lightgreen";
-  msg.textContent = `✅ Bem-vindo, ${usuario.nome}!`;
-
-  // Salvar sessão (opcional)
-  localStorage.setItem("logado", "true");
-
-  // Redirecionar após 1s
-    setTimeout(() => {
-        window.location.href = "/conta";
-    }, 1000);
-    } else {
-    msg.style.color = "red";
-    msg.textContent = "❌ Email ou senha inválidos.";
+    if (data.includes("Bem-vindo")) {
+      setTimeout(() => window.location.href = "/conta", 1000);
     }
-
+  } catch (err) {
+    msg.style.color = "red";
+    msg.textContent = "❌ Erro ao conectar ao servidor.";
+  }
 });
+
+// Logout
+const logoutLink = document.getElementById("logoutLink");
+if (logoutLink) {
+  logoutLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    fetch("/logout").then(() => window.location.href = "/login");
+  });
+}

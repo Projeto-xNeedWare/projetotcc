@@ -1,95 +1,139 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import mysql from "mysql2/promise"; // promise para async/await
+import session from "express-session";
+import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// expõe public/ (CSS, JS, imagens)
+// Recriar __dirname em ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+app.use(session({
+  secret: "chave-secreta",
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 3600000 }
+}));
+
+// Servir arquivos estáticos
 app.use(express.static(path.join(__dirname, "public")));
 
-//-------------------------------- ROTAS --------------------------------//
+// Conexão com MySQL
+const db = await mysql.createPool({
+  host: "localhost",
+  user: "root",
+  password: "123@abc",
+  database: "xneedware"
+});
 
-//----------------------------- PÁGINAS PRINCIPAIS --------------------------------//
-// rota inicial
+// ------------------ Cadastro ------------------
+app.post("/cadastro", async (req, res) => {
+  try {
+    const { nome, sobrenome, email, senha } = req.body;
+
+    // Verifica se email já existe
+    const [rows] = await db.query("SELECT * FROM usuarios WHERE email = ?", [email]);
+    if (rows.length > 0) {
+      return res.send("❌ Email já cadastrado!");
+    }
+
+    // Inserir no banco
+    await db.query("INSERT INTO usuarios (nome, sobrenome, email, senha) VALUES (?, ?, ?, ?)", [nome, sobrenome, email, senha]);
+    res.send("✅ Conta criada com sucesso! Agora faça login.");
+  } catch (err) {
+    console.error(err);
+    res.send("❌ Erro ao cadastrar no servidor.");
+  }
+});
+
+// Login
+app.post("/login", async (req, res) => {
+  try {
+    const { email, senha } = req.body;
+
+    const [rows] = await db.query(
+      "SELECT * FROM usuarios WHERE email = ? AND senha = ?",
+      [email, senha]
+    );
+
+    if (rows.length > 0) {
+      // salva sessão
+      req.session.user = {
+        id: rows[0].id,
+        nome: rows[0].nome,
+        sobrenome: rows[0].sobrenome,
+        email: rows[0].email
+      };
+      res.send(`✅ Bem-vindo, ${rows[0].nome}!`);
+    } else {
+      res.send("❌ Email ou senha inválidos.");
+    }
+  } catch (err) {
+    console.error(err);
+    res.send("❌ Erro ao conectar ao servidor.");
+  }
+});
+
+// ------------------ Logout ------------------
+app.get("/logout", (req, res) => {
+  req.session.destroy(err => {
+    if (err) return res.send("❌ Erro ao sair!");
+    res.redirect("/login");
+  });
+});
+
+// Rota para pegar os dados do usuário logado
+app.get("/api/usuario", (req, res) => {
+  if (req.session.user) {
+    res.json(req.session.user); // envia os dados da sessão
+  } else {
+    res.status(401).send("Não logado");
+  }
+});
+
+// ------------------ Rotas ------------------
+
+// Página inicial
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "pagina-inicial", "index.html"));
 });
 
-// rota de login
+// Login
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "login-cadastro", "index.html"));
 });
 
-// rota de sair
-app.get("/sair", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "login-cadastro", "index.html"));
+// rota de conta do usuário
+app.get("/conta", (req, res) => {
+  if (!req.session.user) {
+    // se não estiver logado, volta para login
+    return res.redirect("/login");
+  }
+  res.sendFile(path.join(__dirname, "views", "conta-usuario", "minha-conta.html"));
 });
 
-// rota de contato
-app.get("/contato", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "pagina-inicial", "index.html#contato"));
-});
-
-// rota de produtos
+// Demais rotas estáticas
 app.get("/produtos", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "produtos", "index.html"));
 });
 
-// rota de sobre
 app.get("/sobre", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "sobre", "index.html"));
 });
 
-// rota de conta do usuário
-app.get("/conta", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "conta-usuario", "minha-conta.html"));
+app.get("/contato", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "pagina-inicial", "index.html#contato"));
 });
 
-// rota de política de privacidade
-app.get("/politica-privacidade", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "politica_privacidade", "index.html"));
-});
-
-// rota de pagamentos
-app.get("/pagamentos", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "pagamentos", "index.html"));
-});
-//----------------------------- FIM PÁGINAS PRINCIPAIS --------------------------------//
-
-//-------------------------------- PRODUTOS SEPARADOS ------------------------------------//
-// chatbot
-app.get("/chatbot", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "produtos", "produtos-separados", "chatbot.html"));
-});
-
-// downloader
-app.get("/downloader", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "produtos", "produtos-separados", "downloader.html"));
-});
-
-// excel
-app.get("/excel", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "produtos", "produtos-separados", "excel.html"));
-});
-
-// message
-app.get("/message", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "produtos", "produtos-separados", "message.html"));
-});
-
-// qrcode
-app.get("/qrgenerator", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "produtos", "produtos-separados", "qrcode.html"));
-});
-
-// manager
-app.get("/manager", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "produtos", "produtos-separados", "manager.html"));
-});
-//-------------------------------- FIM PRODUTOS SEPARADOS --------------------------------//
-
-//-------------------------------- FIM ROTAS --------------------------------//
-
+// Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`✅ Servidor rodando em http://localhost:${PORT}`);
 });
