@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta - xNeedWare</title>
-    <link rel="stylesheet" href="../../public/styles.css">
-    <link rel="stylesheet" href="./../bootstraps/header.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/header.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
@@ -16,13 +16,22 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
+<script>
+    // minha-conta.html
+    window.onload = () => {
+    if (localStorage.getItem("logado") !== "true") {
+        window.location.href = "index.html";
+    }
+    };
+</script>
+
 <body>
      <!-- Cabeçalho -->
      <header class="xneedware-header">
         <div class="header-container">
-            <a href="../pagina_inicial/index.php" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
@@ -30,10 +39,14 @@
         
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../produtos/index.php">Produtos</a></li>
-                    <li><a href="../sobre/index.php">Sobre</a></li>
-                    <li><a href="./../pagina_inicial/index.php#contato">Contato</a></li>
-                    <?php include '../../public/header-usuario.php'; ?>
+                    <li><a href="/produtos">Produtos</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <!-- Espaço para o usuário -->
+                    <div id="usuarioArea"></div>
+
+                    <!-- Linkando o JS externo -->
+                    <script src="/js/header-usuario.js"></script>
                 </ul>
             </nav>
         </div>
@@ -42,7 +55,7 @@
 <!-- Conteúdo Principal -->
 <main class="container">
     <h1 class="page-title">Minha Conta</h1>
-    <h1><?php include '../../public/nome-usuario.php'; ?></h1>
+    <h1>Olá, .....</h1>
     
     <div class="stats-grid">
         <div class="stat-card">
@@ -70,8 +83,8 @@
     <div class="tabs-container">
         <div class="tabs">
             <button class="tab-btn active" data-tab="info">Dados Pessoais</button>
-            <button class="tab-btn" data-tab="purchases">Compras</button>
-            <button class="tab-btn" data-tab="settings">Configurações</button>
+            <!-- <button class="tab-btn" data-tab="purchases">Compras</button>
+            <button class="tab-btn" data-tab="settings">Configurações</button> -->
         </div>
 
         <!-- Aba: Dados Pessoais -->
@@ -81,26 +94,24 @@
                     <h2 class="card-title">Dados Pessoais</h2>
                     <p class="card-description">Gerencie suas informações pessoais</p>
                 </div>
-                <?php
-                $nome = $_SESSION['usuario_nome'] ?? $_COOKIE['nome'] ?? 'Usuário';
-                $email = $_SESSION['usuario_email'] ?? $_COOKIE['email'] ?? 'email@exemplo.com';
-                ?>
+
                 <div class="card-content">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Nome</label>
-                            <span class="user-info"><?php echo htmlspecialchars($nome); ?></span>
+                            <span class="user-info" id="user-nome">nome</span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <span class="user-info"><?php echo htmlspecialchars($email); ?></span>
+                            <span class="user-info" id="user-email">email@exemplo.com</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Aba: Compras -->
+        <!-- 
+        Aba: Compras
         <div class="tab-content" id="purchases">
             <div class="card">
                 <div class="card-header">
@@ -108,21 +119,19 @@
                     <p class="card-description">Veja todas as suas compras anteriores</p>
                 </div>
                 <div class="tab-content" id="purchases">
-                <?php include '../../public/historico-compras.php'; ?>
             </div>
         </div>
 
-        <!-- Aba: Configurações -->
+        Aba: Configurações
         <div class="tab-content" id="settings">
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Configurações da Conta</h2>
                     <p class="card-description">Altere suas informações de acesso</p>
                 </div>
-                <div class="tab-content" id="settings">
-                <?php include '../../public/historico-compras.php'; ?>
             </div>
         </div>
+        -->
     </div>
 </main>
 
@@ -151,9 +160,16 @@
             });
         });
     });
+
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+  if (usuario) {
+    document.querySelector(".page-title + h1").textContent = `Olá, ${usuario.nome}!`;
+    document.getElementById("user-nome").textContent = usuario.nome + " " + usuario.sobrenome;
+    document.getElementById("user-email").textContent = usuario.email;
+  }
 </script>
 
-<script src="/header-script.js"></script>
-<script src="/dashboard.js"></script>
+
 </body>
 </html>

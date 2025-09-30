@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Cadastro | xNeedWare</title>
+  <link rel="stylesheet" href="/css/login-cadastro.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+  <main>
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div class="logo">
+            <a href="/" class="logo">
+              <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
+            </a>
+          </div>
+          <h1 id="form-title">Entrar na sua conta</h1>
+          <p id="form-desc">Faça login para continuar</p>
+        </div>
+
+        <!-- Formulário de Login -->
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="loginSenha">Senha</label>
+            <div class="input-wrapper">
+              <input type="password" id="loginSenha" placeholder="••••••••" required>
+            </div>
+          </div>
+          <input type="submit" class="btn-primary" value="Entrar">
+        </form>
+
+        <!-- Formulário de Cadastro -->
+        <form id="cadastroForm" class="auth-form" style="display:none;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cadastroNome">Nome</label>
+              <div class="input-wrapper">
+                <input type="text" id="cadastroNome" placeholder="Seu nome" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cadastroSobrenome">Sobrenome</label>
+              <div class="input-wrapper">
+                <input type="text" id="cadastroSobrenome" placeholder="Seu sobrenome" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cadastroEmail">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="cadastroEmail" placeholder="seu@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cadastroSenha">Senha</label>
+            <div class="input-wrapper">
+              <input type="password" id="cadastroSenha" placeholder="••••••••" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cadastroSenha2">Confirmar senha</label>
+            <div class="input-wrapper">
+              <input type="password" id="cadastroSenha2" placeholder="••••••••" required>
+            </div>
+          </div>
+          <input type="submit" class="btn-primary" value="Criar conta">
+        </form>
+
+        <div class="auth-footer">
+          <p id="toggle-link">
+            Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>
+          </p>
+        </div>
+
+        <p id="msg" style="text-align:center; margin-top:10px; font-size:0.9rem;"></p>
+      </div>
+    </div>
+  </main>
+
+  <div class="auth-background">
+    <div class="bg-gradient"></div>
+    <div class="bg-pattern"></div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

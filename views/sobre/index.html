@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre a xNeedWare - Inovação e Excelência em Soluções Digitais</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/sobre.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
 </head>
 
@@ -15,7 +15,7 @@
     <!-- CABEÇALHO -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="../pagina_inicial/index.php" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
+            <a href="/" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
 
@@ -25,10 +25,12 @@
             
             <nav class="main-nav">
                 <ul>
-                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.php">Produtos</a></li>
-                    <li><a title="Saiba mais sobre a xNeedWare" href="../sobre/index.php">Sobre</a></li>
-                    <li><a title="Entre em contato conosco" href="./../pagina_inicial/index.php#contato">Contato</a></li>
-                    <?php include '../../public/header-usuario.php'; ?>
+                    <li><a title="Veja todos os nossos produtos disponíveis" href="/produtos">Produtos</a></li>
+                    <li><a title="Saiba mais sobre a xNeedWare" href="/sobre">Sobre</a></li>
+                    <li><a title="Entre em contato conosco" href="/contato">Contato</a></li>
+                    <div id="usuarioArea"></div>
+
+                    <script src="/js/header-usuario.js"></script>
                 </ul>
             </nav>
         </div>
@@ -37,7 +39,7 @@
     <!-- CONTEÚDO -->
     <main>
         <video autoplay muted loop playsinline class="bg-video">
-            <source src="vid_background.mp4" type="video/mp4">
+            <source src="/video" type="video/mp4">
             Seu navegador não suporta vídeo.
         </video>
         <section class="hero about-hero">

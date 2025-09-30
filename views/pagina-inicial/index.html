@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xNeedWare | Software Premium para Empresas</title>
     <meta name="description" content="Soluções de software premium para empresas de todos os tamanhos">
-    <link rel="stylesheet" href="../pagina_inicial/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 
 <body onload="numRandom('num-random', 'num-random2', 'num-random3', 'num-random4')">
@@ -30,14 +30,15 @@
         
             <nav class="main-nav">
                 <ul>
-                    <li><a title="Veja todos os nossos produtos disponíveis" href="../produtos/index.php">Produtos</a></li>
-                    <li><a title="Saiba mais sobre a nossa empresa" href="../sobre/index.php">Sobre</a></li>
-                    <li><a title="Entre em contato conosco" href="../pagina_inicial/index.php#contato">Contato</a></li>
-                    <?php include '../../public/header-usuario.php'; ?>
+                    <li><a title="Veja todos os nossos produtos disponíveis" href="/produtos">Produtos</a></li>
+                    <li><a title="Saiba mais sobre a nossa empresa" href="/sobre">Sobre</a></li>
+                    <li><a title="Entre em contato conosco" href="/contato">Contato</a></li>
+                    <div id="usuarioArea"></div>
+
+                    <script src="/js/header-usuario.js"></script>
                 </ul>
             </nav>
 
-            <script src="../../public/entrar.js"></script>
         </div>
     </header>
 
@@ -61,7 +62,7 @@
                         Transforme sua empresa com soluções de software inovadoras e personalizadas para atender às suas necessidades específicas.
                     </p>
                     <div class="hero-buttons">
-                        <a title="Venha explorar nossos produtos" href="../produtos/index.php" class="btn btn-primary">
+                        <a title="Venha explorar nossos produtos" href="/produtos" class="btn btn-primary">
                             Explorar Produtos
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -390,11 +391,11 @@
                     <h3 class="footer-title">Produtos</h3>
                     
                     <ul>
-                        <li><a title="Adquira o produto Chatbot" href="../produtos/produtos_separados/chatbot.php">xNeed Chatbot</a></li>
-                        <li><a title="Adquira o produto Downloader" href="../produtos/produtos_separados/downloader.php">xNeed Downloader</a></li>
-                        <li><a title="Adquira o produto Message" href="../produtos/produtos_separados/message.php">xNeed Message</a></li>
-                        <li><a title="Adquira o produto QrGenerator" href="../produtos/produtos_separados/QrGenerator.php">xNeed QrGenerator</a></li>
-                        <li><a title="Adquira o produto Excel" href="../produtos/produtos_separados/Excel.php">xNeed Excel</a></li>
+                        <li><a title="Adquira o produto Chatbot" href="/chatbot.php">xNeed Chatbot</a></li>
+                        <li><a title="Adquira o produto Downloader" href="/downloader.php">xNeed Downloader</a></li>
+                        <li><a title="Adquira o produto Message" href="/message.php">xNeed Message</a></li>
+                        <li><a title="Adquira o produto QrGenerator" href="/qrgenerator.php">xNeed QrGenerator</a></li>
+                        <li><a title="Adquira o produto Excel" href="/excel.php">xNeed Excel</a></li>
                     </ul>
                 
                 </div>
