@@ -35,48 +35,187 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Seu Carrinho</h1>
-      <p class="subtitle">Revise seus produtos antes de finalizar a compra.</p>
-    </section>
+        <section class="hero">
+            <h1>Seu Carrinho</h1>
+            <p class="subtitle">Revise seus produtos antes de finalizar a compra.</p>
+        </section>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <section class="checkout-container">
-      <div class="checkout-form">
-        <h2>Produtos adicionados</h2>
-        <div id="carrinhoContainer" class="cart-items"></div>
-      </div>
+        <section class="checkout-container">
+            <div class="checkout-form">
+                <div class="form-progress">
+                    <div class="progress-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Carrinho</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Dados</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Pagamento</div>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Confirmação</div>
+                    </div>
+                </div>
 
-      <!-- SIDEBAR -->
-      <div class="checkout-sidebar">
-        <div class="order-summary-card">
-          <h3>Resumo do pedido</h3>
-          <div id="sidebar-products"></div>
-          <div class="summary-item total">
-            <div class="summary-label">Total</div>
-            <div class="summary-value" id="sidebar-total">R$ 00,00</div>
-          </div>
-        </div>
+                <!-- HERO -->
+                  
 
-        <div class="form-actions" style="margin-top:20px;">
-          <a href="/pagamentos" class="btn-next" style="width:100%; text-align:center;">Finalizar Compra</a>
-        </div>
+                  <!-- CONTEÚDO PRINCIPAL -->
+                      <h2>Produtos adicionados</h2>
+                      <div id="carrinhoContainer" class="cart-items"></div>
 
-        <div class="secure-payment">
-          <div class="secure-icon">🔒</div>
-          <p>Pagamento 100% seguro</p>
-        </div>
+                          <div class="form-actions">
+                            <button type="button" class="btn-next" onclick="nextStep(2)">Continuar</button>
+                          </div>
+                      </div>
 
-        <div class="help-section">
-          <h4>Precisa de ajuda?</h4>
-          <p>Entre em contato com nosso suporte:</p>
-          <a href="mailto:suporte@xneedware.com" class="support-link">suporte@xneedware.com</a>
-          <a href="tel:+551199999999" class="support-link">+55 11 9999-9999</a>
-        </div>
-      </div>
-    </section>
-  </main>
+                    <div class="form-step hidden" id="step-1">
+                        <h2>Confirme seus dados clicando em "Continuar"</h2>
+
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <span class="user-info" id="user-nome-step2"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email para receber o arquivo</label>
+                            <input type="email" id="email" name="email" required>
+                            <small>Você pode alterar o email para receber o arquivo em outro endereço.</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="prevStep(2)">Voltar</button>
+                            <button type="button" class="btn-next" onclick="nextStep(2)">Continuar</button>
+                        </div>
+                    </div>
+
+                    <script>
+                    document.addEventListener("DOMContentLoaded", async () => {
+                        try {
+                            const res = await fetch("/api/usuario");
+                            if (!res.ok) throw new Error("Usuário não logado");
+                            const usuario = await res.json();
+
+                            // Preenche os campos com os dados do usuário
+                            document.getElementById("user-nome-step2").textContent = usuario.nome + " " + usuario.sobrenome;
+                            document.getElementById("email").value = usuario.email;
+                        } 
+                        catch (error) {
+                            console.error("Erro ao carregar dados do usuário:", error);
+                            // Redireciona para a página de login se o usuário não estiver logado
+                            window.location.href = "/login";
+                        }
+                    });
+                    </script>
+
+                    <div class="form-step hidden" id="step-2">
+                        <h2>Informações de pagamento</h2>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-method-tabs">
+                                <button type="button" class="payment-tab active" data-method="google-pay">Google Pay</button>
+                                <button type="button" class="payment-tab" data-method="pix">PIX</button>
+                            </div>
+
+                            <div class="payment-method-content" id="google-pay-content">
+                                <div class="google-pay-section">
+                                    <div class="google-pay-info">
+                                        <i class="fab fa-google-pay" style="font-size: 2rem; color: #4285f4; margin-bottom: 15px;"></i>
+                                        <p>Pague de forma rápida e segura com o Google Pay</p>
+                                        <p class="payment-security">🔒 Seus dados de pagamento ficam protegidos</p>
+                                    </div>
+                                    <div id="google-pay-button-container">
+                                        <div id="google-pay-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-method-content hidden" id="pix-content">
+                                <div class="pix-info">
+                                    <p>Ao finalizar sua compra, você receberá um QR Code para pagamento via PIX.</p>
+                                    <p>O pagamento via PIX é processado instantaneamente.</p>
+                                    <div class="pix-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="prevStep(3)">Voltar</button>
+                            <button type="button" class="btn-next" onclick="nextStep(3)">Continuar</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step hidden" id="step-2">
+                        <h2>Confirme seu pedido</h2>
+                        
+                        <div class="order-summary">
+                            <h3>Resumo da compra</h3>
+                            <div class="summary-item">
+                                <div class="summary-label">Produto</div>
+                                <div class="summary-value" id="summary-product"></div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-label">Forma de pagamento</div>
+                                <div class="summary-value" id="summary-payment">Google Pay</div>
+                            </div>
+                            <div class="summary-item total">
+                                <div class="summary-label">Total</div>
+                                <div class="summary-value" id="summary-total">R$ 00,00</div>
+                            </div>
+                        </div>
+                        
+                        <div class="terms-agreement">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                <span>Concordo com os <a href="#" class="terms-link">Termos de Serviço</a> e <a href="#" class="terms-link">Política de Privacidade</a></span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="prevStep(4)">Voltar</button>
+                            <button type="submit" class="btn-submit">Finalizar compra</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- BARRA DA DIREITA -->
+            <!-- SIDEBAR -->
+                    <div class="checkout-sidebar">
+                      <div class="order-summary-card">
+                        <h3>Resumo do pedido</h3>
+                        <div id="sidebar-products"></div>
+                        <div class="summary-item total">
+                          <div class="summary-label">Total</div>
+                          <div class="summary-value" id="sidebar-total">R$ 00,00</div>
+                        </div>
+                      </div>
+
+                      <div class="form-actions" style="margin-top:20px;">
+                        <a href="/pagamentos" class="btn-next" style="width:100%; text-align:center;">Finalizar Compra</a>
+                      </div>
+
+                      <div class="secure-payment">
+                        <div class="secure-icon">🔒</div>
+                        <p>Pagamento 100% seguro</p>
+                      </div>
+
+                      <div class="help-section">
+                        <h4>Precisa de ajuda?</h4>
+                        <p>Entre em contato com nosso suporte:</p>
+                        <a href="mailto:suporte@xneedware.com" class="support-link">suporte@xneedware.com</a>
+                        <a href="tel:+551199999999" class="support-link">+55 11 9999-9999</a>
+                      </div>
+                    </div>
+        </section>
+    </main>
 
   <!-- FOOTER -->
   <footer class="footer">
