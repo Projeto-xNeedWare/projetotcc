@@ -51,10 +51,12 @@ document.getElementById("cadastroForm").addEventListener("submit", async (e) => 
 });
 
 // Login via fetch para backend
+// Login via fetch para backend
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = document.getElementById("loginEmail").value;
   const senha = document.getElementById("loginSenha").value;
+  const msg = document.getElementById("msg"); // assumindo que existe um elemento para mensagens
 
   try {
     const res = await fetch("/login", {
@@ -63,17 +65,63 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
       body: JSON.stringify({ email, senha })
     });
     const data = await res.text();
-    msg.textContent = data;
+    
+    if (msg) {
+      msg.textContent = data;
+    }
 
-    if (data.includes("Bem-vindo")) {
-      // redireciona para página protegida
-      window.location.href = "/conta";
+    if (data.includes("Bem-vindo") || res.ok) {
+      // Opção 1: Redirecionar para a última página acessada
+      const ultimaPagina = sessionStorage.getItem('paginaAnterior') || '/';
+      window.location.href = ultimaPagina;
+      
+      // Opção 2: Redirecionar baseado no tipo de usuário ou contexto
+      // window.location.href = determinarPaginaDestino();
+      
+      // Opção 3: Redirecionar para página específica
+      // window.location.href = "/conta";
     }
   } catch (err) {
-    msg.style.color = "red";
-    msg.textContent = "❌ Erro ao conectar ao servidor.";
+    if (msg) {
+      msg.style.color = "red";
+      msg.textContent = "❌ Erro ao conectar ao servidor.";
+    }
+    console.error("Erro no login:", err);
   }
 });
+
+// Função para salvar a página atual antes do login
+function salvarPaginaAtual() {
+  // Não salva se já estiver na página de login
+  if (!window.location.pathname.includes('/login')) {
+    sessionStorage.setItem('paginaAnterior', window.location.href);
+  }
+}
+
+// Função para determinar página de destino baseada no contexto
+function determinarPaginaDestino() {
+  // Verifica se veio de uma página específica
+  const urlParams = new URLSearchParams(window.location.search);
+  const redirect = urlParams.get('redirect');
+  
+  if (redirect) {
+    return redirect;
+  }
+  
+  // Verifica se tinha algo no carrinho
+  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  if (carrinho.length > 0) {
+    return "/carrinho";
+  }
+  
+}
+
+// Chama esta função quando o usuário clicar em "Login" em qualquer página
+// Exemplo no header:
+function prepararLogin() {
+  salvarPaginaAtual();
+  window.location.href = "/login";
+}
 
 // Logout
 const logoutLink = document.getElementById("logoutLink");
