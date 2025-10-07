@@ -43,6 +43,96 @@
         </div>
     </header>
 
+    <!-- Seção Inicial -->
+    <section class="hero">
+        <!-- Luzes de fundo gradiante -->
+        <div class="bg-blob blob1"></div>
+        <div class="bg-blob blob2"></div>
+        <div class="bg-blob blob3"></div>
+
+        <!-- Seção Hero: parte principal do site que aparece primeiro, usada pra chamar atenção com título, descrição e dashboard -->
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Título, Descrição e Botões "Explorar" e "Fale Conosco" -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Software Premium para 
+                        <span class="gradient-text">Empresas de Todos os Tamanhos</span>
+                    </h1>
+                    <p class="hero-description">
+                        Transforme sua empresa com soluções de software inovadoras e personalizadas para atender às suas necessidades específicas.
+                    </p>
+                    <div class="hero-buttons">
+                        <a title="Venha explorar nossos produtos" href="/produtos" class="btn btn-primary">
+                            Explorar Produtos
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a title="Entre em contato conosco" href="#contato" class="btn btn-outline">
+                            Fale Conosco
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dashboard em Forma de Cartão -->
+                <div class="hero-image">
+                    <!-- Fundo e cabeçalho do dashboard -->
+                    <div class="dashboard-fundo">
+                        <div class="dashboard-header">
+                            <div class="dashboard-dots">
+                                <div class="dot red" title="Close"></div>
+                                <div class="dot yellow" title="Minimize"></div>
+                                <div class="dot green" title="Maximize"></div>
+                            </div>
+                            <div class="dashboard-title">xNeedWare Dashboard</div>
+                        </div>
+                        
+                        <!-- Conteúdo do dashboard-->
+                        <div class="dashboard-content">
+                            <div class="dashboard-bar">
+                                <div style="width: 75%; height: 100%; background: linear-gradient(to right, rgba(124, 58, 237, 0.7), rgba(37, 99, 235, 0.7)); border-radius: inherit; animation: loading 2s ease-in-out infinite;">
+                                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: rgba(255, 255, 255, 0.8); font-size: 0.75rem;">
+                                        Carregando dados...
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Grid Dashboard -->
+                            <div class="dashboard-grid">
+                                <!-- Usuários ativos -->
+                                <div class="dashboard-card purple">
+                                    <div class="card-content" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                        <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Usuários ativos</div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <strong id="num-random" style="color: white; font-size: 1.25rem;"></strong> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
+                                            <span id="num-random4" style="color: #34d399; font-size: 0.7rem;"></span> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Novas vendas -->
+                                <div class="dashboard-card blue">
+                                    <div class="card-content" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                        <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem;">Novas vendas</div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <strong id="num-random3" style="color: white; font-size: 1.25rem;"></strong> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
+                                            <span id="num-random2" style="color: #34d399; font-size: 0.7rem;"></span> <!-- Os números estão trazendo um código feito pelo Bruno em Javascript, onde os número são formados de maneira aleatória -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rodapé do Dashboard com informação de Receita Fictícia -->
+                        <div class="dashboard-footer">
+                            <div class="footer-bar" style="display: flex; align-items: center; padding: 1 1rem; margin-top: 2rem">
+                                <span style="color: rgba(255, 255, 255, 0.7); font-size: 0.75rem; margin-left: 1rem">Receita: $ 120.450</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="hero">
         <div class="container">
