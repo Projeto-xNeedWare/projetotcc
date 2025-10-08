@@ -101,6 +101,186 @@
      list-style: none;
    }
    
+
+
+   /* Variáveis necessárias */
+:root {
+    --color-black: #000000;
+    --color-dark: #0f0920;
+    --color-white: #ffffff;
+    --color-purple-500: #8b5cf6;
+    --color-purple-600: #7c3aed;
+    --color-purple-700: #6d28d9;
+    --color-blue-500: #3b82f6;
+    --color-blue-600: #2563eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+}
+
+/* Estrutura base */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+    color: var(--color-white);
+    background: linear-gradient(to bottom, var(--color-black), var(--color-dark)) fixed;
+}
+
+/* Blobs de fundo */
+.bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.blob1 {
+    top: 25%;
+    left: 25%;
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-purple-600);
+    animation: blob 7s infinite;
+}
+
+.blob2 {
+    top: 33%;
+    right: 25%;
+    width: 18rem;
+    height: 18rem;
+    background-color: var(--color-blue-600);
+}
+
+.blob3 {
+    bottom: 25%;
+    left: 33%;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--color-purple-800);
+}
+
+/* Grid layout */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--color-gray-300);
+    margin-bottom: 2rem;
+    max-width: 32rem;
+    text-align: left;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Texto gradiente */
+.gradient-text {
+    background: linear-gradient(to right, var(--color-purple-500), var(--color-blue-500));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: translateX(3px);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--color-purple-600), var(--color-blue-600));
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, var(--color-purple-700), var(--color-blue-700));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--color-purple-500);
+    color: var(--color-white);
+}
+
+.btn-outline:hover {
+    background: rgba(124, 58, 237, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Animações */
+@keyframes blob {
+    0%, 100% { transform: translate(0px, 0px) scale(1); }
+    25% { transform: translate(20px, -20px) scale(1.1); }
+    50% { transform: translate(-15px, 15px) scale(0.9); }
+    75% { transform: translate(-10px, -15px) scale(1.05); }
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+
    /* ====================================
       4. COMPONENTES E ELEMENTOS COMUNS
       ==================================== */
