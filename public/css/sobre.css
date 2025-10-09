@@ -62,8 +62,7 @@ body {
     color: var(--color-white);
     background: linear-gradient(to bottom, var(--color-black), var(--color-dark)) fixed;
     line-height: 1.6;
-    overflow-x: hidden;
-}
+  }
 
 a {
     text-decoration: none;
@@ -81,6 +80,13 @@ img {
 
 /* CONTEÚDO DA PÁGINA SOBRE */
 
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-bottom: 100px;
+  }
     /* Cabeçalho */
     .xneedware-header {
         background-color: #00000000;
@@ -231,6 +237,8 @@ img {
     }
 
     /* SECTIONS - TÍTULOS */
+
+
     .section-header {
         text-align: center;
         margin-bottom: 3rem;
@@ -257,9 +265,6 @@ img {
     }
 
     /* SECTION - TEXTO E IMAGEM SOBRE NÓS */
-    .about-intro {
-        margin-bottom: 5rem;
-    }
 
     .about-content {
         display: flex;

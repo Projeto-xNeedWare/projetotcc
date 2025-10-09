@@ -131,6 +131,10 @@
     background: linear-gradient(to bottom, var(--color-black), var(--color-dark)) fixed;
 }
 
+.title p {
+    margin-bottom: -340px;
+}
+
 /* Blobs de fundo */
 .bg-blob {
     position: absolute;
@@ -409,6 +413,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem;
+
   }
 
   /* Texto do titulo com gradiente */
