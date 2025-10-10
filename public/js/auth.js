@@ -131,3 +131,63 @@ if (logoutLink) {
     fetch("/logout").then(() => window.location.href = "/login");
   });
 }
+
+// Verificar parâmetros da URL para abrir cadastro automaticamente
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const action = urlParams.get('action');
+    
+    // Se tiver action=register ou form=register, mostra cadastro
+    if (action === 'register' || urlParams.get('form') === 'register') {
+        mostrarCadastro();
+    }
+    
+    // Salva a página atual antes do login (se não for página de login)
+    if (!window.location.pathname.includes('/login')) {
+        sessionStorage.setItem('paginaAnterior', window.location.href);
+    }
+});
+
+// Função para redirecionar após login bem-sucedido
+function redirecionarAposLogin() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirect = urlParams.get('redirect');
+    
+    if (redirect) {
+        window.location.href = redirect;
+    } else {
+        const ultimaPagina = sessionStorage.getItem('paginaAnterior') || '/';
+        window.location.href = ultimaPagina;
+    }
+}
+
+// Atualize a parte do login para usar a função de redirecionamento
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("loginEmail").value;
+    const senha = document.getElementById("loginSenha").value;
+    const msg = document.getElementById("msg");
+
+    try {
+        const res = await fetch("/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, senha })
+        });
+        const data = await res.text();
+        
+        if (msg) {
+            msg.textContent = data;
+        }
+
+        if (data.includes("Bem-vindo") || res.ok) {
+            redirecionarAposLogin();
+        }
+    } catch (err) {
+        if (msg) {
+            msg.style.color = "red";
+            msg.textContent = "❌ Erro ao conectar ao servidor.";
+        }
+        console.error("Erro no login:", err);
+    }
+});

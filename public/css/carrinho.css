@@ -109,6 +109,7 @@ height: 50px;
 display: grid;
 grid-template-columns: 2fr 1fr;
 gap: 20px;
+color: var(--color-gray-300);
 }
 
 .resumo-pedido {
@@ -116,6 +117,236 @@ position: sticky;
 top: 20px;
 align-self: start;
 }
+
+
+/* Estilos para a barra lateral fixa */
+    .checkout-sidebar {
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+    }
+
+    /* Melhorias no carrinho */
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid #e0e0e000;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background: var(--color-gray-800);
+    }
+
+    .cart-item-info h4 {
+      margin: 0 0 5px 0;
+      color: #ffffff;
+    }
+
+    .cart-item-info p {
+      margin: 0;
+      color: #666;
+    }
+
+    .qtd-input {
+      width: 60px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .remover-btn {
+      background: #ff4444;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .remover-btn:hover {
+      background: #cc0000;
+    }
+
+    /* Steps do formulário */
+    .form-step {
+      transition: opacity 0.3s ease;
+    }
+
+    .form-step.hidden {
+      display: none;
+    }
+
+    .form-step.active {
+      display: block;
+    }
+
+    /* Progress bar */
+    .progress-step.active .step-number {
+      background: #007bff;
+      color: white;
+    }
+
+    .progress-step.active .step-text {
+      color: #007bff;
+      font-weight: 600;
+    }
+
+    /* Estilos para seleção de método de pagamento */
+    .payment-methods-selection {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .payment-option {
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: var(--color-gray-800);
+    }
+
+    .payment-option:hover {
+      border-color: #c0c0c0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .payment-option.selected {
+      border-color: #007bff;
+      background: var(--color-gray-800);
+    }
+
+    .payment-option-header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    .payment-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+      border-radius: 10px;
+      font-size: 1.5rem;
+    }
+
+    .payment-option[data-method="google-pay"] .payment-icon {
+      color: #4285f4;
+      background: #e8f0fe;
+    }
+
+    .payment-info {
+      flex: 1;
+    }
+
+    .payment-info h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #c0c0c0;
+    }
+
+    .payment-info p {
+      margin: 0;
+      color: #c0c0c0;
+      font-size: 0.9rem;
+    }
+
+    .payment-radio {
+      position: relative;
+      width: 20px;
+      height: 20px;
+    }
+
+    .payment-radio input[type="radio"] {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .radio-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    .payment-radio input[type="radio"]:checked + .radio-checkmark {
+      border-color: #007bff;
+      background: #007bff;
+    }
+
+    .payment-radio input[type="radio"]:checked + .radio-checkmark::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .payment-option-details {
+      padding: 0 20px 20px 20px;
+      border-top: 1px solid #f0f0f0;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .payment-option-details.hidden {
+      display: none;
+    }
+
+    .payment-security {
+      color: #28a745;
+      font-size: 0.9rem;
+      margin: 10px 0;
+    }
+
+    /* Garantir que o botão do Google Pay seja visível */
+    .gpay-button {
+      width: 100% !important;
+      height: 40px !important;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    /* Loading spinner */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #007bff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 2s linear infinite;
+      margin: 20px auto;
+    }
 
 
 
@@ -228,7 +459,7 @@ position: fixed;
 
 * Estilos do cabeçalho */
 .xneedware-header {
-background-color: #000000;
+background-color: #00000000;
 width: 100%;
 padding: 20px 0;
 position: relative;

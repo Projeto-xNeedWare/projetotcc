@@ -295,6 +295,7 @@ body {
   .btn-primary {
     background: linear-gradient(to right, var(--color-purple-600), var(--color-blue-600));
     color: var(--color-white);
+    border-radius: var(--border-radius);
   }
   
   .btn-primary:hover {
@@ -319,6 +320,11 @@ body {
     border: none;
     border-color: transparent;
 
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .form-group {
@@ -360,7 +366,7 @@ body {
 
 /* Estrutura principal do cabeçalho */
 .xneedware-header {
-  background-color: #000000;
+  background-color: #00000000;
   width: 100%;
   padding: 20px 0;
   position: relative;
@@ -609,10 +615,9 @@ body {
     border-bottom: 1px solid var(--color-gray-800);
   }
   .partners-text {
-    
+    font-size: 1.125rem;
+    margin-bottom: 3.5rem;
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
   }
   
   

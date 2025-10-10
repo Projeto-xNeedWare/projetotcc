@@ -225,6 +225,77 @@ main {
   box-shadow: 0 5px 15px rgba(138, 92, 245, 0.4);
 }
 
+.product-price-section {
+    margin-bottom: -40px;
+    padding: 15px;
+    background: #f8f9fa00;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+      color: var(--color-gray-300);
+}
+
+.price-discount {
+    font-size: 1rem;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.price-installments {
+    font-size: 1rem;
+    color: #666;
+}
+
+.cta-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 140px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+    .cta-section {
+        flex-direction: column;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
 
 /* 5.8 Rodapé */
 .footer {

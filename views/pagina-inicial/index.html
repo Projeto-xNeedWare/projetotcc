@@ -15,6 +15,15 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 
+<style>
+    button.btn-primary.sent {
+        background-color: #2ecc71 !important;
+    }
+    button.btn-primary.error {
+        background-color: #e74c3c !important;
+    }
+</style>
+
 <body onload="numRandom('num-random', 'num-random2', 'num-random3', 'num-random4')">
     
     <!-- Início do cabeçalho reutilizável -->
@@ -38,7 +47,6 @@
                     <script src="/js/header-usuario.js"></script>
                 </ul>
             </nav>
-
         </div>
     </header>
 
@@ -56,9 +64,7 @@
 
     <!-- Sessão de Contato -->
     <section id="contato" class="contact">
-        
         <div class="container">
-
             <div class="section-header"> 
                 <h2 class="section-title">
                     Entre em <span class="gradient-text">Contato</span> e faça sua <span class="gradient-text">Cotação</span>
@@ -70,7 +76,6 @@
             </div>
 
             <div class="contact-grid">
-                
                 <div class="contact-info">
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -82,11 +87,9 @@
                             <p>contato@xneedware.com</p>
                             <p>suporte@xneedware.com</p>
                         </div>
-                    
                     </div>
 
                     <div class="contact-card">
-                        
                         <div class="contact-icon blue">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -96,7 +99,6 @@
                             <p>+55 (19) 99693-7305</p>
                             <p>+55 (11) 99761-5610</p>
                         </div>
-                    
                     </div>
 
                     <div class="contact-card">
@@ -112,83 +114,64 @@
                 </div>
 
                 <div class="contact-form-container">
-                    
-                    <form class="contact-form" action="../../enviar.php" method="POST">
-                        
-                        <h3 class="form-title" style="margin-bottom: 20px;">Dados Pessoais</h3>
-                        
+                    <form class="contact-form">
+                        <h3 class="form-title">Dados Pessoais</h3>
+
                         <div class="form-grid">
-                            
                             <div class="form-group">
-                                <label for="name">Nome</label>
-                                <input type="text" id="name" name="name" title="Digite seu nome completo" required>
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" title="Digite seu email" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="telefone">Telefone</label>
-                                <input type="text" id="telefone" name="telefone" title="Digite seu telefone" required>
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" required>
                             </div>
-                        
                         </div>
-                        
-                        <h3 class="form-title" style="margin-bottom: 20px;">Dados Empresariais</h3>
-                        
+
+                        <h3 class="form-title">Dados Empresariais</h3>
+
                         <div class="form-group">
                             <label for="nomeempresa">Nome da Empresa</label>
-                            <input type="text" id="nomeempresa" name="nomeempresa" title="Digite o nome da sua empresa" required>
+                            <input type="text" id="nomeempresa" name="nomeempresa" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="cnpj">CNPJ</label>
-                            <input type="text" id="cnpj" name="cnpj" title="Digite o CNPJ da sua empresa" required>
+                            <input type="text" id="cnpj" name="cnpj" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Especifique como funcionará o seu Software" title="Digite sua mensagem" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary">
                             Enviar Mensagem <i class="fas fa-paper-plane"></i>
                         </button>
-                    
                     </form>
-                
                 </div>
-            
             </div>
-        
         </div>
-    
     </section>
 
     <section class="partners">
-
-
         <div class="bg-blob blob1"></div>
         <div class="bg-blob blob2"></div>
         
-        
         <div class="partners-text">
-            
-            <h1>Grupo xNeed</h1>
-            
-            <p>Conectando empresas com inovação: todos os sites do nosso grupo são criados pelo Grupo xNeed.</p>
-
+            <h1><span class="gradient-text">Parceiros</span> xNeedWare</h1>
+            <p>Conectando empresas com inovação: todos os sites do nosso grupo são criados pelo Grupo xNeedWare.</p>
             <p>Descubra também nossos parceiros que fazem parte desta rede de soluções digitais.</p>
-            
-
         </div>
 
         <div class="container">
-            
             <div class="partners-grid">
-                
                 <div class="partner-logo">
                     <a href="https://macarvalho07.github.io/Pira-Tour/" target="_blank" rel="noopener">
                         <img src="../assets/partners/pira_tour.png" alt="pira_tour.png" title="Parceiro Pira Tour">
@@ -217,7 +200,6 @@
                     <a href="">
                         <img src="../assets/partners/cryptobr.png" alt="cryptobr" title="Parceiro CryptoBR">
                     </a>
-                
                 </div>
             </div>
         </div>
@@ -226,7 +208,6 @@
         
     <!-- sessão em breve -->
     <section class="coming-soon">
-
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
@@ -262,9 +243,7 @@
                             <span class="tag blue">Desenvolvedores</span>
                             <span class="tag">Monetização</span>
                         </div>
-                    
                     </div>
-                
                 </div>
 
                 <div class="coming-soon-form">
@@ -273,21 +252,15 @@
                         <button type="submit" class="btn btn-primary">Receber Atualizações</button>
                     </form>
                 </div>
-            
             </div>
         </div>
-    
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        
         <div class="container">
-            
             <div class="footer-grid">
-                
                 <div class="footer-about">
-                    
                     <a href="/" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
@@ -301,11 +274,9 @@
                         <a title="Visite nosso LinkedIn" href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a title="Visite nosso GitHub" href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
-                
                 </div>
 
                 <div class="footer-links">
-                    
                     <h3 class="footer-title">Produtos</h3>
                     
                     <ul>
@@ -316,42 +287,102 @@
                         <li><a title="Adquira o produto Excel" href="/excel">xNeed Excel</a></li>
                         <li><a title="Adquira o produto Manager" href="/manager">xNeed Manager</a></li>
                     </ul>
-                
                 </div>
 
                 <div class="footer-links">
-                    
                     <h3 class="footer-title">Empresa</h3>
                     
                     <ul>
                         <li><a title="Saiba mais sobre nós" href="../sobre/index.php">Sobre Nós</a></li>
                     </ul>
-                
                 </div>
 
                 <div class="footer-links">
-                    
                     <h3 class="footer-title">Suporte</h3>
                     
                     <ul>
                         <li><a title="Acesse nossa política de privacidade" href="../politica_privacidade/index.html">Política de Privacidade</a></li>
                     </ul>
-                
                 </div>
-            
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> xNeedWare. Todos os direitos reservados.</p>
             </div>
-        
         </div>
-    
     </footer>
 
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+        var telefone = document.getElementById('telefone');
+        var telefoneMask = IMask(telefone, {
+            mask: '(00) 00000-0000'
+        });
 
+        var cnpj = document.getElementById('cnpj');
+        var cnpjMask = IMask(cnpj, {
+            mask: '00.000.000/0000-00'
+        });
+    </script>
 
-    <script src="../../public/random.js"></script>
+    <!-- SDK do EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        (function() {
+            emailjs.init("i6A9OquSWXxx-aiJg");
+        })();
+
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const button = this.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = 'Enviando...';
+            button.disabled = true;
+
+            const templateParams = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                telefone: document.getElementById('telefone').value,
+                nomeempresa: document.getElementById('nomeempresa').value,
+                cnpj: document.getElementById('cnpj').value,
+                message: document.getElementById('message').value,
+                time: new Date().toLocaleString('pt-BR')
+            };
+
+            // Validação simples
+            if (!templateParams.name || !templateParams.email || !templateParams.message) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                button.disabled = false;
+                button.innerHTML = originalText;
+                return;
+            }
+
+            // Envio do EmailJS
+            emailjs.send('service_wf67yi5', 'template_9v8g6kw', templateParams)
+                .then(() => {
+                    button.innerHTML = 'Mensagem enviada! ✅';
+                    button.classList.add('sent');
+                    alert('Mensagem enviada com sucesso!');
+                    e.target.reset();
+                })
+                .catch((error) => {
+                    console.error('Erro ao enviar:', error);
+                    button.innerHTML = 'Erro ao enviar ❌';
+                    button.classList.add('error');
+                    alert('Ocorreu um erro ao enviar sua mensagem. Tente novamente.');
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.disabled = false;
+                        button.classList.remove('sent', 'error');
+                    }, 3000);
+                });
+        });
+    </script>
+
 
 </body>
 </html>

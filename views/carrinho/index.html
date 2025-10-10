@@ -11,234 +11,7 @@
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
   <style>
-    /* Estilos para a barra lateral fixa */
-    .checkout-sidebar {
-      position: sticky;
-      top: 20px;
-      height: fit-content;
-      max-height: calc(100vh - 40px);
-      overflow-y: auto;
-    }
-
-    /* Melhorias no carrinho */
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      background: white;
-    }
-
-    .cart-item-info h4 {
-      margin: 0 0 5px 0;
-      color: #333;
-    }
-
-    .cart-item-info p {
-      margin: 0;
-      color: #666;
-    }
-
-    .qtd-input {
-      width: 60px;
-      padding: 5px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      text-align: center;
-    }
-
-    .remover-btn {
-      background: #ff4444;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .remover-btn:hover {
-      background: #cc0000;
-    }
-
-    /* Steps do formulário */
-    .form-step {
-      transition: opacity 0.3s ease;
-    }
-
-    .form-step.hidden {
-      display: none;
-    }
-
-    .form-step.active {
-      display: block;
-    }
-
-    /* Progress bar */
-    .progress-step.active .step-number {
-      background: #007bff;
-      color: white;
-    }
-
-    .progress-step.active .step-text {
-      color: #007bff;
-      font-weight: 600;
-    }
-
-    /* Estilos para seleção de método de pagamento */
-    .payment-methods-selection {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin: 20px 0;
-    }
-
-    .payment-option {
-      border: 2px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 0;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background: white;
-    }
-
-    .payment-option:hover {
-      border-color: #c0c0c0;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .payment-option.selected {
-      border-color: #007bff;
-      background: #f8fbff;
-    }
-
-    .payment-option-header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      gap: 15px;
-    }
-
-    .payment-icon {
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f8f9fa;
-      border-radius: 10px;
-      font-size: 1.5rem;
-    }
-
-    .payment-option[data-method="google-pay"] .payment-icon {
-      color: #4285f4;
-      background: #e8f0fe;
-    }
-
-    .payment-info {
-      flex: 1;
-    }
-
-    .payment-info h3 {
-      margin: 0 0 5px 0;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .payment-info p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .payment-radio {
-      position: relative;
-      width: 20px;
-      height: 20px;
-    }
-
-    .payment-radio input[type="radio"] {
-      opacity: 0;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-    }
-
-    .radio-checkmark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border: 2px solid #ccc;
-      border-radius: 50%;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    .payment-radio input[type="radio"]:checked + .radio-checkmark {
-      border-color: #007bff;
-      background: #007bff;
-    }
-
-    .payment-radio input[type="radio"]:checked + .radio-checkmark::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 8px;
-      height: 8px;
-      background: white;
-      border-radius: 50%;
-    }
-
-    .payment-option-details {
-      padding: 0 20px 20px 20px;
-      border-top: 1px solid #f0f0f0;
-      margin-top: 0;
-      text-align: center;
-    }
-
-    .payment-option-details.hidden {
-      display: none;
-    }
-
-    .payment-security {
-      color: #28a745;
-      font-size: 0.9rem;
-      margin: 10px 0;
-    }
-
-    /* Garantir que o botão do Google Pay seja visível */
-    .gpay-button {
-      width: 100% !important;
-      height: 40px !important;
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    /* Loading spinner */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .loading-spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #007bff;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 2s linear infinite;
-      margin: 20px auto;
-    }
+    
   </style>
 </head>
 <body>
@@ -477,431 +250,627 @@
   </footer>
 
   <script>
-    let currentStep = 0;
-    let paymentsClient = null;
-
-    // ==================== CONFIGURAÇÃO GOOGLE PAY ====================
-    const baseRequest = {
-        apiVersion: 2,
-        apiVersionMinor: 0
-    };
-
-    const allowedPaymentMethods = [{
-        type: 'CARD',
-        parameters: {
-            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-            allowedCardNetworks: ['MASTERCARD', 'VISA']
-        },
-        tokenizationSpecification: {
-            type: 'PAYMENT_GATEWAY',
-            parameters: {
-                gateway: 'example',
-                gatewayMerchantId: 'exampleGatewayMerchantId'
-            }
-        }
-    }];
-
-    // ==================== INICIALIZAÇÃO GOOGLE PAY ====================
-    function initializeGooglePay() {
-        if (window.google && window.google.payments) {
-            paymentsClient = new google.payments.api.PaymentsClient({
-                environment: 'TEST' // Mude para 'PRODUCTION' em produção
-            });
-
-            console.log('Google Pay inicializado com sucesso');
-        } else {
-            console.log('Google Pay API não carregada, tentando novamente...');
-            setTimeout(initializeGooglePay, 500);
-        }
-    }
-
-    // ==================== PROCESSAR PAGAMENTO GOOGLE PAY ====================
-    function iniciarPagamentoGooglePay() {
-        if (!validateCurrentStep()) return;
-
-        console.log('Iniciando pagamento Google Pay...');
-
-        // Mostra loading
-        const submitBtn = document.querySelector('.btn-submit');
-        const originalText = submitBtn.textContent;
-        submitBtn.innerHTML = '<div class="loading-spinner"></div>';
-        submitBtn.disabled = true;
-
-        if (!paymentsClient) {
-            console.error('Google Pay não inicializado');
-            showPaymentError();
-            return;
-        }
-
-        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-        if (carrinho.length === 0) {
-            alert('Seu carrinho está vazio.');
-            return;
-        }
-
-        const total = calcularTotalCarrinho();
-
-        const paymentDataRequest = {
-            ...baseRequest,
-            allowedPaymentMethods,
-            transactionInfo: {
-                totalPriceStatus: 'FINAL',
-                totalPriceLabel: 'Total',
-                totalPrice: total.toFixed(2),
-                currencyCode: 'BRL',
-                countryCode: 'BR'
-            },
-            merchantInfo: {
-                merchantId: 'BCR2DN4T26QN5K5L',
-                merchantName: 'xNeedWare'
-            }
-        };
-
-        // Verifica se o Google Pay está disponível
-        paymentsClient.isReadyToPay({
-            ...baseRequest,
-            allowedPaymentMethods
-        })
-        .then(function(response) {
-            if (response.result) {
-                // Inicia o fluxo de pagamento
-                paymentsClient.loadPaymentData(paymentDataRequest)
-                    .then(function(paymentData) {
-                        console.log('Pagamento processado com sucesso:', paymentData);
-                        processarPagamentoSucesso(paymentData);
-                    })
-                    .catch(function(err) {
-                        console.error('Erro no pagamento Google Pay:', err);
-                        if (err.statusCode === 'CANCELED') {
-                            console.log('Usuário cancelou o pagamento');
-                            submitBtn.textContent = originalText;
-                            submitBtn.disabled = false;
-                        } else {
-                            showPaymentError();
-                        }
-                    });
-            } else {
-                console.log('Google Pay não disponível neste dispositivo');
-                showPaymentError();
-            }
-        })
-        .catch(function(err) {
-            console.error('Erro ao verificar Google Pay:', err);
-            showPaymentError();
-        });
-    }
-
-    function processarPagamentoSucesso(paymentData) {
-        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-        const total = calcularTotalCarrinho();
-        
-        // Envia para histórico
-        carrinho.forEach(item => {
-            fetch('/api/historico-pagamento', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    produto: item.nome,
-                    valor: item.preco,
-                    quantidade: item.quantidade,
-                    total: total,
-                    metodo: 'google-pay'
-                })
-            }).catch(err => console.error('Erro ao salvar histórico:', err));
-        });
-
-        // Limpa carrinho após compra
-        localStorage.removeItem("carrinho");
-        
-        // Mostra confirmação de sucesso
-        const step3 = document.getElementById('step-3');
-        if (step3) {
-            step3.innerHTML = `
-                <div style="text-align: center; padding: 40px 20px;">
-                    <div style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">
-                        ✅
-                    </div>
-                    <h2 style="color: #28a745; margin-bottom: 15px;">Pagamento Aprovado!</h2>
-                    <p style="color: #666; margin-bottom: 25px;">
-                        Seu pagamento de <strong>R$ ${total.toFixed(2)}</strong> 
-                        foi processado com sucesso via Google Pay.
-                    </p>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 30px;">
-                        Você receberá um email com as instruções de download em breve.
-                    </p>
-                    <button onclick="window.location.href='/conta/pedidos'" style="
-                        background: #28a745;
-                        color: white;
-                        border: none;
-                        padding: 12px 30px;
-                        border-radius: 6px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        font-weight: 600;
-                        margin: 5px;
-                    ">
-                        Ver Meus Pedidos
-                    </button>
-                    <button onclick="window.location.href='/produtos'" style="
-                        background: #007bff;
-                        color: white;
-                        border: none;
-                        padding: 12px 30px;
-                        border-radius: 6px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        font-weight: 600;
-                        margin: 5px;
-                    ">
-                        Continuar Comprando
-                    </button>
-                </div>
-            `;
-        }
-    }
-
-    function showPaymentError() {
-        const submitBtn = document.querySelector('.btn-submit');
-        submitBtn.textContent = 'Tentar Novamente';
-        submitBtn.disabled = false;
-        
-        alert('Erro ao processar pagamento com Google Pay. Por favor, tente novamente ou entre em contato com o suporte.');
-    }
-
-    // ==================== SISTEMA DE STEPS ====================
-    function showStep(step) {
-        document.querySelectorAll('.form-step').forEach(el => {
-            el.classList.add('hidden');
-            el.classList.remove('active');
-        });
-        
-        const currentStepEl = document.getElementById(`step-${step}`);
-        if (currentStepEl) {
-            currentStepEl.classList.remove('hidden');
-            currentStepEl.classList.add('active');
-        }
-        
-        updateProgress(step);
-        currentStep = step;
-    }
-
-    function nextStep() {
-        if (validateCurrentStep()) {
-            if (currentStep < 3) {
-                showStep(currentStep + 1);
-                
-                if (currentStep === 3) {
-                    updateFinalSummary();
-                }
-            }
-        }
-    }
-
-    function prevStep() {
-        if (currentStep > 0) {
-            showStep(currentStep - 1);
-        }
-    }
-
-    function updateProgress(step) {
-        document.querySelectorAll('.progress-step').forEach((stepEl, index) => {
-            if (index <= step) {
-                stepEl.classList.add('active');
-            } else {
-                stepEl.classList.remove('active');
-            }
-        });
-    }
-
-    function validateCurrentStep() {
-        switch(currentStep) {
-            case 0:
-                const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-                if (carrinho.length === 0) {
-                    alert('Seu carrinho está vazio. Adicione produtos antes de continuar.');
-                    return false;
-                }
-                return true;
-                
-            case 1:
-                const email = document.getElementById('email');
-                if (!email || !email.value.trim()) {
-                    alert('Por favor, informe um email válido.');
-                    email.focus();
-                    return false;
-                }
-                
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email.value)) {
-                    alert('Por favor, informe um email válido.');
-                    email.focus();
-                    return false;
-                }
-                return true;
-                
-            case 2:
-                // Sem validação específica para seleção de pagamento
-                return true;
-                
-            case 3:
-                const termsCheckbox = document.getElementById('terms');
-                if (!termsCheckbox.checked) {
-                    alert('Por favor, aceite os termos de serviço.');
-                    return false;
-                }
-                return true;
-                
-            default:
-                return true;
-        }
-    }
-
-    // ==================== SISTEMA DO CARRINHO ====================
-    function atualizarCarrinho() {
-        const carrinhoContainer = document.getElementById("carrinhoContainer");
-        const sidebarProducts = document.getElementById("sidebar-products");
-        const sidebarTotal = document.getElementById("sidebar-total");
-
-        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-
-        carrinhoContainer.innerHTML = "";
-        sidebarProducts.innerHTML = "";
-
-        if (carrinho.length === 0) {
-            carrinhoContainer.innerHTML = `
-                <div style="text-align: center; padding: 40px 20px; color: #666;">
-                    <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 15px; opacity: 0.5;"></i>
-                    <p>Seu carrinho está vazio.</p>
-                    <a href="/produtos" style="color: #007bff; text-decoration: none;">Continuar comprando</a>
-                </div>
-            `;
-            sidebarTotal.textContent = "R$ 00,00";
-            return;
-        }
-
-        let total = 0;
-
-        carrinho.forEach(item => {
-            const itemTotal = item.preco * item.quantidade;
-            total += itemTotal;
-
-            const div = document.createElement("div");
-            div.classList.add("cart-item");
-            div.innerHTML = `
-                <div class="cart-item-info">
-                    <h4>${item.nome}</h4>
-                    <p>R$ ${item.preco.toFixed(2)} x 
-                    <input type="number" min="1" value="${item.quantidade}" data-id="${item.id}" class="qtd-input"> 
-                    = R$ ${itemTotal.toFixed(2)}</p>
-                </div>
-                <button class="remover-btn" data-id="${item.id}" title="Remover item">
-                    <i class="fas fa-trash"></i>
-                </button>
-            `;
-            carrinhoContainer.appendChild(div);
-
-            const summaryDiv = document.createElement("div");
-            summaryDiv.classList.add("summary-item");
-            summaryDiv.innerHTML = `
-                <div class="summary-label">${item.nome} (${item.quantidade}x)</div>
-                <div class="summary-value">R$ ${itemTotal.toFixed(2)}</div>
-            `;
-            sidebarProducts.appendChild(summaryDiv);
-        });
-
-        sidebarTotal.textContent = `R$ ${total.toFixed(2)}`;
-
-        document.querySelectorAll(".remover-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const id = btn.dataset.id;
-                const novoCarrinho = carrinho.filter(p => p.id !== id);
-                localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
-                atualizarCarrinho();
-            });
-        });
-
-        document.querySelectorAll(".qtd-input").forEach(input => {
-            input.addEventListener("change", () => {
-                const id = input.dataset.id;
-                const produto = carrinho.find(p => p.id === id);
-                if (produto) {
-                    produto.quantidade = Math.max(1, parseInt(input.value) || 1);
-                    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-                    atualizarCarrinho();
-                }
-            });
-            
-            input.addEventListener("blur", () => {
-                if (!input.value || parseInt(input.value) < 1) {
-                    input.value = 1;
-                    const id = input.dataset.id;
-                    const produto = carrinho.find(p => p.id === id);
-                    if (produto) {
-                        produto.quantidade = 1;
-                        localStorage.setItem("carrinho", JSON.stringify(carrinho));
-                        atualizarCarrinho();
-                    }
-                }
-            });
-        });
-    }
-
-    function updateFinalSummary() {
-        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-        const total = calcularTotalCarrinho();
-        const email = document.getElementById('email').value;
-        
-        const summaryProduct = document.getElementById('summary-product');
-        if (summaryProduct) {
-            if (carrinho.length === 1) {
-                summaryProduct.textContent = carrinho[0].nome;
-            } else {
-                summaryProduct.textContent = `${carrinho.length} produtos`;
-            }
-        }
-        
-        const summaryPayment = document.getElementById('summary-payment');
-        if (summaryPayment) {
-            summaryPayment.textContent = 'Google Pay';
-        }
-        
-        const summaryEmail = document.getElementById('summary-email');
-        if (summaryEmail) {
-            summaryEmail.textContent = email;
-        }
-        
-        const summaryTotal = document.getElementById('summary-total');
-        if (summaryTotal) {
-            summaryTotal.textContent = `R$ ${total.toFixed(2)}`;
-        }
-    }
-
-    function calcularTotalCarrinho() {
-        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-        return carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
-    }
-
-    // ==================== INICIALIZAÇÃO ====================
     document.addEventListener("DOMContentLoaded", async () => {
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        try {
-            const res = await fetch("/api/usuario");
-            if (!res.ok) throw new Error("Usuário não logado");
-            const usuario = await res.json();
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      
+      // Carrega dados do usuário apenas se estiver logado
+      try {
+          const res = await fetch("/api/usuario");
+          if (res.ok) {
+              const usuario = await res.json();
+              document.getElementById("user-nome-step2").textContent = usuario.nome + " " + usuario.sobrenome;
+              document.getElementById("email").value = usuario.email;
+              document.getElementById("summary-email").textContent = usuario.email;
+          }
+      } 
+      catch (error) {
+          console.log("Usuário não logado - permitindo navegação");
+      }
+      
+      atualizarCarrinho();
+      initializeGooglePay();
+  });
 
-            document.getElementById("user-nome-step2").textContent = usuario.nome + " " + usuario.sobrenome;
-            document.getElementById("email").value = usuario.email;
-        } 
-        catch (error) {
-            console.error("Erro ao carregar dados do usuário:", error);
-            window.location.href = "/login";
-        }
-        
-        atualizarCarrinho();
-        initializeGooglePay();
-    });
-  </script>
+  // ==================== VARIÁVEIS GLOBAIS ====================
+  let currentStep = 0;
+  let paymentsClient = null;
+
+  // ==================== CONFIGURAÇÃO GOOGLE PAY ====================
+  const baseRequest = {
+      apiVersion: 2,
+      apiVersionMinor: 0
+  };
+
+  const allowedPaymentMethods = [{
+      type: 'CARD',
+      parameters: {
+          allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+          allowedCardNetworks: ['MASTERCARD', 'VISA']
+      },
+      tokenizationSpecification: {
+          type: 'PAYMENT_GATEWAY',
+          parameters: {
+              gateway: 'example',
+              gatewayMerchantId: 'exampleGatewayMerchantId'
+          }
+      }
+  }];
+
+  // ==================== INICIALIZAÇÃO GOOGLE PAY ====================
+  function initializeGooglePay() {
+      if (window.google && window.google.payments) {
+          paymentsClient = new google.payments.api.PaymentsClient({
+              environment: 'TEST' // Mude para 'PRODUCTION' em produção
+          });
+
+          console.log('Google Pay inicializado com sucesso');
+      } else {
+          console.log('Google Pay API não carregada, tentando novamente...');
+          setTimeout(initializeGooglePay, 500);
+      }
+  }
+
+  // ==================== SISTEMA DE STEPS ====================
+  function showStep(step) {
+      document.querySelectorAll('.form-step').forEach(el => {
+          el.classList.add('hidden');
+          el.classList.remove('active');
+      });
+      
+      const currentStepEl = document.getElementById(`step-${step}`);
+      if (currentStepEl) {
+          currentStepEl.classList.remove('hidden');
+          currentStepEl.classList.add('active');
+      }
+      
+      updateProgress(step);
+      currentStep = step;
+      
+      // Atualiza o resumo final quando chegar no step 3
+      if (step === 3) {
+          updateFinalSummary();
+      }
+  }
+
+  function nextStep() {
+      if (validateCurrentStep()) {
+          if (currentStep < 3) {
+              showStep(currentStep + 1);
+          }
+      }
+  }
+
+  function prevStep() {
+      if (currentStep > 0) {
+          showStep(currentStep - 1);
+      }
+  }
+
+  function updateProgress(step) {
+      document.querySelectorAll('.progress-step').forEach((stepEl, index) => {
+          if (index <= step) {
+              stepEl.classList.add('active');
+          } else {
+              stepEl.classList.remove('active');
+          }
+      });
+  }
+
+  function validateCurrentStep() {
+      switch(currentStep) {
+          case 0:
+              const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+              if (carrinho.length === 0) {
+                  alert('Seu carrinho está vazio. Adicione produtos antes de continuar.');
+                  return false;
+              }
+              return true;
+              
+          case 1:
+              const email = document.getElementById('email');
+              if (!email || !email.value.trim()) {
+                  alert('Por favor, informe um email válido.');
+                  email.focus();
+                  return false;
+              }
+              
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(email.value)) {
+                  alert('Por favor, informe um email válido.');
+                  email.focus();
+                  return false;
+              }
+              return true;
+              
+          case 2:
+              // Sem validação específica para seleção de pagamento
+              return true;
+              
+          case 3:
+              const termsCheckbox = document.getElementById('terms');
+              if (!termsCheckbox.checked) {
+                  alert('Por favor, aceite os termos de serviço.');
+                  return false;
+              }
+              return true;
+              
+          default:
+              return true;
+      }
+  }
+
+  // ==================== SISTEMA DO CARRINHO ====================
+  function atualizarCarrinho() {
+      const carrinhoContainer = document.getElementById("carrinhoContainer");
+      const sidebarProducts = document.getElementById("sidebar-products");
+      const sidebarTotal = document.getElementById("sidebar-total");
+
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+      carrinhoContainer.innerHTML = "";
+      sidebarProducts.innerHTML = "";
+
+      if (carrinho.length === 0) {
+          carrinhoContainer.innerHTML = `
+              <div style="text-align: center; padding: 40px 20px; color: #666;">
+                  <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 15px; opacity: 0.5;"></i>
+                  <p>Seu carrinho está vazio.</p>
+                  <a href="/produtos" style="color: #007bff; text-decoration: none;">Continuar comprando</a>
+              </div>
+          `;
+          sidebarTotal.textContent = "R$ 00,00";
+          return;
+      }
+
+      let total = 0;
+
+      carrinho.forEach(item => {
+          const itemTotal = item.preco * item.quantidade;
+          total += itemTotal;
+
+          const div = document.createElement("div");
+          div.classList.add("cart-item");
+          div.innerHTML = `
+              <div class="cart-item-info">
+                  <h4>${item.nome}</h4>
+                  <p>R$ ${item.preco.toFixed(2)} x 
+                  <input type="number" min="1" value="${item.quantidade}" data-id="${item.id}" class="qtd-input"> 
+                  = R$ ${itemTotal.toFixed(2)}</p>
+              </div>
+              <button class="remover-btn" data-id="${item.id}" title="Remover item">
+                  <i class="fas fa-trash"></i>
+              </button>
+          `;
+          carrinhoContainer.appendChild(div);
+
+          const summaryDiv = document.createElement("div");
+          summaryDiv.classList.add("summary-item");
+          summaryDiv.innerHTML = `
+              <div class="summary-label">${item.nome} (${item.quantidade}x)</div>
+              <div class="summary-value">R$ ${itemTotal.toFixed(2)}</div>
+          `;
+          sidebarProducts.appendChild(summaryDiv);
+      });
+
+      sidebarTotal.textContent = `R$ ${total.toFixed(2)}`;
+
+      // Adiciona event listeners para os botões de remover
+      document.querySelectorAll(".remover-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+              const id = btn.dataset.id;
+              const novoCarrinho = carrinho.filter(p => p.id !== id);
+              localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
+              atualizarCarrinho();
+          });
+      });
+
+      // Adiciona event listeners para os inputs de quantidade
+      document.querySelectorAll(".qtd-input").forEach(input => {
+          input.addEventListener("change", () => {
+              const id = input.dataset.id;
+              const produto = carrinho.find(p => p.id === id);
+              if (produto) {
+                  produto.quantidade = Math.max(1, parseInt(input.value) || 1);
+                  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+                  atualizarCarrinho();
+              }
+          });
+          
+          input.addEventListener("blur", () => {
+              if (!input.value || parseInt(input.value) < 1) {
+                  input.value = 1;
+                  const id = input.dataset.id;
+                  const produto = carrinho.find(p => p.id === id);
+                  if (produto) {
+                      produto.quantidade = 1;
+                      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+                      atualizarCarrinho();
+                  }
+              }
+          });
+      });
+  }
+
+  function updateFinalSummary() {
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      const total = calcularTotalCarrinho();
+      const email = document.getElementById('email').value;
+      
+      const summaryProduct = document.getElementById('summary-product');
+      if (summaryProduct) {
+          if (carrinho.length === 1) {
+              summaryProduct.textContent = carrinho[0].nome;
+          } else {
+              summaryProduct.textContent = `${carrinho.length} produtos`;
+          }
+      }
+      
+      const summaryPayment = document.getElementById('summary-payment');
+      if (summaryPayment) {
+          summaryPayment.textContent = 'Google Pay';
+      }
+      
+      const summaryEmail = document.getElementById('summary-email');
+      if (summaryEmail) {
+          summaryEmail.textContent = email;
+      }
+      
+      const summaryTotal = document.getElementById('summary-total');
+      if (summaryTotal) {
+          summaryTotal.textContent = `R$ ${total.toFixed(2)}`;
+      }
+  }
+
+  function calcularTotalCarrinho() {
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      return carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
+  }
+
+  // ==================== SISTEMA DE LOGIN NO FINALIZAR COMPRA ====================
+  async function iniciarPagamentoGooglePay() {
+      // Verifica se os termos foram aceitos
+      if (!document.getElementById('terms').checked) {
+          alert('Por favor, aceite os termos de serviço para continuar.');
+          return;
+      }
+
+      // Verifica se o usuário está logado
+      try {
+          const res = await fetch("/api/usuario");
+          if (!res.ok) {
+              // Se não estiver logado, mostra modal de login
+              mostrarModalLogin();
+              return;
+          }
+
+          const usuario = await res.json();
+          
+          // Se estiver logado, prossegue com o pagamento
+          processarPagamentoGooglePay(usuario);
+          
+      } catch (error) {
+          console.error("Erro ao verificar login:", error);
+          mostrarModalLogin();
+      }
+  }
+
+  // Função para mostrar modal de login
+  function mostrarModalLogin() {
+      const modalHTML = `
+          <div id="loginModal" class="login-modal">
+              <div class="login-modal-content">
+                  <span class="close-modal" onclick="fecharModalLogin()">&times;</span>
+                  <h3>Login Necessário</h3>
+                  <p>Para finalizar sua compra, faça login em sua conta.</p>
+                  <div class="modal-buttons">
+                      <a href="/login" class="btn-login">
+                          Fazer Login
+                      </a>
+                      <a href="/login?action=register" class="btn-register">
+                          Criar Conta
+                      </a>
+                      <button onclick="fecharModalLogin()" class="btn-continue">
+                          Continuar Navegando
+                      </button>
+                  </div>
+              </div>
+          </div>
+      `;
+      
+      document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+
+  // Função para fechar o modal
+  function fecharModalLogin() {
+      const modal = document.getElementById('loginModal');
+      if (modal) modal.remove();
+  }
+
+  // ==================== PROCESSAR PAGAMENTO GOOGLE PAY ====================
+  function processarPagamentoGooglePay(usuario) {
+      console.log('Iniciando pagamento Google Pay para:', usuario);
+
+      // Mostra loading
+      const submitBtn = document.querySelector('.btn-submit');
+      const originalText = submitBtn.textContent;
+      submitBtn.innerHTML = '<div class="loading-spinner"></div>';
+      submitBtn.disabled = true;
+
+      if (!paymentsClient) {
+          console.error('Google Pay não inicializado');
+          showPaymentError();
+          return;
+      }
+
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      if (carrinho.length === 0) {
+          alert('Seu carrinho está vazio.');
+          return;
+      }
+
+      const total = calcularTotalCarrinho();
+
+      const paymentDataRequest = {
+          ...baseRequest,
+          allowedPaymentMethods,
+          transactionInfo: {
+              totalPriceStatus: 'FINAL',
+              totalPriceLabel: 'Total',
+              totalPrice: total.toFixed(2),
+              currencyCode: 'BRL',
+              countryCode: 'BR'
+          },
+          merchantInfo: {
+              merchantId: 'BCR2DN4T26QN5K5L',
+              merchantName: 'xNeedWare'
+          }
+      };
+
+      // Verifica se o Google Pay está disponível
+      paymentsClient.isReadyToPay({
+          ...baseRequest,
+          allowedPaymentMethods
+      })
+      .then(function(response) {
+          if (response.result) {
+              // Inicia o fluxo de pagamento
+              paymentsClient.loadPaymentData(paymentDataRequest)
+                  .then(function(paymentData) {
+                      console.log('Pagamento processado com sucesso:', paymentData);
+                      processarPagamentoSucesso(paymentData);
+                  })
+                  .catch(function(err) {
+                      console.error('Erro no pagamento Google Pay:', err);
+                      if (err.statusCode === 'CANCELED') {
+                          console.log('Usuário cancelou o pagamento');
+                          submitBtn.textContent = originalText;
+                          submitBtn.disabled = false;
+                      } else {
+                          showPaymentError();
+                      }
+                  });
+          } else {
+              console.log('Google Pay não disponível neste dispositivo');
+              showPaymentError();
+          }
+      })
+      .catch(function(err) {
+          console.error('Erro ao verificar Google Pay:', err);
+          showPaymentError();
+      });
+  }
+
+  function processarPagamentoSucesso(paymentData) {
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      const total = calcularTotalCarrinho();
+      
+      // Envia para histórico
+      carrinho.forEach(item => {
+          fetch('/api/historico-pagamento', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                  produto: item.nome,
+                  valor: item.preco,
+                  quantidade: item.quantidade,
+                  total: total,
+                  metodo: 'google-pay'
+              })
+          }).catch(err => console.error('Erro ao salvar histórico:', err));
+      });
+
+      // Limpa carrinho após compra
+      localStorage.removeItem("carrinho");
+      
+      // Mostra confirmação de sucesso
+      const step3 = document.getElementById('step-3');
+      if (step3) {
+          step3.innerHTML = `
+              <div style="text-align: center; padding: 40px 20px;">
+                  <div style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">
+                      ✅
+                  </div>
+                  <h2 style="color: #28a745; margin-bottom: 15px;">Pagamento Aprovado!</h2>
+                  <p style="color: #666; margin-bottom: 25px;">
+                      Seu pagamento de <strong>R$ ${total.toFixed(2)}</strong> 
+                      foi processado com sucesso via Google Pay.
+                  </p>
+                  <p style="color: #666; font-size: 14px; margin-bottom: 30px;">
+                      Você receberá um email com as instruções de download em breve.
+                  </p>
+                  <button onclick="window.location.href='/conta'" style="
+                      background: #28a745;
+                      color: white;
+                      border: none;
+                      padding: 12px 30px;
+                      border-radius: 6px;
+                      font-size: 16px;
+                      cursor: pointer;
+                      font-weight: 600;
+                      margin: 5px;
+                  ">
+                      Ver Meus Pedidos
+                  </button>
+                  <button onclick="window.location.href='/produtos'" style="
+                      background: #007bff;
+                      color: white;
+                      border: none;
+                      padding: 12px 30px;
+                      border-radius: 6px;
+                      font-size: 16px;
+                      cursor: pointer;
+                      font-weight: 600;
+                      margin: 5px;
+                  ">
+                      Continuar Comprando
+                  </button>
+              </div>
+          `;
+      }
+  }
+
+  function showPaymentError() {
+      const submitBtn = document.querySelector('.btn-submit');
+      submitBtn.textContent = 'Tentar Novamente';
+      submitBtn.disabled = false;
+      
+      alert('Erro ao processar pagamento com Google Pay. Por favor, tente novamente ou entre em contato com o suporte.');
+  }
+
+  // ==================== CSS PARA O MODAL DE LOGIN ====================
+  const modalStyles = `
+  <style>
+  .login-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+  }
+
+  .login-modal-content {
+      background: var(--color-gray-900);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      animation: slideUp 0.3s ease;
+  }
+
+  .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #c0c0c0;
+  }
+
+  .close-modal:hover {
+      color: #c0c0c0;
+  }
+
+  .login-modal-content h3 {
+      color: #c0c0c0;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+  }
+
+  .login-modal-content p {
+      color: #c0c0c0;
+      margin-bottom: 25px;
+      line-height: 1.5;
+  }
+
+  .modal-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .btn-login, .btn-register, .btn-continue {
+      padding: 14px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+  }
+
+  .btn-login {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+  }
+
+  .btn-register {
+      background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+      color: white;
+  }
+
+  .btn-continue {
+      background: #f1f1f1;
+      color: #333;
+      margin-top: 10px;
+  }
+
+  .btn-login:hover, .btn-register:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-continue:hover {
+      background: #e0e0e0;
+  }
+
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+      from { 
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to { 
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @media (max-width: 480px) {
+      .login-modal-content {
+          padding: 20px;
+          margin: 20px;
+      }
+      
+      .modal-buttons {
+          gap: 10px;
+      }
+      
+      .btn-login, .btn-register, .btn-continue {
+          padding: 12px 16px;
+          font-size: 0.9rem;
+      }
+  }
+  </style>
+  `;
+
+  // Adiciona os estilos do modal ao documento
+  document.head.insertAdjacentHTML('beforeend', modalStyles);
+</script>
+
   <script src="https://pay.google.com/gp/p/js/pay.js"></script>
   <script src="/js/google-pay.js"></script>
 </body>
