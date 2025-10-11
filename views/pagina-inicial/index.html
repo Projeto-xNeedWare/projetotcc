@@ -6,15 +6,18 @@
     <title>xNeedWare | Software Premium para Empresas</title>
     <meta name="description" content="Soluções de software premium para empresas de todos os tamanhos">
     <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
-    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
-    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
-    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
-    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
-    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css"/>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css"/>
 </head>
 
+<!-- CSS DE ENVIO DE FORMULÁRIO ENTRE EM CONTATO -->
 <style>
     button.btn-primary.sent {
         background-color: #2ecc71 !important;
@@ -26,7 +29,7 @@
 
 <body onload="numRandom('num-random', 'num-random2', 'num-random3', 'num-random4')">
     
-    <!-- Início do cabeçalho reutilizável -->
+    <!-- CABEÇALHO -->
     <header class="xneedware-header">
         <div class="header-container">
             <a href="/" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
@@ -50,6 +53,7 @@
         </div>
     </header>
 
+    <!-- VÍDEO DE FUNDO - TELA INICIAL -->
     <video autoplay muted loop playsinline class="bg-video">
     <source src="/assets/assets-sobre/vid_background.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
@@ -62,7 +66,7 @@
         </div>
     </section>
 
-    <!-- Sessão de Contato -->
+    <!-- SECTION 1: ENTRE EM CONTATO -->
     <section id="contato" class="contact">
         <div class="container">
             <div class="section-header"> 
@@ -71,7 +75,7 @@
                 </h2>
                 
                 <p class="section-description">
-                    Estamos prontos para ajudar sua empresa a alcançar o próximo nível. Entre em contato conosco para saber mais sobre nossas soluções.
+                    Entre em contato conosco para saber mais sobre nossas soluções.
                 </p>
             </div>
 
@@ -160,13 +164,13 @@
         </div>
     </section>
 
+    <!-- SECTION 2: PARCEIROS -->
     <section class="partners">
         <div class="bg-blob blob1"></div>
         <div class="bg-blob blob2"></div>
         
         <div class="partners-text">
             <h1><span class="gradient-text">Parceiros</span> xNeedWare</h1>
-            <p>Conectando empresas com inovação: todos os sites do nosso grupo são criados pelo Grupo xNeedWare.</p>
             <p>Descubra também nossos parceiros que fazem parte desta rede de soluções digitais.</p>
         </div>
 
@@ -206,7 +210,7 @@
     </section>
         
         
-    <!-- sessão em breve -->
+    <!-- SECTION 3: EM BREVE -->
     <section class="coming-soon">
         <div class="container">
             <div class="section-header">
@@ -256,7 +260,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- RODAPÉ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -312,6 +316,7 @@
         </div>
     </footer>
 
+    <!-- Máscaras de Entrada - TELEFONE E CNPJ -->
     <script src="https://unpkg.com/imask"></script>
     <script>
         var telefone = document.getElementById('telefone');
@@ -327,7 +332,6 @@
 
     <!-- SDK do EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
     <script>
         (function() {
             emailjs.init("i6A9OquSWXxx-aiJg");
@@ -382,7 +386,5 @@
                 });
         });
     </script>
-
-
 </body>
 </html>

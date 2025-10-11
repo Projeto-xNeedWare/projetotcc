@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho | xNeedWare</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
   <link rel="stylesheet" href="/css/carrinho.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
-  <style>
-    
-  </style>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">    
+
+  <!-- Google Fonts e Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
 </head>
+
 <body>
+
+  <!-- CABEÇALHO -->
   <header class="xneedware-header">
     <div class="header-container">
       <a href="/" class="logo">
@@ -37,12 +39,14 @@
     </div>
   </header>
 
+  <!-- CONTEÚDO -->
   <main>
     <section class="hero">
       <h1>Seu Carrinho</h1>
       <p class="subtitle">Revise seus produtos antes de finalizar a compra.</p>
     </section>
 
+    <!-- 4 PASSOS PARA PAGAMENTO -->
     <section class="checkout-container">
       <div class="checkout-form">
         <div class="form-progress">
@@ -103,6 +107,8 @@
           
           <div class="payment-methods-selection">
             <div class="payment-option selected" data-method="google-pay">
+
+              <!-- ATUALMENTE NOSSA ÚNICA OPÇÃO DE PAGAMENTO É O GOOGLE PAY -->
               <div class="payment-option-header">
                 <div class="payment-icon">
                   <i class="fab fa-google-pay"></i>
@@ -116,6 +122,7 @@
                   <span class="radio-checkmark"></span>
                 </div>
               </div>
+
               <div class="payment-option-details" id="google-pay-details">
                 <div class="google-pay-info">
                   <p class="payment-security">🔒 Seus dados de pagamento ficam protegidos</p>
@@ -141,20 +148,24 @@
               <div class="summary-label">Produto</div>
               <div class="summary-value" id="summary-product"></div>
             </div>
+
             <div class="summary-item">
               <div class="summary-label">Forma de pagamento</div>
               <div class="summary-value" id="summary-payment">Google Pay</div>
             </div>
+
             <div class="summary-item">
               <div class="summary-label">Email para entrega</div>
               <div class="summary-value" id="summary-email"></div>
             </div>
+
             <div class="summary-item total">
               <div class="summary-label">Total</div>
               <div class="summary-value" id="summary-total">R$ 00,00</div>
             </div>
           </div>
           
+          <!-- CONCORDAR COM TERMOS DE SERVIÇO E POLÍTICA DE PRIVACIDADE -->
           <div class="terms-agreement">
             <label class="checkbox-container">
               <input type="checkbox" id="terms" name="terms" required>
@@ -175,6 +186,7 @@
         <div class="order-summary-card">
           <h3>Resumo do pedido</h3>
           <div id="sidebar-products"></div>
+
           <div class="summary-item total">
             <div class="summary-label">Total</div>
             <div class="summary-value" id="sidebar-total">R$ 00,00</div>
@@ -196,7 +208,7 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- RODAPÉ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -310,7 +322,7 @@
       }
   }
 
-  // ==================== SISTEMA DE STEPS ====================
+  // ============= SISTEMA DE PASSO A PASSO DE PAGAMENTO ==============
   function showStep(step) {
       document.querySelectorAll('.form-step').forEach(el => {
           el.classList.add('hidden');
@@ -526,7 +538,7 @@
       return carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
   }
 
-  // ==================== SISTEMA DE LOGIN NO FINALIZAR COMPRA ====================
+  // ==================== SISTEMA DE LOGIN AO FINALIZAR COMPRA ====================
   async function iniciarPagamentoGooglePay() {
       // Verifica se os termos foram aceitos
       if (!document.getElementById('terms').checked) {
@@ -554,30 +566,81 @@
       }
   }
 
-  // Função para mostrar modal de login
-  function mostrarModalLogin() {
-      const modalHTML = `
-          <div id="loginModal" class="login-modal">
-              <div class="login-modal-content">
-                  <span class="close-modal" onclick="fecharModalLogin()">&times;</span>
-                  <h3>Login Necessário</h3>
-                  <p>Para finalizar sua compra, faça login em sua conta.</p>
-                  <div class="modal-buttons">
-                      <a href="/login" class="btn-login">
-                          Fazer Login
-                      </a>
-                      <a href="/login?action=register" class="btn-register">
-                          Criar Conta
-                      </a>
-                      <button onclick="fecharModalLogin()" class="btn-continue">
-                          Continuar Navegando
-                      </button>
-                  </div>
-              </div>
-          </div>
-      `;
+ // Função para mostrar modal de login
+function mostrarModalLogin() {
+    console.log('🔄 MOSTRAR MODAL - Página atual:', window.location.href);
+    
+    const modalHTML = `
+        <div id="loginModal" class="login-modal">
+            <div class="login-modal-content">
+                <span class="close-modal" onclick="fecharModalLogin()">&times;</span>
+                <h3>Login Necessário</h3>
+                <p>Para finalizar sua compra, faça login em sua conta.</p>
+                <div class="modal-buttons">
+                    <a href="javascript:void(0)" onclick="prepararLogin()" class="btn-login">
+                        Fazer Login
+                    </a>
+                    <a href="javascript:void(0)" onclick="prepararCadastro()" class="btn-register">
+                        Criar Conta
+                    </a>
+                    <button onclick="fecharModalLogin()" class="btn-continue">
+                        Continuar Navegando
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+// Função para preparar login - COM DEBUG
+function prepararLogin() {
+    console.log('🎯 PREPARAR LOGIN - Salvando página atual...');
+    console.log('📍 URL atual:', window.location.href);
+    
+    salvarPaginaAtual();
+    
+    // Verificar se salvou
+    setTimeout(() => {
+        const paginaSalva = localStorage.getItem('paginaAnterior');
+        console.log('💾 Página salva no localStorage:', paginaSalva);
+        console.log('🔀 Redirecionando para /login...');
+        
+        window.location.href = "/login";
+    }, 100);
+}
+
+  // Função para preparar cadastro - COM DEBUG
+  function prepararCadastro() {
+      console.log('🎯 PREPARAR CADASTRO - Salvando página atual...');
       
-      document.body.insertAdjacentHTML('beforeend', modalHTML);
+      salvarPaginaAtual();
+      
+      setTimeout(() => {
+          const paginaSalva = localStorage.getItem('paginaAnterior');
+          console.log('💾 Página salva no localStorage:', paginaSalva);
+          console.log('🔀 Redirecionando para cadastro...');
+          
+          window.location.href = "/login?action=register";
+      }, 100);
+  }
+
+  // Função salvarPaginaAtual - COM DEBUG
+  function salvarPaginaAtual() {
+      const paginaAtual = window.location.href;
+      const paginasIgnorar = ['/login', '/registro', '/cadastro', '/auth'];
+      
+      const deveIgnorar = paginasIgnorar.some(pagina => paginaAtual.includes(pagina));
+      
+      if (!deveIgnorar) {
+          localStorage.setItem('paginaAnterior', paginaAtual);
+          console.log('✅ Página SALVA:', paginaAtual);
+          return true;
+      } else {
+          console.log('❌ Página IGNORADA (é login/cadastro):', paginaAtual);
+          return false;
+      }
   }
 
   // Função para fechar o modal
@@ -872,6 +935,5 @@
 </script>
 
   <script src="https://pay.google.com/gp/p/js/pay.js"></script>
-  <script src="/js/google-pay.js"></script>
 </body>
 </html>

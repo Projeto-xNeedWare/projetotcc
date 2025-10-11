@@ -107,23 +107,23 @@
 
 /* Estrutura base */
 .hero {
-    min-height: 70vh;
     display: flex;
     align-items: center;
-    padding: 1rem 0 4rem;
     position: relative;
     overflow: hidden;
     color: var(--color-white);
     background: linear-gradient(to bottom, var(--color-black), var(--color-dark)) fixed;
 }
 
-.title p {
-    margin-bottom: -340px;
+.title .container {
+    text-align: center;
+    font-size: 1.225rem;
+    margin-bottom: 0.7rem;
 }
 
 /* Blobs de fundo */
 .bg-blob {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     filter: blur(50px);
     opacity: 0.2;
@@ -565,16 +565,6 @@
       color: #8a5cf6;
   }
 
-  /* 5.2 Hero Section */
-  .hero {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      padding: 1rem 0 4rem;
-      position: relative;
-      overflow: hidden;
-  }
-
   /* Elementos de fundo (blob é aqls bolinha colorida de fundo) */
   .bg-blob {
       position: absolute;
@@ -844,30 +834,17 @@
      text-align: center;
      padding: 80px 0 40px;
    }
-   
-   .hero h1 {
-     font-size: 42px;
-     font-weight: 700;
-     margin-bottom: 20px;
-   }
-   
-   .subtitle {
-     font-size: 18px;
-     max-width: 700px;
-     margin: 0 auto;
-     color: #cccccc;
-   }
-   
+      
    /* 5.3 Produtos */
    .products {
      padding: 40px 0 80px;
    }
    
    .product-cards {
-     display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
-     gap: 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
    }
    
    /* Cards de produto */

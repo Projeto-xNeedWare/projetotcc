@@ -121,6 +121,13 @@ img {
         background-clip: text;
         color: transparent;
     }
+
+    .gradient-text {
+    background: linear-gradient(to right, var(--color-purple-500), var(--color-blue-500));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
     
     /* NAVEGAÇÃO CABEÇALHO PRINCIPAL */
     .main-nav ul {
@@ -242,6 +249,7 @@ img {
     .section-header {
         text-align: center;
         margin-bottom: 3rem;
+        margin-top: 5rem;
     }
 
     .section-header h2 {
