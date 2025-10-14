@@ -93,5 +93,19 @@
   </div>
 
   <script src="/js/auth.js"></script>
+  <script>
+    // Código de inicialização imediata
+    (function() {
+        // Salva a página atual imediatamente se não for login
+        if (!window.location.href.includes('/login')) {
+            localStorage.setItem('paginaAnterior', window.location.href);
+        }
+        
+        // Debug no console
+        console.log('🎯 Sistema de redirecionamento carregado');
+        console.log('📍 Página atual:', window.location.href);
+        console.log('💾 Página salva:', localStorage.getItem('paginaAnterior'));
+    })();
+  </script>
 </body>
 </html>
