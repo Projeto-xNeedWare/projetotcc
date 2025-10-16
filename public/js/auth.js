@@ -1,20 +1,22 @@
+// Funcionamento completo do nosso sistema de login/cadastro com redirecionamento
+
 // Alternar entre Login e Cadastro
 function mostrarCadastro() {
   document.getElementById('loginForm').style.display = 'none';
   document.getElementById('cadastroForm').style.display = 'block';
-  document.getElementById('form-title').innerText = 'Crie sua conta';
-  document.getElementById('form-desc').innerText = 'Preencha os dados abaixo para começar';
+  document.getElementById('form-title').innerText = 'Crie sua conta'; // Textos manipulados do HTML
+  document.getElementById('form-desc').innerText = 'Preencha os dados abaixo para começar'; // Textos manipulados do HTML
   document.getElementById('toggle-link').innerHTML =
-    'Já tem uma conta? <a href="#" onclick="mostrarLogin()">Faça login</a>';
+    'Já tem uma conta? <a href="#" onclick="mostrarLogin()">Faça login</a>'; // Textos manipulados do HTML
 }
 
 function mostrarLogin() {
   document.getElementById('loginForm').style.display = 'block';
   document.getElementById('cadastroForm').style.display = 'none';
-  document.getElementById('form-title').innerText = 'Entrar na sua conta';
-  document.getElementById('form-desc').innerText = 'Faça login para continuar';
+  document.getElementById('form-title').innerText = 'Entrar na sua conta'; // Textos manipulados do HTML
+  document.getElementById('form-desc').innerText = 'Faça login para continuar'; // Textos manipulados do HTML
   document.getElementById('toggle-link').innerHTML =
-    'Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>';
+    'Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>'; // Textos manipulados do HTML
 }
 
 const msg = document.getElementById("msg");
@@ -22,12 +24,14 @@ const msg = document.getElementById("msg");
 // Cadastro via fetch para backend
 document.getElementById("cadastroForm").addEventListener("submit", async (e) => {
   e.preventDefault();
+  // Pega os valores dos campos com o 'value', para pegar exatamente o que o usuário digitou
   const nome = document.getElementById("cadastroNome").value;
   const sobrenome = document.getElementById("cadastroSobrenome").value;
   const email = document.getElementById("cadastroEmail").value;
   const senha = document.getElementById("cadastroSenha").value;
   const senha2 = document.getElementById("cadastroSenha2").value;
 
+    // Mostrar confirmação de senha
   if (senha !== senha2) {
     msg.style.color = "red";
     msg.textContent = "❌ As senhas não coincidem!";
@@ -50,14 +54,16 @@ document.getElementById("cadastroForm").addEventListener("submit", async (e) => 
   }
 });
 
-// =============================================
-// SISTEMA CORRIGIDO DE REDIRECIONAMENTO PÓS-LOGIN
-// =============================================
-
 // 1. Salvar a página atual APENAS se NÃO for página de login/cadastro
+// Tivemos que fazer isso pois o usuário pode clicar em "login" de qualquer página do site
+// e aí, se ele fizer login com sucesso, deve voltar para a página de onde veio
+// e não para a página de login (o que seria um loop infinito)
+
+// Este trecho resolveu nosso problema de redirecionamento quando o usuário ia finalizar o pagamento, 
+// ele realizava o login mas ai ele voltava lá na tela de inicio, tendo que eleionar os produtos novamente
 function salvarPaginaAtual() {
     const paginaAtual = window.location.href;
-    const paginasIgnorar = ['/login', '/registro', '/cadastro', '/auth'];
+    const paginasIgnorar = ['/login', '/cadastro'];
     
     // Verifica se NÃO é uma página de login/cadastro
     const deveIgnorar = paginasIgnorar.some(pagina => paginaAtual.includes(pagina));
