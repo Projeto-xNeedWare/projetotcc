@@ -156,6 +156,11 @@ app.get("/carrinho", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "carrinho", "index.html"));
 });
 
+// Página de Política de Privacidade
+app.get("/politica_privacidade", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "politica_privacidade", "index.html"));
+});
+
 // ==================== ROTAS DE PÁGINAS (PRODUTOS) ====================
 
 // Página do xNeed Downloader
