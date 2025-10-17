@@ -1,6 +1,7 @@
 /* ====================================
    1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
    ==================================== */
+/* Paleta de cores e variáveis globais do projeto */
 :root {
     /* Cores neutras */
     --color-black: #000000;
@@ -15,7 +16,7 @@
     --color-gray-200: #e5e7eb;
     --color-gray-100: #f3f4f6;
     --color-white: #ffffff;
-    
+
     /* Escala de roxos - Cor primária */
     --color-purple-900: #4c1d95;
     --color-purple-800: #5b21b6;
@@ -27,7 +28,7 @@
     --color-purple-200: #ddd6fe;
     --color-purple-100: #ede9fe;
     --color-purple-50: #f5f3ff;
-    
+
     /* Escala de azuis - Cor secundária */
     --color-blue-900: #1e3a8a;
     --color-blue-800: #1e40af;
@@ -39,8 +40,8 @@
     --color-blue-200: #bfdbfe;
     --color-blue-100: #dbeafe;
     --color-blue-50: #eff6ff;
-    
-    /* Outras cores */
+
+    /* Outras cores e bordas */
     --color-yellow-400: #fbbf24;
     --border-radius-sm: 0.375rem;
     --border-radius: 0.5rem;
@@ -49,16 +50,19 @@
 /* ====================================
    2. RESET E ESTILOS BASE
    ==================================== */
+/* Remove margens e paddings padrão e aplica box-sizing global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Ativa rolagem suave */
 html {
     scroll-behavior: smooth;
 }
 
+/* Estilos base do corpo */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--color-white);
@@ -67,20 +71,24 @@ body {
     overflow-x: hidden;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Listas */
 ul {
     list-style: none;
 }
 
+/* Imagens responsivas */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* Botões base */
 button {
     background-color: transparent;
     border: none;
@@ -90,6 +98,7 @@ button {
 /* ====================================
    3. UTILITÁRIOS E CLASSES COMUNS
    ==================================== */
+/* Container centralizado e responsivo */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -97,6 +106,7 @@ button {
     padding: 0 1rem;
 }
 
+/* Texto com gradiente roxo-azul */
 .gradient-text {
     background: linear-gradient(to right, var(--color-purple-500), var(--color-blue-500));
     -webkit-background-clip: text;
@@ -104,6 +114,7 @@ button {
     color: transparent;
 }
 
+/* Títulos de seção */
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -114,16 +125,16 @@ button {
 }
 
 /* ====================================
-   4. COMPONENTES
+   4. COMPONENTES REUTILIZÁVEIS
    ==================================== */
 
-/* 4.1 Botões */
+/* ---- 4.1 Botões ---- */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1.5rem;
-    border-radius: var(--border-radius-full);
+    border-radius: var(--border-radius);
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -140,6 +151,7 @@ button {
     transform: translateX(3px);
 }
 
+/* Botão principal com gradiente */
 .btn-primary {
     background: linear-gradient(to right, var(--color-purple-600), var(--color-blue-600));
     color: var(--color-white);
@@ -152,6 +164,7 @@ button {
     box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
 }
 
+/* Botão com contorno */
 .btn-outline {
     background: transparent;
     border: 1px solid var(--color-purple-500);
@@ -163,7 +176,7 @@ button {
     transform: translateY(-2px);
 }
 
-/* 4.2 Formulários */
+/* ---- 4.2 Formulários ---- */
 .form-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -199,108 +212,16 @@ button {
 }
 
 /* ====================================
-   5. LAYOUT E ESTRUTURA
+   5. LAYOUT E SEÇÕES PRINCIPAIS
    ==================================== */
 
-/* 5.1 Cabeçalho */
-.xneedware-header {
-    background-color: #00000000;
-    width: 100%;
-    padding: 20px 0;
-    position: relative;
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.logo-x {
-    color: var(--color-white);
-}
-
-.logo-text {
-    background: linear-gradient(to right, var(--color-purple-500), var(--color-blue-500), var(--color-purple-700));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.main-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.main-nav li {
-    margin-left: 30px;
-}
-
-.main-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: #8a5cf6;
-}
-
-.icone-grande {
-    margin-left: 30px;
-    font-size: 27px;
-    color: #6c00ff;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.icone-grande:hover {
-    color: #6c00ff;
-    transform: scale(1.22);
-    animation: brilho-pulsante 1s infinite alternate;
-}
-
-@keyframes brilho-pulsante {
-    0% {
-        text-shadow: 0 0 5px #6c00ff, 0 0 10px #6c00ff, 0 0 15px #6c00ff;
-    }
-    100% {
-        text-shadow: 0 0 15px #6c00ff, 0 0 30px #6c00ff, 0 0 45px #00d2ff;
-    }
-}
-
-.menu-toggle {
-    display: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    background-color: transparent;
-    border: 0;
-}
-
-.menu-toggle:hover {
-    color: #8a5cf6;
-}
-
-/* 5.2 Hero Section */
+/* ---- 5.2 Hero Section ---- */
 .hero {
     text-align: center;
     padding: 80px 0 40px;
 }
 
+/* Título principal com gradiente */
 .hero h1 {
     font-size: 3rem;
     background: linear-gradient(90deg, #8a5cf5 0%, #3b82f6 100%);
@@ -309,6 +230,7 @@ button {
     color: transparent;
 }
 
+/* Subtítulo */
 .subtitle {
     font-size: 1.35rem;
     color: rgba(255, 255, 255, 0.7);
@@ -316,6 +238,7 @@ button {
     margin: 0 auto;
 }
 
+/* Hero com vídeo de fundo */
 .about-hero {
     position: relative;
     overflow: hidden;
@@ -330,6 +253,7 @@ button {
     background-color: transparent;
 }
 
+/* Vídeo de fundo do hero */
 .bg-video {
     position: absolute;
     top: 0;
@@ -344,6 +268,7 @@ button {
     pointer-events: none;
 }
 
+/* Conteúdo central do hero */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -352,17 +277,19 @@ button {
     padding: 0 2rem;
 }
 
-/* 5.3 Contato */
+/* ---- 5.3 Contato ---- */
 .contact {
     padding: 5rem 0;
 }
 
+/* Layout em grid: informações + formulário */
 .contact-grid {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 2rem;
 }
 
+/* Cartões de informação */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -384,6 +311,7 @@ button {
     border-color: var(--color-purple-700);
 }
 
+/* Ícones dos cartões */
 .contact-icon {
     width: 3rem;
     height: 3rem;
@@ -401,6 +329,7 @@ button {
     color: var(--color-blue-400);
 }
 
+/* Texto dentro dos cartões */
 .contact-title {
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
@@ -411,6 +340,7 @@ button {
     font-size: 0.875rem;
 }
 
+/* Formulário de contato */
 .contact-form-container {
     background: linear-gradient(to bottom right, var(--color-gray-900), var(--color-gray-800));
     border: 1px solid var(--color-gray-700);
@@ -419,6 +349,7 @@ button {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Campos em grid */
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -426,7 +357,7 @@ button {
     margin-bottom: 1.5rem;
 }
 
-/* 5.4 Parceiros */
+/* ---- 5.4 Parceiros ---- */
 .partners {
     padding: 3rem 0;
     border-top: 1px solid var(--color-gray-800);
@@ -459,7 +390,7 @@ button {
     filter: brightness(1.2);
 }
 
-/* 5.5 Coming Soon */
+/* ---- 5.5 Coming Soon ---- */
 .coming-soon {
     padding: 5rem 0;
     position: relative;
@@ -482,12 +413,13 @@ button {
     margin-bottom: 1.5rem;
 }
 
+/* Ícone grande da seção */
 .coming-soon-icon {
     width: 8rem;
     height: 8rem;
     background: linear-gradient(to bottom right, rgba(124, 58, 237, 0.3), rgba(37, 99, 235, 0.3));
     border: 1px solid rgba(124, 58, 237, 0.3);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -520,6 +452,7 @@ button {
     margin-bottom: 1.5rem;
 }
 
+/* Tags */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -532,7 +465,7 @@ button {
     color: var(--color-purple-300);
     font-size: 0.75rem;
     padding: 0.25rem 0.75rem;
-    border-radius: var(--border-radius-full);
+    border-radius: var(--border-radius);
 }
 
 .tag.blue {
@@ -541,6 +474,7 @@ button {
     color: var(--color-blue-300);
 }
 
+/* Formulário "coming soon" */
 .coming-soon-form {
     border-top: 1px solid var(--color-gray-700);
     padding-top: 1.5rem;
@@ -567,135 +501,12 @@ button {
     box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
 }
 
-/* 5.6 Rodapé */
-.footer {
-    background-color: var(--color-black);
-    border-top: 1px solid var(--color-gray-800);
-    padding: 3rem 0 1.5rem;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.footer-about {
-    max-width: 20rem;
-}
-
-.footer-description {
-    color: var(--color-gray-400);
-    margin: 1rem 0;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    box-shadow: 0px 0px 15px #00000027;
-    padding: 15px 10px;
-    border-radius: 5em;
-}
-
-.social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: black;
-    box-shadow: 0px 0px 4px #00000027;
-    transition: 0.3s;
-}
-
-.social-link:hover {
-    background-color: var(--color-gray-700);
-    color: var(--color-black);
-    transform: translateY(-3px);
-}
-
-.footer-title {
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-white);
-}
-
-.footer-links ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.footer-links a {
-    color: var(--color-gray-400);
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--color-white);
-}
-
-.footer-bottom {
-    border-top: 1px solid var(--color-gray-800);
-    padding-top: 1.5rem;
-    text-align: center;
-    color: var(--color-gray-400);
-    font-size: 0.875rem;
-}
-
 /* ====================================
-   6. MEDIA QUERIES
+   6. MEDIA QUERIES (Responsividade)
    ==================================== */
 
-/* Mobile */
+/* ---- Mobile ---- */
 @media (max-width: 768px) {
-    /* Cabeçalho Mobile */
-    .header-container {
-        flex-wrap: wrap;
-    }
-    
-    .menu-toggle {
-        display: block;
-        order: 2;
-    }
-    
-    .logo {
-        order: 1;
-    }
-    
-    .main-nav {
-        width: 100%;
-        order: 3;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    
-    .main-nav.active {
-        max-height: 300px;
-        margin-top: 20px;
-    }
-    
-    .main-nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .main-nav li {
-        margin: 10px 0;
-        width: 100%;
-    }
-    
-    .main-nav a {
-        display: block;
-        padding: 5px 0;
-    }
-    
     /* Hero Mobile */
     .bg-video {
         display: none;
@@ -712,63 +523,63 @@ button {
     .hero-content {
         padding: 0;
     }
-    
+
     /* Contato Mobile */
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-grid {
         grid-template-columns: 1fr;
     }
-    
+
     /* Coming Soon Mobile */
     .coming-soon-grid {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+
     .coming-soon-form form {
         flex-direction: column;
     }
 }
 
-/* Tablet */
+/* ---- Tablet ---- */
 @media (max-width: 992px) {
     .about-hero {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .hero-content {
         margin-bottom: 2rem;
     }
-    
+
     .values-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .partners-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Desktop Pequeno */
+/* ---- Desktop Pequeno ---- */
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .about-grid,
     .hero-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
