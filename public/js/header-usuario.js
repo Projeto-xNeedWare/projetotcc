@@ -46,3 +46,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   }
 });
+
+const menuButton = document.getElementById('mobile-menu');
+const mainNav = document.querySelector('.main-nav');
+
+menuButton.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+});
