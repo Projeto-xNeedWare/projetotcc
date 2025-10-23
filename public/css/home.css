@@ -277,10 +277,7 @@ button {
     padding: 0 2rem;
 }
 
-/* ---- 5.3 Contato ---- */
-.contact {
-    padding: 5rem 0;
-}
+
 
 /* Layout em grid: informações + formulário */
 .contact-grid {
