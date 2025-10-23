@@ -1,6 +1,6 @@
-/* ====================================
-   5.1 Cabeçalho
-   ==================================== */
+/* =======================================================
+   CABEÇALHO | xNeedWare
+   ======================================================= */
 .xneedware-header {
     background-color: #00000000;
     width: 100%;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-/* === LOGO === */
+/* === LOGO (CANTO SUPERIOR ESQUERDO) === */
 .logo {
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
     color: #8a5cf6;
 }
 
-/* === ÍCONE DE USUÁRIO === */
+/* === ÍCONE DE USUÁRIO (CANTO SUPERIOR DIREITO) === */
 .icone-grande {
     margin-left: 30px;
     font-size: 27px;
@@ -97,9 +97,11 @@
     color: #8a5cf6;
 }
 
-/* ====================================
-   6. MEDIA QUERIES - CABEÇALHO
-   ==================================== */
+/* =======================================================
+   MEDIA QUERIES - Responsividade Cabeçalho
+   ======================================================= */
+
+/* Celulares (até 768px) */
 @media (max-width: 768px) {
     .header-container {
         flex-wrap: wrap;

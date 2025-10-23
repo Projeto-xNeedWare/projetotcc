@@ -4,7 +4,7 @@
 
 /* ----- Estrutura Principal ----- */
 .footer {
-  background-color: #000; /* fundo escuro */
+  background-color: #000;
   border-top: 1px solid #1f1f1f;
   padding: 4rem 0 2rem;
   color: #fff;
@@ -25,7 +25,7 @@
   margin-bottom: 3rem;
 }
 
-/* ----- Seção "Sobre" ----- */
+/* ----- Coluna "Sobre" ----- */
 .footer-about .logo {
   display: inline-flex;
   align-items: center;
@@ -153,7 +153,7 @@
 }
 
 /* =======================================================
-   MEDIA QUERIES - Responsividade
+   MEDIA QUERIES - Responsividade Rodapé
    ======================================================= */
 
 /* Tablets (até 992px) */
