@@ -513,13 +513,19 @@ button {
     }
 
     .about-hero {
+        position: relative;
+        pointer-events: none; /* Não captura cliques */
         background: none;
         min-height: 100vh;
         padding: 1rem;
         margin-top: -7rem;
         margin-bottom: -7rem;
-    }
 
+    }
+    
+    .about-hero * {
+    pointer-events: auto; /* Mantém clique nos elementos internos */
+}
     .hero-content {
         padding: 0;
     }
