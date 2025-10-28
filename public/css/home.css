@@ -501,12 +501,42 @@ button {
     box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
 }
 
+    .fa-thin {
+        margin-left: 20px ;
+    }
+    .fa-circle-user {
+        margin-left: 20px ;
+    }
+
+
+
+
 /* ====================================
    6. MEDIA QUERIES (Responsividade)
    ==================================== */
 
 /* ---- Mobile ---- */
 @media (max-width: 768px) {
+
+    .fa-thin {
+        margin-left: 0 ;
+    }
+    .fa-circle-user {
+        margin-left: 0 ;
+    }
+
+    .linha {
+        display: block;
+         border-bottom: #ffffff 2px solid;
+    }
+    .hero {
+        display: none;
+    }
+
+    .about-hero {
+        display: none;
+    }
+
     /* Hero Mobile */
     .bg-video {
         display: none;
@@ -547,6 +577,23 @@ button {
 
 /* ---- Tablet ---- */
 @media (max-width: 992px) {
+
+        .fa-thin {
+        margin-left: 0 ;
+    }
+    .fa-circle-user {
+        margin-left: 0 ;
+    }
+        .linha {
+        display: block;
+         border-bottom: #ffffff 2px solid;
+        }
+        .hero {
+        display: none;
+    }
+    .about-hero {
+        display: none;
+    }
     .about-hero {
         flex-direction: column;
         text-align: center;
@@ -571,6 +618,23 @@ button {
 
 /* ---- Desktop Pequeno ---- */
 @media (max-width: 1024px) {
+
+    .fa-thin {
+        margin-left: 0 ;
+    }
+    .fa-circle-user {
+        margin-left: 0 ;
+    }
+        .linha {
+        display: block;
+         border-bottom: #ffffff 2px solid;
+        }
+        .hero {
+        display: none;
+    }
+    .about-hero {
+        display: none;
+    }
     .hero-title {
         font-size: 2.5rem;
     }
