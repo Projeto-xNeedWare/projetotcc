@@ -5,7 +5,7 @@
 
 O **xNeedWare** é um sistema de gerenciamento de pedidos de desenvolvimento de softwares personalizados. Ele foi projetado para atender empresas e indivíduos que buscam soluções tecnológicas sob medida, simplificando o processo de solicitação e gestão de projetos de software.
 
-Este projeto foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** para o curso Técnico em Desenvolvimento de Sistemas.
+Este projeto foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** para o curso Técnico em Desenvolvimento de Sistemas na escola Doutor Jorge Coury.
 
 ---
 
@@ -13,11 +13,12 @@ Este projeto foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** par
 
 O sistema oferece um conjunto robusto de recursos para uma gestão completa de solicitações:
 
-* **Autenticação Segura:** Cadastro e login de usuários com validação.
+* **Autenticação Segura:** Cadastro e login de usuários com criptografia.
 * **Solicitação de Software:** Formulário intuitivo para detalhamento de novos pedidos.
-* **Gestão de Conta:** Página dedicada para o usuário acompanhar o status de suas solicitações.
-* **Comunicação Automatizada:** Envio de e-mails transacionais (via SMTP) para notificações importantes.
+* **Compra de mini-softwares:** Página de produtos onde a pessoa consegue comprar mini-softwares feitos por nós no primeiro ano do curso.
+* **Comunicação Automatizada:** Envio de e-mails após a compra do produto.
 * **Interação Dinâmica:** Validações de *frontend* e animações utilizando JavaScript puro.
+* **Pagamento 100% seguro com API Google Pay:** Pela segurança do usuário ele pode reaizar uma compra pelo método Google Pay.
 * **Estrutura de Dados Sólida:** Integração com banco de dados **MySQL**.
 
 ### 💻 Tecnologias Utilizadas
@@ -25,10 +26,9 @@ O sistema oferece um conjunto robusto de recursos para uma gestão completa de s
 | Categoria | Tecnologia | Descrição |
 | :--- | :--- | :--- |
 | **Backend** | Node.js | Ambiente de execução para o servidor. |
-| **Linguagem** | JavaScript | Utilizada tanto no *backend* quanto no *frontend*. |
+| **Linguagem** | JavaScript | Utilizada principalmente no *backend*. |
 | **Banco de Dados** | MySQL Workbench | Sistema de gerenciamento de banco de dados relacional. |
 | **Frontend** | HTML5, CSS3 | Estrutura e estilização da interface. |
-| **Dependências** | npm/Yarn | Gerenciamento de pacotes e dependências. |
 
 ---
 
