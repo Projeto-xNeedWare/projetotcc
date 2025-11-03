@@ -1,10 +1,11 @@
-# – Protótipo Inicial do Site
+# 🧭 Protótipo Inicial do Site
 
 Esta branch contém o **protótipo inicial** do site, desenvolvido como base estrutural e visual do projeto.  
 Cada pasta representa uma **página ou módulo** independente, com seus próprios arquivos HTML, CSS e JavaScript.
 
-Antes de haver a branch "projetotcc" nós utilizavamos esta branch inicialmente, aqui nós tivemos a prática de toda nossa ideia, e com o decorrer dos meses 
-fomos aprendendo mais e obtendo mais dicas para adicionarmos ao nosso projeto
+Antes de haver a branch **"projetotcc"**, nós utilizávamos esta branch inicialmente.  
+Aqui nós tivemos a prática de toda nossa ideia, e com o decorrer dos meses fomos aprendendo mais e obtendo mais dicas para adicionarmos ao nosso projeto.
+
 ---
 
 ## ⚙️ Como Usar no VS Code
@@ -34,42 +35,47 @@ fomos aprendendo mais e obtendo mais dicas para adicionarmos ao nosso projeto
 
 Abaixo está uma visão geral da estrutura do projeto:
 
-.vscode/
-├── settings.json # (Configurações específicas do VS Code)
+📦 Projeto
+├── 📂 .vscode/
+│ └── ⚙️ settings.json # Configurações específicas do VS Code
+│
+├── 📂 assets_geral/
+│ ├── 🎨 black/ e white/ # Conjuntos de temas e ícones
+│ ├── 📄 CSS/ # Estilos globais compartilhados
+│ └── 🖼️ favicon.ico # Ícone principal do site
+│
+├── 📂 bootstraps/
+│ ├── 📄 footer.html
+│ ├── 📄 header.html
+│ └── ⚙️ typing.js # Efeito de digitação
+│
+├── 📂 assinaturas/
+├── 📂 cadastro/
+├── 📂 em_breve/
+├── 📂 entre_em_contato/
+├── 📂 login/
+├── 📂 pagamento/
+├── 📂 pagina_inicial/
+├── 📂 pagina_produtos/
+├── 📂 sobre_modo_dev/
+├── 📂 sobre_nos/
+│ └── Todas seguem o mesmo padrão:
+│ 📁 pasta/
+│ ├── index.html
+│ ├── styles.css
+│ ├── script.js
+│ └── 📂 assets/
+│
+├── 📂 produtos/
+│ ├── 🤖 chatbot_ai/
+│ ├── 📊 excel_automation/
+│ ├── 💼 personal_website/
+│ └── 🧠 python_assistant/ # Cada pasta representa um produto do site
+│
+└── 📄 README.md # Documentação do projeto
 
-assets_geral/
-├── black/ e white/ # Conjuntos de temas e ícones
-├── CSS/ # Estilos globais compartilhados
-└── favicon.ico # Ícone principal do site
-
-bootstraps/
-├── footer.html
-├── header.html
-└── typing.js # Efeito de digitação
-
-Os que estão abaixo seguem o mesmo padrão...
-└── Estrutura de cada pasta:
-## 📁 pasta/
-##    ├── index.html
-##    ├── styles.css 
-##    ├── script.js 
-## 📁 └── assets/
-
-assinaturas/
-cadastro/
-em_breve/
-entre_em_contato/
-login/
-pagamento/
-pagina_inicial/
-pagina_produtos/
-sobre_modo_dev/
-sobre_nos/
-produtos/
-├── chatbot_ai/
-├── excel_automation/
-├── personal_website/
-└── python_assistant/ # Cada pasta representa um produto do site
+yaml
+Copy code
 
 ---
 
@@ -88,25 +94,26 @@ produtos/
 > 🔹 Esta branch, por ser o **protótipo inicial** do projeto.
 
 Ela define:
-- A ideia do projeto fora do papel;
-- O layout base das páginas;
-- Os componentes reutilizáveis (header, footer e scripts globais);
-- A base para futuras melhorias de design e funcionalidades.
+- A ideia do projeto fora do papel;  
+- O layout base das páginas;  
+- Os componentes reutilizáveis (header, footer e scripts globais);  
+- A base para futuras melhorias de design e funcionalidades.  
 
-Próximas versões incluirão:
-- Integração com banco de dados;
-- Backend (PHP ou Node.js);
-- Sistema de login funcional;
-- Layout aprimorado e responsivo.
-- Página de pagamento
+**Próximas versões incluirão:**
+- Integração com banco de dados;  
+- Backend (PHP ou Node.js);  
+- Sistema de login funcional;  
+- Layout aprimorado e responsivo;  
+- Página de pagamento.  
 
 ---
 
-### ✨ Desenvolvido por:
-**Equipe de xNeedWare:
-* Gabriel
-* Matheus
-* Felipe
-* Bruno
+### ✨ Desenvolvido por
 
-** Data - (20 de fevereiro de 2025 às 08:19)**
+**Equipe de xNeedWare:**
+- Gabriel  
+- Matheus  
+- Felipe  
+- Bruno  
+
+📅 **Data:** 20 de fevereiro de 2025 às 08:19
