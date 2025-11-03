@@ -35,47 +35,47 @@ Aqui nós tivemos a prática de toda nossa ideia, e com o decorrer dos meses fom
 
 Abaixo está uma visão geral da estrutura do projeto:
 
-📦 Projeto
-├── 📂 .vscode/
-│ └── ⚙️ settings.json # Configurações específicas do VS Code
-│
-├── 📂 assets_geral/
-│ ├── 🎨 black/ e white/ # Conjuntos de temas e ícones
-│ ├── 📄 CSS/ # Estilos globais compartilhados
-│ └── 🖼️ favicon.ico # Ícone principal do site
-│
-├── 📂 bootstraps/
-│ ├── 📄 footer.html
-│ ├── 📄 header.html
-│ └── ⚙️ typing.js # Efeito de digitação
-│
-├── 📂 assinaturas/
-├── 📂 cadastro/
-├── 📂 em_breve/
-├── 📂 entre_em_contato/
-├── 📂 login/
-├── 📂 pagamento/
-├── 📂 pagina_inicial/
-├── 📂 pagina_produtos/
-├── 📂 sobre_modo_dev/
-├── 📂 sobre_nos/
-│ └── Todas seguem o mesmo padrão:
-│ 📁 pasta/
-│ ├── index.html
-│ ├── styles.css
-│ ├── script.js
-│ └── 📂 assets/
-│
-├── 📂 produtos/
-│ ├── 🤖 chatbot_ai/
-│ ├── 📊 excel_automation/
-│ ├── 💼 personal_website/
-│ └── 🧠 python_assistant/ # Cada pasta representa um produto do site
-│
-└── 📄 README.md # Documentação do projeto
+📁 **.vscode/**  
+└─ ⚙️ `settings.json` – Configurações específicas do VS Code
 
-yaml
-Copy code
+📁 **assets_geral/**  
+├─ 🎨 `black/` – Tema escuro  
+├─ ⚪ `white/` – Tema claro  
+└─ CSS/ – Estilos globais compartilhados  
+
+📁 **bootstraps/**  
+├─ `footer.html`  
+├─ `header.html`  
+└─ ⚙️ `typing.js` – Efeito de digitação
+
+📁 **assinaturas/**  
+📁 **cadastro/**  
+📁 **em_breve/**  
+📁 **entre_em_contato/**  
+📁 **login/**  
+📁 **pagamento/**  
+📁 **pagina_inicial/**  
+
+📁 **pagina_produtos/**  
+├─ 📁 `sobre_modo_dev/`  
+├─ 📁 `sobre_nos/`  
+├─ 📁 `sobre_produto/`  
+└─ 📁 `pasta/`  
+
+📄 `index.html`  
+📄 `styles.css`  
+📄 `script.js`  
+
+📁 **assets/**  
+📁 **produtos/**  
+├─ 🤖 `chatbot_ai/`  
+├─ 📊 `excel_automation/`  
+└─ 💼 `personal_website/`  
+
+📁 **python_assistant/** – Cada pasta representa um produto do site  
+
+📄 `README.md` – Documentação do projeto
+
 
 ---
 
