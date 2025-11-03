@@ -6,6 +6,7 @@
     <title>xNeed Message - Dispare mensagens automatizadas</title>
     <link rel="stylesheet" href="/css/produtos_separados.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
@@ -17,22 +18,22 @@
 </head>
 
 <body>
-    <!-- CABEÇALHO REUTILIZÁVEL -->
+    <!-- CABEÇALHO -->
     <header class="xneedware-header">
         <div class="header-container">
-            <a href="/" class="logo">
+            <a href="/" class="logo" title="Logo xNeedWare - Voltar para a página inicial">
                 <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
             </a>
             
             <button class="menu-toggle" id="mobile-menu">
                 <i class="fas fa-bars"></i>
             </button>
-            
+        
             <nav class="main-nav">
                 <ul>
-                    <li><a href="/produtos">Produtos</a></li>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/contato">Contato</a></li>
+                    <li><a title="Veja todos os nossos produtos disponíveis" href="/produtos">Produtos</a></li>
+                    <li><a title="Saiba mais sobre nós" href="/sobre">Sobre</a></li>
+                    <li><a title="Entre em contato conosco" href="/#contato">Contato</a></li>
                     <div id="usuarioArea"></div>
 
                     <script src="/js/header-usuario.js"></script>
@@ -161,23 +162,22 @@
         </section>
     </main>
 
-    <!-- RODAPÉ REUTILIZÁVEL -->
+    <!-- RODAPÉ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="/message" class="logo">
+                    <a href="/produtos" class="logo">
                         <span class="logo-x">x</span><span class="logo-text">NeedWare</span>
                     </a>
-
                     <p class="footer-description">
                         Transformando empresas através de soluções de software inovadoras e eficientes.
                     </p>
-
                     <div class="social-links">
-                        <a href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
+                        
+                        <a title="Visite nosso Instagram" href="https://www.instagram.com/xneedware/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a title="Visite nosso LinkedIn" href="https://www.linkedin.com/company/xneedware/posts/?feedView=all" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a title="Visite nosso GitHub" title="Visite nosso Instagram" href="https://github.com/Projeto-xNeedWare" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
@@ -196,14 +196,14 @@
                 <div class="footer-links">
                     <h3 class="footer-title">Empresa</h3>
                     <ul>
-                        <li><a href="/sobre">Sobre Nós</a></li>
+                        <li><a title="Saiba mais sobre nós" href="/sobre">Sobre Nós</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h3 class="footer-title">Suporte</h3>
                     <ul>
-                        <li><a href="/politica_privacidade">Política de Privacidade</a></li>
+                        <li><a title="Acesse nossa política de privacidade" href="/politica_privacidade">Política de Privacidade</a></li>
                     </ul>
                 </div>
             </div>

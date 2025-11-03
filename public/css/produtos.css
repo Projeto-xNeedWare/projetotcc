@@ -620,11 +620,7 @@
       max-width: 32rem;
   }
 
-  .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-  }
+
 
   .hero-image {
       position: relative;
@@ -813,10 +809,7 @@
           font-size: 2rem;
       }
       
-      .hero-buttons {
-          flex-direction: column;
-          align-items: flex-start;
-      }
+
       
       .btn {
           width: 100%;

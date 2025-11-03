@@ -1058,16 +1058,7 @@ select:focus {
     }
   }
   
-  @media (max-width: 576px) {
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .hero-buttons .btn {
-        width: 100%;
-    }
-    
+
     .stats-grid {
         flex-direction: column;
     }

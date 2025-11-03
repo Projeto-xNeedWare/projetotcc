@@ -41,8 +41,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Usuário não logado
     usuarioArea.innerHTML = `
       <a title="Entre na sua conta" href="/login">
-        <i class="fa-thin fa-circle-user" style="margin-left: 20px; font-size: 2rem;"></i>
+        <i class="fa-thin fa-circle-user" style="font-size: 2rem;"></i>
       </a>
     `;
   }
+});
+
+const menuButton = document.getElementById('mobile-menu');
+const mainNav = document.querySelector('.main-nav');
+
+menuButton.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
 });
