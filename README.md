@@ -1,190 +1,137 @@
-## 🧠 xNeedWare — Sistema de Gestão de Solicitação de Softwares
+# 🚀 xNeedWare - Plataforma de Venda de Softwares e Serviços (Protótipo TCC)
 
-[![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Tecnologias](https://img.shields.io/badge/Tecnologias-Node.js%2C%20MySQL-green.svg)](https://github.com/Projeto-xNeedWare/projetotcc)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-O **xNeedWare** é um sistema de gerenciamento de pedidos de desenvolvimento de softwares personalizados. Ele foi projetado para atender empresas e indivíduos que buscam soluções tecnológicas sob medida, simplificando o processo de solicitação e gestão de projetos de software.
+## 🎯 Objetivo do Projeto
 
-Este projeto foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** para o curso Técnico em Desenvolvimento de Sistemas na escola Doutor Jorge Coury.
+O **xNeedWare** é um protótipo funcional desenvolvido como Trabalho de Conclusão de Curso (TCC) com o objetivo de criar uma plataforma *online* para **solicitação e comercialização de softwares do tipo SaaS (Software as a Service)**.
 
----
+O sistema visa facilitar a comunicação entre desenvolvedores e micro/pequenas empresas, oferecendo uma interface simples para:
+1.  Visualizar serviços e soluções de software disponíveis.
+2.  Solicitar o desenvolvimento de sistemas personalizados.
 
-### ✨ Funcionalidades
+Este projeto serve como um protótipo inicial de um sistema de vendas automatizado, demonstrando o processo completo de desenvolvimento de software, desde a concepção até a implementação.
 
-O sistema oferece um conjunto robusto de recursos para uma gestão completa de solicitações:
+## ✨ Funcionalidades Principais
 
-* **Autenticação Segura:** Cadastro e login de usuários com criptografia.
-* **Solicitação de Software:** Formulário intuitivo para detalhamento de novos pedidos.
-* **Compra de mini-softwares:** Página de produtos onde a pessoa consegue comprar mini-softwares feitos por nós no primeiro ano do curso.
-* **Comunicação Automatizada:** Envio de e-mails após a compra do produto.
-* **Interação Dinâmica:** Validações de *frontend* e animações utilizando JavaScript puro.
-* **Pagamento 100% seguro com API Google Pay:** Pela segurança do usuário ele pode reaizar uma compra pelo método Google Pay.
-* **Estrutura de Dados Sólida:** Integração com banco de dados **MySQL**.
+*   **Interface Responsiva:** Prioriza a clareza visual e a eficiência em diferentes dispositivos.
+*   **Gestão de Usuários:** Fluxo de cadastro e login com armazenamento seguro de informações.
+*   **Simulação de Compra:** Estrutura para gerenciamento de produtos e simulação de compra de softwares.
+*   **Integração de Pagamento (Teste):** Utilização da API do Google Pay em ambiente de teste para simular transações.
+*   **Arquitetura MVC:** Estrutura modular para facilitar a manutenção e a escalabilidade.
 
-### 💻 Tecnologias Utilizadas
+## 🛠️ Stack Tecnológica
 
-| Categoria | Tecnologia | Descrição |
+O projeto foi desenvolvido utilizando uma *stack* moderna e consolidada:
+
+| Categoria | Tecnologia | Detalhes |
 | :--- | :--- | :--- |
-| **Backend** | Node.js | Ambiente de execução para o servidor. |
-| **Linguagem** | JavaScript | Utilizada principalmente no *backend*. |
-| **Banco de Dados** | MySQL Workbench | Sistema de gerenciamento de banco de dados relacional. |
-| **Frontend** | HTML5, CSS3 | Estrutura e estilização da interface. |
+| **Linguagem** | JavaScript | Utilizada como *full stack* (Front-end e Back-end). |
+| **Back-end** | Node.js com Express | Ambiente de execução e *framework* para rotas REST e lógica do servidor. |
+| **Front-end** | HTML5, CSS3, JavaScript | Interface de usuário com foco em usabilidade e design *Tech*. |
+| **Banco de Dados** | MySQL Workbench | Banco de dados relacional para armazenamento de usuários, solicitações e produtos. |
+| **Pagamento** | Google Pay API | Integração em ambiente de teste para simulação de transações. |
+| **Controle de Versão** | Git / GitHub | Gerenciamento de código e colaboração. |
 
----
+## 🏗️ Arquitetura da Solução
 
-### 📂 Estrutura de Pastas e Arquivos Chave
+A arquitetura segue o padrão **Model-View-Controller (MVC)**, garantindo a separação de responsabilidades:
 
-A arquitetura do projeto segue um padrão MVC (Model-View-Controller) simplificado, comum em aplicações Node.js:
+*   **Model:** Gerencia a lógica de negócio e a interação com o banco de dados MySQL.
+*   **View:** Responsável pela interface do usuário (páginas HTML e scripts JS em `views/`).
+*   **Controller:** Intermediário (principalmente em `server.js`), define rotas, processa requisições e aciona o Model.
 
-| Pasta/Arquivo | Propósito |
-| :--- | :--- |
-| `server.js` | **Ponto de Entrada** que inicializa o servidor. |
-| `db/` | Contém o módulo de conexão com o MySQL (`conn.js`). |
-| `routes/` | Define os *endpoints* da aplicação (e.g., `auth.js` para login/cadastro). |
-| **`public/`** | Armazena todos os ativos estáticos (CSS, JS de *frontend*, Imagens). |
-| **`views/`** | Contém os arquivos de *template* (HTML/EJS/etc.) que o servidor renderiza. |
+## ⚙️ Instalação e Execução
 
-#### 💡 Explicação de `public/` e `views/`
+Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
 
-* **`public/` (Conteúdo Estático)**: Esta pasta é servida "como está" ao navegador do usuário. Arquivos dentro dela (como CSS, scripts de frontend e imagens) são acessíveis diretamente pela URL do projeto, sem processamento do servidor.
-* **`views/` (Templates Dinâmicos)**: Esta pasta **não é** acessível diretamente. Ela armazena os *templates* que o Node.js utiliza para montar as páginas HTML dinamicamente (injetando dados do banco, por exemplo) antes de enviá-las ao cliente.
+### Pré-requisitos
 
----
+Certifique-se de ter instalado em sua máquina:
 
-### 🚀 Instalação e Uso (Node.js)
+*   [Node.js](https://nodejs.org/en/) (versão LTS recomendada)
+*   [MySQL Workbench](https://www.mysql.com/products/workbench/) ou outro cliente MySQL
 
-Para iniciar o **xNeedWare** em seu ambiente de desenvolvimento, siga os passos abaixo.
+### 1. Acesso ao Código-Fonte
 
-#### Pré-requisitos
-
-* **Node.js** (LTS recomendado) e **npm**.
-* **MySQL Workbench** ou ambiente MySQL configurado.
-
-#### 1. Configuração do Projeto
+O código-fonte está disponível no seguinte repositório:
 
 ```bash
-# 1. Clone o repositório
-git clone [https://github.com/Projeto-xNeedWare/projetotcc.git](https://github.com/Projeto-xNeedWare/projetotcc.git)
-
-# 2. Acesse o diretório do projeto
+git clone https://github.com/Projeto-xNeedWare/projetotcc.git
 cd projetotcc
+```
 
-# 3. Instale as dependências Node.js
-npm install
+### 2. Instalação das Dependências
 
-Perfeito! O README anterior já está formatado em Markdown.
-
-Aqui está o código completo do README atualizado, profissional e limpo, incluindo as explicações sobre Node.js e as pastas public/views, pronto para ser copiado e colado no seu arquivo README.md:
-
-Markdown
-
-## 🧠 xNeedWare — Sistema de Gestão de Solicitação de Softwares
-
-[![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Tecnologias](https://img.shields.io/badge/Tecnologias-Node.js%2C%20MySQL-green.svg)](https://github.com/Projeto-xNeedWare/projetotcc)
-
-O **xNeedWare** é um sistema de gerenciamento de pedidos de desenvolvimento de softwares personalizados. Ele foi projetado para atender empresas e indivíduos que buscam soluções tecnológicas sob medida, simplificando o processo de solicitação e gestão de projetos de software.
-
-Este projeto foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** para o curso Técnico em Desenvolvimento de Sistemas.
-
----
-
-### ✨ Funcionalidades
-
-O sistema oferece um conjunto robusto de recursos para uma gestão completa de solicitações:
-
-* **Autenticação Segura:** Cadastro e login de usuários com validação.
-* **Solicitação de Software:** Formulário intuitivo para detalhamento de novos pedidos.
-* **Gestão de Conta:** Página dedicada para o usuário acompanhar o status de suas solicitações.
-* **Comunicação Automatizada:** Envio de e-mails transacionais (via SMTP) para notificações importantes.
-* **Interação Dinâmica:** Validações de *frontend* e animações utilizando JavaScript puro.
-* **Estrutura de Dados Sólida:** Integração com banco de dados **MySQL**.
-
-### 💻 Tecnologias Utilizadas
-
-| Categoria | Tecnologia | Descrição |
-| :--- | :--- | :--- |
-| **Backend** | Node.js | Ambiente de execução para o servidor. |
-| **Linguagem** | JavaScript | Utilizada tanto no *backend* quanto no *frontend*. |
-| **Banco de Dados** | MySQL Workbench | Sistema de gerenciamento de banco de dados relacional. |
-| **Frontend** | HTML5, CSS3 | Estrutura e estilização da interface. |
-| **Dependências** | npm/Yarn | Gerenciamento de pacotes e dependências. |
-
----
-
-### 📂 Estrutura de Pastas e Arquivos Chave
-
-A arquitetura do projeto segue um padrão MVC (Model-View-Controller) simplificado, comum em aplicações Node.js:
-
-| Pasta/Arquivo | Propósito |
-| :--- | :--- |
-| `server.js` | **Ponto de Entrada** que inicializa o servidor. |
-| `db/` | Contém o módulo de conexão com o MySQL (`conn.js`). |
-| `routes/` | Define os *endpoints* da aplicação (e.g., `auth.js` para login/cadastro). |
-| **`public/`** | Armazena todos os ativos estáticos (CSS, JS de *frontend*, Imagens). |
-| **`views/`** | Contém os arquivos de *template* (HTML/EJS/etc.) que o servidor renderiza. |
-
-#### 💡 Explicação de `public/` e `views/`
-
-* **`public/` (Conteúdo Estático)**: Esta pasta é servida "como está" ao navegador do usuário. Arquivos dentro dela (como CSS, scripts de frontend e imagens) são acessíveis diretamente pela URL do projeto, sem processamento do servidor.
-* **`views/` (Templates Dinâmicos)**: Esta pasta **não é** acessível diretamente. Ela armazena os *templates* que o Node.js utiliza para montar as páginas HTML dinamicamente (injetando dados do banco, por exemplo) antes de enviá-las ao cliente.
-
----
-
-### 🚀 Instalação e Uso (Node.js)
-
-Para iniciar o **xNeedWare** em seu ambiente de desenvolvimento, siga os passos abaixo.
-
-#### Pré-requisitos
-
-* **Node.js** (LTS recomendado) e **npm**.
-* **MySQL Workbench** ou ambiente MySQL configurado.
-
-#### 1. Configuração do Projeto
+Utilize o NPM para instalar todas as bibliotecas necessárias para o *back-end*:
 
 ```bash
-# 1. Clone o repositório
-git clone [https://github.com/Projeto-xNeedWare/projetotcc.git](https://github.com/Projeto-xNeedWare/projetotcc.git)
-
-# 2. Acesse o diretório do projeto
-cd projetotcc
-
-# 3. Instale as dependências Node.js
 npm install
+```
 
-2. Configuração do Banco de Dados e Ambiente
-Crie um banco de dados MySQL.
+### 3. Configuração do Banco de Dados
 
-Importe as tabelas utilizando os arquivos de dump (mencionados como banco_auto/ no seu antigo README).
+1.  Crie um banco de dados local com o nome `xneedware` (ou outro de sua preferência).
+2.  Crie um arquivo `.env` na raiz do projeto e configure as credenciais de acesso ao seu MySQL:
 
-Configure as variáveis de ambiente:
+    ```ini
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASSWORD=sua_senha_mysql
+    DB_NAME=xneedware
+    ```
 
-# 4. Crie o arquivo de variáveis de ambiente
-cp .env.example .env
+3.  Execute o script SQL de criação da tabela de usuários:
 
-# 5. Edite o arquivo .env
-# Configure as variáveis de conexão com o MySQL (host, user, password, database)
-# e as credenciais de SMTP para o envio de e-mails.
+    ```sql
+    CREATE TABLE usuarios (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        nome VARCHAR (50) NOT NULL,
+        sobrenome VARCHAR (50) NOT NULL,
+        email VARCHAR (100) NOT NULL UNIQUE,
+        senha VARCHAR (255) NOT NULL,
+        criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    ```
 
-# 6. Inicie o servidor Node.js
-npm start
-# OU, se houver um script de desenvolvimento (ex: com nodemon):
-# npm run dev
+### 4. Execução do Servidor
 
-O servidor estará rodando no endereço configurado (geralmente http://localhost:3000).
+Inicie o servidor Node.js com o comando:
 
-🤝 Contribuição
-Contribuições são a espinha dorsal de um projeto de código aberto! Sinta-se à vontade para abrir issues ou enviar pull requests.
+```bash
+node server.js
+```
 
-👨‍💻 Desenvolvedores
-Este projeto é um esforço colaborativo do TCC, desenvolvido por:
+O sistema estará acessível localmente em:
 
-Gabriel Marin
+🔗 **[http://localhost:3000](http://localhost:3000)**
 
-Matheus de Mello
+## 🔮 Futuras Implementações
 
-Felipe Lotério
+O projeto está preparado para as seguintes evoluções:
 
-Bruno Correr
+*   **Integração Real de Pagamento:** Substituição do ambiente de testes por *gateways* de pagamento reais.
+*   **Painel Administrativo:** Implementação de um painel para gestão de solicitações e métricas de uso.
+*   **Deploy Contínuo:** Configuração de CI/CD para hospedagem em ambientes de nuvem (AWS, Render, etc.).
+*   **Expansão de Funcionalidades:** Adição de mais produtos e funcionalidades para uso direto no site.
 
-Trabalho de Conclusão de Curso (TCC) — Técnico em Desenvolvimento de Sistemas.
+## 👥 Equipe
+
+| Nome | Função |
+| :--- | :--- |
+| Gabriel Diogo Marin Loquetti | Desenvolvedor |
+| Felipe Lotério dos Santos | Desenvolvedor |
+| Matheus de Mello de Carvalho | Desenvolvedor |
+| Bruno Correr Coa | Desenvolvedor |
+
+**Orientador(a):** Profª. Cláudia Heleno
+
+---
+
+*Este README.md foi gerado com base na Documentação Técnica do Software TCC (10/11/2025).*
+*Repositório Oficial: [https://github.com/Projeto-xNeedWare/projetotcc](https://github.com/Projeto-xNeedWare/projetotcc)*
