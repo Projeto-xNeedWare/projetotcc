@@ -77,7 +77,7 @@ npm install
 ### 3. Configuração do Banco de Dados
 
 1.  Crie um banco de dados local com o nome `xneedware` (ou outro de sua preferência).
-2.  Crie um arquivo `.env` na raiz do projeto e configure as credenciais de acesso ao seu MySQL:
+2.  No arquivo `server.js` configure as credenciais de acesso ao seu MySQL:
 
     ```ini
     DB_HOST=localhost
