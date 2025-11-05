@@ -344,6 +344,7 @@ button {
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5rem;
 }
 
 /* Campos em grid */

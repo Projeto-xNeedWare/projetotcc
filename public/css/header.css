@@ -1,5 +1,5 @@
 /* =======================================================
-   CABEÇALHO | xNeedWare
+   CABEÇALHO | xNeedWare - REFATORADO PARA OFF-CANVAS (V2 - FIX SCROLL)
    ======================================================= */
 .xneedware-header {
     background-color: #00000000;
@@ -36,7 +36,7 @@
     color: transparent;
 }
 
-/* === MENU DE NAVEGAÇÃO === */
+/* === MENU DE NAVEGAÇÃO (DESKTOP) === */
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -51,7 +51,6 @@
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    margin-left: 30px;
     transition: color 0.3s ease;
 }
 
@@ -70,7 +69,6 @@
 
 .icone-grande:hover {
     color: #6c00ff;
-    transform: scale(1.22);
     animation: brilho-pulsante 1s infinite alternate;
 }
 
@@ -83,7 +81,7 @@
     }
 }
 
-/* === MENU MOBILE === */
+/* === MENU MOBILE (HAMBURGUER) === */
 .menu-toggle {
     display: none;
     color: white;
@@ -92,6 +90,7 @@
     transition: color 0.3s ease;
     background-color: transparent;
     border: 0;
+    z-index: 1001; 
 }
 
 .menu-toggle:hover {
@@ -99,49 +98,127 @@
 }
 
 /* =======================================================
-   MEDIA QUERIES - Responsividade Cabeçalho
+   MEDIA QUERIES - Responsividade Cabeçalho (Off-Canvas)
    ======================================================= */
 
 /* Celulares (até 768px) */
 @media (max-width: 768px) {
-    .header-container {
-        flex-wrap: wrap;
+    
+    /* FIX 1: Fixa o cabeçalho no topo e garante que ele fique acima de tudo */
+    .xneedware-header {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        z-index: 1002; 
+        background-color: #0f0920; /* Cor de fundo do menu lateral (var(--color-dark)) */
+        /* Garante que o cabeçalho ocupe toda a largura */
+        width: 100%; 
+    }
+    
+    /* FIX 2: Regra para o Body quando o menu está aberto (necessita de JS para adicionar a classe) */
+    body.menu-open {
+        overflow: hidden; /* Impede a rolagem do conteúdo principal */
+    }
+    
+    /* Menu Off-Canvas */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%; 
+        max-width: 300px; 
+        height: 100%;
+        background-color: #0f0920; 
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        /* Ajusta o padding para começar abaixo do cabeçalho fixo */
+        padding-top: 80px; 
+        /* FIX 3: Garante que o menu não cause overflow horizontal */
+        overflow-y: auto; 
     }
 
+    /* Mostra o menu off-canvas */
+    .main-nav.active {
+        transform: translateX(0); 
+    }
+
+    /* Estilos da lista de links no menu off-canvas */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .main-nav li {
+        margin: 15px 0;
+        width: 100%;
+        margin-left: 0; 
+    }
+
+    .main-nav a {
+        font-size: 18px;
+        padding: 10px 0;
+        display: block;
+    }
+    
+    /* Garante que o ícone de usuário fique visível no cabeçalho */
+    .icone-grande {
+        order: 3; 
+        margin-left: auto; 
+    }
+
+    /* Mostra o botão do menu hamburguer */
     .menu-toggle {
         display: block;
         order: 2;
     }
 
-    .logo {
-        order: 1;
+    /* Opcional: Adiciona um overlay escuro quando o menu está ativo */
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
     }
+}
 
+/* Regras de desktop para garantir que não sejam afetadas */
+@media (min-width: 769px) {
+    /* Garante que o cabeçalho volte a ser relativo no desktop */
+    .xneedware-header {
+        position: relative;
+        z-index: auto;
+        background-color: #00000000;
+    }
+    
     .main-nav {
-        width: 100%;
-        order: 3;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        transform: translateX(0);
+        padding-top: 0;
+        overflow-y: visible;
     }
-
-    .main-nav.active {
-        max-height: 300px;
-        margin-top: 20px;
-    }
-
+    
     .main-nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        padding: 0;
     }
-
-    .main-nav li {
-        margin: 10px 0;
-        width: 100%;
+    
+    .menu-toggle {
+        display: none;
     }
-
-    .main-nav a {
-        display: block;
-        padding: 5px 0;
+    
+    .icone-grande {
+        order: 0; 
+        margin-left: 30px;
     }
 }

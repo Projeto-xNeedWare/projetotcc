@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Usuário logado
     usuarioArea.innerHTML = `
       <div class="usuario-menu" style="position: relative; display: inline-block;">
-        <a title="Acesse sua conta" class="icone-grande" href="/conta" style="font-size: 1.2rem;">
+        <a title="Acesse sua conta" class="icone-grande" href="/conta" style="margin-left: 0px; font-size: 1.2rem;">
           <i class="fa-thin fa-circle-user"></i> Olá, ${usuario.nome}
         </a>
         <div class="usuario-dropdown" style="display: none; padding: 10px; width: 150px; position: absolute; background: #000000ff; border: 1px solid #ccc; right: 0; z-index: 10;">
@@ -53,3 +53,4 @@ const mainNav = document.querySelector('.main-nav');
 menuButton.addEventListener('click', () => {
     mainNav.classList.toggle('active');
 });
+
