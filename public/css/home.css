@@ -523,10 +523,10 @@ button {
         margin-left: 0 ;
     }
 
-    .linha {
-        display: block;
-         border-bottom: #ffffff 2px solid;
+    .section-header h2 {
+        margin-top: 10px;
     }
+
     .hero {
         display: none;
     }
