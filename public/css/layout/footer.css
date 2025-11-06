@@ -1,7 +1,3 @@
-/* =======================================================
-   FOOTER | xNeedWare
-   ======================================================= */
-
 /* ----- Estrutura Principal ----- */
 .footer {
   background-color: #000;
@@ -25,7 +21,6 @@
   margin-bottom: 3rem;
 }
 
-/* ----- Coluna "Sobre" ----- */
 .footer-about .logo {
   display: inline-flex;
   align-items: center;
@@ -68,7 +63,6 @@
   max-width: 22rem;
 }
 
-/* ----- Ícones Sociais ----- */
 .social-links {
   display: flex;
   align-items: center;
@@ -101,7 +95,6 @@
   box-shadow: 0 0 10px #7c3aed70;
 }
 
-/* ----- Colunas de Links ----- */
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -132,7 +125,6 @@
   color: #fff;
 }
 
-/* ----- Rodapé Inferior ----- */
 .footer-bottom {
   border-top: 1px solid #1f1f1f;
   padding-top: 1.5rem;
@@ -146,7 +138,6 @@
   font-weight: 600;
 }
 
-/* ----- Animações Suaves ----- */
 .social-link,
 .footer-about .logo,
 .footer-links a {
@@ -196,6 +187,3 @@
     height: 42px;
   }
 }
-/* =======================================================
-   FIM DO FOOTER | xNeedWare
-   ======================================================= */

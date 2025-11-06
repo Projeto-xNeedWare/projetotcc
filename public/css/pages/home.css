@@ -1,11 +1,5 @@
-/* ==========================================================================
-   1. ESTILOS ESPECÍFICOS DA PÁGINA INICIAL (HOME)
-   ========================================================================== */
-
 /* ---- 1.1 Hero Section (Com Vídeo) ---- */
 .hero {
-    /* A classe .hero é usada no HTML, mas o estilo aqui é do .about-hero do CSS original. 
-       Ajustado para usar .hero e .about-hero juntos, conforme o HTML. */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -23,7 +17,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 80px; /* Para não cobrir o header fixo */
+    margin-top: 80px;
     width: 100%;
     height: 80%;
     object-fit: cover;
@@ -43,9 +37,6 @@
 
 .hero-content h1 {
     font-size: 3rem;
-    /* O estilo de gradiente para o H1 do hero foi removido do CSS original, 
-       mas o HTML sugere que ele deveria ter um estilo. 
-       Mantendo o estilo do CSS original que estava em outro bloco: */
     background: linear-gradient(90deg, var(--color-purple-500) 0%, var(--color-blue-500) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -138,8 +129,7 @@
 }
 
 .partners-text h1 {
-    /* Estilo do H1 dentro de .partners-text que usa .gradient-text */
-    font-size: 2.425rem; /* Usando o tamanho do .section-title */
+    font-size: 2.425rem;
 }
 
 .partners-grid {
@@ -162,7 +152,7 @@
     filter: brightness(1.2);
 }
 
-/* ---- 1.4 Coming Soon ---- */
+/* ---- 1.4 Em Breve ---- */
 .coming-soon {
     padding: 5rem 0;
     position: relative;
@@ -247,36 +237,221 @@
     75% { transform: translate(-10px, -15px) scale(1.02); }
 }
 
-/* ==========================================================================
-   2. MEDIA QUERIES ESPECÍFICAS DA HOME
-   ========================================================================== */
-
-/* ---- Desktop Pequeno (<= 1024px) ---- */
-@media (max-width: 1024px) {
-    /* Ocultando Heroes em telas menores (Pode ser ajustado se quiser um hero mobile) */
-    .hero,
-    .about-hero {
-        display: none;
+/* ---- 2.1 Desktop Médio (até 1200px) ---- */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 2.75rem;
     }
 
-    /* Ajustes de tipografia e layout */
-    .hero-title {
+    .subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+/* ---- 2.2 Desktop Pequeno / Tablet Horizontal (até 1024px) ---- */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        top: -30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+        max-width: 90%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form-container {
+        padding: 1.75rem;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .coming-soon-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .coming-soon-icon {
+        width: 6rem;
+        height: 6rem;
         font-size: 2.5rem;
     }
-}
 
-/* ---- Tablet (<= 992px) ---- */
-@media (max-width: 992px) {
-    /* Ajuste de grid de parceiros */
-    .partners-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .coming-soon-title {
+        font-size: 1.35rem;
+    }
+
+    .coming-soon-description {
+        font-size: 0.95rem;
+    }
+
+    .coming-soon-form form {
+        flex-direction: column;
     }
 }
 
-/* ---- Mobile (<= 768px) ---- */
+/* ---- 2.3 Tablet Vertical (até 768px) ---- */
 @media (max-width: 768px) {
-    /* Ajustes de tipografia */
-    .section-header h2 {
-        margin-top: 10px;
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .partners-text h1 {
+        font-size: 2rem;
+    }
+
+    .partners-text p {
+        font-size: 0.95rem;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .contact-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+    }
+
+    .coming-soon {
+        padding: 3rem 1rem;
+    }
+
+    .coming-soon-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ---- 2.4 Celular Grande (até 576px) ---- */
+@media (max-width: 576px) {
+    .hero {
+        padding: 2.5rem 1rem;
+        min-height: 85vh;
+    }
+
+    .hero-content {
+        top: -20px;
+        padding: 0 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-title {
+        font-size: 1rem;
+    }
+
+    .contact-details p {
+        font-size: 0.85rem;
+    }
+
+    .partners-text h1 {
+        font-size: 1.65rem;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .coming-soon-icon {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2rem;
+    }
+
+    .coming-soon-title {
+        font-size: 1.25rem;
+    }
+
+    .coming-soon-description {
+        font-size: 0.9rem;
+    }
+
+    .coming-soon-form input {
+        padding: 0.65rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .coming-soon-form button {
+        width: 100%;
+    }
+}
+
+/* ---- 2.5 Celular Pequeno (até 480px) ---- */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.55rem;
+    }
+
+    .subtitle {
+        font-size: 0.875rem;
+        line-height: 1.4;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .contact-form-container {
+        padding: 1.25rem;
+    }
+
+    .coming-soon-card {
+        padding: 1.25rem;
+    }
+
+    .coming-soon-title {
+        font-size: 1.15rem;
+    }
+
+    .coming-soon-description {
+        font-size: 0.85rem;
     }
 }

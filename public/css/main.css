@@ -17,3 +17,12 @@
 
 /* 5. PAGES: Estilos específicos da página atual (Home) */
 @import url("./pages/home.css");
+
+/* =========================================================
+   INSTRUÇÕES DE USO:
+   
+   Cole este link na seção <head> do seu HTML:
+   <link rel="stylesheet" href="/css/main-(NOME_PAGINA).css">
+
+   Todos os estilos serão carregados através deste arquivo único.
+   ========================================================= */

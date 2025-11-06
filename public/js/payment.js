@@ -523,30 +523,37 @@ function processarPagamentoSucesso(total) {
     // Limpa carrinho após compra
     localStorage.removeItem("carrinho");
     
+    // importa o CSS externamente via JS
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/css/components/components.css";
+    document.head.appendChild(link);
+
+
     // Mostra confirmação de sucesso no Step 3
     const step3 = document.getElementById('step-3');
     if (step3) {
-        step3.innerHTML = `
-            <div style="text-align: center; padding: 40px 20px;">
-                <div style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">
-                    ✅
-                </div>
-                <h2 style="color: #28a745; margin-bottom: 15px;">Pagamento Aprovado!</h2>
-                <p style="color: #c0c0c0; margin-bottom: 25px;">
-                    Seu pagamento de <strong>R$ ${total.toFixed(2)}</strong> 
-                    foi processado com sucesso via Google Pay.
-                </p>
-                <p style="color: #c0c0c0; font-size: 14px; margin-bottom: 30px;">
-                    Você receberá um email com as instruções de download em breve.
-                </p>
-                <button onclick="window.location.href='/conta'" class="btn-primary" style="margin: 5px;">
-                    Ver Meus Pedidos
-                </button>
-                <button onclick="window.location.href='/produtos'" class="btn-outline" style="margin: 5px;">
-                    Continuar Comprando
-                </button>
-            </div>
-        `;
+    step3.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px;">
+        <div style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">
+            ✅
+        </div>
+        <h2 style="color: #28a745; margin-bottom: 15px;">Pagamento Aprovado!</h2>
+        <p style="color: #c0c0c0; margin-bottom: 25px;">
+            Seu pagamento de <strong>R$ ${total.toFixed(2)}</strong> 
+            foi processado com sucesso via Google Pay.
+        </p>
+        <p style="color: #c0c0c0; font-size: 14px; margin-bottom: 30px;">
+            Você receberá um email com as instruções de download em breve.
+        </p>
+        <button onclick="window.location.href='/conta'" class="btn-primary" style="margin: 5px;">
+            Ver Meus Pedidos
+        </button>
+        <button onclick="window.location.href='/produtos'" class="btn-outline" style="margin: 5px;">
+            Continuar Comprando
+        </button>
+        </div>
+    `;
     }
 }
 

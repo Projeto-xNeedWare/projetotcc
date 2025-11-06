@@ -1,171 +1,304 @@
 /* ==========================================================================
-   COMPONENTS.CSS - Componentes Reutilizáveis (Versão Final)
+   COMPONENTS.CSS - Componentes Reutilizáveis
    ========================================================================== */
 
 /* 1. BOTÕES GERAIS */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
 }
 
 .btn i {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover i {
-    transform: translateX(3px);
+  transform: translateX(3px);
 }
 
 .btn-primary {
-    background: linear-gradient(to right, var(--color-purple-600), var(--color-blue-600));
-    color: var(--color-white);
-    border-radius: var(--border-radius);
+  background: linear-gradient(90deg, var(--color-purple-600), var(--color-blue-600));
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius, 0.75rem);
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(to right, var(--color-purple-700), var(--color-blue-700));
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  background: linear-gradient(90deg, var(--color-purple-700), var(--color-blue-700));
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.45);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
-    background: transparent;
-    border: 1px solid var(--color-purple-500);
-    color: var(--color-white);
+  background: transparent;
+  border: 2px solid var(--color-purple-500);
+  color: var(--color-white);
+  border-radius: var(--border-radius, 0.75rem);
+  padding: 0.9rem 1.8rem;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-    background: rgba(124, 58, 237, 0.1);
-    transform: translateY(-2px);
+  background: rgba(124, 58, 237, 0.1);
+  border-color: var(--color-purple-400);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
 }
 
 /* 2. BOTÕES DE CTA (PRODUTO) */
 .cta-button {
-    padding: 12px 24px;
-    border-radius: 8px;
-    color: var(--color-white);
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.3s ease;
-    flex: 1;
-    min-width: 140px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    background-color: var(--color-purple-500);
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 140px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-purple-500);
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    filter: brightness(1.1);
-    background-color: var(--color-purple-600);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+  background-color: var(--color-purple-600);
 }
 
 .cta-section {
-    display: flex; /* CORREÇÃO: Adicionado display: flex */
-    gap: 10px;
-    align-items: center;
-    justify-content: center; /* CORREÇÃO: Centraliza os botões */
-    margin-top: 20px; /* CORREÇÃO: Adicionado margem para respiro */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-/* 3. CARDS E SEÇÕES DE INFORMAÇÃO */
+/* 3. CARDS E SEÇÕES */
 .value-card,
 .team-member,
 .stat-card,
 .feature-card {
-    background-color: rgba(15, 21, 36, 0.5);
-    border-radius: 12px;
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(15, 21, 36, 0.5);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-card:hover,
 .team-member:hover,
 .stat-card:hover,
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .values-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
 }
 
 .values-list .check-icon {
-    color: var(--color-purple-500);
-    margin-right: 0.75rem;
+  color: var(--color-purple-500);
+  margin-right: 0.75rem;
 }
 
 /* 4. FORMULÁRIOS */
 .form-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--color-gray-300);
-    margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-gray-300);
+  margin-bottom: 0.5rem;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid var(--color-gray-700);
-    border-radius: var(--border-radius);
-    padding: 0.75rem 1rem;
-    color: var(--color-white);
-    transition: all 0.3s ease;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  color: var(--color-white);
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-purple-500);
-    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+  outline: none;
+  border-color: var(--color-purple-500);
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
 }
 
-/* 5. TAGS */
+/* 5. COMPONENTES DE AUTENTICAÇÃO */
+.auth-card {
+  background: rgba(10, 10, 26, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl), 0 0 0 1px rgba(150, 112, 255, 0.1);
+  width: 100%;
+  max-width: 700px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: cardAppear 0.6s var(--easing) forwards;
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-purple-500),
+    var(--color-blue-400),
+    var(--color-purple-400),
+    var(--color-blue-500)
+  );
+  background-size: 300% 100%;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, var(--color-purple-300), var(--color-blue-300));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.auth-header p {
+  color: var(--color-gray-400);
+  font-size: 0.95rem;
+}
+
+.auth-form {
+  margin-bottom: 1.5rem;
+}
+
+.auth-footer {
+  text-align: center;
+  color: var(--color-gray-400);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.auth-footer a {
+  color: var(--color-purple-300);
+  transition: color var(--transition-fast) ease;
+}
+
+.auth-footer a:hover {
+  color: var(--color-purple-200);
+  text-shadow: 0 0 8px rgba(150, 112, 255, 0.5);
+}
+
+/* 6. TAGS */
 .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .tag {
-    background: linear-gradient(to bottom right, rgba(124, 58, 237, 0.3), rgba(124, 58, 237, 0.1));
-    border: 1px solid rgba(124, 58, 237, 0.3);
-    color: var(--color-purple-300);
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--border-radius);
+  background: linear-gradient(to bottom right, rgba(124, 58, 237, 0.3), rgba(124, 58, 237, 0.1));
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: var(--color-purple-300);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius);
 }
 
 .tag.blue {
-    background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.3), rgba(37, 99, 235, 0.1));
-    border: 1px solid rgba(37, 99, 235, 0.3);
-    color: var(--color-blue-300);
+  background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.3), rgba(37, 99, 235, 0.1));
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: var(--color-blue-300);
 }
 
-/* 6. ESTILOS DE PRODUTO (do main-produtos-separados.css) */
+/* 7. PRODUTOS */
 .product-details {
   display: flex;
   flex-direction: column;
@@ -200,7 +333,6 @@
   color: var(--color-white);
 }
 
-
 .product-card h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
@@ -211,7 +343,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Lista de recursos */
 .feature-list {
   margin-top: 1.5rem;
 }
@@ -228,16 +359,16 @@
   color: var(--color-purple-500);
 }
 
-
-/* Seções de informação e benefícios */
-.info-section, .benefits-section {
+.info-section,
+.benefits-section {
   background-color: rgba(15, 21, 36, 0.5);
   border-radius: 12px;
   padding: 2rem;
   margin-top: 2rem;
 }
 
-.info-section h3, .benefits-section h3 {
+.info-section h3,
+.benefits-section h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -258,50 +389,247 @@
   align-items: flex-start;
 }
 
-/* Preço */
 .product-price-section {
-    margin-bottom: -40px;
-    padding: 15px;
-    background: #f8f9fa00;
-    border-radius: 10px;
-    text-align: center;
+  margin-bottom: -40px;
+  padding: 15px;
+  background: #f8f9fa00;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .price-main {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 5px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 
 .price-amount {
-    font-size: 2.5rem;
-    font-weight: 700;
-      color: var(--color-gray-300);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-gray-300);
 }
 
 .price-discount {
-    font-size: 1rem;
-    color: #10b981;
-    background: rgba(16, 185, 129, 0.1);
-    padding: 4px 8px;
-    border-radius: 6px;
+  font-size: 1rem;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .price-installments {
-    font-size: 1rem;
-    color: var(--color-gray-600);
+  font-size: 1rem;
+  color: var(--color-gray-600);
 }
 
-/* 7. RESPONSIVIDADE DE COMPONENTES */
+/* 8. COMPONENTES DO CARRINHO E CHECKOUT */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  margin-top: 2rem;
+  color: var(--color-gray-300);
+}
+
+.checkout-sidebar {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.checkout-form {
+  background-color: #0f1524;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.progress-step.active .step-number {
+  background-color: #8a5cf5;
+  color: white;
+}
+
+.step-text {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.progress-step.active .step-text {
+  color: white;
+}
+
+.progress-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 0.5rem;
+  position: relative;
+  top: -15px;
+}
+
+.form-step {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.form-step.hidden {
+  display: none;
+}
+
+.form-step h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-step h3 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.order-summary {
+  background-color: rgba(15, 21, 36, 0.5);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.order-summary h3 {
+  margin-bottom: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.summary-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.summary-item.total {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.terms-agreement {
+  margin-bottom: 2rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  border-color: rgba(138, 92, 245, 0.5);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #8a5cf5;
+  border-color: #8a5cf5;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.terms-link {
+  color: #8a5cf5;
+  text-decoration: underline;
+}
+
+/* 9. RESPONSIVIDADE */
 @media (max-width: 768px) {
-    .cta-section {
-        flex-direction: column; /* Empilha no mobile */
-    }
-    
-    .cta-button {
-        width: 100%;
-        max-width: 280px;
-    }
+  .cta-section {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .product-card {
+    padding: 1.5rem;
+  }
 }

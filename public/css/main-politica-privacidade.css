@@ -1,14 +1,14 @@
 /* ==========================================================================
-   MAIN-PRODUTOS.CSS
+   MAIN-POLITICA-PRIVACIDADE.CSS
    ========================================================================== */
 
 @import url("./base/base.css");
 
-@import url("./utilities/utilities.css");
+@import url("./layout/footer.css");
+@import url("./layout/header.css");
 
 @import url("./components/components.css");
 
-@import url("./layout/header.css");
-@import url("./layout/footer.css");
+@import url("./utilities/utilities.css");
 
-@import url("./pages/produtos.css");
+@import url("./pages/politica-privacidade.css");

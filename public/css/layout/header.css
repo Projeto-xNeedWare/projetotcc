@@ -1,6 +1,3 @@
-/* =======================================================
-   CABEÇALHO | xNeedWare - REFATORADO PARA OFF-CANVAS (V2 - FIX SCROLL)
-   ======================================================= */
 .xneedware-header {
     background-color: #00000000;
     width: 100%;
@@ -98,29 +95,24 @@
 }
 
 /* =======================================================
-   MEDIA QUERIES - Responsividade Cabeçalho (Off-Canvas)
+   MEDIA QUERIES - Responsividade Cabeçalho
    ======================================================= */
 
-/* Celulares (até 768px) */
 @media (max-width: 768px) {
     
-    /* FIX 1: Fixa o cabeçalho no topo e garante que ele fique acima de tudo */
     .xneedware-header {
         position: fixed; 
         top: 0;
         left: 0;
         z-index: 1002; 
-        background-color: #0f0920; /* Cor de fundo do menu lateral (var(--color-dark)) */
-        /* Garante que o cabeçalho ocupe toda a largura */
+        background-color: #0f0920;
         width: 100%; 
     }
     
-    /* FIX 2: Regra para o Body quando o menu está aberto (necessita de JS para adicionar a classe) */
     body.menu-open {
-        overflow: hidden; /* Impede a rolagem do conteúdo principal */
+        overflow: hidden;
     }
     
-    /* Menu Off-Canvas */
     .main-nav {
         position: fixed;
         top: 0;
@@ -133,18 +125,14 @@
         transform: translateX(100%); 
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
-        /* Ajusta o padding para começar abaixo do cabeçalho fixo */
         padding-top: 80px; 
-        /* FIX 3: Garante que o menu não cause overflow horizontal */
         overflow-y: auto; 
     }
 
-    /* Mostra o menu off-canvas */
     .main-nav.active {
         transform: translateX(0); 
     }
 
-    /* Estilos da lista de links no menu off-canvas */
     .main-nav ul {
         flex-direction: column;
         align-items: flex-start;
@@ -163,19 +151,16 @@
         display: block;
     }
     
-    /* Garante que o ícone de usuário fique visível no cabeçalho */
     .icone-grande {
         order: 3; 
         margin-left: auto; 
     }
 
-    /* Mostra o botão do menu hamburguer */
     .menu-toggle {
         display: block;
         order: 2;
     }
 
-    /* Opcional: Adiciona um overlay escuro quando o menu está ativo */
     body.menu-open::before {
         content: '';
         position: fixed;
@@ -188,9 +173,7 @@
     }
 }
 
-/* Regras de desktop para garantir que não sejam afetadas */
 @media (min-width: 769px) {
-    /* Garante que o cabeçalho volte a ser relativo no desktop */
     .xneedware-header {
         position: relative;
         z-index: auto;

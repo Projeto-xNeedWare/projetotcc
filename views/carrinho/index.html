@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho | xNeedWare</title>
-  <link rel="stylesheet" href="/css/carrinho.css">
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/main-carrinho.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">    
 
   <!-- Google Fonts e Font Awesome -->
@@ -101,82 +99,81 @@
           </div>
         </div>
 
-        <!-- STEP 2 - SELEÇÃO DE PAGAMENTO (Refatorado) -->
         <!-- STEP 2 - SELEÇÃO DE PAGAMENTO (Refatorado com CSS Original) -->
-<div class="form-step hidden" id="step-2">
-    <h2>Selecione o método de pagamento</h2>
-    
-    <!-- O container original é .payment-methods-selection -->
-    <div class="payment-methods-selection">
-        
-        <!-- A opção de pagamento original é .payment-option. Usamos uma tag <div> para manter a estrutura original, mas é recomendável usar <label> para acessibilidade. -->
-        <!-- Para manter a usabilidade, o clique deve ser tratado via JavaScript no elemento .payment-option -->
-        <div class="payment-option selected" data-method="google-pay">
-
-            <!-- O cabeçalho original é .payment-option-header -->
-            <div class="payment-option-header">
-                
-                <!-- Ícone -->
-                <div class="payment-icon">
-                    <!-- Usando um ícone genérico, pois o CSS original não define um ícone específico para o Google Pay, apenas cores. Assumindo que você usa Font Awesome ou similar. -->
-                    <i class="fab fa-google-pay"></i>
-                </div>
-                
-                <!-- Informações -->
-                <div class="payment-info">
-                    <h3>Google Pay</h3>
-                    <p>Pague de forma rápida e segura</p>
-                </div>
-                
-                <!-- Radio Button Customizado -->
-                <div class="payment-radio">
-                    <!-- O input radio deve ser o único elemento que recebe o 'checked' -->
-                    <input type="radio" name="payment-method" value="google-pay" id="google-pay-radio" checked>
-                    <!-- O checkmark customizado é estilizado pelo CSS original -->
-                    <span class="radio-checkmark"></span>
-                </div>
-            </div>              
-
-            <!-- Detalhes da Opção (usado para informações de segurança) -->
-            <div class="payment-option-details" id="google-pay-details">
-                <!-- O CSS original usa .payment-security para o texto de segurança -->
-                <p class="payment-security">
-                    <!-- Adicionando um ícone de cadeado para melhorar a clareza visual (requer Font Awesome) -->
-                    <i class="fas fa-lock"></i> Seus dados de pagamento ficam protegidos
-                </p>
-                <p>
-                    <small>Você será redirecionado para o Google Pay ao finalizar a compra</small>
-                </p>
-            </div>
+        <div class="form-step hidden" id="step-2">
+            <h2>Selecione o método de pagamento</h2>
             
-        </div>
-        
-        <!-- Exemplo de como adicionar outra opção, mantendo o CSS original -->
+            <!-- O container original é .payment-methods-selection -->
+            <div class="payment-methods-selection">
+                
+                <!-- A opção de pagamento original é .payment-option. Usamos uma tag <div> para manter a estrutura original, mas é recomendável usar <label> para acessibilidade. -->
+                <!-- Para manter a usabilidade, o clique deve ser tratado via JavaScript no elemento .payment-option -->
+                <div class="payment-option selected" data-method="google-pay">
 
-        <div class="payment-option" data-method="pix">
-            <div class="payment-option-header">
-                <div class="payment-icon">
-                    <i class="fas fa-qrcode"></i>
+                    <!-- O cabeçalho original é .payment-option-header -->
+                    <div class="payment-option-header">
+                        
+                        <!-- Ícone -->
+                        <div class="payment-icon">
+                            <!-- Usando um ícone genérico, pois o CSS original não define um ícone específico para o Google Pay, apenas cores. Assumindo que você usa Font Awesome ou similar. -->
+                            <i class="fab fa-google-pay"></i>
+                        </div>
+                        
+                        <!-- Informações -->
+                        <div class="payment-info">
+                            <h3>Google Pay</h3>
+                            <p>Pague de forma rápida e segura</p>
+                        </div>
+                        
+                        <!-- Radio Button Customizado -->
+                        <div class="payment-radio">
+                            <!-- O input radio deve ser o único elemento que recebe o 'checked' -->
+                            <input type="radio" name="payment-method" value="google-pay" id="google-pay-radio" checked>
+                            <!-- O checkmark customizado é estilizado pelo CSS original -->
+                            <span class="radio-checkmark"></span>
+                        </div>
+                    </div>              
+
+                    <!-- Detalhes da Opção (usado para informações de segurança) -->
+                    <div class="payment-option-details" id="google-pay-details">
+                        <!-- O CSS original usa .payment-security para o texto de segurança -->
+                        <p class="payment-security">
+                            <!-- Adicionando um ícone de cadeado para melhorar a clareza visual (requer Font Awesome) -->
+                            <i class="fas fa-lock"></i> Seus dados de pagamento ficam protegidos
+                        </p>
+                        <p>
+                            <small>Você será redirecionado para o Google Pay ao finalizar a compra</small>
+                        </p>
+                    </div>
+                    
                 </div>
-                <div class="payment-info">
-                    <h3>Pix</h3>
-                    <p>Pagamento instantâneo</p>
+                
+                <!-- Exemplo de como adicionar outra opção, mantendo o CSS original -->
+
+                <div class="payment-option" data-method="pix">
+                    <div class="payment-option-header">
+                        <div class="payment-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <div class="payment-info">
+                            <h3>Pix</h3>
+                            <p>Pagamento instantâneo</p>
+                        </div>
+                        <div class="payment-radio">
+                            <input type="radio" name="payment-method" value="pix" id="pix-radio">
+                            <span class="radio-checkmark"></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="payment-radio">
-                    <input type="radio" name="payment-method" value="pix" id="pix-radio">
-                    <span class="radio-checkmark"></span>
-                </div>
+            
+                
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-back" onclick="prevStep()">Voltar</button>
+                <button type="button" class="btn-next" onclick="nextStep()">Continuar</button>
             </div>
         </div>
-    
-        
-    </div>
-
-    <div class="form-actions">
-        <button type="button" class="btn-back" onclick="prevStep()">Voltar</button>
-        <button type="button" class="btn-next" onclick="nextStep()">Continuar</button>
-    </div>
-</div>
 
 
 
@@ -187,22 +184,22 @@
           <div class="order-summary">
             <h3>Resumo da compra</h3>
             <div class="summary-item">
-              <div class="summary-label">Produto</div>
+              <div class="summary-label">Produto<br></div>
               <div class="summary-value" id="summary-product"></div>
             </div>
 
             <div class="summary-item">
-              <div class="summary-label">Forma de pagamento</div>
+              <div class="summary-label">Forma de pagamento<br></div>
               <div class="summary-value" id="summary-payment">Google Pay</div>
             </div>
 
             <div class="summary-item">
-              <div class="summary-label">Email para entrega</div>
+              <div class="summary-label">Email para entrega<br></div>
               <div class="summary-value" id="summary-email"></div>
             </div>
 
             <div class="summary-item total">
-              <div class="summary-label">Total</div>
+              <div class="summary-label">Total<br></div>
               <div class="summary-value" id="summary-total">R$ 00,00</div>
             </div>
           </div>
@@ -231,7 +228,7 @@
 
           <div class="summary-item total">
             <div class="summary-label">Total</div>
-            <div class="summary-value" id="sidebar-total">R$ 00,00</div>
+            <div class="summary-value" id="sidebar-total"> R$ 00,00</div>
           </div>
         </div>
 

@@ -1,49 +1,14 @@
-/* ===================================
-   MAIN.CSS - Arquivo Principal de Estilos
-   xNeedWare Project
-   =================================== */
+/* ==========================================================================
+   MAIN-PRODUTOS-SEPARADOS.CSS
+   ========================================================================== */
 
-/* 
- * Este arquivo centraliza todos os imports de CSS do projeto
- * Organizado por categorias para facilitar manutenção
- */
+@import url("/css/base/base.css");
 
-/* ===================================
-   1. BASE - Estilos Fundamentais
-   =================================== */
-@import url('./base/base.css');
+@import url("./layout/footer.css");
+@import url("./layout/header.css");
 
-/* ===================================
-   2. COMPONENTS - Componentes Reutilizáveis
-   =================================== */
-@import url('./components/header.css');
-@import url('./components/footer.css');
-@import url('./components/components.css');
+@import url("./components/components.css");
 
-/* ===================================
-   3. UTILITIES - Classes Utilitárias e Responsividade
-   =================================== */
-@import url('./utilities/utilities.css');
+@import url("./utilities/utilities.css");
 
-/* ===================================
-   4. PAGES - Estilos Específicos de Páginas
-   =================================== */
-/* 
- * Mantenha aqui apenas estilos que são *exclusivos* de uma página
- * e que não puderam ser modularizados em components ou base.
- * Ex: home.css, sobre.css, etc.
- */
-@import url('./pages/home.css');
-@import url('./pages/produtos.css');
-@import url('./pages/sobre.css');
-@import url('./pages/carrinho.css');
-@import url('./pages/login-cadastro.css');
-@import url('./pages/pagamentos.css');
-@import url('./pages/politica-privacidade.css');
-
-/* ===================================
-   NOTAS DE ORGANIZAÇÃO:
-   
-   - O estilo de 'produtos_separados' foi integrado em 'components.css' e 'utilities.css'.
-   - Remova os imports de páginas que não existem no seu projeto.
-   =================================== */
+@import url("./pages/produtos_separados.css");
