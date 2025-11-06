@@ -1,0 +1,145 @@
+/* ==========================================================================
+   PAGES/PRODUTOS_SEPARADOS.CSS - Estilos Específicos da Página de Produto
+   ========================================================================== */
+
+/* 1. LAYOUT DA PÁGINA DE PRODUTO */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 2. CARD PRINCIPAL DO PRODUTO */
+.product-card {
+  background-color: #0f1524;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--color-white);
+}
+
+
+.product-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+/* 3. LISTA DE RECURSOS */
+.feature-list {
+  margin-top: 1.5rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.check-icon {
+  margin-right: 0.75rem;
+  font-weight: bold;
+  color: var(--color-purple-500);
+}
+
+
+/* 4. SEÇÕES DE INFORMAÇÃO E BENEFÍCIOS */
+.info-section, .benefits-section {
+  background-color: rgba(15, 21, 36, 0.5);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.info-section h3, .benefits-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section p {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 5. PREÇO */
+.product-price-section {
+    margin-bottom: -40px;
+    padding: 15px;
+    background: #f8f9fa00;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+      color: var(--color-gray-300);
+}
+
+.price-discount {
+    font-size: 1rem;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.price-installments {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+}
+
+/* 6. RESPONSIVIDADE DE PRODUTO */
+@media (max-width: 768px) {
+    .cta-section {
+        flex-direction: column;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+}

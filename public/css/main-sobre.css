@@ -1,0 +1,19 @@
+/* ==========================================================================
+   MAIN-SOBRE.CSS - ARQUIVO PRINCIPAL DE IMPORTAÇÃO PARA A PÁGINA SOBRE
+   ========================================================================== */
+
+/* 1. BASE: Variáveis e Reset */
+@import url("./base/base.css");
+
+/* 2. UTILITIES: Classes de ajuda e utilitários */
+@import url("./utilities/utilities.css");
+
+/* 3. COMPONENTS: Estilos de componentes reutilizáveis (Botões, Formulários, Cards) */
+@import url("./components/components.css");
+
+/* 4. LAYOUT: Estrutura principal (Header, Footer) */
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+
+/* 5. PAGES: Estilos específicos da página atual (Sobre) */
+@import url("./pages/sobre.css");

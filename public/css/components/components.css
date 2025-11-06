@@ -1,0 +1,307 @@
+/* ==========================================================================
+   COMPONENTS.CSS - Componentes Reutilizáveis (Versão Final)
+   ========================================================================== */
+
+/* 1. BOTÕES GERAIS */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: translateX(3px);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--color-purple-600), var(--color-blue-600));
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, var(--color-purple-700), var(--color-blue-700));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--color-purple-500);
+    color: var(--color-white);
+}
+
+.btn-outline:hover {
+    background: rgba(124, 58, 237, 0.1);
+    transform: translateY(-2px);
+}
+
+/* 2. BOTÕES DE CTA (PRODUTO) */
+.cta-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: var(--color-white);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 140px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-purple-500);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+    background-color: var(--color-purple-600);
+}
+
+.cta-section {
+    display: flex; /* CORREÇÃO: Adicionado display: flex */
+    gap: 10px;
+    align-items: center;
+    justify-content: center; /* CORREÇÃO: Centraliza os botões */
+    margin-top: 20px; /* CORREÇÃO: Adicionado margem para respiro */
+}
+
+/* 3. CARDS E SEÇÕES DE INFORMAÇÃO */
+.value-card,
+.team-member,
+.stat-card,
+.feature-card {
+    background-color: rgba(15, 21, 36, 0.5);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover,
+.team-member:hover,
+.stat-card:hover,
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.values-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.values-list .check-icon {
+    color: var(--color-purple-500);
+    margin-right: 0.75rem;
+}
+
+/* 4. FORMULÁRIOS */
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-gray-300);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    color: var(--color-white);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-purple-500);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+/* 5. TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: linear-gradient(to bottom right, rgba(124, 58, 237, 0.3), rgba(124, 58, 237, 0.1));
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    color: var(--color-purple-300);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+}
+
+.tag.blue {
+    background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.3), rgba(37, 99, 235, 0.1));
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    color: var(--color-blue-300);
+}
+
+/* 6. ESTILOS DE PRODUTO (do main-produtos-separados.css) */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: #0f1524;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--color-white);
+}
+
+
+.product-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+/* Lista de recursos */
+.feature-list {
+  margin-top: 1.5rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.check-icon {
+  margin-right: 0.75rem;
+  font-weight: bold;
+  color: var(--color-purple-500);
+}
+
+
+/* Seções de informação e benefícios */
+.info-section, .benefits-section {
+  background-color: rgba(15, 21, 36, 0.5);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.info-section h3, .benefits-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section p {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Preço */
+.product-price-section {
+    margin-bottom: -40px;
+    padding: 15px;
+    background: #f8f9fa00;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+      color: var(--color-gray-300);
+}
+
+.price-discount {
+    font-size: 1rem;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.price-installments {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+}
+
+/* 7. RESPONSIVIDADE DE COMPONENTES */
+@media (max-width: 768px) {
+    .cta-section {
+        flex-direction: column; /* Empilha no mobile */
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
