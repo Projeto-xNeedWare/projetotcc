@@ -617,7 +617,7 @@
 
   .cta-button {
     width: 100%;
-    max-width: 280px;
+    
   }
 
   .checkout-container {
@@ -631,5 +631,12 @@
 
   .product-card {
     padding: 1.5rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    flex-direction: column;
   }
 }

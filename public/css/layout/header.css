@@ -48,6 +48,7 @@
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
+    margin-left: 10px;
     transition: color 0.3s ease;
 }
 
@@ -140,7 +141,7 @@
     }
 
     .main-nav li {
-        margin: 15px 0;
+        margin: 5px 0;
         width: 100%;
         margin-left: 0; 
     }
