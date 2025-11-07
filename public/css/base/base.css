@@ -135,6 +135,14 @@ button {
 
 .section-title {
   font-size: 2.425rem;
+    text-align: center;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-gray-400);
+  text-align: center;
 }
 
 /* Animações */
