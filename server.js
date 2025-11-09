@@ -4,6 +4,7 @@ import session from "express-session";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
+import bcrypt from "bcypt";
 
 // ==================== CONFIGURAÇÃO INICIAL ====================
 const app = express();
@@ -51,10 +52,15 @@ app.post("/cadastro", async (req, res) => {
     }
 
     // Insere novo usuário no banco
+    // Criptografa a senha antes de salvar
+    const senhaCriptografada = await bcrypt.hash(senha, 10);
+
+    // Insere novo usuário no banco com a senha criptografada
     await db.query(
-      "INSERT INTO usuarios (nome, sobrenome, email, senha) VALUES (?, ?, ?, ?)", 
-      [nome, sobrenome, email, senha]
+    "INSERT INTO usuarios (nome, sobrenome, email, senha) VALUES (?, ?, ?, ?)", 
+    [nome, sobrenome, email, senhaCriptografada]
     );
+
     res.send("✅ Conta criada com sucesso! Agora faça login.");
   } catch (err) {
     console.error(err);
@@ -67,11 +73,31 @@ app.post("/login", async (req, res) => {
   try {
     const { email, senha } = req.body;
 
-    // Verifica credenciais no banco
-    const [rows] = await db.query(
-      "SELECT * FROM usuarios WHERE email = ? AND senha = ?",
-      [email, senha]
-    );
+    // Busca o usuário pelo email
+const [rows] = await db.query("SELECT * FROM usuarios WHERE email = ?", [email]);
+
+if (rows.length === 0) {
+  return res.send("❌ Email ou senha inválidos.");
+}
+
+const usuario = rows[0];
+
+// Compara a senha digitada com a criptografada
+const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
+
+if (!senhaCorreta) {
+  return res.send("❌ Email ou senha inválidos.");
+}
+
+// Salva dados do usuário na sessão
+req.session.user = {
+  id: usuario.id,
+  nome: usuario.nome,
+  sobrenome: usuario.sobrenome,
+  email: usuario.email
+};
+res.send(`✅ Bem-vindo, ${usuario.nome}!`);
+
 
     if (rows.length > 0) {
       // Salva dados do usuário na sessão
