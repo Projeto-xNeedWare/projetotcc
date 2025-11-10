@@ -74,48 +74,37 @@ app.post("/login", async (req, res) => {
     const { email, senha } = req.body;
 
     // Busca o usuário pelo email
-const [rows] = await db.query("SELECT * FROM usuarios WHERE email = ?", [email]);
+    const [rows] = await db.query("SELECT * FROM usuarios WHERE email = ?", [email]);
 
-if (rows.length === 0) {
-  return res.send("❌ Email ou senha inválidos.");
-}
-
-const usuario = rows[0];
-
-// Compara a senha digitada com a criptografada
-const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
-
-if (!senhaCorreta) {
-  return res.send("❌ Email ou senha inválidos.");
-}
-
-// Salva dados do usuário na sessão
-req.session.user = {
-  id: usuario.id,
-  nome: usuario.nome,
-  sobrenome: usuario.sobrenome,
-  email: usuario.email
-};
-res.send(`✅ Bem-vindo, ${usuario.nome}!`);
-
-
-    if (rows.length > 0) {
-      // Salva dados do usuário na sessão
-      req.session.user = {
-        id: rows[0].id,
-        nome: rows[0].nome,
-        sobrenome: rows[0].sobrenome,
-        email: rows[0].email
-      };
-      res.send(`✅ Bem-vindo, ${rows[0].nome}!`);
-    } else {
-      res.send("❌ Email ou senha inválidos.");
+    if (rows.length === 0) {
+      return res.send("❌ Email ou senha inválidos.");
     }
+
+    const usuario = rows[0];
+
+    // Compara a senha digitada com a criptografada
+    const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
+
+    if (!senhaCorreta) {
+      return res.send("❌ Email ou senha inválidos.");
+    }
+
+    // Salva dados do usuário na sessão
+    req.session.user = {
+      id: usuario.id,
+      nome: usuario.nome,
+      sobrenome: usuario.sobrenome,
+      email: usuario.email
+    };
+
+    res.send(`✅ Bem-vindo, ${usuario.nome}!`);
+
   } catch (err) {
     console.error(err);
     res.send("❌ Erro ao conectar ao servidor.");
   }
 });
+
 
 // ==================== ROTAS DE SESSÃO ====================
 
