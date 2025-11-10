@@ -238,7 +238,11 @@ function atualizarCarrinho() {
     let total = 0;
 
     carrinho.forEach(item => {
-        const itemTotal = item.preco * item.quantidade;
+        // Garante que o preço seja numérico
+        const preco = parseFloat(item.preco) || 0;
+        const quantidade = parseInt(item.quantidade) || 1;
+
+        const itemTotal = preco * quantidade;
         total += itemTotal;
 
         // Cria o item na lista principal (Step 0)
@@ -247,14 +251,17 @@ function atualizarCarrinho() {
         div.innerHTML = `
             <div class="cart-item-info">
                 <h4>${item.nome}</h4>
-                <p>R$ ${item.preco.toFixed(2)} x 
-                <input type="number" min="1" value="${item.quantidade}" data-id="${item.id}" class="qtd-input"> 
-                = R$ ${itemTotal.toFixed(2)}</p>
+                <p>
+                    R$ ${preco.toFixed(2).replace('.', ',')} x 
+                    <input type="number" min="1" value="${quantidade}" data-id="${item.id}" class="qtd-input"> 
+                    = R$ ${itemTotal.toFixed(2).replace('.', ',')}
+                </p>
             </div>
             <button class="remover-btn" data-id="${item.id}" title="Remover item">
                 <i class="fas fa-trash"></i>
             </button>
         `;
+
         carrinhoContainer.appendChild(div);
 
         // Cria o item no resumo lateral
