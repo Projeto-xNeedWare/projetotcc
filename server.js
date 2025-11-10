@@ -72,7 +72,6 @@ app.post("/cadastro", async (req, res) => {
 app.post("/login", async (req, res) => {
   try {
     const { email, senha } = req.body;
-
     // Busca o usuário pelo email
     const [rows] = await db.query("SELECT * FROM usuarios WHERE email = ?", [email]);
 
@@ -81,7 +80,6 @@ app.post("/login", async (req, res) => {
     }
 
     const usuario = rows[0];
-
     // Compara a senha digitada com a criptografada
     const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
 
@@ -104,7 +102,6 @@ app.post("/login", async (req, res) => {
     res.send("❌ Erro ao conectar ao servidor.");
   }
 });
-
 
 // ==================== ROTAS DE SESSÃO ====================
 
