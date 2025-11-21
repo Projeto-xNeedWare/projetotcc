@@ -4,7 +4,6 @@ import session from "express-session";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import bcrypt from "bcrypt";
 
 // ==================== CONFIGURAÇÃO INICIAL ====================
 const app = express();
