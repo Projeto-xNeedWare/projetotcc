@@ -32,11 +32,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // ==================== CONEXÃO COM BANCO DE DADOS ====================
 const db = await mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "123@abc",
-  database: "xneedware"
+  uri: process.env.DATABASE_URL
 });
+
+export default db;
+
 
 // ==================== ROTAS DE AUTENTICAÇÃO ====================
 
