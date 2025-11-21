@@ -32,10 +32,12 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // ==================== CONEXÃO COM BANCO DE DADOS ====================
 const db = await mysql.createPool({
-  uri: process.env.DATABASE_URL
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 });
-
-export default db;
 
 
 // ==================== ROTAS DE AUTENTICAÇÃO ====================
